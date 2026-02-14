@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Непросто — Разработка сайтов и SEO</title>
+    <meta name="description" content="Создаём сайты, которые работают на бизнес. Разработка, SEO-продвижение, автоматизация.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">Непросто</span>
+            </a>
+            <nav class="nav">
+                <a href="#services">Услуги</a>
+                <a href="#portfolio">Работы</a>
+                <a href="#about">О нас</a>
+                <a href="#contact" class="nav-cta">Связаться</a>
+            </nav>
+            <button class="mobile-menu" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Герой -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-tag">Веб-студия из Москвы</p>
+                <h1 class="hero-title">Создаём сайты,<br>которые <span class="highlight">работают</span></h1>
+                <p class="hero-desc">Разработка на MODX, SEO-продвижение и автоматизация для бизнеса. Не просто сайты — инструменты роста.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Обсудить проект</a>
+                    <a href="#portfolio" class="btn btn-secondary">Посмотреть работы</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="card-stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">лет опыта</span>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="card-stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">проектов</span>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="card-stat">
+                        <span class="stat-number">SEO</span>
+                        <span class="stat-label">в топ-10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Что делаем</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Разработка сайтов</h3>
+                    <p>Корпоративные сайты, интернет-магазины, лендинги на MODX. Чистый код, быстрая загрузка.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>SEO-продвижение</h3>
+                    <p>Выводим в топ Яндекса и Google. Комплексная оптимизация, контент-стратегия, аналитика.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Автоматизация</h3>
+                    <p>Интеграции с CRM, чат-боты, AI-решения. Экономим ваше время и деньги.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Дизайн</h3>
+                    <p>Современный UI/UX, фирменный стиль, прототипы. Дизайн, который конвертирует.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Избранные работы</h2>
+            <div class="portfolio-grid">
+                <article class="portfolio-card portfolio-card--large">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span class="portfolio-label">E-commerce</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Интернет-магазин автозапчастей</h3>
+                        <p>MODX + интеграция с 1С, 50 000+ товаров</p>
+                    </div>
+                </article>
+                <article class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span class="portfolio-label">Корпоративный</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Строительная компания</h3>
+                        <p>Сайт + SEO, топ-3 по региону</p>
+                    </div>
+                </article>
+                <article class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span class="portfolio-label">Лендинг</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SaaS-сервис</h3>
+                        <p>Конверсия 12%, A/B тесты</p>
+                    </div>
+                </article>
+            </div>
+            <div class="portfolio-cta">
+                <a href="#" class="btn btn-outline">Все проекты →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Почему мы</h2>
+                <div class="about-text">
+                    <p class="about-lead">Мы — небольшая команда, которая делает работу основательно. Без менеджеров-прослоек, без раздутых смет.</p>
+                    <p>15 лет в веб-разработке научили нас главному: сайт должен решать задачи бизнеса, а не просто красиво выглядеть. Каждый проект — это погружение в вашу нишу, понимание целей и создание инструмента, который будет работать годами.</p>
+                </div>
+                <ul class="about-features">
+                    <li>
+                        <strong>Прямая коммуникация</strong>
+                        <span>Работаете напрямую с разработчиками</span>
+                    </li>
+                    <li>
+                        <strong>Честные сроки</strong>
+                        <span>Называем реальные дедлайны и держим их</span>
+                    </li>
+                    <li>
+                        <strong>Поддержка после запуска</strong>
+                        <span>Не бросаем проект после сдачи</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Готовы обсудить проект?</h2>
+                <p>Расскажите о задаче — предложим решение и оценим сроки</p>
+                <a href="#contact" class="btn btn-primary btn-large">Написать нам</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Telegram</span>
+                        <a href="https://t.me/antonneprosto" class="contact-value">@antonneprosto</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:hello@ne-prosto.ru" class="contact-value">hello@ne-prosto.ru</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Город</span>
+                        <span class="contact-value">Москва</span>
+                    </div>
+                </div>
+                <form class="contact-form" action="#" method="POST">
+                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Расскажите о проекте" rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">◈</span>
+                    <span class="logo-text">Непросто</span>
+                </div>
+                <p class="footer-copy">© 2026 Непросто. Разработка сайтов и SEO.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
