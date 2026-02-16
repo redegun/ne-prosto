@@ -275,6 +275,69 @@
             max-width: 300px;
         }
         
+        /* Sprints grid */
+        .sprints-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .sprint-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: border-color 0.2s;
+        }
+        
+        .sprint-card:hover {
+            border-color: var(--accent);
+        }
+        
+        .sprint-card__header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .sprint-card__number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
+            opacity: 0.5;
+        }
+        
+        .sprint-card__title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .sprint-card__list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .sprint-card__list li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .sprint-card__list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            opacity: 0.5;
+        }
+        
         /* CTA */
         .case-cta {
             padding: 80px 0;
@@ -400,77 +463,144 @@
         </div>
     </section>
 
-    <!-- Work done -->
+    <!-- Work done - Sprints -->
     <section class="case-section case-section--alt">
         <div class="container">
-            <h2 class="case-section__title">Что сделано</h2>
+            <h2 class="case-section__title">9 спринтов разработки</h2>
+            <p class="case-section__text">
+                За 5 лет работы мы провели 9 итераций развития сайта — от базовой оптимизации 
+                до полноценного интернет-магазина.
+            </p>
             
-            <div class="work-list">
-                <div class="work-item">
-                    <div class="work-item__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <path d="M3 9h18"/>
-                        </svg>
+            <div class="sprints-grid">
+                <!-- Sprint 1 -->
+                <div class="sprint-card">
+                    <div class="sprint-card__header">
+                        <span class="sprint-card__number">01</span>
+                        <h4 class="sprint-card__title">Фундамент</h4>
                     </div>
-                    <div class="work-item__content">
-                        <h4>Редизайн шаблонов</h4>
-                        <p>Полностью переработаны шаблоны услуг и категорий. Современный дизайн, 
-                           улучшенная структура контента, адаптивная верстка.</p>
-                    </div>
+                    <ul class="sprint-card__list">
+                        <li>Перенос на VDS-сервер</li>
+                        <li>Микроразметка Schema.org</li>
+                        <li>Оптимизация загрузки изображений</li>
+                        <li>Метки для контент-страниц</li>
+                        <li>Раздел «Керамика на авто» — 20 страниц</li>
+                        <li>Система перелинковки</li>
+                    </ul>
                 </div>
                 
-                <div class="work-item">
-                    <div class="work-item__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 6h16M4 12h16M4 18h10"/>
-                        </svg>
+                <!-- Sprint 2 -->
+                <div class="sprint-card">
+                    <div class="sprint-card__header">
+                        <span class="sprint-card__number">02</span>
+                        <h4 class="sprint-card__title">Редизайн</h4>
                     </div>
-                    <div class="work-item__content">
-                        <h4>Навигация и UX</h4>
-                        <p>Разработан умный сайдбар с расширенным состоянием. 
-                           Пользователи быстрее находят нужные услуги.</p>
-                    </div>
+                    <ul class="sprint-card__list">
+                        <li>Новый шаблон услуги</li>
+                        <li>Новый шаблон категории</li>
+                        <li>Умный сайдбар с расширенным состоянием</li>
+                        <li>SEO-баннеры</li>
+                        <li>Карточки работ в портфолио</li>
+                    </ul>
                 </div>
                 
-                <div class="work-item">
-                    <div class="work-item__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                        </svg>
+                <!-- Sprint 3 -->
+                <div class="sprint-card">
+                    <div class="sprint-card__header">
+                        <span class="sprint-card__number">03</span>
+                        <h4 class="sprint-card__title">Расширение контента</h4>
                     </div>
-                    <div class="work-item__content">
-                        <h4>SEO-оптимизация</h4>
-                        <p>Комплексная работа над поисковым продвижением: техническая оптимизация, 
-                           семантическое ядро, контент-маркетинг, баннеры для поведенческих факторов.</p>
-                    </div>
+                    <ul class="sprint-card__list">
+                        <li>Калькулятор стоимости оклейки</li>
+                        <li>Раздел «Работа и цены»</li>
+                        <li>Брендирование помещений — 21 страница</li>
+                        <li>Детейлинг кузова — 9 страниц</li>
+                        <li>Тонировка — 6 страниц</li>
+                        <li>Визуалы транспорта на главную</li>
+                        <li>Галерея работ</li>
+                    </ul>
                 </div>
                 
-                <div class="work-item">
-                    <div class="work-item__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                        </svg>
+                <!-- Sprint 4 -->
+                <div class="sprint-card">
+                    <div class="sprint-card__header">
+                        <span class="sprint-card__number">04</span>
+                        <h4 class="sprint-card__title">Новые направления</h4>
                     </div>
-                    <div class="work-item__content">
-                        <h4>Производительность</h4>
-                        <p>Оптимизация скорости загрузки, работа над Core Web Vitals, 
-                           улучшение показателей PageSpeed.</p>
-                    </div>
+                    <ul class="sprint-card__list">
+                        <li>Раздел «Керамика на авто»</li>
+                        <li>Раздел «Печать на пленке»</li>
+                        <li>Раздел «Полиуретан на авто»</li>
+                        <li>Шаблоны: Новости, О компании, Вакансии</li>
+                        <li>Поиск по сайту</li>
+                        <li>FAQ-разметка FAQPAGE</li>
+                        <li>Калькулятор защитной пленки</li>
+                    </ul>
                 </div>
                 
-                <div class="work-item">
-                    <div class="work-item__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/>
-                            <path d="M8 21h8m-4-4v4"/>
-                        </svg>
+                <!-- Sprint 5 -->
+                <div class="sprint-card">
+                    <div class="sprint-card__header">
+                        <span class="sprint-card__number">05</span>
+                        <h4 class="sprint-card__title">Блог и статьи</h4>
                     </div>
-                    <div class="work-item__content">
-                        <h4>Портфолио работ</h4>
-                        <p>Регулярное добавление новых кейсов оклейки. 
-                           Более 900 работ в портфолио компании.</p>
+                    <ul class="sprint-card__list">
+                        <li>Раздел статей с категориями и тегами</li>
+                        <li>Лента новостей</li>
+                        <li>Блок полиграфических услуг</li>
+                        <li>Блок услуг детейлинга</li>
+                        <li>Перелинковка разделов</li>
+                        <li>Внедрение FAQPAGE на категории</li>
+                    </ul>
+                </div>
+                
+                <!-- Sprint 6 -->
+                <div class="sprint-card">
+                    <div class="sprint-card__header">
+                        <span class="sprint-card__number">06</span>
+                        <h4 class="sprint-card__title">Продвижение</h4>
                     </div>
+                    <ul class="sprint-card__list">
+                        <li>Базовые работы по SEO</li>
+                        <li>Раздел «Полиуретан на авто»</li>
+                        <li>Таргетинг ВКонтакте</li>
+                        <li>Продвижение в Pinterest</li>
+                        <li>Блок «Вопрос-ответ»</li>
+                        <li>Модуль перелинковки</li>
+                    </ul>
+                </div>
+                
+                <!-- Sprint 7 -->
+                <div class="sprint-card">
+                    <div class="sprint-card__header">
+                        <span class="sprint-card__number">07</span>
+                        <h4 class="sprint-card__title">Магазин наклеек</h4>
+                    </div>
+                    <ul class="sprint-card__list">
+                        <li>Главная страница магазина</li>
+                        <li>Страница «Доставка и оплата»</li>
+                        <li>Конструктор наклейки с надписью</li>
+                        <li>Массовое редактирование товаров</li>
+                        <li>SEO-оптимизация каталога</li>
+                        <li>Региональная стратегия — 8 городов</li>
+                    </ul>
+                </div>
+                
+                <!-- Sprint 8-9 -->
+                <div class="sprint-card">
+                    <div class="sprint-card__header">
+                        <span class="sprint-card__number">08-09</span>
+                        <h4 class="sprint-card__title">Развитие</h4>
+                    </div>
+                    <ul class="sprint-card__list">
+                        <li>Новые страницы брендирования</li>
+                        <li>Работа со старыми страницами</li>
+                        <li>Статьи и контент-маркетинг</li>
+                        <li>Раздел «Печать стикеров» — 15 страниц</li>
+                        <li>Калькулятор стикеров</li>
+                        <li>Каталог обоев</li>
+                        <li>Интеграция с AmoCRM</li>
+                    </ul>
                 </div>
             </div>
         </div>
