@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейс Vinyl TM — Непросто</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --success: #22c55e;
+            --border: #2a2a2a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero */
+        .case-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+        
+        .case-hero__badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 100px;
+            font-size: 14px;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+        
+        .case-hero__title {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        
+        .case-hero__desc {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+        
+        .case-hero__meta {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .case-hero__meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .case-hero__meta-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .case-hero__meta-value {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        /* Stats */
+        .case-stats {
+            padding: 80px 0;
+            background: var(--bg-secondary);
+        }
+        
+        .case-stats__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+        
+        .case-stats__item {
+            text-align: center;
+            padding: 32px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        
+        .case-stats__number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--success);
+            margin-bottom: 8px;
+        }
+        
+        .case-stats__label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        /* Content sections */
+        .case-section {
+            padding: 80px 0;
+        }
+        
+        .case-section--alt {
+            background: var(--bg-secondary);
+        }
+        
+        .case-section__title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        
+        .case-section__text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-bottom: 24px;
+        }
+        
+        /* Work list */
+        .work-list {
+            display: grid;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        
+        .work-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 24px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        
+        .work-item__icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .work-item__icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+        
+        .work-item__content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .work-item__content p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+            margin-top: 32px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 32px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        .timeline-item__year {
+            font-size: 14px;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-item__title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-item__desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        /* Gallery placeholder */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .gallery__item {
+            aspect-ratio: 16/10;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        
+        .gallery__item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: top;
+        }
+        
+        .gallery__item--mobile {
+            aspect-ratio: 9/16;
+            max-width: 300px;
+        }
+        
+        /* CTA */
+        .case-cta {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .case-cta__title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .case-cta__desc {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .btn:hover {
+            background: var(--accent-hover);
+        }
+        
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            padding: 24px;
+        }
+        
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <a href="/portfolio" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Назад к портфолио
+    </a>
+
+    <!-- Hero -->
+    <section class="case-hero">
+        <div class="container">
+            <span class="case-hero__badge">Разработка + SEO</span>
+            <h1 class="case-hero__title">Vinyl TM</h1>
+            <p class="case-hero__desc">
+                Комплексное развитие сайта оклейки автомобилей и брендирования транспорта. 
+                От редизайна до SEO-продвижения — 5 лет непрерывной работы.
+            </p>
+            <div class="case-hero__meta">
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Клиент</span>
+                    <span class="case-hero__meta-value">Creative Team Print</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Период</span>
+                    <span class="case-hero__meta-value">2019 — настоящее время</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Сайт</span>
+                    <span class="case-hero__meta-value"><a href="https://vinyl-tm.ru" target="_blank" style="color: var(--accent)">vinyl-tm.ru</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="case-stats">
+        <div class="container">
+            <div class="case-stats__grid">
+                <div class="case-stats__item">
+                    <div class="case-stats__number">+1229%</div>
+                    <div class="case-stats__label">Рост трафика</div>
+                </div>
+                <div class="case-stats__item">
+                    <div class="case-stats__number">+1291%</div>
+                    <div class="case-stats__label">Рост посетителей</div>
+                </div>
+                <div class="case-stats__item">
+                    <div class="case-stats__number">5 лет</div>
+                    <div class="case-stats__label">Сотрудничество</div>
+                </div>
+                <div class="case-stats__item">
+                    <div class="case-stats__number">400K+</div>
+                    <div class="case-stats__label">Визитов в год</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="case-section">
+        <div class="container">
+            <h2 class="case-section__title">О проекте</h2>
+            <p class="case-section__text">
+                Vinyl TM (Creative Team Print) — одна из ведущих компаний Москвы в сфере оклейки 
+                автомобилей и брендирования транспорта. Сотрудничество началось в 2019 году с задачи 
+                увеличить органический трафик и привести сайт к современным стандартам.
+            </p>
+            <p class="case-section__text">
+                За 5 лет мы провели полный редизайн сайта, внедрили SEO-оптимизацию, 
+                разработали новые функциональные модули и обеспечили стабильный рост бизнеса клиента.
+            </p>
+        </div>
+    </section>
+
+    <!-- Work done -->
+    <section class="case-section case-section--alt">
+        <div class="container">
+            <h2 class="case-section__title">Что сделано</h2>
+            
+            <div class="work-list">
+                <div class="work-item">
+                    <div class="work-item__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18"/>
+                        </svg>
+                    </div>
+                    <div class="work-item__content">
+                        <h4>Редизайн шаблонов</h4>
+                        <p>Полностью переработаны шаблоны услуг и категорий. Современный дизайн, 
+                           улучшенная структура контента, адаптивная верстка.</p>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-item__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6h16M4 12h16M4 18h10"/>
+                        </svg>
+                    </div>
+                    <div class="work-item__content">
+                        <h4>Навигация и UX</h4>
+                        <p>Разработан умный сайдбар с расширенным состоянием. 
+                           Пользователи быстрее находят нужные услуги.</p>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-item__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <div class="work-item__content">
+                        <h4>SEO-оптимизация</h4>
+                        <p>Комплексная работа над поисковым продвижением: техническая оптимизация, 
+                           семантическое ядро, контент-маркетинг, баннеры для поведенческих факторов.</p>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-item__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <div class="work-item__content">
+                        <h4>Производительность</h4>
+                        <p>Оптимизация скорости загрузки, работа над Core Web Vitals, 
+                           улучшение показателей PageSpeed.</p>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-item__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8m-4-4v4"/>
+                        </svg>
+                    </div>
+                    <div class="work-item__content">
+                        <h4>Портфолио работ</h4>
+                        <p>Регулярное добавление новых кейсов оклейки. 
+                           Более 900 работ в портфолио компании.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="case-section">
+        <div class="container">
+            <h2 class="case-section__title">Результаты по годам</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-item__year">2019 — Старт</div>
+                    <div class="timeline-item__title">30 000 визитов в год</div>
+                    <div class="timeline-item__desc">
+                        Начало сотрудничества. Аудит сайта, определение точек роста, 
+                        первые SEO-работы.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-item__year">2020</div>
+                    <div class="timeline-item__title">75 000 визитов (+146%)</div>
+                    <div class="timeline-item__desc">
+                        Редизайн основных шаблонов, расширение семантики, 
+                        начало активного наполнения портфолио.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-item__year">2021</div>
+                    <div class="timeline-item__title">152 000 визитов (+103%)</div>
+                    <div class="timeline-item__desc">
+                        Удвоение трафика. Работа над поведенческими факторами, 
+                        внедрение новых функциональных модулей.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-item__year">2022</div>
+                    <div class="timeline-item__title">158 000 визитов (+4%)</div>
+                    <div class="timeline-item__desc">
+                        Стабилизация позиций в сложный период. Удержание аудитории, 
+                        работа над конверсией.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-item__year">2023</div>
+                    <div class="timeline-item__title">349 000 визитов (+120%)</div>
+                    <div class="timeline-item__desc">
+                        Прорыв! Масштабное SEO-продвижение, новые посадочные страницы, 
+                        рост по высокочастотным запросам.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-item__year">2024</div>
+                    <div class="timeline-item__title">403 000 визитов (+16%)</div>
+                    <div class="timeline-item__desc">
+                        Закрепление результатов. Сайт стабильно в топе по основным запросам, 
+                        работа над удержанием позиций.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="case-section case-section--alt">
+        <div class="container">
+            <h2 class="case-section__title">Дизайн</h2>
+            <p class="case-section__text">
+                Примеры страниц и интерфейсных решений.
+            </p>
+            
+            <div class="gallery">
+                <a href="img/vinyl-home.png" target="_blank" class="gallery__item">
+                    <img src="img/vinyl-home.png" alt="Главная страница Vinyl TM" loading="lazy">
+                </a>
+                <a href="img/vinyl-service.png" target="_blank" class="gallery__item">
+                    <img src="img/vinyl-service.png" alt="Страница услуги" loading="lazy">
+                </a>
+                <a href="img/vinyl-works.png" target="_blank" class="gallery__item">
+                    <img src="img/vinyl-works.png" alt="Портфолио работ" loading="lazy">
+                </a>
+                <a href="img/vinyl-mobile.png" target="_blank" class="gallery__item gallery__item--mobile">
+                    <img src="img/vinyl-mobile.png" alt="Мобильная версия" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="case-cta">
+        <div class="container">
+            <h2 class="case-cta__title">Нужен похожий результат?</h2>
+            <p class="case-cta__desc">
+                Обсудим ваш проект и найдём точки роста
+            </p>
+            <a href="/#contact" class="btn">
+                Обсудить проект
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
