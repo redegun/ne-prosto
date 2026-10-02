@@ -34,3 +34,14 @@
 .st-case__cta>a:hover{background:var(--st-accent);color:white}
 @media(max-width:700px){.stankin-page .process{padding:32px 20px}.stankin-page .process-title__subtext{font-size:18px}.st-case{font-size:18px}.st-case__intro p{font-size:20px}.st-case__section{margin-top:48px}.st-case__pair{grid-template-columns:1fr;gap:28px;margin-top:28px}.st-case__team dl{grid-template-columns:1fr 1fr;gap:28px 20px}.st-case__team dt{font-size:18px}.st-case__team dd{font-size:15px}.st-case__cta p{font-size:24px}.st-case__cta>a{width:100%;text-align:center;box-sizing:border-box}}
 @media(max-width:380px){.st-case__team dl{grid-template-columns:1fr}}
+
+/* More finished photographs and four source videos. */
+.st-case .st-case__gallery-title{font-family:Museo,ProximaNova,sans-serif;font-size:26px;line-height:1.25;margin:48px 0 24px}
+.st-case__gallery-title + .st-case__pair{margin-top:0}
+.st-case__videos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 28px}
+.st-case__video-item{margin:0;min-width:0}
+.st-case__video-item figcaption{margin-top:16px;font-size:15px;line-height:1.5;color:var(--st-muted)}
+.st-case__video-item h3{margin:0 0 8px;font-family:Museo,ProximaNova,sans-serif;font-size:23px;line-height:1.25;color:var(--st-ink)}
+.st-case__video-item p{margin:0 0 8px}
+.st-case__pair + .st-case__figure{margin-top:32px}
+@media(max-width:700px){.st-case__videos{grid-template-columns:1fr;gap:32px}.st-case .st-case__gallery-title{font-size:23px;margin-top:36px}.st-case__video-item h3{font-size:21px}}

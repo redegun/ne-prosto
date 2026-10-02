@@ -1,0 +1,165 @@
+{
+  "url": "https://ne-prosto.ru/portfolio/poezd-stankin",
+  "status": 200,
+  "figures": 19,
+  "photos_with_credit": 14,
+  "videos": 4,
+  "h1": 1,
+  "autoplay": false,
+  "noindex": false,
+  "checks": [
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-01.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 529192
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/render-exterior-4-7.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 457676
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/render-exterior-1-1.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 448339
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/render-interior-1-10.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 269618
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/render-interior-2-10.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 275231
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/render-interior-5-10.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 274567
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-25.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 692091
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-00.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 394745
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-31.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 697021
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-12.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 580764
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-08.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 505740
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-24.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 466559
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-09.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 562510
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-11.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 413737
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-13.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 382444
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-14.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 449134
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-10.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 241631
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-17.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 272907
+    },
+    {
+      "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-16.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "size": 392628
+    },
+    {
+      "url": "https://kinescope.io/embed/tYdhKqasNmRALiEBGoeZgQ",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "size": 10612
+    },
+    {
+      "url": "https://kinescope.io/embed/aqdsChSRhQKaPwgg538mzn",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "size": 10899
+    },
+    {
+      "url": "https://kinescope.io/embed/ttZqnb4GCE9EmCxnSRy5qm",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "size": 11857
+    },
+    {
+      "url": "https://kinescope.io/embed/5f2TMeiAJYJcpzNLyUjxFq",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "size": 10610
+    }
+  ],
+  "browser": {
+    "desktop": {
+      "video_columns": 2,
+      "posters_loaded": true,
+      "overflow": false
+    },
+    "mobile": {
+      "viewport_width": 390,
+      "document_width": 375,
+      "video_width": 335,
+      "video_columns": 1,
+      "overflow": false,
+      "gallery_and_video_screenshots_reviewed": true
+    }
+  }
+}
