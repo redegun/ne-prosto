@@ -1,0 +1,23 @@
+{
+  "source": "https://disk.yandex.ru/d/0Nc9Z8zvb7svDQ",
+  "missing_references": 24,
+  "missing_unique_files": [
+    "1_Вагон.jpg",
+    "2_Вагон.jpg",
+    "4_Вагон.jpg",
+    "5_Вагон.jpg",
+    "6_Вагон.jpg",
+    "7_Вагон.jpg",
+    "8_Вагон.jpg",
+    "Вагон_1_конц_6.jpg",
+    "Вагон_3.jpg",
+    "Развертка_2_вагон.jpg",
+    "для_3д_1.jpg"
+  ],
+  "pilot_vagon3_requires": [
+    "Вагон_3.jpg",
+    "Развертка_2_вагон.jpg",
+    "для_3д_1.jpg"
+  ],
+  "status": "User will provide textures"
+}

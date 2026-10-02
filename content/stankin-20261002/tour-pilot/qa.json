@@ -1,0 +1,31 @@
+{
+  "status": "technical draft; publication blocked by missing design textures",
+  "geometry": {
+    "bytes": 9130760,
+    "meshes": 395,
+    "triangles": 148680,
+    "materials": 58,
+    "images": 0
+  },
+  "browser": {
+    "desktop": {
+      "exterior": true,
+      "interior": true,
+      "four_forward_steps_verified_visually": true,
+      "guided_stops": 5,
+      "last_next_disabled": true
+    },
+    "mobile": {
+      "width": 390,
+      "document_width": 375,
+      "gallery_overflow": false,
+      "guided_view_verified": true
+    }
+  },
+  "pending": [
+    "Branded source textures",
+    "Final export optimization",
+    "Final keyboard, error/retry, touch-drag and reduced-motion verification with branded model",
+    "Portfolio integration"
+  ]
+}
