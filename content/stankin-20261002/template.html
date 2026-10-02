@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+[[$head_2019]]
+
+<body class="portfolio-process-page stankin-page">
+
+[[$header_2019]]
+
+<div class="breadcrumbs">
+		<div class="breadcrumbs-wrapper">
+			<div class="breadcrumbs-items">
+[[pdoCrumbs?
+	&fastMode=`1`
+	&outputSeparator=`<span class="breadcrumbs-cursor">&rsaquo;</span>`
+	&tplHome=`@INLINE <a href="/" class="breadcrumbs-item">Непросто</a>`
+	&showHome=`1`
+	&tplWrapper=`@INLINE {$output}`
+	&tplMax=`@INLINE &nbsp;...&nbsp;`
+	&tpl=`@INLINE <a href="{$link}" class="breadcrumbs-item">{$menutitle}</a>`
+	&tplCurrent=`@INLINE <span class="breadcrumbs-item breadcrumbs-item_active">[[+menutitle]]</span>`
+]]
+			</div>
+		</div>
+	</div>
+
+<main class="process">
+		<div class="process-wrapper">
+			<div class="process-title">
+				<h1 class="process-title__text">[[*longtitle:empty=`[[*pagetitle]]`]]</h1>
+				<div class="process-title__subtext">[[*introtext]]</div>
+			</div>
+			[[*content]]
+		</div>
+	</main>
+
+[[$footer_2019]]
+</body>
+</html>
