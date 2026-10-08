@@ -1,0 +1,21 @@
+{
+  "car": 8,
+  "objects": 432,
+  "excluded_helpers": [],
+  "branding": [
+    {
+      "material": "vagon_1.001",
+      "replaced_images": [
+        "8_Вагон.jpg.001"
+      ],
+      "texture": "Внутри_вагон_8.jpg"
+    }
+  ],
+  "disconnected_images_not_required": [
+    {
+      "material": "Color_000.008",
+      "image": "для_3д_1.jpg.014"
+    }
+  ],
+  "bytes": 2784760
+}

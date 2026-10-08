@@ -14,3 +14,5 @@ MODX resource 100, template 15 (копия 11 с семантическим H1 �
 Контент и экспорт CMS хранятся здесь; исходные рабочие документы и access state исключены из git. Доступ к хостингу берётся серверно из clients/antonvetrov/ACCESS.md, секретов в коде нет.
 
 Расширение по просьбе Антона 2 октября: добавлено 10 фотографий результата и 3 видео. Перед изменением сохранены исходный ресурс, HTML, CSS, payload, manifest и README в sources/before-more-media/ на VPS. Содержимое MODX обновлялось с проверкой исходного и итогового SHA-256. QA расширения: more-media-qa.json; временные endpoints перемещены из public_html/_agent_tmp/stankin-more-20261002 в ne-prosto/_agent_archives/stankin-more-20261002, все 4 публичных URL возвращают 404. Для отката расширения использовать резервную копию sources/before-more-media/.
+
+8 октября 2026 опубликована экскурсия по восьми салонам: блок #tour после раздела о 3D-модели, запуск по клику, модели 2.52–2.93 МБ. Подробности и QA — tour-pilot/README.md, tour-pilot/qa-interiors-20261008.json. Backup — sources/before-tour-20261008/.

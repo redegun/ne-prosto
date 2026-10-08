@@ -1,0 +1,25 @@
+{
+  "car": 3,
+  "objects": 395,
+  "excluded_helpers": [],
+  "branding": [
+    {
+      "material": "vagon3",
+      "replaced_images": [
+        "Вагон_3.jpg.001"
+      ],
+      "texture": "Вагон_3_внутри.jpg"
+    }
+  ],
+  "disconnected_images_not_required": [
+    {
+      "material": "Color_000.009",
+      "image": "для_3д_1.jpg.015"
+    },
+    {
+      "material": "Резина_2.086",
+      "image": "Развертка_2_вагон.jpg.013"
+    }
+  ],
+  "bytes": 2932424
+}

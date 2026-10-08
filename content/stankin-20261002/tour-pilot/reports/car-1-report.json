@@ -1,0 +1,23 @@
+{
+  "car": 1,
+  "objects": 432,
+  "excluded_helpers": [
+    "Mesh492.001"
+  ],
+  "branding": [
+    {
+      "material": "vagon_1",
+      "replaced_images": [
+        "1_Вагон.jpg.001"
+      ],
+      "texture": "Вагон_1_внутри.jpg"
+    }
+  ],
+  "disconnected_images_not_required": [
+    {
+      "material": "Color_000.003",
+      "image": "для_3д_1.jpg.003"
+    }
+  ],
+  "bytes": 2886536
+}

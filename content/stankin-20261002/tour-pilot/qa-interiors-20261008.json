@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-08",
+  "status": "published",
+  "case_url": "https://ne-prosto.ru/portfolio/poezd-stankin#tour",
+  "tour_url": "https://ne-prosto.ru/images/portfolio/stankin/tour-20261008/",
+  "checks": {
+    "original_blend_sha256_unchanged": "6a9e54fa27f889e2857b38e8c748fadac25d1ed6f72dd13b8ead931af1bec73f",
+    "source_texture_checksums_stable": true,
+    "all_eight_interiors_visually_inspected": true,
+    "all_eight_compressed_glbs_loaded_from_live_site": true,
+    "one_embedded_brand_atlas_per_glb": true,
+    "draco_required_extension_all_models": true,
+    "head_cars_keep_original_geometry": true,
+    "head_car_cabin_walk_bounds_adjusted": true,
+    "desktop_keyboard_WASD": true,
+    "pointer_drag": true,
+    "screen_step_buttons": true,
+    "guided_five_stops_and_boundaries": true,
+    "previous_and_reset": true,
+    "fullscreen_and_exit_live_iframe": true,
+    "forced_model_404_and_retry_recovery_local": true,
+    "click_to_load_iframe_absent_before_click": true,
+    "mobile_emulated_viewport": {
+      "width": 390,
+      "height": 844,
+      "document_client_width": 375,
+      "document_scroll_width": 375,
+      "live_iframe_width": 335
+    },
+    "javascript_syntax_checks": true,
+    "php_endpoint_linted_in_existing_php74_docker_image": true,
+    "live_case_resource_hash": "f03901e1f6ce997cfbee3aac7f9ab5ab2b59f753dc553cbfda80b66d70e22270",
+    "temporary_endpoint_archived_http_status": 404
+  },
+  "limits": [
+    "Mobile layout and pointer controls were tested in browser emulation, not on physical mobile hardware.",
+    "Reduced-motion path inspected in code; no separate emulation of the OS preference.",
+    "Exterior branding not provided; outside mode hidden in published UI.",
+    "Non-brand materials are simplified for web rendering; printed fine text in 24–25k source atlases downscaled to 4096px."
+  ],
+  "unrelated_console_warning": "Yandex Maps JS API: Invalid API key from site's existing global script; no tour runtime error seen."
+}

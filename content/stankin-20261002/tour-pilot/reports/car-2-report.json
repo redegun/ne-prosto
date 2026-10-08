@@ -1,0 +1,34 @@
+{
+  "car": 2,
+  "objects": 395,
+  "excluded_helpers": [
+    "Plane",
+    "Plane.001",
+    "Plane.002",
+    "Plane.003",
+    "Plane.004",
+    "Plane.005",
+    "Plane.006",
+    "Plane.007"
+  ],
+  "branding": [
+    {
+      "material": "vagon2",
+      "replaced_images": [
+        "2_Вагон.jpg.001"
+      ],
+      "texture": "Вагон_2_внутри.jpg"
+    }
+  ],
+  "disconnected_images_not_required": [
+    {
+      "material": "Color_000.004",
+      "image": "для_3д_1.jpg.004"
+    },
+    {
+      "material": "Резина_2.039",
+      "image": "Развертка_2_вагон.jpg.003"
+    }
+  ],
+  "bytes": 2524660
+}

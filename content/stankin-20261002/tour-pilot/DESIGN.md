@@ -1,9 +1,11 @@
-# STANKIN interactive carriage — technical pilot
-Initial scope: one authentic carriage (collection vagon3), external orbit view, constrained aisle navigation, five guided camera stops. Scene images will be added from the author's source files; this pilot is clearly labeled as a geometry test and is not published in the portfolio.
-Brand: retain the existing case's white surface, black typography and red focus accent; typography and website integration will reuse the live case's font files.
-References: existing /portfolio/poezd-stankin — case typography and attribution; Three.js OrbitControls example — exterior orbit controls; Three.js PointerLockControls documentation — first-person camera direction (no pointer-lock requirement in mobile flow).
-Primary task: explore the designed carriage; primary action: enter the carriage. Secondary actions: exterior, guided stops, full screen, reset.
-Default/hover/focus/pressed/disabled/loading/error/retry/fullscreen and mobile controls are implemented. Empty is not applicable. Reduced motion removes camera transitions.
-Typical failures addressed: missing image sources block final branding; heavy full station excluded; only one carriage loads; textures and camera controls remain independently replaceable; loading is explicit; camera movement is constrained to aisle so visitors cannot exit through walls; reset and exit are always available; touch navigation does not require keyboard.
-Failure handling: failed WebGL/network shows a readable error and retry; original source is untouched; original photographs remain the fallback.
-Current source checks: 392512040-byte Blender 5.0 file, SHA256 6a9e54fa27f889e2857b38e8c748fadac25d1ed6f72dd13b8ead931af1bec73f. 8 carriage collections, 24 missing image references / 11 unique basenames; author promised to provide textures. Temporary local processing explicitly authorized in conversation due to VPS disk pressure. Final artifacts and records stored on VPS.
+# Экскурсия СТАНКИН
+
+Основной сценарий — рассмотреть авторское оформление в восьми салонах. Запуск в кейсе по кнопке поверх рабочего рендера; тяжёлая модель загружается только по выбору посетителя.
+
+Структура: выбор вагона, режимы «Внутри» / «Экскурсия», сброс, полный экран. Свободное перемещение ограничено проходом; головы состава имеют отдельные границы перед кабиной. Пять точек маршрута показывают вход, обе стены, центр и обратную перспективу.
+
+Белый фон, чёрные кнопки активного режима, красный focus-visible. На мобильной ширине режимы и вспомогательные кнопки расположены в два ряда, экранные стрелки не перекрывают маршрут. Встраивание адаптировано через ?embed=1; вводная часть скрыта, iframe имеет собственную фиксированную высоту.
+
+Состояния: loading/progress, ready, pressed, disabled, hover/focus, load error/retry, fullscreen. Reduced motion отключает переходы камеры. Ошибка не убирает фотографии исходного кейса. Есть отдельная ссылка на просмотр при отключённом JavaScript интеграции.
+
+Опубликована только готовая часть с внутренним оформлением. Внешний осмотр скрыт до получения наружных атласов. В продуктовых текстах нет служебных сообщений о Blender, конвертации, отсутствующих текстурах или тестовом прототипе.

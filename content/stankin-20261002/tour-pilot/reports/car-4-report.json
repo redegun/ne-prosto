@@ -1,0 +1,25 @@
+{
+  "car": 4,
+  "objects": 395,
+  "excluded_helpers": [],
+  "branding": [
+    {
+      "material": "vagon_5(Таня).009",
+      "replaced_images": [
+        "4_Вагон.jpg"
+      ],
+      "texture": "Вагон_4_внутри.jpg"
+    }
+  ],
+  "disconnected_images_not_required": [
+    {
+      "material": "Резина_2.094",
+      "image": "Развертка_2_вагон.jpg.014"
+    },
+    {
+      "material": "Color_000.010",
+      "image": "для_3д_1.jpg.016"
+    }
+  ],
+  "bytes": 2669928
+}

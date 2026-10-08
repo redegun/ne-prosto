@@ -1,0 +1,176 @@
+{
+  "source": "https://disk.yandex.ru/d/bdfd9VL_DXS0ZQ",
+  "models": [
+    {
+      "file": "car-1.glb",
+      "bytes": 2886536,
+      "sha256": "4689cb536d09402c8cfb4f4e3d1acdab874d0e194836a6eabed0f4e73e47ac06",
+      "meshes": 432,
+      "materials": 60,
+      "embedded_images": 1,
+      "textured_materials": [
+        "vagon_1"
+      ],
+      "triangles": 150764,
+      "compression": "Draco",
+      "texture_max_side": 4096
+    },
+    {
+      "file": "car-2.glb",
+      "bytes": 2524660,
+      "sha256": "46f187a8e42dcea11965ce2b07f8c55c565c37b3014bebeaa5c7daa31711fc77",
+      "meshes": 395,
+      "materials": 58,
+      "embedded_images": 1,
+      "textured_materials": [
+        "vagon2"
+      ],
+      "triangles": 148680,
+      "compression": "Draco",
+      "texture_max_side": 4096
+    },
+    {
+      "file": "car-3.glb",
+      "bytes": 2932424,
+      "sha256": "cb438ebbd53847e7fcc01f1b57aaade125f11a9278ab37c72e3656878481ae0a",
+      "meshes": 395,
+      "materials": 58,
+      "embedded_images": 1,
+      "textured_materials": [
+        "vagon3"
+      ],
+      "triangles": 148680,
+      "compression": "Draco",
+      "texture_max_side": 4096
+    },
+    {
+      "file": "car-4.glb",
+      "bytes": 2669928,
+      "sha256": "9e4cd39796e6d5842721b8f6f7baac1df7941acbcc469e4c23f4a235d76001f5",
+      "meshes": 395,
+      "materials": 58,
+      "embedded_images": 1,
+      "textured_materials": [
+        "vagon_5(Таня).009"
+      ],
+      "triangles": 148680,
+      "compression": "Draco",
+      "texture_max_side": 4096
+    },
+    {
+      "file": "car-5.glb",
+      "bytes": 2747072,
+      "sha256": "33600844bf70ce0b4d63910a635e076608381b2060964d2bbfe52eb5dbf70bc6",
+      "meshes": 395,
+      "materials": 58,
+      "embedded_images": 1,
+      "textured_materials": [
+        "vagon_5(Таня).010"
+      ],
+      "triangles": 148680,
+      "compression": "Draco",
+      "texture_max_side": 4096
+    },
+    {
+      "file": "car-6.glb",
+      "bytes": 2674508,
+      "sha256": "589c23c29c2292a9a10d21e35b394ecfefb4992b5b6b18af273d027e037938e6",
+      "meshes": 395,
+      "materials": 58,
+      "embedded_images": 1,
+      "textured_materials": [
+        "vagon_5(Таня).011"
+      ],
+      "triangles": 148680,
+      "compression": "Draco",
+      "texture_max_side": 4096
+    },
+    {
+      "file": "car-7.glb",
+      "bytes": 2582212,
+      "sha256": "cf614bc9bee42d8db7d69ff957fac27087adbccfcf4869c08d3110743fddb407",
+      "meshes": 395,
+      "materials": 58,
+      "embedded_images": 1,
+      "textured_materials": [
+        "vagon_5(Таня).012"
+      ],
+      "triangles": 148680,
+      "compression": "Draco",
+      "texture_max_side": 4096
+    },
+    {
+      "file": "car-8.glb",
+      "bytes": 2784760,
+      "sha256": "f6c59052e46c3c185d44cca54192786b2f1b1fca2f36c174648915ee651a01a3",
+      "meshes": 432,
+      "materials": 60,
+      "embedded_images": 1,
+      "textured_materials": [
+        "vagon_1.001"
+      ],
+      "triangles": 150764,
+      "compression": "Draco",
+      "texture_max_side": 4096
+    }
+  ],
+  "source_images": [
+    {
+      "name": "Вагон_1_внутри.jpg",
+      "bytes": 15147701,
+      "sha256": "eacb25d5be8516ed1fc51dce0f662662fd50993042addaa1144615338b6dc154",
+      "width": 24000,
+      "height": 24000
+    },
+    {
+      "name": "Вагон_2_внутри.jpg",
+      "bytes": 11290745,
+      "sha256": "ec58f02f2a3b653cbf3da9cfdcd6dc05ac95b6fab0b87a9db89382420aa17abe",
+      "width": 24000,
+      "height": 24000
+    },
+    {
+      "name": "Вагон_3_внутри.jpg",
+      "bytes": 17536980,
+      "sha256": "d2328506460aa1748f1c061c5c343cbb7d21ad5b89cb0150f5cec2e841cf17bd",
+      "width": 25000,
+      "height": 25000
+    },
+    {
+      "name": "Вагон_4_внутри.jpg",
+      "bytes": 12792859,
+      "sha256": "2eeaa50a8d20d2ab012f9d9f17e1afffb4dfb22f3bc8b7ba8fcefb0ec2952ad2",
+      "width": 24000,
+      "height": 24000
+    },
+    {
+      "name": "Вагон_6_внутри_Света.jpg",
+      "bytes": 25189205,
+      "sha256": "46f5b0a6e4ba32db307ad8b6f2ed50d1c5a8e0e094d32c4a20446175260ccfb7",
+      "width": 24000,
+      "height": 24000
+    },
+    {
+      "name": "Вагон_7_внутри.jpg",
+      "bytes": 25699558,
+      "sha256": "8f72a758c325ee1627fe3c9f374a1a40d75a2c279d95048ba15c9e293f53689d",
+      "width": 24000,
+      "height": 24000
+    },
+    {
+      "name": "Внутри_5_2.jpg",
+      "bytes": 30728208,
+      "sha256": "2a15ad1ab49163c8b864fbf012f04a965c0e4bfd2c539f28f23f40dbc7316c5d",
+      "width": 24000,
+      "height": 24000
+    },
+    {
+      "name": "Внутри_вагон_8.jpg",
+      "bytes": 26227854,
+      "sha256": "895081ce3945f803aacd15e0f9dda784b7bbe762c9a540cc9e77ceedb92a04eb",
+      "width": 24000,
+      "height": 24000
+    }
+  ],
+  "initial_transfer": "One selected GLB plus viewer and decoder; other carriages load only on selection"
+}
