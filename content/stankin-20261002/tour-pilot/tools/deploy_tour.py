@@ -25,10 +25,10 @@ def call(action,**values):
  st=json.loads(STATE.read_text())
  req=urllib.request.Request(WEB+st['path'],data=json.dumps({'action':action,**values}).encode(),headers={'Content-Type':'application/json','X-Stankin-Key':st['token']})
  with urllib.request.urlopen(req,timeout=45) as r:return json.load(r)
-cmd=sys.argv[1]
+cmd=sys.argv[1] if __name__=='__main__' and len(sys.argv)>1 else None
 if cmd=='assets':
- files=[ROOT/n for n in ['index.html','tour.css','tour.js','loader.js','embed.js','embed.css']]
- files+=list((ROOT/'models').glob('*.glb'))+list((ROOT/'vendor').rglob('*'))
+ files=[ROOT/n for n in ['index.html','tour.css','tour.js','loader.js','embed.js','embed.css','appearance.js','detail-textures.js','effects.js']]
+ files+=list((ROOT/'models').glob('*.glb'))+list((ROOT/'vendor').rglob('*'))+list((ROOT/'details').rglob('*'))
  with connect() as ftp:
   for src in files:
    if src.is_file():store(ftp,src,REMOTE+'/'+ASSETS+'/'+src.relative_to(ROOT).as_posix())

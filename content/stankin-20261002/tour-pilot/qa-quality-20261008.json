@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-08",
+  "version": "quality3",
+  "local": {
+    "all_eight_carriages_loaded": true,
+    "default_car": "1",
+    "desktop_visual": [
+      "neutral floor",
+      "dark navy seats",
+      "metal reflections",
+      "transparent windows with visible hall",
+      "no ceiling hotspots",
+      "readable close text",
+      "zoom",
+      "fullscreen"
+    ],
+    "mobile": {
+      "viewport": "390x844",
+      "embedded": true,
+      "controls_fit": true,
+      "mobile_detail_requests_200": true,
+      "guided_step_2": true,
+      "physical_device": false
+    },
+    "console_errors": [],
+    "console_warnings": [
+      "PMREM shader precision warning X4122 from graphics driver; no compile failure"
+    ]
+  },
+  "assets": {
+    "tile_counts": [
+      32,
+      32,
+      40,
+      32,
+      38,
+      32,
+      32,
+      34
+    ],
+    "total_detail_bytes": 196096633,
+    "all_manifest_files_exist": true
+  },
+  "live": {
+    "url": "https://ne-prosto.ru/portfolio/poezd-stankin#tour",
+    "launch_from_case": true,
+    "default_car": "1",
+    "zoom_button_present": true,
+    "new_lighting_visible": true,
+    "http_sha256_matches": [
+      "index.html",
+      "loader.js",
+      "tour.js",
+      "appearance.js",
+      "detail-textures.js",
+      "effects.js",
+      "vendor/environments/RoomEnvironment.js",
+      "vendor/postprocessing/GTAOPass.js",
+      "details/car-1/manifest.json",
+      "details/car-1/4-4.jpg",
+      "details/car-8/manifest.json"
+    ],
+    "ftp_all_571_files_size_verified": true,
+    "cms_content_modified": false,
+    "new_admin_endpoint": false
+  }
+}
