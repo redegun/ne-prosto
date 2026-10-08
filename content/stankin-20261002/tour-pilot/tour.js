@@ -1,6 +1,6 @@
-import { createEffects } from './effects.js?v=quality3';
-import { DetailTextures } from './detail-textures.js?v=quality3';
-import { improveMaterials, setupLighting } from './appearance.js?v=quality3';
+import { createEffects } from './effects.js?v=contrast1';
+import { DetailTextures } from './detail-textures.js?v=contrast1';
+import { improveMaterials, setupLighting } from './appearance.js?v=contrast1';
 import * as THREE from 'three';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -62,7 +62,7 @@ async function load(){
  finally{loadingCar=false;$('car').disabled=false;}
 }
 
-try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;host.appendChild(renderer.domElement);controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.08;controls.minDistance=3;controls.maxDistance=30;controls.maxPolarAngle=Math.PI*.49;setupLighting(scene,renderer);const floor=new THREE.Mesh(new THREE.PlaneGeometry(150,150),new THREE.MeshStandardMaterial({color:0xdfe4e7,roughness:1}));floor.rotation.x=-Math.PI/2;floor.position.y=-.12;scene.add(floor);effects=createEffects(renderer,scene,camera);resize();new ResizeObserver(resize).observe(host);renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();error('Графический режим остановлен. Нажмите «Попробовать ещё раз», чтобы перезагрузить просмотр.');});requestAnimationFrame(frame);load();}catch(e){error('Ваш браузер не смог запустить 3D. Откройте кейс с фотографиями или попробуйте другой браузер.');}
+try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;host.appendChild(renderer.domElement);controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.08;controls.minDistance=3;controls.maxDistance=30;controls.maxPolarAngle=Math.PI*.49;setupLighting(scene,renderer);const floor=new THREE.Mesh(new THREE.PlaneGeometry(150,150),new THREE.MeshStandardMaterial({color:0x10151b,roughness:1,envMapIntensity:.05}));floor.rotation.x=-Math.PI/2;floor.position.y=-.12;scene.add(floor);effects=createEffects(renderer,scene,camera);resize();new ResizeObserver(resize).observe(host);renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();error('Графический режим остановлен. Нажмите «Попробовать ещё раз», чтобы перезагрузить просмотр.');});requestAnimationFrame(frame);load();}catch(e){error('Ваш браузер не смог запустить 3D. Откройте кейс с фотографиями или попробуйте другой браузер.');}
 ['outside','inside','guided'].forEach(m=>$(m).onclick=()=>setMode(m));$('reset').onclick=()=>setMode(mode);$('prev').onclick=()=>{if(step>0){step--;showStep();}};$('next').onclick=()=>{if(step<stops.length-1){step++;showStep();}};$('retry').onclick=()=>renderer&&!renderer.getContext().isContextLost()?load():location.reload();
 $('car').onchange=()=>{currentCar=Number($('car').value);mode='inside';load();};
 $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if(viewer.requestFullscreen)await viewer.requestFullscreen();else{$('hint').textContent='Полноэкранный режим недоступен в этом браузере.';}}catch{$('hint').textContent='Полноэкранный режим недоступен в этом браузере.';}};

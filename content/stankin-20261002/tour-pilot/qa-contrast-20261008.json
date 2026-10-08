@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-08",
+  "version": "contrast1",
+  "visual_checks": [
+    "car 1 dark graphics",
+    "car 8 white panels retain details",
+    "ceiling lamps visibly on",
+    "graphite floor",
+    "dark station, columns and local light through glass",
+    "mobile embedded 390x844"
+  ],
+  "source_lamps_audited_in_all_eight_glb": true,
+  "console_errors": [],
+  "physical_mobile_device": false,
+  "live_sha256": {
+    "appearance.js": "93907224d4f9c2d2c213d1f381411dfe458c693acf89e544c5dd2b5e7623d269",
+    "tour.js": "c634fd66bc0aefb5c17e491f5e07d01ed4e828da866cb5626320eef84ae142b0",
+    "loader.js": "99ee27164290b283211a239eea1aa5dc8a4b9ae1441ca1f56dd5c3fe8ed43e36",
+    "index.html": "f2d9f08a69a1de9fefa1fe64b76095ecbf297bd236ab5f687b381da795db4331"
+  },
+  "backup": "../sources/before-contrast-20261008/",
+  "cms_changed": false
+}
