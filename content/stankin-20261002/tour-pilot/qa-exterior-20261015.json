@@ -9,6 +9,13 @@
     "inside_return": "car 3 existing contrast lighting preserved",
     "guided_next": "car 1 point 1 to 2 passed",
     "mobile": "390x844 controls and whole carriage fit; reload starts inside car 1",
-    "notes": "Viewport emulation, not a physical phone. Live verification recorded after CI."
+    "notes": "Viewport emulation, not a physical phone. Checkout action upgraded to pinned v6/node24 after successful publication to remove the v4/node20 deprecation warning; deployment assets unchanged.",
+    "source_blend_sha256": "6a9e54fa27f889e2857b38e8c748fadac25d1ed6f72dd13b8ead931af1bec73f",
+    "mobile_tiles": "1600px variants served successfully, checked server log",
+    "fullscreen": "outside whole carriage fits, exit restored UI",
+    "runtime_errors": "none after current release; historical contrast1 server-off error excluded",
+    "live_case": "iframe starts inside car 1; Outside, zoom and return Inside passed",
+    "ci": "https://github.com/redegun/ne-prosto/actions/runs/38737555748 success; 514 files published with size checks; entry files and sample exterior assets verified by HTTP SHA",
+    "ephemeral_runner": "completed one job; credentials removed; runner unregistered; no service created"
   }
 }
