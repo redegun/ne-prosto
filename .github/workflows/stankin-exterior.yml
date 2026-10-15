@@ -1,0 +1,29 @@
+name: Publish STANKIN exterior
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ne-prosto-stankin-deploy
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, neprosto-once]
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Validate release
+        working-directory: content/stankin-20261002/tour-pilot
+        run: |
+          node --check tour.js
+          node --check appearance.js
+          node --check detail-textures.js
+          python3 tools/deploy_exterior_ci.py --check
+      - name: Publish scoped assets and verify HTTP hashes
+        working-directory: content/stankin-20261002/tour-pilot
+        env:
+          NE_PROSTO_FTP: ${{ secrets.NE_PROSTO_FTP }}
+        run: python3 -u tools/deploy_exterior_ci.py

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-15",
+  "release": "exterior2",
+  "local_url": "http://127.0.0.1:8766/",
+  "checks": {
+    "original_geometry_and_uv": "all 8 Blender collections audited; unchanged GLB",
+    "all_8_car_loads": "passed local browser",
+    "exterior_visual": "car 1 both sides and head; cars 3 and 8",
+    "inside_return": "car 3 existing contrast lighting preserved",
+    "guided_next": "car 1 point 1 to 2 passed",
+    "mobile": "390x844 controls and whole carriage fit; reload starts inside car 1",
+    "notes": "Viewport emulation, not a physical phone. Live verification recorded after CI."
+  }
+}

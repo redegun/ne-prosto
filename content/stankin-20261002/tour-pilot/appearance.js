@@ -43,7 +43,17 @@ export function setupLighting(scene,renderer){
   }
  }
  scene.add(hall);
- return {environment,lights,hall};
+ const outsideLights=new THREE.Group();
+ for(const [position,intensity] of [[[5,9,7],2.8],[[-6,5,-6],1.3]]){
+  const lamp=new THREE.DirectionalLight(0xffffff,intensity);lamp.position.set(...position);outsideLights.add(lamp);
+ }
+ outsideLights.visible=false;scene.add(outsideLights);
+ return {environment,lights,hall,setMode(mode){
+  const outside=mode==='outside';hall.visible=!outside;outsideLights.visible=outside;
+  lights.forEach(light=>light.visible=!outside);scene.environmentIntensity=outside?.72:.46;
+  scene.background.set(outside?'#171e28':'#080d13');
+ }};
+
 }
 export function improveMaterials(root){
  const replacements=new Map();

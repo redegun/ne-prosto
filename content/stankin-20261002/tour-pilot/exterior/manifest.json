@@ -1,0 +1,62 @@
+{
+  "source": "https://disk.yandex.ru/d/T2sgQL_nKO3pYA",
+  "uv_split": 0.425,
+  "cars": [
+    {
+      "car": 1,
+      "source": "1_Вагон.jpg",
+      "source_sha256": "3dd620af78b0ce0bbd204d45999b0790f95abc5bad293d8ce37d81a3819282d4",
+      "base_bytes": 1360066,
+      "detail_tiles": 30
+    },
+    {
+      "car": 2,
+      "source": "2_Вагон.jpg",
+      "source_sha256": "a2a4c2ec687d643426d5d75b1d1559ff506305896b1eaa102087a4115cfc79a3",
+      "base_bytes": 1489854,
+      "detail_tiles": 32
+    },
+    {
+      "car": 3,
+      "source": "3_Вагон.jpg",
+      "source_sha256": "239796bef3378c9c136965833294b791facb4fee8e970d05f472cda23ffe1999",
+      "base_bytes": 1599702,
+      "detail_tiles": 32
+    },
+    {
+      "car": 4,
+      "source": "4_Вагон.jpg",
+      "source_sha256": "98ca5f916ca7ce9137412cd28b500bb97369501af21649738f87f9d606badf72",
+      "base_bytes": 1466975,
+      "detail_tiles": 32
+    },
+    {
+      "car": 5,
+      "source": "5_Вагон.jpg",
+      "source_sha256": "d5388ab01dd6b525566c2e4a7ffaa974c7b03ba7808767f98b3e96548140c389",
+      "base_bytes": 1296896,
+      "detail_tiles": 32
+    },
+    {
+      "car": 6,
+      "source": "6_Вагон.jpg",
+      "source_sha256": "e5ef634fdbe8d5e3091f4c88de311de11140b5c13da7c3a9493e3130a83e048a",
+      "base_bytes": 1346608,
+      "detail_tiles": 32
+    },
+    {
+      "car": 7,
+      "source": "7_Вагон.jpg",
+      "source_sha256": "078e351630b8d92a4cd4b698a437e14fe772f3414565ca54d109956171dce35a",
+      "base_bytes": 1414105,
+      "detail_tiles": 32
+    },
+    {
+      "car": 8,
+      "source": "8_Вагон.jpg",
+      "source_sha256": "ffe2d617d3427c5ff6f57df0b0407c659540fe7aad66acd618a97107360fc4d9",
+      "base_bytes": 1292694,
+      "detail_tiles": 24
+    }
+  ]
+}
