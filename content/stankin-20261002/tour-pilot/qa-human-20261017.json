@@ -1,0 +1,13 @@
+{
+  "version": "20261017-human1",
+  "checks": {
+    "camera": "PASS: eye 1.65 m above platform; selected car 1 complete in desktop fullscreen, selected car 2 complete at 390x844; resize recalculates framing; OrbitControls near-horizontal limit preserves eye height.",
+    "hover": "PASS: focus on car 1 draws a thin visible silhouette; original body colour/brightness unchanged. Old emissive mutation removed.",
+    "mobile": "PASS: single top mode row and collapsed tools; native car selector and arrows at bottom; next selects car 2; tools opens and zoom action collapses it.",
+    "interior": "PASS: native selector opens interior car 2; previous interior appearance and movement controls render correctly.",
+    "keyboard": "Native select excluded from viewer movement key handler; existing WASD and arrow navigation retained.",
+    "console": "No new errors. Initial cloneUniforms render-target warning fixed by assigning mask texture after ShaderPass construction.",
+    "static": "node --check: tour/effects/station/train-overview; git diff --check; release 7 hashes pass"
+  },
+  "deployment": "pending"
+}

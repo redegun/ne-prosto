@@ -6,7 +6,7 @@ export function createStation(length=180){
  const mat=(color,roughness=.8,metalness=0)=>new THREE.MeshStandardMaterial({color,roughness,metalness,envMapIntensity:.15});
  const concrete=mat('#343b40'),stone=mat('#494d4c'),wall=mat('#303a41'),trim=mat('#788084',.42,.6),black=mat('#10161b'),edge=mat('#b8a16c');
  const lamp=new THREE.MeshStandardMaterial({color:'#d3d6ca',emissive:'#fff1ce',emissiveIntensity:1.6,roughness:.5});
- const geo=new THREE.BoxGeometry(1,1,1);
+ const geo=new THREE.BoxGeometry(1,1,1),foreground=[];
  function box(size,pos,material){const o=new THREE.Mesh(geo,material);o.scale.set(...size);o.position.set(...pos);station.add(o);return o;}
  // Track bed, sleepers and rails; the rail top is at the original wheel contact height.
  box([4.1,.35,length],[0,-.3,0],black);
@@ -23,9 +23,9 @@ export function createStation(length=180){
  for(const y of [2.05,2.9,3.75])box([.025,.018,length],[-3.12,y,0],black);
  // Slim columns, ceiling beams and light strips outline the hall without a blocking roof.
  for(let z=-length/2+5;z<length/2;z+=13){
-  box([.48,4.9,.58],[8.4,3.55,z],stone);
-  box([.7,.18,.8],[8.4,1.23,z],trim);
-  box([.72,.18,.8],[8.4,5.9,z],trim);
+  foreground.push(box([.48,4.9,.58],[8.4,3.55,z],stone));
+  foreground.push(box([.7,.18,.8],[8.4,1.23,z],trim));
+  foreground.push(box([.72,.18,.8],[8.4,5.9,z],trim));
   box([11.5,.22,.22],[2.7,6.03,z],concrete);
   box([2.3,.1,.32],[5.3,5.84,z],lamp);
   box([.06,.45,2.4],[-3.1,4.65,z],lamp);
@@ -53,7 +53,14 @@ export function createStation(length=180){
  }
  const roof=box([13.2,.18,length],[3.2,6.25,0],concrete);
  roof.material=new THREE.MeshStandardMaterial({color:'#343b40',roughness:.9,side:THREE.DoubleSide,envMapIntensity:.15});
- station.setCloseView=enabled=>{roof.visible=enabled;};
+ // The inspection camera may back up to fit a full carriage on portrait screens.
+ // Continue the platform under it and omit foreground columns in this cutaway view.
+ const platformExtension=box([65,.09,length],[42.25,1.05,0],stone);
+ platformExtension.visible=false;
+ station.setCloseView=enabled=>{
+  roof.visible=enabled;platformExtension.visible=enabled;foreground.forEach(o=>{o.visible=!enabled;});
+  roof.scale.x=enabled?80:13.2;roof.position.x=enabled?36.7:3.2;
+ };
  roof.visible=false;
  return station;
 }

@@ -1,0 +1,49 @@
+{
+  "version": "20261017-human1",
+  "files": [
+    {
+      "path": "effects.js",
+      "bytes": 3628,
+      "sha256": "5e6bd5726fb2ec461c93171c8293f9e160eb7711d7187d2b26ea7fd267d42ae1"
+    },
+    {
+      "path": "train-overview.js",
+      "bytes": 2491,
+      "sha256": "93ad3730c8a9588e475ac058923eabf35df9c0e2cbc0b1cb42459c55c09dc686"
+    },
+    {
+      "path": "station.js",
+      "bytes": 4006,
+      "sha256": "6f2fd3048a179d71a38b8d72e7f026e23d4845fc4cfef0d5c8d568467bb7def2"
+    },
+    {
+      "path": "tour.css",
+      "bytes": 9488,
+      "sha256": "f329030f40c66d22809df0c060d71b31c0392549eddf673a342214b4c5563f3b"
+    },
+    {
+      "path": "tour.js",
+      "bytes": 25237,
+      "sha256": "2b69c401727e656c88576345ebb3790befed6135dc4a66271c68d873bd09aa9a"
+    },
+    {
+      "path": "loader.js",
+      "bytes": 584,
+      "sha256": "e85ba8616fde369ceedab43b786844a7c26a6c7bf1b997a6c60c81385495d3d3"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6752,
+      "sha256": "ef718267ed72d1930c88e5c2fcfc0930cb5739ef8fdc30dcfa9096f30ba0c0bf"
+    }
+  ],
+  "expected_live": {
+    "effects.js": "39b37595aefa6a616b7973c683d867de6d95fde006b411cfbe574f9af3202e7e",
+    "train-overview.js": "d8a07f0a3815ac28c40c7ae585b638e3fc806606b74d35ceb256aedca449c876",
+    "station.js": "c2eb662a2774929cf946d55a2c2a23ff7a3c3a2fef4fa0042eb5f370a5ee4d00",
+    "tour.css": "36ece2b28c6ff0493c383007ce944f1ecb8b2d3d9bfccaa654ca1b53e5dd2745",
+    "tour.js": "eac26a0496be7bc6148afd4ffc3c8fd7bfdfbf5da0817be7553e8a3ebec150fa",
+    "loader.js": "cf81d60b2c3e5ce0355984fa4a8861aeca508d1fa5a662e98e9d64b55313b789",
+    "index.html": "4d293bcc02c7472db9cd7392020d58c1f137bf9a576294197d0110b36151b3e1"
+  }
+}

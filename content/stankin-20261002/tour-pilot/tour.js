@@ -1,8 +1,8 @@
-import { createEffects } from './effects.js?v=station2';
+import { createEffects } from './effects.js?v=human1';
 import { DetailTextures } from './detail-textures.js?v=close1';
 import { improveMaterials, setupLighting } from './appearance.js?v=station2';
-import { createStation } from './station.js?v=close1';
-import { TrainOverview, disposeTree } from './train-overview.js?v=close1';
+import { createStation } from './station.js?v=human1';
+import { TrainOverview, disposeTree } from './train-overview.js?v=human1';
 import * as THREE from 'three';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -15,10 +15,10 @@ const draco=new DRACOLoader().setDecoderPath('./vendor/draco/').setWorkerLimit(2
 const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(58,1,.025,650);
 let renderer,effects,lighting,controls,station,floor,model,overview,details;
 let mode='outside',currentCar=1,busy=false,ready=false,step=0,yaw=0,pitch=0,drag=null,pickStart=null;
-let outsideWide=false,outsideDetailCar=0,detailCandidate=0,detailCandidateAt=0,detailRetryAt=0;
+let outsideFramed=false,outsideWide=false,outsideDetailCar=0,detailCandidate=0,detailCandidateAt=0,detailRetryAt=0;
 let transition=null,lastTime=0,zoomed=false,lastRequest={mode:'outside',car:1};
 const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();
-const outsideHint='A/D или стрелки по краям — вдоль поезда. W/S и колесо — ближе/дальше. Нажмите на вагон, чтобы войти.';
+const outsideHint=()=>matchMedia('(max-width:720px)').matches?'Нажмите на вагон, чтобы войти':'A/D — вдоль поезда · W/S — ближе/дальше · Нажмите на вагон, чтобы войти';
 const stops=[
  {title:'Вход в салон',p:[0,2.12,6],t:[0,2.12,0]},
  {title:'Оформление левой стены',p:[0,2.12,3.5],t:[-1.25,2.1,1]},
@@ -40,7 +40,7 @@ function setZoom(enabled){
 }
 function fitOutside(animate=false){
  if(!overview)return;
- outsideWide=true;setZoom(false);station.setCloseView(false);releaseOutsideDetails();updateControls();
+ outsideFramed=false;outsideWide=true;setZoom(false);station.setCloseView(false);releaseOutsideDetails();updateControls();
  // A broadside view gives each carriage comparable size and a useful click target.
  const box=new THREE.Box3().setFromObject(overview.root),target=box.getCenter(new THREE.Vector3());
  target.y=2.4;
@@ -67,12 +67,25 @@ function releaseOutsideDetails(){
 }
 function showOutsideCar(car=currentCar,animate=true){
  if(!overview)return;
- outsideWide=false;currentCar=THREE.MathUtils.clamp(car,1,8);setZoom(false);station.setCloseView(true);
- const z=overview.centers[currentCar-1],target=new THREE.Vector3(0,2.15,z);
+ outsideFramed=true;outsideWide=false;currentCar=THREE.MathUtils.clamp(car,1,8);setZoom(false);
+ const box=new THREE.Box3().setFromObject(overview.cars[currentCar-1]);
+ const target=new THREE.Vector3(0,2.05,overview.centers[currentCar-1]);
+ // Platform top is 1.095 m; eye level is 1.65 m above it.
+ const eye=1.095+1.65,slant=camera.aspect<.9?.45:.12;
+ const probe=new THREE.PerspectiveCamera(camera.fov,camera.aspect,.15,650);
+ const corners=[];
+ for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])corners.push(new THREE.Vector3(x,y,z));
+ let near=4,far=120;
+ for(let i=0;i<18;i++){
+  const distance=(near+far)/2;
+  probe.position.set(distance,eye,target.z+distance*slant);probe.lookAt(target);probe.updateMatrixWorld();
+  const fits=corners.every(corner=>{const point=corner.clone().project(probe);return Math.abs(point.x)<.93&&Math.abs(point.y)<.74&&point.z<1;});
+  if(fits)far=distance;else near=distance;
+ }
  controls.maxDistance=450;camera.far=650;camera.updateProjectionMatrix();
  if(scene.fog){scene.fog.near=180;scene.fog.far=550;}
- view(target.clone().add(new THREE.Vector3(8.1,1.15,1.15)).toArray(),target.toArray(),animate);
- updateControls();$('hint').textContent=outsideHint;
+ view([far,eye,target.z+far*slant],target.toArray(),animate);
+ updateControls();$('hint').textContent=outsideHint();
 }
 function nearestOutsideCar(){
  if(!overview)return currentCar;
@@ -81,7 +94,7 @@ function nearestOutsideCar(){
  return nearest;
 }
 function updateOutsideDetails(now){
- if(!ready||mode!=='outside'||outsideWide||camera.position.distanceTo(controls.target)>30){releaseOutsideDetails();return;}
+ if(!ready||mode!=='outside'||outsideWide||camera.position.distanceTo(controls.target)>60){releaseOutsideDetails();return;}
  const car=nearestOutsideCar();
  if(car!==currentCar){currentCar=car;updateControls();}
  if(car!==detailCandidate){detailCandidate=car;detailCandidateAt=now;return;}
@@ -92,7 +105,7 @@ function updateOutsideDetails(now){
 }
 function focusOrbit(){
  if(!ready||mode!=='outside'||!overview)return;
- transition=null;
+ outsideFramed=false;transition=null;
  camera.updateMatrixWorld();overview.root.updateMatrixWorld(true);
  ray.setFromCamera(new THREE.Vector2(0,0),camera);
  const hit=ray.intersectObjects(overview.cars,true)[0];
@@ -121,13 +134,14 @@ function moveOutside(forward,right,dt){
 function resize(){
  if(!renderer)return;const box=host.getBoundingClientRect();if(!box.width||!box.height)return;
  renderer.setSize(box.width,box.height,false);camera.aspect=box.width/box.height;camera.updateProjectionMatrix();
- effects?.resize(box.width,box.height);if(ready&&mode==='outside'&&outsideWide)fitOutside(false);
+ effects?.resize(box.width,box.height);if(ready&&mode==='outside'){if(outsideWide)fitOutside(false);else if(outsideFramed&&!zoomed)showOutsideCar(currentCar,false);}
 }
 function updateControls(){
+ viewer.dataset.mode=mode;
  document.querySelectorAll('.modes button').forEach(b=>{b.disabled=!ready;b.setAttribute('aria-pressed',String(b.id===mode));});
  $('reset').disabled=!ready;$('zoom').disabled=!ready;$('car').disabled=busy;
  $('walk').hidden=!ready||mode!=='inside';$('route').hidden=!ready||mode!=='guided';
- $('train-cars').hidden=!ready||mode!=='outside';
+ $('train-cars').hidden=!ready||mode!=='outside';$('mobile-car-wrap').hidden=!ready||mode!=='outside';$('car-mobile').value=String(currentCar);
  $('all-train').hidden=mode!=='outside';$('all-train').disabled=!ready;
  $('all-train').setAttribute('aria-pressed',String(outsideWide));
  $('outside-nav').hidden=!ready||mode!=='outside';
@@ -144,18 +158,18 @@ function setupMode(next){
  controls.enabled=ready&&next==='outside';controls.enablePan=next==='outside';
  controls.minDistance=next==='outside'?3.5:3;
  controls.minPolarAngle=next==='outside'?Math.PI*.14:0;
- controls.maxPolarAngle=Math.PI*.48;
+ controls.maxPolarAngle=next==='outside'?Math.PI*.4995:Math.PI*.48;
  host.style.cursor=next==='outside'?'grab':'grab';
 }
 function showStep(animate=true){const s=stops[step];view(s.p,s.t,animate);$('step').textContent=String(step+1).padStart(2,'0')+' / 05';$('stop-title').textContent=s.title;$('prev').disabled=step===0;$('next').disabled=step===4;}
 function applyMode(next,animate=true){
  setupMode(next);setZoom(false);updateControls();
- if(next==='outside'){showOutsideCar(currentCar,animate);$('hint').textContent=outsideHint;}
+ if(next==='outside'){showOutsideCar(currentCar,animate);$('hint').textContent=outsideHint();}
  if(next==='inside'){view([0,2.12,6],[0,2.12,0],animate);$('hint').textContent='Потяните, чтобы осмотреться. Для движения — стрелки на экране или клавиши WASD.';}
  if(next==='guided'){step=0;showStep(animate);$('hint').textContent='Переключайте точки стрелками. Потяните, чтобы осмотреться на остановке.';}
 }
 function clearAssets(){
- details?.dispose();details=null;outsideDetailCar=0;detailCandidate=0;detailRetryAt=0;
+ effects?.setHighlight(null);details?.dispose();details=null;outsideDetailCar=0;detailCandidate=0;detailRetryAt=0;
  if(model){scene.remove(model);disposeTree(model);model=null;}
  if(overview){scene.remove(overview.root);overview.dispose();overview=null;}
 }
@@ -214,7 +228,7 @@ function frame(now){
   const r=Number(keys.has('KeyD')||keys.has('ArrowRight')||held.has('right'))-Number(keys.has('KeyA')||keys.has('ArrowLeft')||held.has('left'));
   if(f||r)move(f,r,dt);
  }
- if(ready&&mode==='outside')station.setCloseView(!outsideWide&&camera.position.y<5.9&&camera.position.x>-3&&camera.position.x<9.75);
+ if(ready&&mode==='outside')station.setCloseView(!outsideWide&&camera.position.y<5.9&&camera.position.x>-3&&camera.position.x<74);
  if(ready&&!transition){if(mode==='outside')updateOutsideDetails(now);details?.update(now,camera);}
  effects.render();requestAnimationFrame(frame);
 }
@@ -244,8 +258,8 @@ function pickedCar(e){
 }
 function highlightCar(car){
  if(mode!=='outside')return;
- overview?.highlight(car);host.style.cursor=car?'pointer':'grab';
- $('hint').textContent=car?'Вагон '+String(car).padStart(2,'0')+' · Нажмите, чтобы войти':outsideHint;
+ overview?.highlight(car);effects?.setHighlight(overview?.cars[car-1]);host.style.cursor=car?'pointer':'grab';
+ $('hint').textContent=car?'Вагон '+String(car).padStart(2,'0')+' · Нажмите, чтобы войти':outsideHint();
 }
 try{
  renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
@@ -267,6 +281,12 @@ $('reset').onclick=()=>applyMode(mode);$('zoom').onclick=()=>{if(ready){if(mode=
 $('prev').onclick=()=>{if(step>0){step--;showStep();}};$('next').onclick=()=>{if(step<4){step++;showStep();}};
 $('retry').onclick=()=>renderer&&!renderer.getContext().isContextLost()?open(lastRequest.mode,lastRequest.car):location.reload();
 $('car').onchange=()=>open('inside',Number($('car').value));
+$('car-mobile').onchange=()=>open('inside',Number($('car-mobile').value));
+function closeTools(){viewer.classList.remove('tools-open');$('tools-toggle').setAttribute('aria-expanded','false');}
+$('tools-toggle').onclick=()=>{const expanded=viewer.classList.toggle('tools-open');$('tools-toggle').setAttribute('aria-expanded',String(expanded));};
+document.querySelector('.view-actions').addEventListener('click',e=>{if(e.target.closest('button'))closeTools();});
+viewer.addEventListener('keydown',e=>{if(e.key==='Escape'&&viewer.classList.contains('tools-open')){e.stopPropagation();closeTools();$('tools-toggle').focus();}});
+host.addEventListener('pointerdown',()=>{closeTools();highlightCar(0);});
 document.querySelectorAll('[data-car]').forEach(b=>{
  const car=Number(b.dataset.car);b.onclick=()=>open('inside',car);
  b.addEventListener('pointerenter',()=>highlightCar(car));b.addEventListener('pointerleave',()=>highlightCar(0));
@@ -306,7 +326,7 @@ host.addEventListener('pointerup',e=>{
 host.addEventListener('pointerleave',()=>{if(mode==='outside'&&ready)highlightCar(0);});
 ['pointercancel','lostpointercapture'].forEach(n=>host.addEventListener(n,e=>{pointers.delete(e.pointerId);pickStart=null;drag=null;}));
 viewer.addEventListener('keydown',e=>{
- if(!ready||transition)return;
+ if(!ready||transition||e.target.matches('select,input,textarea'))return;
  if(mode==='outside'&&e.code==='Enter'&&(e.target===host||e.target===renderer.domElement)){e.preventDefault();open('inside',currentCar);return;}
  if((mode==='inside'||mode==='outside')&&['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)){
   e.preventDefault();if(!e.repeat){if(mode==='outside')focusOrbit();const f=['KeyW','ArrowUp'].includes(e.code)?1:['KeyS','ArrowDown'].includes(e.code)?-1:0,r=['KeyD','ArrowRight'].includes(e.code)?1:['KeyA','ArrowLeft'].includes(e.code)?-1:0;if(mode==='outside')moveOutside(f,r,.08);else move(f,r,.08);}keys.add(e.code);

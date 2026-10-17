@@ -6,3 +6,50 @@
 .train-cars{position:absolute;z-index:2;bottom:76px;left:50%;transform:translateX(-50%);display:flex;gap:5px;padding:7px;background:rgba(11,18,24,.88)}.train-cars button{min-width:44px;padding:10px 12px;border-color:#9aa0a2}.train-cars button[aria-pressed="true"]{border-color:#fff;background:#303b43}.train-cars button:hover,.train-cars button:focus-visible{background:#e4d7b5;color:#141c23}.viewer{background:#080d13}@media(max-width:720px){.train-cars{width:calc(100% - 24px);gap:3px;padding:5px;bottom:90px}.train-cars button{flex:1;min-width:0;padding:10px 0;font-size:12px}}
 
 .outside-nav{position:absolute;inset:50% 12px auto;display:flex;justify-content:space-between;pointer-events:none;z-index:2;transform:translateY(-50%)}.outside-nav button{pointer-events:auto;min-width:44px;font-size:22px;padding:8px 12px;background:rgba(255,255,255,.94)}.outside-nav button:disabled{pointer-events:none}.view-actions{gap:5px}@media(max-width:720px){.view-actions button{padding:8px 7px;font-size:10px}.outside-nav{left:8px;right:8px}.outside-nav button{min-width:40px;padding:8px}.hint{max-width:calc(100% - 24px)}}
+
+/* Quiet controls leave the model as the main content. Hit areas remain 44 px. */
+.viewer button,.mobile-car-wrap select{background:rgba(18,25,30,.66);color:#e0e5e7;border:1px solid rgba(226,234,239,.18);border-radius:5px;box-shadow:none}
+.viewer button:hover{background:rgba(39,49,55,.9);color:#fff}
+.viewer button[aria-pressed="true"]{background:rgba(49,60,66,.88);border-color:rgba(226,234,239,.52);color:#fff}
+.viewer button:disabled{opacity:.28}
+.modes,.view-actions{top:14px}
+.modes{left:14px;gap:3px}
+.modes button{padding:10px 12px;font-size:12px}
+.modes button+button{border-left:1px solid rgba(226,234,239,.18)}
+.view-actions{right:14px;gap:4px}
+.view-actions button{font-size:11px;padding:9px 11px}
+.train-cars{bottom:38px;background:transparent;padding:0;gap:3px}
+.train-cars button{min-width:42px;padding:10px 8px;font-size:11px}
+.train-cars button:hover,.train-cars button:focus-visible{background:rgba(49,60,66,.88);color:#fff}
+.hint{bottom:8px;background:none;color:#ccd2d4;text-shadow:0 1px 3px #000;padding:4px 8px;font-size:11px}
+.outside-nav button{background:rgba(18,25,30,.5);font-size:20px}
+.route{background:rgba(18,25,30,.8);color:#e0e5e7;border-color:rgba(226,234,239,.18);border-radius:5px}
+.route span{color:#a6afb4}
+.tools-toggle,.mobile-car-wrap{display:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.embedded .car-picker{display:none}
+.embedded .viewer{height:100dvh}
+@media(max-width:720px){
+ .modes{left:10px;right:auto;top:10px;gap:2px}
+ .modes button{flex:none;font-size:11px;padding:9px 10px}
+ .tools-toggle{display:block;position:absolute;z-index:3;right:10px;top:10px;width:44px;min-height:44px;padding:0;font-size:24px;line-height:1}
+ .view-actions{display:none;top:62px;left:auto;right:10px;width:162px;padding:5px;gap:3px;flex-direction:column;background:rgba(16,23,28,.96);border:1px solid rgba(226,234,239,.18);border-radius:7px;z-index:3}
+ .tools-open .view-actions{display:flex}
+ .view-actions button{font-size:12px;text-align:left;padding:10px 12px;background:transparent;border-color:transparent}
+ .train-cars{display:none}
+ .mobile-car-wrap{display:block;position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:2}
+ .mobile-car-wrap select{height:44px;width:146px;font:inherit;font-size:12px;padding:10px;cursor:pointer}
+ .mobile-car-wrap select option{background:#1e292f;color:#fff}
+ .outside-nav{left:calc(50% - 126px);right:calc(50% - 126px);top:auto;bottom:12px;transform:none;height:44px}
+ .outside-nav button{width:44px;min-width:44px;padding:8px}
+ .hint{bottom:62px;font-size:10px;max-width:calc(100% - 24px);width:auto;padding:4px;line-height:1.3}
+ .walk{bottom:18px;left:10px;gap:2px}
+ .walk>div{gap:2px}
+ .walk button{background:rgba(18,25,30,.5)}
+ .route{bottom:16px}
+}
+
+@media(max-width:720px){
+ .viewer[data-mode="inside"] .hint{bottom:18px;left:auto;right:10px;transform:none;width:calc(100% - 172px);max-width:220px;text-align:left}
+ .viewer[data-mode="guided"] .hint{bottom:94px}
+}

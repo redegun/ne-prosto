@@ -9,7 +9,7 @@ export function disposeTree(root){
  geometry.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>{t.dispose();t.source?.data?.close?.();});
 }
 export class TrainOverview{
- constructor(renderer,draco){this.renderer=renderer;this.draco=draco;this.root=new THREE.Group();this.cars=[];this.dead=false;this.highlighted=0;this.originals=new Map();}
+ constructor(renderer,draco){this.renderer=renderer;this.draco=draco;this.root=new THREE.Group();this.cars=[];this.dead=false;this.highlighted=0;}
  async load(progress){
   let next=1,done=0;
   const worker=async()=>{
@@ -25,7 +25,6 @@ export class TrainOverview{
      o.userData.car=number;
      if(o.isMesh)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>{
       if(m.map)m.map.anisotropy=Math.min(8,this.renderer.capabilities.getMaxAnisotropy());
-      if(m.emissive&&!this.originals.has(m))this.originals.set(m,{color:m.emissive.clone(),intensity:m.emissiveIntensity});
      });
     });
     this.cars[number-1]=car;this.root.add(car);progress(++done);
@@ -43,17 +42,6 @@ export class TrainOverview{
   // Existing coupler tips now meet; original meshes and body proportions are unchanged.
 
  }
- highlight(number){
-  if(this.highlighted===number)return;
-  for(const n of [this.highlighted,number]){
-   const car=this.cars[n-1];if(!car)continue;
-   car.traverse(o=>{if(o.isMesh)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>{
-    const original=this.originals.get(m);if(!original)return;
-    if(n===number){m.emissive.set('#9bafa9');m.emissiveIntensity=.16;}
-    else{m.emissive.copy(original.color);m.emissiveIntensity=original.intensity;}
-   });});
-  }
-  this.highlighted=number;
- }
- dispose(){if(this.dead)return;this.dead=true;disposeTree(this.root);this.root.clear();this.cars=[];this.originals.clear();}
+ highlight(number){this.highlighted=number;}
+ dispose(){if(this.dead)return;this.dead=true;disposeTree(this.root);this.root.clear();this.cars=[];}
 }
