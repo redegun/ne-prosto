@@ -26,8 +26,9 @@ jobs:
           node --check train-overview.js
           node --check effects.js
           python3 tools/deploy_wide_ci.py --check
+          python3 tools/deploy_wide_case_ci.py --check
       - name: Publish scoped assets and verify HTTP hashes
         working-directory: content/stankin-20261002/tour-pilot
         env:
           NE_PROSTO_FTP: ${{ secrets.NE_PROSTO_FTP }}
-        run: python3 -u tools/deploy_wide_ci.py
+        run: python3 -u tools/deploy_wide_case_ci.py
