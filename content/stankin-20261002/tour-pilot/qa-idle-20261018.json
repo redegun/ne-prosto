@@ -4,9 +4,25 @@
     "desktop": "PASS: 2.4s idle opacity0; mouse interaction restores control visibility; keyboard Tab shows controls and focus keeps them visible beyond timeout.",
     "mobile": "PASS at browser viewport390x844: outer iframe250px, inner248px, no in-view numbered buttons/select; interior589px; return exterior248px.",
     "modes": "PASS: interior loads, all overlay chrome fades leaving unobstructed salon; outside action returns to selected car.",
-    "menu": "PASS: tools-open holds control visibility beyond delay, closing restores idle behavior.",
+    "menu": "PASS: tools-open holds control visibility beyond delay, closing restores idle behavior. Confirmed outside250px frame: menu bottom166 fits and stays visible beyond delay.",
     "touch": "Code path: initial touch/pen while ui-idle suppresses carriage activation for that gesture, without preventing OrbitControls. Physical-touch device not tested.",
-    "static": "node --check and exact release hashes checked; diff --check clean"
+    "static": "node --check and exact release hashes checked; diff --check clean",
+    "live": "PASS: normal case reload uses iframe ?embed=1&v=20261018-idle1; width1265,height384; idle class true, controls opacity0, numbered controls count0. Screenshot saved; no tour console errors, only pre-existing global Yandex Maps API warning."
   },
-  "deployment": "pending"
+  "deployment": {
+    "commit": "f10b042dbd4773a3a06ac323ef5f7eb0bf797da5",
+    "run": "https://github.com/redegun/ne-prosto/actions/runs/39073581909",
+    "conclusion": "success",
+    "httpShaMatches": 7,
+    "resource": 100,
+    "resourceContentSha256": "a1e1510d2625112cee3fe4400f66baa8973bcb1f6680ad77c95f6b203712cc18",
+    "backup": "/opt/office1080/ne-prosto-backups/39073581909",
+    "bridge": "Archived outside webroot; public404 confirmed",
+    "runner": "Exited0 and removed registration, runner count0",
+    "worklogId": 6995,
+    "screenshots": [
+      "reports/idle-live-20261018.jpg",
+      "reports/idle-mobile-20261018.jpg"
+    ]
+  }
 }
