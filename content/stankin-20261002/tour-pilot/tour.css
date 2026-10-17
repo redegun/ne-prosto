@@ -56,11 +56,11 @@
 
 html:not(.embedded) main{max-width:none}
 html:not(.embedded) .viewer:not(:fullscreen){width:calc(100% + 64px);margin-left:-32px}
-.viewer[data-mode="outside"]:not(:fullscreen){height:clamp(220px,25vw,480px);min-height:0}
+.viewer[data-mode="outside"]:not(:fullscreen){height:clamp(250px,30vw,540px);min-height:0}
 .embedded .viewer[data-mode]:not(:fullscreen){height:100dvh;width:100%;margin-left:0}
 @media(max-width:720px){
  html:not(.embedded) .viewer:not(:fullscreen){width:calc(100% + 32px);margin-left:-16px}
- .viewer[data-mode="outside"]:not(:fullscreen){height:220px}
+ .viewer[data-mode="outside"]:not(:fullscreen){height:250px}
  .embedded .viewer[data-mode]:not(:fullscreen){height:100dvh;width:100%;margin-left:0}
 }
 
@@ -68,3 +68,10 @@ html:not(.embedded) .viewer:not(:fullscreen){width:calc(100% + 64px);margin-left
  .view-actions{width:calc(100% - 20px);grid-template-columns:repeat(2,minmax(0,1fr))}
  .tools-open .view-actions{display:grid}
 }
+
+/* Idle chrome is visually absent but still reachable with Tab/screen readers. */
+[data-tour-controls]{opacity:1;transition:opacity .22s ease}
+.viewer.ui-idle [data-tour-controls]{opacity:0}
+.viewer.ui-idle [data-tour-controls],.viewer.ui-idle [data-tour-controls] *{pointer-events:none!important}
+@media(max-width:720px){.outside-nav{left:12px;right:12px}.hint{bottom:14px;max-width:calc(100% - 140px)}}
+@media(prefers-reduced-motion:reduce){[data-tour-controls]{transition:none}}

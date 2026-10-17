@@ -1,0 +1,12 @@
+{
+  "version": "20261018-idle1",
+  "checks": {
+    "desktop": "PASS: 2.4s idle opacity0; mouse interaction restores control visibility; keyboard Tab shows controls and focus keeps them visible beyond timeout.",
+    "mobile": "PASS at browser viewport390x844: outer iframe250px, inner248px, no in-view numbered buttons/select; interior589px; return exterior248px.",
+    "modes": "PASS: interior loads, all overlay chrome fades leaving unobstructed salon; outside action returns to selected car.",
+    "menu": "PASS: tools-open holds control visibility beyond delay, closing restores idle behavior.",
+    "touch": "Code path: initial touch/pen while ui-idle suppresses carriage activation for that gesture, without preventing OrbitControls. Physical-touch device not tested.",
+    "static": "node --check and exact release hashes checked; diff --check clean"
+  },
+  "deployment": "pending"
+}

@@ -1,0 +1,48 @@
+{
+  "version": "20261018-idle1",
+  "files": [
+    {
+      "path": "tour.js",
+      "bytes": 26205,
+      "sha256": "657335846fb48edc05409428c3fc052c1696a169e22c89d149c55d69c0410e1c"
+    },
+    {
+      "path": "tour.css",
+      "bytes": 10697,
+      "sha256": "d50fe428bab6e3fd91a668183c530c652018aad217b64a238980f4870e4cf911"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5400,
+      "sha256": "e4fe7abd40fa2d78c918227b6f1e2e738e6860c508c43a0c9b6c096c7c63ce09"
+    },
+    {
+      "path": "loader.js",
+      "bytes": 583,
+      "sha256": "a286946ff2b3cf1b70f6ba611eeea84297cb785cae1e211b4d11505bc4067eea"
+    },
+    {
+      "path": "embed.css",
+      "bytes": 1195,
+      "sha256": "04479b2829bfd74f00a609b1f890865955f7a10c8452cd78219bd5b2374d6f33"
+    },
+    {
+      "path": "embed.js",
+      "bytes": 1147,
+      "sha256": "8029fd026678417b2de25eda76d9a7ee2003c50cfe0074a48367d0d720392a20"
+    },
+    {
+      "path": "ui-controls.js",
+      "bytes": 2108,
+      "sha256": "17c695cff37d946eefda99b47b672b8aa50b42a64114428d17ca111f53298ed7"
+    }
+  ],
+  "expected_live": {
+    "tour.js": "70bd8595cdefeed001bc827d6de2dc46078a5d4a16979bd1dbfd0ee6b71241b8",
+    "tour.css": "00aeb5e813c652f098ff959b1b7b4c4a64944867273a8b9f01a8ba3ebcfb377b",
+    "index.html": "caba41c095762bee478b570d9b9336cc16390590030e80d83d75383b80b90372",
+    "loader.js": "f40c83e2e0a146711abdf9eb3bf18bd9cfb95c36431783fe663568141ca0b240",
+    "embed.css": "645dacb46f88ab8c7117ffd8069ce45c4b5c9aaaf382b2b48d88360e9b024fad",
+    "embed.js": "a2ea2e3d9cd5585a33b6deb0fb6e09ac4918a1c51b3fc2e3bb9f204a070b33a8"
+  }
+}

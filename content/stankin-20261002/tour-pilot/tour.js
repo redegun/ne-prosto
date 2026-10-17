@@ -1,3 +1,4 @@
+import { setupAutoHideControls } from './ui-controls.js?v=idle1';
 import { createEffects } from './effects.js?v=wide1';
 import { DetailTextures } from './detail-textures.js?v=wide1';
 import { improveMaterials, setupLighting } from './appearance.js?v=station2';
@@ -24,6 +25,7 @@ if(new URLSearchParams(location.search).has('profile'))setInterval(()=>{
 let mode='outside',currentCar=1,busy=false,ready=false,step=0,yaw=0,pitch=0,drag=null,pickStart=null;
 let outsideFramed=false,outsideWide=false,outsideDetailCar=0,detailCandidate=0,detailCandidateAt=0,detailRetryAt=0;
 let transition=null,lastTime=0,zoomed=false,lastRequest={mode:'outside',car:1};
+const autoControls=setupAutoHideControls(viewer);
 const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();
 const outsideHint=()=>matchMedia('(max-width:720px)').matches?'Нажмите на вагон, чтобы войти':'A/D — вдоль поезда · W/S — ближе/дальше · Нажмите на вагон, чтобы войти';
 const stops=[
@@ -151,13 +153,11 @@ function updateControls(){
  document.querySelectorAll('.modes button').forEach(b=>{b.disabled=!ready;b.setAttribute('aria-pressed',String(b.id===mode));});
  $('reset').disabled=!ready;$('zoom').disabled=!ready;$('car').disabled=busy;
  $('walk').hidden=!ready||mode!=='inside';$('route').hidden=!ready||mode!=='guided';
- $('train-cars').hidden=!ready||mode!=='outside';$('mobile-car-wrap').hidden=!ready||mode!=='outside';$('car-mobile').value=String(currentCar);
  $('all-train').hidden=mode!=='outside';$('all-train').disabled=!ready;
  $('all-train').setAttribute('aria-pressed',String(outsideWide));
  $('outside-nav').hidden=!ready||mode!=='outside';
  $('car-back').disabled=currentCar===1;$('car-forward').disabled=currentCar===8;
  $('car').value=String(currentCar);
- document.querySelectorAll('[data-car]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.car)===currentCar)));
  $('car-status').textContent=mode==='outside'?(outsideWide?'Весь поезд · 8 вагонов':'Вагон '+String(currentCar).padStart(2,'0')+' · снаружи'):'Вагон '+String(currentCar).padStart(2,'0')+' · внутри';
  $('car-label').textContent=mode==='outside'?'Войти в вагон':'Выберите вагон';
 }
@@ -297,17 +297,11 @@ $('reset').onclick=()=>applyMode(mode);$('zoom').onclick=()=>{if(ready){if(mode=
 $('prev').onclick=()=>{if(step>0){step--;showStep();}};$('next').onclick=()=>{if(step<4){step++;showStep();}};
 $('retry').onclick=()=>renderer&&!renderer.getContext().isContextLost()?open(lastRequest.mode,lastRequest.car):location.reload();
 $('car').onchange=()=>open('inside',Number($('car').value));
-$('car-mobile').onchange=()=>open('inside',Number($('car-mobile').value));
 function closeTools(){viewer.classList.remove('tools-open');$('tools-toggle').setAttribute('aria-expanded','false');}
 $('tools-toggle').onclick=()=>{const expanded=viewer.classList.toggle('tools-open');$('tools-toggle').setAttribute('aria-expanded',String(expanded));};
 document.querySelector('.view-actions').addEventListener('click',e=>{if(e.target.closest('button'))closeTools();});
 viewer.addEventListener('keydown',e=>{if(e.key==='Escape'&&viewer.classList.contains('tools-open')){e.stopPropagation();closeTools();$('tools-toggle').focus();}});
 host.addEventListener('pointerdown',()=>{closeTools();highlightCar(0);});
-document.querySelectorAll('[data-car]').forEach(b=>{
- const car=Number(b.dataset.car);b.onclick=()=>open('inside',car);
- b.addEventListener('pointerenter',()=>highlightCar(car));b.addEventListener('pointerleave',()=>highlightCar(0));
- b.addEventListener('focus',()=>highlightCar(car));b.addEventListener('blur',()=>highlightCar(0));
-});
 $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if(viewer.requestFullscreen)await viewer.requestFullscreen();else $('hint').textContent='Полноэкранный режим недоступен в этом браузере.';}catch{$('hint').textContent='Полноэкранный режим недоступен в этом браузере.';}};
 document.addEventListener('fullscreenchange',()=>{$('fullscreen').textContent=document.fullscreenElement?'Свернуть':'На весь экран';$('fullscreen').setAttribute('aria-label',document.fullscreenElement?'Выйти из полноэкранного режима':'Открыть на весь экран');resize();});
 host.addEventListener('pointerdown',()=>{
@@ -318,7 +312,7 @@ host.addEventListener('pointerdown',e=>{
  if(!ready||transition)return;
  pointers.add(e.pointerId);
  if(mode==='outside'){
-  pickStart=pointers.size===1&&e.button===0?{id:e.pointerId,x:e.clientX,y:e.clientY}:null;
+  pickStart=pointers.size===1&&e.button===0&&!autoControls.wokeOnTouch(e)?{id:e.pointerId,x:e.clientX,y:e.clientY}:null;
   return;
  }
  host.focus({preventScroll:true});host.setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY};
