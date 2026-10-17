@@ -1,25 +1,25 @@
 {
-  "version": "20261017-camera1",
+  "version": "20261017-camera2",
   "files": [
     {
       "path": "tour.js",
-      "bytes": 20267,
-      "sha256": "35b6ff772cb8e81fb9c095356b21680b882deca50633f86df9e1662b8109bb7d"
+      "bytes": 20527,
+      "sha256": "d2e3b0feb69df91b182c2825e61358beb7e4a11c2da88a48596a03b3907c1ac4"
     },
     {
       "path": "loader.js",
       "bytes": 585,
-      "sha256": "58500e48d644f21ea2ecef37c7696075bd6b837554f9116dd9ea07494d1544b6"
+      "sha256": "3b444f7240023077436426380ad7935005a0a7ad574c9e9e1f28c8f589f9c2d4"
     },
     {
       "path": "index.html",
       "bytes": 5576,
-      "sha256": "5bae38cdb05a1c5b724599988ced6b419220809a37663762da5c014dff704f44"
+      "sha256": "ef2668072cfafdf9e6bd601136d2e2f88513a039efd2a6d9995399fe4182f32d"
     }
   ],
   "expected_live": {
-    "tour.js": "1f84963bed0730bfd946512163aeb5e43ebd2d13c2007adee326246986328c0d",
-    "loader.js": "d59a3d4922bae55dd637fdf89f64632688f1cf57d581445a4477e91c5af36ee3",
-    "index.html": "b3b8adb9a240297229e04573a67dc3b765a34137448547f1d5bdf40523deac18"
+    "tour.js": "35b6ff772cb8e81fb9c095356b21680b882deca50633f86df9e1662b8109bb7d",
+    "loader.js": "58500e48d644f21ea2ecef37c7696075bd6b837554f9116dd9ea07494d1544b6",
+    "index.html": "5bae38cdb05a1c5b724599988ced6b419220809a37663762da5c014dff704f44"
   }
 }

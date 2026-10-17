@@ -54,6 +54,9 @@ function fitOutside(animate=false){
   distance=Math.max(distance,depth+Math.abs(p.dot(right))/(tanH*.94),depth+Math.abs(p.dot(up))/(tanV*.55));
  }
  controls.maxDistance=Math.max(450,distance*1.5);
+ camera.far=Math.max(650,distance*2);camera.updateProjectionMatrix();
+ // A portrait overview needs more distance; do not fade its graphics into the background.
+ if(scene.fog){scene.fog.near=Math.max(180,distance*1.25);scene.fog.far=Math.max(550,distance*3);}
  view(target.clone().addScaledVector(direction,distance*1.02).toArray(),target.toArray(),animate);
 }
 function focusOrbit(){
