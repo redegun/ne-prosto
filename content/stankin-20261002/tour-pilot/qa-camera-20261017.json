@@ -1,0 +1,13 @@
+{
+  "version": "20261017-camera1",
+  "checks": {
+    "desktop": "Broadside fit: car bodies occupy nearly full viewer width, no distant vanishing-point composition",
+    "keyboard": "W repeatedly approaches; D translates along train; keyboard focus preserved in viewer",
+    "orbit": "Drag after W/D rotates around visible car area and does not enter interior",
+    "picking": "Click after moving and rotating entered car 5",
+    "focus": "Central-ray anchor retains viewing direction; zoom-to-cursor enabled",
+    "mobile": "pending",
+    "live": "pending"
+  },
+  "deployment": "pending"
+}

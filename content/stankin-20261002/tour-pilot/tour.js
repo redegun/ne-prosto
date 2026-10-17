@@ -17,6 +17,7 @@ let renderer,effects,lighting,controls,station,floor,model,overview,details;
 let mode='outside',currentCar=1,busy=false,ready=false,step=0,yaw=0,pitch=0,drag=null,pickStart=null;
 let transition=null,lastTime=0,zoomed=false,lastRequest={mode:'outside',car:1};
 const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();
+const outsideHint='Нажмите на вагон, чтобы войти. Потяните — вращение; колесо и W/S — ближе/дальше; A/D — вдоль поезда.';
 const stops=[
  {title:'Вход в салон',p:[0,2.12,6],t:[0,2.12,0]},
  {title:'Оформление левой стены',p:[0,2.12,3.5],t:[-1.25,2.1,1]},
@@ -33,39 +34,54 @@ function view(p,t,animate=true){
  else{transition=null;camera.position.copy(v(p));controls.target.copy(target);camera.lookAt(target);syncAngles();}
 }
 function setZoom(enabled){
- zoomed=enabled;camera.fov=enabled?28:58;camera.updateProjectionMatrix();
+ zoomed=enabled;camera.fov=enabled?28:mode==='outside'?45:58;camera.updateProjectionMatrix();
  $('zoom').textContent=enabled?'Общий вид':'Ближе';$('zoom').setAttribute('aria-pressed',String(enabled));
 }
 function fitOutside(animate=false){
  if(!overview)return;
+ // A broadside view gives each carriage comparable size and a useful click target.
  const box=new THREE.Box3().setFromObject(overview.root),target=box.getCenter(new THREE.Vector3());
- const direction=new THREE.Vector3(.38,.25,1).normalize();
+ target.y=2.4;
+ const direction=new THREE.Vector3(1,.34,.35).normalize();
  const right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),direction).normalize();
  const up=new THREE.Vector3().crossVectors(direction,right).normalize();
  const tanV=Math.tan(THREE.MathUtils.degToRad(camera.fov*.5)),tanH=tanV*camera.aspect;
- // Fit projected bounds, including the platform, rather than the world-space midpoint.
- // Perspective makes the front carriage larger; solving the target offset avoids empty space.
- box.min.x=-3.5;box.max.x=9.8;box.min.y=-.4;box.max.y=6.2;box.min.z=-92;box.max.z=92;
- const points=[];
+ // Keep the orbit anchor on the train; fit distance rather than moving the anchor far away.
+ box.min.x=-3.5;box.max.x=9.8;box.min.y=-.4;box.max.y=6.2;
+ let distance=8;
  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){
-  const p=new THREE.Vector3(x,y,z).sub(target);points.push([p.dot(right),p.dot(up),p.dot(direction)]);
+  const p=new THREE.Vector3(x,y,z).sub(target),depth=p.dot(direction);
+  distance=Math.max(distance,depth+Math.abs(p.dot(right))/(tanH*.94),depth+Math.abs(p.dot(up))/(tanV*.55));
  }
- function interval(distance){
-  let x0=-Infinity,x1=Infinity,y0=-Infinity,y1=Infinity;
-  for(const [x,y,z] of points){
-   const depth=distance-z;if(depth<=0)return null;
-   x0=Math.max(x0,x-depth*tanH*.88);x1=Math.min(x1,x+depth*tanH*.88);
-   y0=Math.max(y0,y-depth*tanV*.72);y1=Math.min(y1,y+depth*tanV*.48);
-  }
-  y0=Math.max(y0,(9-target.y-distance*direction.y)/up.y);
-  return x0<=x1&&y0<=y1?[(x0+x1)/2,(y0+y1)/2]:null;
+ controls.maxDistance=Math.max(450,distance*1.5);
+ view(target.clone().addScaledVector(direction,distance*1.02).toArray(),target.toArray(),animate);
+}
+function focusOrbit(){
+ if(!ready||mode!=='outside'||!overview)return;
+ transition=null;
+ camera.updateMatrixWorld();overview.root.updateMatrixWorld(true);
+ ray.setFromCamera(new THREE.Vector2(0,0),camera);
+ const hit=ray.intersectObjects(overview.cars,true)[0];
+ let target=hit?.point;
+ if(!target){
+  // The vertical train plane also handles a centre ray passing through a window/gap.
+  const point=ray.ray.intersectPlane(new THREE.Plane(new THREE.Vector3(1,0,0),0),new THREE.Vector3());
+  if(point&&Math.abs(point.z)<86&&point.y>.2&&point.y<7)target=point;
  }
- let lo=Math.max(...points.map(p=>p[2]))+3,hi=900;
- for(let i=0;i<36;i++){const mid=(lo+hi)/2;if(interval(mid))hi=mid;else lo=mid;}
- const distance=hi*1.015,[shiftX,shiftY]=interval(distance);
- target.addScaledVector(right,shiftX).addScaledVector(up,shiftY);
- controls.maxDistance=Math.max(300,distance*1.8);
- view(target.clone().addScaledVector(direction,distance).toArray(),target.toArray(),animate);
+ // Both points lie on the existing view ray, so the view does not jump.
+ if(target&&target.distanceTo(camera.position)>=controls.minDistance)controls.target.copy(target);
+}
+function moveOutside(forward,right,dt){
+ const offset=camera.position.clone().sub(controls.target),distance=offset.length();
+ if(forward)camera.position.copy(controls.target).addScaledVector(offset,THREE.MathUtils.clamp(distance*Math.exp(-forward*dt*1.15),controls.minDistance,controls.maxDistance)/distance);
+ if(right){
+  // Translate along the train in the screen's left/right direction.
+  const screenRight=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,0);
+  const dz=(screenRight.z<0?-1:1)*right*dt*THREE.MathUtils.clamp(distance*.5,5,65);
+  const next=THREE.MathUtils.clamp(controls.target.z+dz,-82,82),delta=next-controls.target.z;
+  controls.target.z=next;camera.position.z+=delta;
+ }
+ controls.update();
 }
 function resize(){
  if(!renderer)return;const box=host.getBoundingClientRect();if(!box.width||!box.height)return;
@@ -94,8 +110,8 @@ function setupMode(next){
 }
 function showStep(animate=true){const s=stops[step];view(s.p,s.t,animate);$('step').textContent=String(step+1).padStart(2,'0')+' / 05';$('stop-title').textContent=s.title;$('prev').disabled=step===0;$('next').disabled=step===4;}
 function applyMode(next,animate=true){
- setZoom(false);setupMode(next);updateControls();
- if(next==='outside'){fitOutside(animate);$('hint').textContent='Нажмите на вагон или его номер, чтобы войти. Потяните для вращения, колёсико — приближение.';}
+ setupMode(next);setZoom(false);updateControls();
+ if(next==='outside'){fitOutside(animate);$('hint').textContent=outsideHint;}
  if(next==='inside'){view([0,2.12,6],[0,2.12,0],animate);$('hint').textContent='Потяните, чтобы осмотреться. Для движения — стрелки на экране или клавиши WASD.';}
  if(next==='guided'){step=0;showStep(animate);$('hint').textContent='Переключайте точки стрелками. Потяните, чтобы осмотреться на остановке.';}
 }
@@ -132,6 +148,7 @@ async function open(next,car=currentCar){
    scene.add(model);details=new DetailTextures(renderer,model,car);$('load-text').textContent='Подключаем оформление…';await details.ready;
   }
   ready=true;$('loading').hidden=true;applyMode(next,false);
+  if(document.activeElement===document.body||viewer.contains(document.activeElement))host.focus({preventScroll:true});
  }catch(e){clearAssets();error('Проверьте соединение и попробуйте ещё раз. Можно также выбрать вагон в списке.');console.error(e);}
  finally{busy=false;updateControls();}
 }
@@ -148,7 +165,11 @@ function frame(now){
   const a=THREE.MathUtils.clamp((now-transition.start)/650,0,1),e=a*a*(3-2*a);
   camera.position.lerpVectors(transition.from,transition.to,e);controls.target.lerpVectors(transition.fromTarget,transition.target,e);camera.lookAt(controls.target);
   if(a===1){transition=null;syncAngles();}
- }else if(ready&&mode==='outside')controls.update();
+ }else if(ready&&mode==='outside'){
+  const f=Number(keys.has('KeyW')||keys.has('ArrowUp'))-Number(keys.has('KeyS')||keys.has('ArrowDown'));
+  const r=Number(keys.has('KeyD')||keys.has('ArrowRight'))-Number(keys.has('KeyA')||keys.has('ArrowLeft'));
+  if(f||r)moveOutside(f,r,dt);else controls.update();
+ }
  else if(ready&&mode==='inside'){
   const f=Number(keys.has('KeyW')||keys.has('ArrowUp')||held.has('forward'))-Number(keys.has('KeyS')||keys.has('ArrowDown')||held.has('back'));
   const r=Number(keys.has('KeyD')||keys.has('ArrowRight')||held.has('right'))-Number(keys.has('KeyA')||keys.has('ArrowLeft')||held.has('left'));
@@ -161,18 +182,36 @@ function pickedCar(e){
  if(!overview)return 0;
  const rect=host.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);
  camera.updateMatrixWorld();overview.root.updateMatrixWorld(true);ray.setFromCamera(pointer,camera);
- return ray.intersectObjects(overview.cars,true)[0]?.object.userData.car||0;
+ const direct=ray.intersectObjects(overview.cars,true)[0]?.object.userData.car;
+ if(direct)return direct;
+ // At full-train scale the body is thin: allow a 44 px high hit area around each car.
+ let nearest=0,best=Infinity;
+ for(const car of overview.cars){
+  const box=car.userData.pickBox||(car.userData.pickBox=new THREE.Box3().setFromObject(car));
+  let x0=Infinity,x1=-Infinity,y0=Infinity,y1=-Infinity,visible=false;
+  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){
+   const p=new THREE.Vector3(x,y,z).project(camera);if(p.z<-1||p.z>1)continue;visible=true;
+   const sx=rect.left+(p.x+1)*rect.width/2,sy=rect.top+(1-p.y)*rect.height/2;
+   x0=Math.min(x0,sx);x1=Math.max(x1,sx);y0=Math.min(y0,sy);y1=Math.max(y1,sy);
+  }
+  if(!visible)continue;
+  const cy=(y0+y1)/2,pad=Math.max(0,(44-(y1-y0))/2);
+  if(e.clientX<x0-2||e.clientX>x1+2||e.clientY<y0-pad||e.clientY>y1+pad)continue;
+  const distance=Math.hypot((e.clientX-(x0+x1)/2)/Math.max(1,x1-x0),(e.clientY-cy)/Math.max(44,y1-y0));
+  if(distance<best){best=distance;nearest=car.userData.car;}
+ }
+ return nearest;
 }
 function highlightCar(car){
  if(mode!=='outside')return;
  overview?.highlight(car);host.style.cursor=car?'pointer':'grab';
- $('hint').textContent=car?'Вагон '+String(car).padStart(2,'0')+' · Нажмите, чтобы войти':'Нажмите на вагон или его номер, чтобы войти. Потяните для вращения, колёсико — приближение.';
+ $('hint').textContent=car?'Вагон '+String(car).padStart(2,'0')+' · Нажмите, чтобы войти':outsideHint;
 }
 try{
  renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
  renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;
  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;host.appendChild(renderer.domElement);
- controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.08;
+ controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.08;controls.zoomToCursor=true;controls.screenSpacePanning=true;controls.rotateSpeed=.55;
  lighting=setupLighting(scene,renderer);station=createStation(180);scene.add(station);
  floor=new THREE.Mesh(new THREE.PlaneGeometry(150,150),new THREE.MeshStandardMaterial({color:0x10151b,roughness:1,envMapIntensity:.05}));
  floor.rotation.x=-Math.PI/2;floor.position.y=-.12;scene.add(floor);
@@ -181,7 +220,7 @@ try{
  requestAnimationFrame(frame);open('outside');
 }catch(e){$('loading').hidden=false;document.querySelector('.loading-title').textContent='3D-просмотр недоступен';$('load-text').textContent='Откройте кейс с фотографиями или попробуйте другой браузер.';console.error(e);}
 ['outside','inside','guided'].forEach(m=>$(m).onclick=()=>open(m));
-$('reset').onclick=()=>applyMode(mode);$('zoom').onclick=()=>{if(ready)setZoom(!zoomed);};
+$('reset').onclick=()=>applyMode(mode);$('zoom').onclick=()=>{if(ready){if(mode==='outside')focusOrbit();setZoom(!zoomed);}};
 $('prev').onclick=()=>{if(step>0){step--;showStep();}};$('next').onclick=()=>{if(step<4){step++;showStep();}};
 $('retry').onclick=()=>renderer&&!renderer.getContext().isContextLost()?open(lastRequest.mode,lastRequest.car):location.reload();
 $('car').onchange=()=>open('inside',Number($('car').value));
@@ -192,6 +231,10 @@ document.querySelectorAll('[data-car]').forEach(b=>{
 });
 $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if(viewer.requestFullscreen)await viewer.requestFullscreen();else $('hint').textContent='Полноэкранный режим недоступен в этом браузере.';}catch{$('hint').textContent='Полноэкранный режим недоступен в этом браузере.';}};
 document.addEventListener('fullscreenchange',()=>{$('fullscreen').textContent=document.fullscreenElement?'Свернуть':'На весь экран';$('fullscreen').setAttribute('aria-label',document.fullscreenElement?'Выйти из полноэкранного режима':'Открыть на весь экран');resize();});
+host.addEventListener('pointerdown',()=>{
+ if(ready&&mode==='outside'){host.focus({preventScroll:true});if(!pointers.size)focusOrbit();}
+},true);
+host.addEventListener('wheel',()=>{if(ready&&mode==='outside')focusOrbit();},{capture:true,passive:true});
 host.addEventListener('pointerdown',e=>{
  if(!ready||transition)return;
  pointers.add(e.pointerId);
@@ -219,16 +262,16 @@ host.addEventListener('pointerup',e=>{
 });
 host.addEventListener('pointerleave',()=>{if(mode==='outside'&&ready)highlightCar(0);});
 ['pointercancel','lostpointercapture'].forEach(n=>host.addEventListener(n,e=>{pointers.delete(e.pointerId);pickStart=null;drag=null;}));
-host.addEventListener('keydown',e=>{
+viewer.addEventListener('keydown',e=>{
  if(!ready||transition)return;
- if(mode==='outside'&&e.code==='Enter'){e.preventDefault();open('inside',currentCar);return;}
- if(mode==='inside'&&['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)){
-  e.preventDefault();if(!e.repeat){const f=['KeyW','ArrowUp'].includes(e.code)?1:['KeyS','ArrowDown'].includes(e.code)?-1:0,r=['KeyD','ArrowRight'].includes(e.code)?1:['KeyA','ArrowLeft'].includes(e.code)?-1:0;move(f,r,.08);}keys.add(e.code);
+ if(mode==='outside'&&e.code==='Enter'&&(e.target===host||e.target===renderer.domElement)){e.preventDefault();open('inside',currentCar);return;}
+ if((mode==='inside'||mode==='outside')&&['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)){
+  e.preventDefault();if(!e.repeat){if(mode==='outside')focusOrbit();const f=['KeyW','ArrowUp'].includes(e.code)?1:['KeyS','ArrowDown'].includes(e.code)?-1:0,r=['KeyD','ArrowRight'].includes(e.code)?1:['KeyA','ArrowLeft'].includes(e.code)?-1:0;if(mode==='outside')moveOutside(f,r,.08);else move(f,r,.08);}keys.add(e.code);
  }
  if(mode==='guided'&&e.code==='ArrowRight'&&step<4){e.preventDefault();step++;showStep();}
  if(mode==='guided'&&e.code==='ArrowLeft'&&step>0){e.preventDefault();step--;showStep();}
 });
-host.addEventListener('keyup',e=>keys.delete(e.code));
+window.addEventListener('keyup',e=>keys.delete(e.code));
 host.addEventListener('blur',()=>{keys.clear();held.clear();});
 window.addEventListener('blur',()=>{keys.clear();held.clear();drag=null;pickStart=null;pointers.clear();});
 document.querySelectorAll('[data-move]').forEach(b=>{

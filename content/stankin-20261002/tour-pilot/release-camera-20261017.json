@@ -1,0 +1,25 @@
+{
+  "version": "20261017-camera1",
+  "files": [
+    {
+      "path": "tour.js",
+      "bytes": 20267,
+      "sha256": "35b6ff772cb8e81fb9c095356b21680b882deca50633f86df9e1662b8109bb7d"
+    },
+    {
+      "path": "loader.js",
+      "bytes": 585,
+      "sha256": "58500e48d644f21ea2ecef37c7696075bd6b837554f9116dd9ea07494d1544b6"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5576,
+      "sha256": "5bae38cdb05a1c5b724599988ced6b419220809a37663762da5c014dff704f44"
+    }
+  ],
+  "expected_live": {
+    "tour.js": "1f84963bed0730bfd946512163aeb5e43ebd2d13c2007adee326246986328c0d",
+    "loader.js": "d59a3d4922bae55dd637fdf89f64632688f1cf57d581445a4477e91c5af36ee3",
+    "index.html": "b3b8adb9a240297229e04573a67dc3b765a34137448547f1d5bdf40523deac18"
+  }
+}
