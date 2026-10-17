@@ -1,13 +1,26 @@
 {
-  "version": "20261017-camera1",
+  "version": "20261017-camera2",
   "checks": {
     "desktop": "Broadside fit: car bodies occupy nearly full viewer width, no distant vanishing-point composition",
-    "keyboard": "W repeatedly approaches; D translates along train; keyboard focus preserved in viewer",
+    "keyboard": "W repeatedly approaches; D translates along train; keyboard focus preserved in viewer; S/A reverse movement; Enter on Reset stays outside; focus on model after load",
     "orbit": "Drag after W/D rotates around visible car area and does not enter interior",
     "picking": "Click after moving and rotating entered car 5",
     "focus": "Central-ray anchor retains viewing direction; zoom-to-cursor enabled",
-    "mobile": "pending",
-    "live": "pending"
+    "mobile": "390x844 emulation: all cars within view and 8 number controls available; fog/clipping distance adapts so artwork remains visible; viewport reset after test",
+    "live": "Published overview loads in broadside view; WASD and Reset exercised; fullscreen fits full train; clicking car 6 opens its interior"
   },
-  "deployment": "pending"
+  "deployment": {
+    "status": "success",
+    "commit": "6461314e3d1aa92422e3062146c94ee0af188cac",
+    "workflow": "https://github.com/redegun/ne-prosto/actions/runs/39049016579",
+    "previous_run": "https://github.com/redegun/ne-prosto/actions/runs/39048887992",
+    "http_hashes": 3,
+    "backup": "/opt/office1080/ne-prosto-backups/39049016579",
+    "runner": "ephemeral; exit 0; credentials/registration removed; repository runner count 0"
+  },
+  "screenshots": {
+    "before": "reports/station-live-20261017.jpg",
+    "after": "reports/camera-live-20261017.jpg"
+  },
+  "worklog_id": 6960
 }
