@@ -19,7 +19,7 @@ export class TrainOverview{
     if(this.dead){disposeTree(gltf.scene);return;}
     const car=gltf.scene;improveMaterials(car,{overview:true});
     const box=new THREE.Box3().setFromObject(car),center=box.getCenter(new THREE.Vector3());
-    car.position.x-=center.x;car.position.z-=center.z;car.position.z+=(4.5-number)*20.5;
+    car.position.x-=center.x;car.position.z-=center.z;car.userData.length=box.max.z-box.min.z;
     car.userData.car=number;
     car.traverse(o=>{
      o.userData.car=number;
@@ -34,6 +34,14 @@ export class TrainOverview{
   const work=await Promise.allSettled([worker(),worker()]);
   const failed=work.find(r=>r.status==='rejected');
   if(failed){this.dispose();throw failed.reason;}
+  let end=0;
+  for(const car of this.cars){const half=car.userData.length/2;car.position.z+=end-half;end-=car.userData.length;}
+  for(const car of this.cars)car.position.z-=end/2;
+  this.root.updateMatrixWorld(true);
+  this.bounds=new THREE.Box3().setFromObject(this.root);
+  this.centers=this.cars.map(car=>new THREE.Box3().setFromObject(car).getCenter(new THREE.Vector3()).z);
+  // Existing coupler tips now meet; original meshes and body proportions are unchanged.
+
  }
  highlight(number){
   if(this.highlighted===number)return;

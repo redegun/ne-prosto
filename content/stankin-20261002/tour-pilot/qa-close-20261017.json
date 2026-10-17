@@ -1,0 +1,13 @@
+{
+  "version": "20261017-close1",
+  "checks": {
+    "start": "Close platform-side view of car 1 fills viewer; station floor/wall/ceiling replace empty background",
+    "navigation": "Next arrow opens exterior car 2 without reloading models; A/S move along and away from body",
+    "coupling": "Original full bounds align pairwise; 7 coupler end gaps 0; train length 154.704 m; close view confirms neighbouring car end connection",
+    "textures": "HD exterior typography visible on cars 1 and 2; unneeded shader state restored on disposal",
+    "wide": "Wide button fits all cars, second click returns close to selected car; model resources reused",
+    "mobile": "390x844 emulation: close car fills viewer; four top actions, 8 numbers and edge arrows fit; next moved to car 3; geometry tap selected interior 3",
+    "live": "pending"
+  },
+  "deployment": "pending"
+}

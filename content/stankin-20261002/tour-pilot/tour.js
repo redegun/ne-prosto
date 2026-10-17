@@ -1,8 +1,8 @@
 import { createEffects } from './effects.js?v=station2';
-import { DetailTextures } from './detail-textures.js?v=station2';
+import { DetailTextures } from './detail-textures.js?v=close1';
 import { improveMaterials, setupLighting } from './appearance.js?v=station2';
-import { createStation } from './station.js?v=station2';
-import { TrainOverview, disposeTree } from './train-overview.js?v=station2';
+import { createStation } from './station.js?v=close1';
+import { TrainOverview, disposeTree } from './train-overview.js?v=close1';
 import * as THREE from 'three';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -15,9 +15,10 @@ const draco=new DRACOLoader().setDecoderPath('./vendor/draco/').setWorkerLimit(2
 const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(58,1,.025,650);
 let renderer,effects,lighting,controls,station,floor,model,overview,details;
 let mode='outside',currentCar=1,busy=false,ready=false,step=0,yaw=0,pitch=0,drag=null,pickStart=null;
+let outsideWide=false,outsideDetailCar=0,detailCandidate=0,detailCandidateAt=0,detailRetryAt=0;
 let transition=null,lastTime=0,zoomed=false,lastRequest={mode:'outside',car:1};
 const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();
-const outsideHint='Нажмите на вагон, чтобы войти. Потяните — вращение; колесо и W/S — ближе/дальше; A/D — вдоль поезда.';
+const outsideHint='A/D или стрелки по краям — вдоль поезда. W/S и колесо — ближе/дальше. Нажмите на вагон, чтобы войти.';
 const stops=[
  {title:'Вход в салон',p:[0,2.12,6],t:[0,2.12,0]},
  {title:'Оформление левой стены',p:[0,2.12,3.5],t:[-1.25,2.1,1]},
@@ -34,11 +35,12 @@ function view(p,t,animate=true){
  else{transition=null;camera.position.copy(v(p));controls.target.copy(target);camera.lookAt(target);syncAngles();}
 }
 function setZoom(enabled){
- zoomed=enabled;camera.fov=enabled?28:mode==='outside'?45:58;camera.updateProjectionMatrix();
+ zoomed=enabled;camera.fov=enabled?28:mode==='outside'?(outsideWide?45:64):58;camera.updateProjectionMatrix();
  $('zoom').textContent=enabled?'Общий вид':'Ближе';$('zoom').setAttribute('aria-pressed',String(enabled));
 }
 function fitOutside(animate=false){
  if(!overview)return;
+ outsideWide=true;setZoom(false);station.setCloseView(false);releaseOutsideDetails();updateControls();
  // A broadside view gives each carriage comparable size and a useful click target.
  const box=new THREE.Box3().setFromObject(overview.root),target=box.getCenter(new THREE.Vector3());
  target.y=2.4;
@@ -59,6 +61,35 @@ function fitOutside(animate=false){
  if(scene.fog){scene.fog.near=Math.max(180,distance*1.25);scene.fog.far=Math.max(550,distance*3);}
  view(target.clone().addScaledVector(direction,distance*1.02).toArray(),target.toArray(),animate);
 }
+function releaseOutsideDetails(){
+ if(outsideDetailCar){details?.dispose();details=null;outsideDetailCar=0;}
+ detailCandidate=0;
+}
+function showOutsideCar(car=currentCar,animate=true){
+ if(!overview)return;
+ outsideWide=false;currentCar=THREE.MathUtils.clamp(car,1,8);setZoom(false);station.setCloseView(true);
+ const z=overview.centers[currentCar-1],target=new THREE.Vector3(0,2.15,z);
+ controls.maxDistance=450;camera.far=650;camera.updateProjectionMatrix();
+ if(scene.fog){scene.fog.near=180;scene.fog.far=550;}
+ view(target.clone().add(new THREE.Vector3(8.1,1.15,1.15)).toArray(),target.toArray(),animate);
+ updateControls();$('hint').textContent=outsideHint;
+}
+function nearestOutsideCar(){
+ if(!overview)return currentCar;
+ let nearest=1,distance=Infinity;
+ overview.centers.forEach((z,i)=>{const d=Math.abs(z-controls.target.z);if(d<distance){distance=d;nearest=i+1;}});
+ return nearest;
+}
+function updateOutsideDetails(now){
+ if(!ready||mode!=='outside'||outsideWide||camera.position.distanceTo(controls.target)>30){releaseOutsideDetails();return;}
+ const car=nearestOutsideCar();
+ if(car!==currentCar){currentCar=car;updateControls();}
+ if(car!==detailCandidate){detailCandidate=car;detailCandidateAt=now;return;}
+ if(car===outsideDetailCar||now-detailCandidateAt<250||now<detailRetryAt)return;
+ details?.dispose();details=new DetailTextures(renderer,overview.cars[car-1],car);outsideDetailCar=car;
+ const pending=details;
+ pending.ready.catch(()=>{if(details===pending){pending.dispose();details=null;outsideDetailCar=0;detailRetryAt=performance.now()+30000;}});
+}
 function focusOrbit(){
  if(!ready||mode!=='outside'||!overview)return;
  transition=null;
@@ -69,19 +100,20 @@ function focusOrbit(){
  if(!target){
   // The vertical train plane also handles a centre ray passing through a window/gap.
   const point=ray.ray.intersectPlane(new THREE.Plane(new THREE.Vector3(1,0,0),0),new THREE.Vector3());
-  if(point&&Math.abs(point.z)<86&&point.y>.2&&point.y<7)target=point;
+  if(point&&point.z>=overview.bounds.min.z&&point.z<=overview.bounds.max.z&&point.y>.2&&point.y<7)target=point;
  }
  // Both points lie on the existing view ray, so the view does not jump.
  if(target&&target.distanceTo(camera.position)>=controls.minDistance)controls.target.copy(target);
 }
 function moveOutside(forward,right,dt){
+ if(outsideWide){outsideWide=false;updateControls();}
  const offset=camera.position.clone().sub(controls.target),distance=offset.length();
  if(forward)camera.position.copy(controls.target).addScaledVector(offset,THREE.MathUtils.clamp(distance*Math.exp(-forward*dt*1.15),controls.minDistance,controls.maxDistance)/distance);
  if(right){
   // Translate along the train in the screen's left/right direction.
   const screenRight=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,0);
   const dz=(screenRight.z<0?-1:1)*right*dt*THREE.MathUtils.clamp(distance*.5,5,65);
-  const next=THREE.MathUtils.clamp(controls.target.z+dz,-82,82),delta=next-controls.target.z;
+  const next=THREE.MathUtils.clamp(controls.target.z+dz,overview.centers[7],overview.centers[0]),delta=next-controls.target.z;
   controls.target.z=next;camera.position.z+=delta;
  }
  controls.update();
@@ -89,16 +121,20 @@ function moveOutside(forward,right,dt){
 function resize(){
  if(!renderer)return;const box=host.getBoundingClientRect();if(!box.width||!box.height)return;
  renderer.setSize(box.width,box.height,false);camera.aspect=box.width/box.height;camera.updateProjectionMatrix();
- effects?.resize(box.width,box.height);if(ready&&mode==='outside')fitOutside(false);
+ effects?.resize(box.width,box.height);if(ready&&mode==='outside'&&outsideWide)fitOutside(false);
 }
 function updateControls(){
  document.querySelectorAll('.modes button').forEach(b=>{b.disabled=!ready;b.setAttribute('aria-pressed',String(b.id===mode));});
  $('reset').disabled=!ready;$('zoom').disabled=!ready;$('car').disabled=busy;
  $('walk').hidden=!ready||mode!=='inside';$('route').hidden=!ready||mode!=='guided';
  $('train-cars').hidden=!ready||mode!=='outside';
+ $('all-train').hidden=mode!=='outside';$('all-train').disabled=!ready;
+ $('all-train').setAttribute('aria-pressed',String(outsideWide));
+ $('outside-nav').hidden=!ready||mode!=='outside';
+ $('car-back').disabled=currentCar===1;$('car-forward').disabled=currentCar===8;
  $('car').value=String(currentCar);
  document.querySelectorAll('[data-car]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.car)===currentCar)));
- $('car-status').textContent=mode==='outside'?'Весь поезд · 8 вагонов':'Вагон '+String(currentCar).padStart(2,'0')+' · внутри';
+ $('car-status').textContent=mode==='outside'?(outsideWide?'Весь поезд · 8 вагонов':'Вагон '+String(currentCar).padStart(2,'0')+' · снаружи'):'Вагон '+String(currentCar).padStart(2,'0')+' · внутри';
  $('car-label').textContent=mode==='outside'?'Войти в вагон':'Выберите вагон';
 }
 function setupMode(next){
@@ -106,7 +142,7 @@ function setupMode(next){
  scene.fog=next==='outside'?new THREE.Fog('#080d13',180,550):null;
  camera.near=next==='outside'?.15:.025;camera.updateProjectionMatrix();
  controls.enabled=ready&&next==='outside';controls.enablePan=next==='outside';
- controls.minDistance=next==='outside'?8:3;
+ controls.minDistance=next==='outside'?3.5:3;
  controls.minPolarAngle=next==='outside'?Math.PI*.14:0;
  controls.maxPolarAngle=Math.PI*.48;
  host.style.cursor=next==='outside'?'grab':'grab';
@@ -114,12 +150,12 @@ function setupMode(next){
 function showStep(animate=true){const s=stops[step];view(s.p,s.t,animate);$('step').textContent=String(step+1).padStart(2,'0')+' / 05';$('stop-title').textContent=s.title;$('prev').disabled=step===0;$('next').disabled=step===4;}
 function applyMode(next,animate=true){
  setupMode(next);setZoom(false);updateControls();
- if(next==='outside'){fitOutside(animate);$('hint').textContent=outsideHint;}
+ if(next==='outside'){showOutsideCar(currentCar,animate);$('hint').textContent=outsideHint;}
  if(next==='inside'){view([0,2.12,6],[0,2.12,0],animate);$('hint').textContent='Потяните, чтобы осмотреться. Для движения — стрелки на экране или клавиши WASD.';}
  if(next==='guided'){step=0;showStep(animate);$('hint').textContent='Переключайте точки стрелками. Потяните, чтобы осмотреться на остановке.';}
 }
 function clearAssets(){
- details?.dispose();details=null;
+ details?.dispose();details=null;outsideDetailCar=0;detailCandidate=0;detailRetryAt=0;
  if(model){scene.remove(model);disposeTree(model);model=null;}
  if(overview){scene.remove(overview.root);overview.dispose();overview=null;}
 }
@@ -178,7 +214,8 @@ function frame(now){
   const r=Number(keys.has('KeyD')||keys.has('ArrowRight')||held.has('right'))-Number(keys.has('KeyA')||keys.has('ArrowLeft')||held.has('left'));
   if(f||r)move(f,r,dt);
  }
- if(ready&&!transition)details?.update(now,camera);
+ if(ready&&mode==='outside')station.setCloseView(!outsideWide&&camera.position.y<5.9&&camera.position.x>-3&&camera.position.x<9.75);
+ if(ready&&!transition){if(mode==='outside')updateOutsideDetails(now);details?.update(now,camera);}
  effects.render();requestAnimationFrame(frame);
 }
 function pickedCar(e){
@@ -223,6 +260,9 @@ try{
  requestAnimationFrame(frame);open('outside');
 }catch(e){$('loading').hidden=false;document.querySelector('.loading-title').textContent='3D-просмотр недоступен';$('load-text').textContent='Откройте кейс с фотографиями или попробуйте другой браузер.';console.error(e);}
 ['outside','inside','guided'].forEach(m=>$(m).onclick=()=>open(m));
+$('all-train').onclick=()=>{if(ready){if(outsideWide)showOutsideCar(currentCar);else fitOutside(true);}};
+$('car-back').onclick=()=>{if(ready&&currentCar>1)showOutsideCar(currentCar-1);};
+$('car-forward').onclick=()=>{if(ready&&currentCar<8)showOutsideCar(currentCar+1);};
 $('reset').onclick=()=>applyMode(mode);$('zoom').onclick=()=>{if(ready){if(mode==='outside')focusOrbit();setZoom(!zoomed);}};
 $('prev').onclick=()=>{if(step>0){step--;showStep();}};$('next').onclick=()=>{if(step<4){step++;showStep();}};
 $('retry').onclick=()=>renderer&&!renderer.getContext().isContextLost()?open(lastRequest.mode,lastRequest.car):location.reload();

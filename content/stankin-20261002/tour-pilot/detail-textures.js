@@ -7,14 +7,14 @@ export class DetailTextures {
   this.slots=Array.from({length:SLOT_COUNT},()=>({key:null,texture:null,request:0}));
   this.ray=new THREE.Raycaster();this.point=new THREE.Vector2();this.loader=new THREE.TextureLoader();
   root.traverse(o=>{if(o.isMesh&&(Array.isArray(o.material)?o.material:[o.material]).some(m=>m.map&&/^vagon/i.test(m.name))){this.meshes.push(o);(Array.isArray(o.material)?o.material:[o.material]).filter(m=>m.map&&/^vagon/i.test(m.name)).forEach(m=>this.materials.add(m));}});
-  this.base=[...this.materials][0]?.map;
-  this.uniforms={exteriorBase:{value:this.base}};
+  this.base=[...this.materials][0]?.map;this.previous=new Map([...this.materials].map(m=>[m,{compile:m.onBeforeCompile,key:m.customProgramCacheKey}]));
+  this.uniforms={exteriorBase:{value:this.base},exteriorReady:{value:false}};
   for(let i=0;i<SLOT_COUNT;i++){this.uniforms['detailMap'+i]={value:this.base};this.uniforms['detailCell'+i]={value:new THREE.Vector3(-99,-99,-1)};this.uniforms['detailRect'+i]={value:new THREE.Vector4(0,0,1,1)};}
   this.materials.forEach(material=>{
    material.onBeforeCompile=shader=>{
     Object.assign(shader.uniforms,this.uniforms);
-    let declarations='uniform sampler2D exteriorBase;\n';
-    let sampling='vec2 detailUv=fract(vMapUv);float detailDomain=1.0-step(0.425,detailUv.y);vec3 detailCell=vec3(floor(detailUv*8.0),detailDomain);vec4 sampledDiffuseColor=texture2D(map,vMapUv);if(detailDomain>0.5){sampledDiffuseColor=texture2D(exteriorBase,vec2(detailUv.x,detailUv.y/0.425));}';
+    let declarations='uniform sampler2D exteriorBase;uniform bool exteriorReady;\n';
+    let sampling='vec2 detailUv=fract(vMapUv);float detailDomain=1.0-step(0.425,detailUv.y);vec3 detailCell=vec3(floor(detailUv*8.0),detailDomain);vec4 sampledDiffuseColor=texture2D(map,vMapUv);if(detailDomain>0.5&&exteriorReady){sampledDiffuseColor=texture2D(exteriorBase,vec2(detailUv.x,detailUv.y/0.425));}';
     for(let i=0;i<SLOT_COUNT;i++){
      declarations+='uniform sampler2D detailMap'+i+';uniform vec3 detailCell'+i+';uniform vec4 detailRect'+i+';\n';
      sampling+='if(all(equal(detailCell,detailCell'+i+'))){sampledDiffuseColor=texture2D(detailMap'+i+',(detailUv-detailRect'+i+'.xy)*detailRect'+i+'.zw);}';
@@ -26,7 +26,7 @@ export class DetailTextures {
   });
   this.ready=this.loader.loadAsync('./exterior/car-'+car+'.jpg?v=20261015').then(texture=>{
    if(this.dead){texture.dispose();return;}
-   this.configure(texture);this.exterior=texture;this.uniforms.exteriorBase.value=texture;
+   this.configure(texture);this.exterior=texture;this.uniforms.exteriorBase.value=texture;this.uniforms.exteriorReady.value=true;
   });
   for(const domain of [0,1])fetch(this.folder(domain)+'/manifest.json').then(r=>{if(!r.ok)throw Error('Details unavailable');return r.json();}).then(m=>{if(!this.dead)this.manifests[domain]=m;}).catch(()=>{});
  }
@@ -66,5 +66,5 @@ export class DetailTextures {
    },undefined,()=>{if(!this.dead&&slot.key===key&&slot.request===request){slot.key=null;this.retryAfter.set(key,performance.now()+30000);}});
   }
  }
- dispose(){this.dead=true;this.exterior?.dispose();for(const slot of this.slots)slot.texture?.dispose();this.meshes=[];this.materials.clear();}
+ dispose(){this.dead=true;for(const [m,old] of this.previous){m.onBeforeCompile=old.compile;m.customProgramCacheKey=old.key;m.needsUpdate=true;}this.previous.clear();this.exterior?.dispose();for(const slot of this.slots)slot.texture?.dispose();this.meshes=[];this.materials.clear();}
 }

@@ -51,5 +51,9 @@ export function createStation(length=180){
  for(const z of [-52,0,52]){
   const sign=new THREE.Mesh(new THREE.PlaneGeometry(6.4,1),signMat);sign.rotation.y=Math.PI/2;sign.position.set(-3.1,3.45,z);station.add(sign);
  }
+ const roof=box([13.2,.18,length],[3.2,6.25,0],concrete);
+ roof.material=new THREE.MeshStandardMaterial({color:'#343b40',roughness:.9,side:THREE.DoubleSide,envMapIntensity:.15});
+ station.setCloseView=enabled=>{roof.visible=enabled;};
+ roof.visible=false;
  return station;
 }
