@@ -7,7 +7,21 @@
     "interior": "PASS: native selector opens interior car 2; previous interior appearance and movement controls render correctly.",
     "keyboard": "Native select excluded from viewer movement key handler; existing WASD and arrow navigation retained.",
     "console": "No new errors. Initial cloneUniforms render-target warning fixed by assigning mask texture after ShaderPass construction.",
-    "static": "node --check: tour/effects/station/train-overview; git diff --check; release 7 hashes pass"
+    "static": "node --check: tour/effects/station/train-overview; git diff --check; release 7 hashes pass",
+    "live": "PASS: live full-screen framing of car 1, thin outline on focus, original colours retained; browser warning/error log empty."
   },
-  "deployment": "pending"
+  "deployment": {
+    "status": "success",
+    "commit": "3c0cd71593a010b7cceeca695fdf34b12a2c1e33",
+    "ci": "https://github.com/redegun/ne-prosto/actions/runs/39052608703",
+    "http_sha_verified": 7,
+    "backup": "/opt/office1080/ne-prosto-backups/39052608703",
+    "runner": "ephemeral exit 0, registration removed, total runners 0"
+  },
+  "work_log_id": 6972,
+  "screenshots": {
+    "before": "reports/close-live-20261017.jpg",
+    "after": "reports/human-live-20261017.jpg",
+    "mobile": "reports/human-mobile-20261017.jpg"
+  }
 }
