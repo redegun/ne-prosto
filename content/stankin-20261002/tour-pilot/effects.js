@@ -13,6 +13,7 @@ export function createEffects(renderer,scene,camera){
  ao.blendIntensity=.65;composer.addPass(ao);
  composer.addPass(new OutputPass());
  return {
+  setMode(mode){ao.enabled=mode!=='outside';},
   render(){composer.render();},
   resize(width,height){composer.setSize(width,height);const ratio=Math.min(renderer.getPixelRatio(),1);ao.setSize(Math.max(1,Math.round(width*ratio)),Math.max(1,Math.round(height*ratio)));}
  };

@@ -1,0 +1,62 @@
+{
+  "source_blend_unchanged": true,
+  "overview_only": true,
+  "cars": [
+    {
+      "car": 1,
+      "bytes": 1368204,
+      "sha256": "62db9cc9606ca4db9837d6187826870433253d44df4d078e14aed5d391d6d2c6",
+      "triangles": 57289,
+      "atlas": 1536
+    },
+    {
+      "car": 2,
+      "bytes": 1308148,
+      "sha256": "315118c86111ceaf43c8c8999ce26a67b5cfe64225a87436006d691da3f8c670",
+      "triangles": 56497,
+      "atlas": 1536
+    },
+    {
+      "car": 3,
+      "bytes": 1436308,
+      "sha256": "c8abbee9e47ae24005163a7108febe18548c1379012b7d89ddc5a8f2b286713b",
+      "triangles": 56497,
+      "atlas": 1536
+    },
+    {
+      "car": 4,
+      "bytes": 1329752,
+      "sha256": "d81bf6933ee98c3fae34720861ce091d7b57c4e932809109aa306a7b7fd593f7",
+      "triangles": 56498,
+      "atlas": 1536
+    },
+    {
+      "car": 5,
+      "bytes": 1329304,
+      "sha256": "6b30f8eeca6b91d66e556b10870c8aabce3813e9bbf1657607f15e11b800363a",
+      "triangles": 56497,
+      "atlas": 1536
+    },
+    {
+      "car": 6,
+      "bytes": 1313676,
+      "sha256": "d9acdc0512b63eaa3cf30fbb7515ef4b30960aa2575d9a01edf6b684135b0105",
+      "triangles": 56497,
+      "atlas": 1536
+    },
+    {
+      "car": 7,
+      "bytes": 1299516,
+      "sha256": "8d0c68c31dc03873b1e85360ff9350ade4ddbfea9bb8b10e2b6dc2494debf2d3",
+      "triangles": 56497,
+      "atlas": 1536
+    },
+    {
+      "car": 8,
+      "bytes": 1343288,
+      "sha256": "918bd391dfce10985eba435cdea33276a3089c0a03aba7fd854b3e2f555f9c11",
+      "triangles": 57289,
+      "atlas": 1536
+    }
+  ]
+}

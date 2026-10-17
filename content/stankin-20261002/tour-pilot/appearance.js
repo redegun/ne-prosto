@@ -44,18 +44,18 @@ export function setupLighting(scene,renderer){
  }
  scene.add(hall);
  const outsideLights=new THREE.Group();
- for(const [position,intensity] of [[[5,9,7],2.8],[[-6,5,-6],1.3]]){
+ for(const [position,intensity] of [[[20,35,45],.85],[[-15,18,-35],.25]]){
   const lamp=new THREE.DirectionalLight(0xffffff,intensity);lamp.position.set(...position);outsideLights.add(lamp);
  }
  outsideLights.visible=false;scene.add(outsideLights);
  return {environment,lights,hall,setMode(mode){
   const outside=mode==='outside';hall.visible=!outside;outsideLights.visible=outside;
-  lights.forEach(light=>light.visible=!outside);scene.environmentIntensity=outside?.72:.46;
-  scene.background.set(outside?'#171e28':'#080d13');
+  lights.forEach(light=>light.visible=!outside);scene.environmentIntensity=outside?.32:.46;
+  scene.background.set('#080d13');renderer.toneMappingExposure=outside?.78:.9;
  }};
 
 }
-export function improveMaterials(root){
+export function improveMaterials(root,{overview=false}={}){
  const replacements=new Map();
  root.traverse(object=>{
   if(!object.isMesh)return;
@@ -66,7 +66,7 @@ export function improveMaterials(root){
    if(CEILING_LAMPS.has(mat.name)){
     mat.color.set('#fff8ec');mat.emissive.set('#fff5df');mat.emissiveIntensity=3;mat.metalness=0;mat.roughness=.4;
    }else if(name.includes('glass')){
-    next=new THREE.MeshPhysicalMaterial({name:mat.name,color:0xffffff,roughness:.025,metalness:0,transmission:.98,thickness:.008,ior:1.46,envMapIntensity:.22,side:THREE.FrontSide});
+    next=overview?new THREE.MeshStandardMaterial({name:mat.name,color:0x8fa0ab,transparent:true,opacity:.55,roughness:.2,metalness:.25,envMapIntensity:.3}):new THREE.MeshPhysicalMaterial({name:mat.name,color:0xffffff,roughness:.025,metalness:0,transmission:.98,thickness:.008,ior:1.46,envMapIntensity:.22,side:THREE.FrontSide});
     next.depthWrite=false;
    }else if(name.startsWith('fabric')){
     mat.color.set('#25292d');mat.metalness=.08;mat.roughness=.72;

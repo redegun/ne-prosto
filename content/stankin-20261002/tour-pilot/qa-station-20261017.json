@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-17",
+  "version": "station2",
+  "checks": {
+    "overview": "All eight compact GLBs loaded; 10,728,196 bytes total; about 453k triangles; 1536px atlases",
+    "geometry_and_art": "Same Blender source; original detailed models unchanged; normalize active UV name before joining to preserve exterior artwork",
+    "selection": "Click on carriage 1 geometry opens its interior; number 6 opens 6; keyboard Enter on number 8 opens 8",
+    "return": "Full overview restored after interior 6 and selected number preserved",
+    "guided": "Car 8 route point 1 -> 2 passed",
+    "mobile": "390x844 viewport emulation: whole train and all 8 buttons visible; no physical phone claim",
+    "recovery": "Temporarily unavailable local overview/car-8.glb produced error and Retry; restoring asset and Retry recovered full train",
+    "lighting": "Exterior key lights .85/.25, exposure .78, environment .32; station surfaces visible and graphics preserved; interior lighting unchanged",
+    "fullscreen": "Final perspective fitting verified at 1920x1080 fullscreen, normal viewport and 390x844 emulation",
+    "drag": "Dragging carriage geometry rotates the overview without entering",
+    "source_sha256": "6a9e54fa27f889e2857b38e8c748fadac25d1ed6f72dd13b8ead931af1bec73f; unchanged"
+  },
+  "deployment": "pending"
+}

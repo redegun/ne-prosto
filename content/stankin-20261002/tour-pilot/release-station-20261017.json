@@ -1,0 +1,93 @@
+{
+  "version": "20261017-station2",
+  "files": [
+    {
+      "path": "overview/car-1.glb",
+      "bytes": 1368204,
+      "sha256": "62db9cc9606ca4db9837d6187826870433253d44df4d078e14aed5d391d6d2c6"
+    },
+    {
+      "path": "overview/car-2.glb",
+      "bytes": 1308148,
+      "sha256": "315118c86111ceaf43c8c8999ce26a67b5cfe64225a87436006d691da3f8c670"
+    },
+    {
+      "path": "overview/car-3.glb",
+      "bytes": 1436308,
+      "sha256": "c8abbee9e47ae24005163a7108febe18548c1379012b7d89ddc5a8f2b286713b"
+    },
+    {
+      "path": "overview/car-4.glb",
+      "bytes": 1329752,
+      "sha256": "d81bf6933ee98c3fae34720861ce091d7b57c4e932809109aa306a7b7fd593f7"
+    },
+    {
+      "path": "overview/car-5.glb",
+      "bytes": 1329304,
+      "sha256": "6b30f8eeca6b91d66e556b10870c8aabce3813e9bbf1657607f15e11b800363a"
+    },
+    {
+      "path": "overview/car-6.glb",
+      "bytes": 1313676,
+      "sha256": "d9acdc0512b63eaa3cf30fbb7515ef4b30960aa2575d9a01edf6b684135b0105"
+    },
+    {
+      "path": "overview/car-7.glb",
+      "bytes": 1299516,
+      "sha256": "8d0c68c31dc03873b1e85360ff9350ade4ddbfea9bb8b10e2b6dc2494debf2d3"
+    },
+    {
+      "path": "overview/car-8.glb",
+      "bytes": 1343288,
+      "sha256": "918bd391dfce10985eba435cdea33276a3089c0a03aba7fd854b3e2f555f9c11"
+    },
+    {
+      "path": "appearance.js",
+      "bytes": 5321,
+      "sha256": "8e919600dcd37be1729374360f581ee825292931d3449683d9320c209fc2d239"
+    },
+    {
+      "path": "effects.js",
+      "bytes": 1126,
+      "sha256": "39b37595aefa6a616b7973c683d867de6d95fde006b411cfbe574f9af3202e7e"
+    },
+    {
+      "path": "station.js",
+      "bytes": 3267,
+      "sha256": "d10f13392a1cf36445323a0a5e28caac9da63116c9fae34ade6aa31066ae2537"
+    },
+    {
+      "path": "train-overview.js",
+      "bytes": 2649,
+      "sha256": "74befbb363999b9f6b9efa5f6bc6e421a6d560034f191ca8ea2ea4a42e1094b3"
+    },
+    {
+      "path": "tour.css",
+      "bytes": 5896,
+      "sha256": "74f4913464bb2271aa115c466882076214cf6cc42b10f145a0595ff9a74c1c66"
+    },
+    {
+      "path": "tour.js",
+      "bytes": 17566,
+      "sha256": "1f84963bed0730bfd946512163aeb5e43ebd2d13c2007adee326246986328c0d"
+    },
+    {
+      "path": "loader.js",
+      "bytes": 586,
+      "sha256": "d59a3d4922bae55dd637fdf89f64632688f1cf57d581445a4477e91c5af36ee3"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5413,
+      "sha256": "b3b8adb9a240297229e04573a67dc3b765a34137448547f1d5bdf40523deac18"
+    }
+  ],
+  "expected_live": {
+    "appearance.js": "f47a77b57480f86c39542019683be4b31c0dac3641fd494a143ae751451775c5",
+    "effects.js": "8a932b40a58eee8e24d412d6cce97851226e780861463a4727e326a7e65fbdd4",
+    "tour.css": "eebd0e1cbec8561d42e32f891e936cf9d9ab148e40bc22d2eceb091f7ab6ad9b",
+    "tour.js": "d8c8a47c5524cade58b62fa6f60e3efcce0210bdf67ff88a2c1d7dbbf934d2e4",
+    "loader.js": "257aa907b78ef06322b58c9d6ce7e352f7c73b782fe26c3004d8750ba20d6325",
+    "index.html": "9770ca8dd2d90274bd98fe8a74f02dd27e63a5aa651279d651d4717fdadc813d"
+  }
+}

@@ -1,4 +1,4 @@
-name: Publish STANKIN exterior
+name: Publish STANKIN tour
 on:
   workflow_dispatch:
 permissions:
@@ -21,9 +21,12 @@ jobs:
           node --check tour.js
           node --check appearance.js
           node --check detail-textures.js
-          python3 tools/deploy_exterior_ci.py --check
+          node --check station.js
+          node --check train-overview.js
+          node --check effects.js
+          python3 tools/deploy_station_ci.py --check
       - name: Publish scoped assets and verify HTTP hashes
         working-directory: content/stankin-20261002/tour-pilot
         env:
           NE_PROSTO_FTP: ${{ secrets.NE_PROSTO_FTP }}
-        run: python3 -u tools/deploy_exterior_ci.py
+        run: python3 -u tools/deploy_station_ci.py
