@@ -7,7 +7,19 @@
     "textures": "HD exterior typography visible on cars 1 and 2; unneeded shader state restored on disposal",
     "wide": "Wide button fits all cars, second click returns close to selected car; model resources reused",
     "mobile": "390x844 emulation: close car fills viewer; four top actions, 8 numbers and edge arrows fit; next moved to car 3; geometry tap selected interior 3",
-    "live": "pending"
+    "live": "PASS: deployed close car 1 and fullscreen visually inspected; next arrow selects car 2 and retains close exterior; HD lettering visible; previous returns car 1; console errors/warnings empty."
   },
-  "deployment": "pending"
+  "deployment": {
+    "status": "success",
+    "commit": "ddfa7b78fe8258fcb1833d9a053edaa870434a47",
+    "ci": "https://github.com/redegun/ne-prosto/actions/runs/39050703565",
+    "http_sha_verified": 7,
+    "backup": "/opt/office1080/ne-prosto-backups/39050703565",
+    "runner": "ephemeral office1080 exited 0; registration removed; total runners 0"
+  },
+  "screenshots": {
+    "before": "reports/camera-live-20261017.jpg",
+    "after": "reports/close-live-20261017.jpg"
+  },
+  "work_log_id": 6967
 }
