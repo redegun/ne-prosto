@@ -53,3 +53,18 @@
  .viewer[data-mode="inside"] .hint{bottom:18px;left:auto;right:10px;transform:none;width:calc(100% - 172px);max-width:220px;text-align:left}
  .viewer[data-mode="guided"] .hint{bottom:94px}
 }
+
+html:not(.embedded) main{max-width:none}
+html:not(.embedded) .viewer:not(:fullscreen){width:calc(100% + 64px);margin-left:-32px}
+.viewer[data-mode="outside"]:not(:fullscreen){height:clamp(220px,25vw,480px);min-height:0}
+.embedded .viewer[data-mode]:not(:fullscreen){height:100dvh;width:100%;margin-left:0}
+@media(max-width:720px){
+ html:not(.embedded) .viewer:not(:fullscreen){width:calc(100% + 32px);margin-left:-16px}
+ .viewer[data-mode="outside"]:not(:fullscreen){height:220px}
+ .embedded .viewer[data-mode]:not(:fullscreen){height:100dvh;width:100%;margin-left:0}
+}
+
+@media(max-width:720px){
+ .view-actions{width:calc(100% - 20px);grid-template-columns:repeat(2,minmax(0,1fr))}
+ .tools-open .view-actions{display:grid}
+}

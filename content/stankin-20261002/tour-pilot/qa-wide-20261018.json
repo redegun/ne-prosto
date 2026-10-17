@@ -1,0 +1,14 @@
+{
+  "version": "20261018-wide1",
+  "checks": {
+    "layout": "PASS: case preview client width 1265, iframe x=0 width=1265 height=320; scrollWidth=1265. Before x=24 width=1217 height=680.",
+    "mobile": "PASS: 390x844 browser (375 CSS client width with scrollbar), iframe x=0 width=375 height=220; document scrollWidth=375. Tools menu bottom166 within220 viewport, all four actions accessible.",
+    "modes": "PASS: exterior -> interior auto height504 at current desktop viewport; return exterior320; mobile outside220. Selection and next-car navigation work.",
+    "pause": "PASS: offscreen viewer reports visible=false and frames=0. Scrolling back and next arrow resumes display, selects car2.",
+    "performance": "Same desktop profile view: draw calls179 ->108, render target texture count13 ->9 before later tests. Static visible scene reaches0 newly rendered frames/3s. Counts are scene-specific, not a general FPS multiplier.",
+    "textures": "Both sides share one base atlas; no geometry/UV deletion. Exterior DetailTextures skips internal domain manifests/tiles; visible external detail slots remain6/4.",
+    "console": "No warnings/errors in local integration preview.",
+    "static": "node --check tour/detail-textures/effects/station/embed and git diff --check pass; 9 release file hashes pass"
+  },
+  "deployment": "pending"
+}

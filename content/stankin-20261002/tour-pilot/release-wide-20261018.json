@@ -1,0 +1,61 @@
+{
+  "version": "20261018-wide1",
+  "files": [
+    {
+      "path": "detail-textures.js",
+      "bytes": 5927,
+      "sha256": "a03a7b463892dd54c42f654c832fdba8474403b8aa3f621012ec1c5cc63cf60c"
+    },
+    {
+      "path": "effects.js",
+      "bytes": 3733,
+      "sha256": "9efb5acef29042f071befb1d05aec04626f1945ce7fda83555fa782bf406eceb"
+    },
+    {
+      "path": "station.js",
+      "bytes": 4606,
+      "sha256": "18f74adfaa8ad321848b7ce8d644987aaed2de98670fa450f1a307405059218e"
+    },
+    {
+      "path": "tour.css",
+      "bytes": 10214,
+      "sha256": "00aeb5e813c652f098ff959b1b7b4c4a64944867273a8b9f01a8ba3ebcfb377b"
+    },
+    {
+      "path": "tour.js",
+      "bytes": 26743,
+      "sha256": "70bd8595cdefeed001bc827d6de2dc46078a5d4a16979bd1dbfd0ee6b71241b8"
+    },
+    {
+      "path": "loader.js",
+      "bytes": 583,
+      "sha256": "f40c83e2e0a146711abdf9eb3bf18bd9cfb95c36431783fe663568141ca0b240"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6750,
+      "sha256": "caba41c095762bee478b570d9b9336cc16390590030e80d83d75383b80b90372"
+    },
+    {
+      "path": "embed.css",
+      "bytes": 1195,
+      "sha256": "645dacb46f88ab8c7117ffd8069ce45c4b5c9aaaf382b2b48d88360e9b024fad"
+    },
+    {
+      "path": "embed.js",
+      "bytes": 1147,
+      "sha256": "a2ea2e3d9cd5585a33b6deb0fb6e09ac4918a1c51b3fc2e3bb9f204a070b33a8"
+    }
+  ],
+  "expected_live": {
+    "detail-textures.js": "3b0ddc994fd03e82adb2627d3198a93b4444605e7dc3c9da42fa334181e5814d",
+    "effects.js": "5e6bd5726fb2ec461c93171c8293f9e160eb7711d7187d2b26ea7fd267d42ae1",
+    "station.js": "6f2fd3048a179d71a38b8d72e7f026e23d4845fc4cfef0d5c8d568467bb7def2",
+    "tour.css": "f329030f40c66d22809df0c060d71b31c0392549eddf673a342214b4c5563f3b",
+    "tour.js": "2b69c401727e656c88576345ebb3790befed6135dc4a66271c68d873bd09aa9a",
+    "loader.js": "e85ba8616fde369ceedab43b786844a7c26a6c7bf1b997a6c60c81385495d3d3",
+    "index.html": "ef718267ed72d1930c88e5c2fcfc0930cb5739ef8fdc30dcfa9096f30ba0c0bf",
+    "embed.css": "d4f973adb78e3b6fb65d551a9e42e1eac8040582e8fbd5455b0bdb36bbd9b24d",
+    "embed.js": "6c534451b1b54b4f88d39a162c35a1a3eac828ffde440c9e177cc63186e3737a"
+  }
+}

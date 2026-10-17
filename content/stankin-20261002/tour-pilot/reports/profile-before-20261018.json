@@ -1,0 +1,26 @@
+[
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":179,\"triangles\":114120,\"textures\":13}",
+    "timestamp": "2026-10-17T21:10:39.973Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261017-human1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":179,\"triangles\":114120,\"textures\":13}",
+    "timestamp": "2026-10-17T21:10:42.981Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261017-human1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":179,\"triangles\":114120,\"textures\":13}",
+    "timestamp": "2026-10-17T21:10:45.973Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261017-human1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":179,\"triangles\":114120,\"textures\":13}",
+    "timestamp": "2026-10-17T21:10:48.980Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261017-human1"
+  }
+]

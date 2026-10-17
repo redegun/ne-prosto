@@ -6,6 +6,7 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 
 export function createEffects(renderer,scene,camera){
+ let outside=false;
  const mobile=matchMedia('(max-width:720px)').matches;
  const target=new THREE.WebGLRenderTarget(1,1,{type:THREE.HalfFloatType,samples:mobile?2:4});
  const composer=new EffectComposer(renderer,target);
@@ -47,9 +48,9 @@ export function createEffects(renderer,scene,camera){
  }
 
  return {
-  setMode(mode){ao.enabled=mode!=='outside';selected.clear();outline.enabled=false;},
+  setMode(mode){outside=mode==='outside';ao.enabled=!outside;selected.clear();outline.enabled=false;},
   setHighlight(root){selected.clear();root?.traverse(o=>{if(o.isMesh)selected.add(o);});outline.enabled=selected.size>0&&!ao.enabled;},
-  render(){if(outline.enabled)renderMask();composer.render();},
+  render(){if(outside&&!outline.enabled){renderer.render(scene,camera);return;}if(outline.enabled)renderMask();composer.render();},
   resize(width,height){composer.setSize(width,height);mask.setSize(width,height);outline.uniforms.pixel.value.set(1.25/width,1.25/height);const ratio=Math.min(renderer.getPixelRatio(),1);ao.setSize(Math.max(1,Math.round(width*ratio)),Math.max(1,Math.round(height*ratio)));}
  };
 }

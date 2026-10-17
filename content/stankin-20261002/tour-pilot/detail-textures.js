@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 const SLOT_COUNT=6, UV_SPLIT=.425;
 export class DetailTextures {
- constructor(renderer,root,car){
+ constructor(renderer,root,car,{exteriorOnly=false,onChange=()=>{}}={}){
+  this.onChange=onChange;this.exteriorOnly=exteriorOnly;
   this.renderer=renderer;this.root=root;this.car=car;this.dead=false;this.next=0;this.retryAfter=new Map();this.meshes=[];this.materials=new Set();this.manifests={};
   this.mobile=matchMedia('(max-width:720px)').matches;this.limit=this.mobile?4:6;
   this.slots=Array.from({length:SLOT_COUNT},()=>({key:null,texture:null,request:0}));
@@ -26,9 +27,9 @@ export class DetailTextures {
   });
   this.ready=this.loader.loadAsync('./exterior/car-'+car+'.jpg?v=20261015').then(texture=>{
    if(this.dead){texture.dispose();return;}
-   this.configure(texture);this.exterior=texture;this.uniforms.exteriorBase.value=texture;this.uniforms.exteriorReady.value=true;
+   this.configure(texture);this.exterior=texture;this.uniforms.exteriorBase.value=texture;this.uniforms.exteriorReady.value=true;this.onChange();
   });
-  for(const domain of [0,1])fetch(this.folder(domain)+'/manifest.json').then(r=>{if(!r.ok)throw Error('Details unavailable');return r.json();}).then(m=>{if(!this.dead)this.manifests[domain]=m;}).catch(()=>{});
+  for(const domain of (exteriorOnly?[1]:[0,1]))fetch(this.folder(domain)+'/manifest.json').then(r=>{if(!r.ok)throw Error('Details unavailable');return r.json();}).then(m=>{if(!this.dead){this.manifests[domain]=m;this.next=0;this.onChange();}}).catch(()=>{});
  }
  folder(domain){return './'+(domain?'exterior-details':'details')+'/car-'+this.car;}
  configure(texture){texture.colorSpace=THREE.SRGBColorSpace;texture.flipY=false;texture.anisotropy=Math.min(16,this.renderer.capabilities.getMaxAnisotropy());texture.wrapS=texture.wrapT=THREE.ClampToEdgeWrapping;}
@@ -51,7 +52,7 @@ export class DetailTextures {
   const wanted=[...scores].sort((a,b)=>b[1]-a[1]).slice(0,this.limit).map(v=>v[0]);
   for(let i=0;i<this.limit;i++){
    const slot=this.slots[i];
-   if(slot.key&&!wanted.includes(slot.key)){slot.texture?.dispose();slot.texture=null;slot.key=null;slot.request++;this.uniforms['detailCell'+i].value.set(-99,-99,-1);this.uniforms['detailMap'+i].value=this.base;}
+   if(slot.key&&!wanted.includes(slot.key)){slot.texture?.dispose();slot.texture=null;slot.key=null;slot.request++;this.uniforms['detailCell'+i].value.set(-99,-99,-1);this.uniforms['detailMap'+i].value=this.base;this.onChange();}
   }
   for(const key of wanted){
    if(this.slots.some(s=>s.key===key))continue;
@@ -62,7 +63,7 @@ export class DetailTextures {
     if(this.dead||slot.key!==key||slot.request!==request){texture.dispose();return;}
     this.configure(texture);slot.texture=texture;this.uniforms['detailMap'+i].value=texture;
     this.uniforms['detailCell'+i].value.set(...cell.split('-').map(Number),domain);
-    this.uniforms['detailRect'+i].value.fromArray(this.manifests[domain].tiles[cell].rect);
+    this.uniforms['detailRect'+i].value.fromArray(this.manifests[domain].tiles[cell].rect);this.onChange();
    },undefined,()=>{if(!this.dead&&slot.key===key&&slot.request===request){slot.key=null;this.retryAfter.set(key,performance.now()+30000);}});
   }
  }

@@ -62,5 +62,16 @@ export function createStation(length=180){
   roof.scale.x=enabled?80:13.2;roof.position.x=enabled?36.7:3.2;
  };
  roof.visible=false;
+ const batches=new Map();
+ for(const mesh of [...station.children]){
+  if(!mesh.isMesh||mesh.geometry!==geo||mesh===roof||mesh===platformExtension||foreground.includes(mesh))continue;
+  if(!batches.has(mesh.material))batches.set(mesh.material,[]);
+  batches.get(mesh.material).push(mesh);
+ }
+ for(const [material,meshes] of batches){
+  const batch=new THREE.InstancedMesh(geo,material,meshes.length);
+  meshes.forEach((mesh,i)=>{mesh.updateMatrix();batch.setMatrixAt(i,mesh.matrix);station.remove(mesh);});
+  batch.instanceMatrix.needsUpdate=true;batch.computeBoundingSphere();station.add(batch);
+ }
  return station;
 }
