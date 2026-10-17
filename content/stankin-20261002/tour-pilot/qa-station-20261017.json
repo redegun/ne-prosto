@@ -12,7 +12,20 @@
     "lighting": "Exterior key lights .85/.25, exposure .78, environment .32; station surfaces visible and graphics preserved; interior lighting unchanged",
     "fullscreen": "Final perspective fitting verified at 1920x1080 fullscreen, normal viewport and 390x844 emulation",
     "drag": "Dragging carriage geometry rotates the overview without entering",
-    "source_sha256": "6a9e54fa27f889e2857b38e8c748fadac25d1ed6f72dd13b8ead931af1bec73f; unchanged"
+    "source_sha256": "6a9e54fa27f889e2857b38e8c748fadac25d1ed6f72dd13b8ead931af1bec73f; unchanged",
+    "live": "Case starts full train with selected car 1; clicking car 1 geometry opens interior; return restores full train; native fullscreen works; browser logs no errors/warnings"
   },
-  "deployment": "pending"
+  "deployment": {
+    "status": "success",
+    "commit": "696709bf9208fde944396edf93602671379fc2dc",
+    "workflow": "https://github.com/redegun/ne-prosto/actions/runs/39044408223",
+    "verified_http_files": 16,
+    "backup": "/opt/office1080/ne-prosto-backups/39044408223",
+    "ephemeral_runner": "exit 0; registration and credentials removed; no remaining repository runners"
+  },
+  "screenshots": [
+    "reports/station-before-20261017.jpg",
+    "reports/station-live-20261017.jpg"
+  ],
+  "worklog_id": 6939
 }
