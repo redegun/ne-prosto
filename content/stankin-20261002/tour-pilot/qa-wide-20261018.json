@@ -8,7 +8,33 @@
     "performance": "Same desktop profile view: draw calls179 ->108, render target texture count13 ->9 before later tests. Static visible scene reaches0 newly rendered frames/3s. Counts are scene-specific, not a general FPS multiplier.",
     "textures": "Both sides share one base atlas; no geometry/UV deletion. Exterior DetailTextures skips internal domain manifests/tiles; visible external detail slots remain6/4.",
     "console": "No warnings/errors in local integration preview.",
-    "static": "node --check tour/detail-textures/effects/station/embed and git diff --check pass; 9 release file hashes pass"
+    "static": "node --check tour/detail-textures/effects/station/embed and git diff --check pass; 9 release file hashes pass",
+    "live": "PASS: normal reload of resource100 loads versioned embed and iframe; x=0,width=1265,height=320,clientWidth=scrollWidth=1265. Interior height504 and appearance verified; return exterior works. Only existing global Yandex Maps invalid API key warning; no tour errors."
   },
-  "deployment": "pending"
+  "deployment": {
+    "assets": {
+      "commit": "f9a86e3be104c89808bd63c5b68da2164a86c36b",
+      "run": "https://github.com/redegun/ne-prosto/actions/runs/39070247639",
+      "conclusion": "success",
+      "httpShaMatches": 9,
+      "backup": "/opt/office1080/ne-prosto-backups/39070247639"
+    },
+    "caseEmbedVersions": {
+      "commit": "a2365f6ea14cea2142150308ea0c218271bd16e1",
+      "run": "https://github.com/redegun/ne-prosto/actions/runs/39070415617",
+      "conclusion": "success",
+      "resource": 100,
+      "changes": "Only the embed.css and embed.js query versions in resource100 content",
+      "contentSha256": "45c8dbf3ac8ba655916175637d82e22d661275a286302c1b3988e2eec57a53c8",
+      "backup": "/opt/office1080/ne-prosto-backups/39070415617/resource-100-before.json",
+      "bridge": "Archived outside webroot; public HTTP404 confirmed"
+    },
+    "runner": "Both one-shot runner processes exited0; registered runner count0",
+    "worklogId": 6989,
+    "screenshots": [
+      "reports/wide-before-20261018.jpg",
+      "reports/wide-mobile-20261018.jpg",
+      "reports/wide-live-20261018.jpg"
+    ]
+  }
 }
