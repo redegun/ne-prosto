@@ -1,6 +1,7 @@
 from pathlib import Path
 import json,re,hashlib
 ROOT=Path(__file__).resolve().parent
+if (ROOT/'releases/v1.json').exists():raise SystemExit('Historical v1 generator: later releases must use their own guarded manifest')
 snapshot=json.loads((ROOT/'sources/cms-snapshot.json').read_text())
 ot={x['id']:x for x in snapshot['templates']};oc={x['name']:x for x in snapshot['chunks']}
 templates={};chunks={};resources={}

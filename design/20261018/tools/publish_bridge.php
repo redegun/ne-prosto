@@ -10,21 +10,22 @@ function fail($message){http_response_code(409);echo json_encode(['error'=>$mess
 if($modx->getOption('site_url')!=='https://ne-prosto.ru/')fail('Wrong site');
 $input=json_decode(file_get_contents('php://input'),true);
 if(!is_array($input)||!in_array($input['action']??'', ['inspect','apply'],true))fail('Invalid action');
-$allowed=['modTemplate'=>'content','modChunk'=>'snippet','modResource'=>'content','modTemplateVarResource'=>'value'];
+$allowed=['modTemplate'=>'content','modChunk'=>'snippet','modSnippet'=>'snippet','modResource'=>'content','modTemplateVarResource'=>'value'];
 $changes=$input['changes']??[];
 if(count($changes)<1||count($changes)>50)fail('Invalid count');
 $rows=[];$objects=[];
 foreach($changes as $i=>$c){
  $class=$c['type']??'';$field=$c['field']??'';
  if(!isset($allowed[$class])||$allowed[$class]!==$field)fail('Invalid type/field');
- if(!$c['id']&&($class!=='modChunk'||!preg_match('/^np_[a-z_]+$/',$c['name'])))fail('Invalid new object');
+ if(!$c['id']&&!(($class==='modChunk'&&preg_match('/^np_[a-z_]+$/',$c['name']))||($class==='modSnippet'&&$c['name']==='npLegacyContent')))fail('Invalid new object');
  $o=$modx->getObject($class,$c['id']?(int)$c['id']:['name'=>$c['name']]);
  if($c['id']&&!$o)fail('Missing object '.$i);
- if($class==='modChunk'&&$o&&$o->get('name')!==$c['name'])fail('Chunk identity mismatch');
+ if(in_array($class,['modChunk','modSnippet'],true)&&$o&&$o->get('name')!==$c['name'])fail('Chunk identity mismatch');
  $value=$o?(string)$o->get($field):null;
  $hash=$value===null?null:hash('sha256',$value);
  if($hash!==$c['expected']&&$hash!==$c['target'])fail('Source changed '.$class.' '.($c['id']?:$c['name']));
  if(!is_string($c['content'])||hash('sha256',$c['content'])!==$c['target'])fail('Payload hash mismatch');
+ if($class==='modSnippet'){try{token_get_all('<?php '.$c['content'],TOKEN_PARSE);}catch(Throwable $e){fail('Snippet syntax error');}}
  $rows[]=['type'=>$class,'id'=>$o?$o->get('id'):null,'name'=>$c['name'],'field'=>$field,'value'=>$value,'hash'=>$hash,'object'=>$o?$o->toArray():null];
  $objects[]=$o;
 }

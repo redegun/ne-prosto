@@ -1,6 +1,6 @@
 {
   "site": "https://ne-prosto.ru/",
-  "release": "design-20261018-v1",
+  "release": "design-20261018-v2",
   "changes": [
     {
       "type": "modTemplate",
@@ -8,7 +8,7 @@
       "name": null,
       "field": "content",
       "path": "templates/5.html",
-      "expected": "ddae10343702637e7eb2994a1700754ddf1a6911e3cd9a04d82c952576f78b3d",
+      "expected": "f8a141cd0a71861425e4531827219714675df90d2a573a4b3514c0444703c394",
       "target": "f8a141cd0a71861425e4531827219714675df90d2a573a4b3514c0444703c394"
     },
     {
@@ -17,7 +17,7 @@
       "name": null,
       "field": "content",
       "path": "templates/1.html",
-      "expected": "a7b8b0575628931f9361d340bc54198999525723c9a0e1575b4e28917b3ea0fa",
+      "expected": "d3fccc74fb49d215656de12cfffb78cd6256e40c73bd8618834e0e4e97e790e6",
       "target": "d3fccc74fb49d215656de12cfffb78cd6256e40c73bd8618834e0e4e97e790e6"
     },
     {
@@ -26,7 +26,7 @@
       "name": null,
       "field": "content",
       "path": "templates/13.html",
-      "expected": "c39d3e94c71a5cfc9a92aae2d51a646dd9a358ec31b32b8d17f32647c45337d4",
+      "expected": "1e9661611f9b774e4c13ae30c89e40af0a26969f2bbb0665c603954631712977",
       "target": "1e9661611f9b774e4c13ae30c89e40af0a26969f2bbb0665c603954631712977"
     },
     {
@@ -35,7 +35,7 @@
       "name": null,
       "field": "content",
       "path": "templates/9.html",
-      "expected": "3065f4fd74188b593620aed43e0f48b7ef3a4e7964899d919d8afc7c5145d832",
+      "expected": "b261ee002393f484984148415b64d6671eeab296e87e99a955574f7ae8eade14",
       "target": "b261ee002393f484984148415b64d6671eeab296e87e99a955574f7ae8eade14"
     },
     {
@@ -44,7 +44,7 @@
       "name": null,
       "field": "content",
       "path": "templates/6.html",
-      "expected": "ef3557c43fccdb9ab2678ee006f329ada5bcaa8b94b734cd92c0021db8ed3c67",
+      "expected": "d506e20b5bf12bebff0263e0a42323d44b63a49c9ae92b7fdddd7e33dad5ffc7",
       "target": "d506e20b5bf12bebff0263e0a42323d44b63a49c9ae92b7fdddd7e33dad5ffc7"
     },
     {
@@ -53,7 +53,7 @@
       "name": null,
       "field": "content",
       "path": "templates/7.html",
-      "expected": "600600d5f31f0c19bfa99ed7e014d6dd355a71420d894828084e0aaf42b6297d",
+      "expected": "70d128a2fdad44f274003c4a02ee2da37eac7c2aec0832d27b5687dd04e8d16d",
       "target": "70d128a2fdad44f274003c4a02ee2da37eac7c2aec0832d27b5687dd04e8d16d"
     },
     {
@@ -62,7 +62,7 @@
       "name": null,
       "field": "content",
       "path": "templates/8.html",
-      "expected": "fdb80408f20812d35f1a8969f7e20ddac465c78f0609a8fdbca3d4c670c03e8d",
+      "expected": "d1d41fd944d736ed2e0daf352f91a835e8f57b4a2ca505ec65249ae31992da28",
       "target": "d1d41fd944d736ed2e0daf352f91a835e8f57b4a2ca505ec65249ae31992da28"
     },
     {
@@ -71,7 +71,7 @@
       "name": null,
       "field": "content",
       "path": "templates/10.html",
-      "expected": "dd9061c78ab40389eaac09725358d373493ae3d69502e8e92222576db5ed769d",
+      "expected": "aff1d0d8c5e621dcf464c666fcf1f6e1e4bf6905aeb542d4b3191b6c7d4a7486",
       "target": "aff1d0d8c5e621dcf464c666fcf1f6e1e4bf6905aeb542d4b3191b6c7d4a7486"
     },
     {
@@ -80,7 +80,7 @@
       "name": null,
       "field": "content",
       "path": "templates/11.html",
-      "expected": "310ef028638d924b01697b0eb272678bd4c2136021232fdacde953de27765629",
+      "expected": "13856ad173834f5f1ed3fe7ddb6f7955bb2cfc4134409c8570a8faea5d696ac1",
       "target": "13856ad173834f5f1ed3fe7ddb6f7955bb2cfc4134409c8570a8faea5d696ac1"
     },
     {
@@ -89,7 +89,7 @@
       "name": null,
       "field": "content",
       "path": "templates/12.html",
-      "expected": "fbcc380471239cb5b74c0f49c195a2dad5a7f19522e13ed677b481c0997aabfe",
+      "expected": "b5c91f013d42318a34d4c43e7248887c6ff55edbcda8d0e2516425ba29258dae",
       "target": "b5c91f013d42318a34d4c43e7248887c6ff55edbcda8d0e2516425ba29258dae"
     },
     {
@@ -98,7 +98,7 @@
       "name": null,
       "field": "content",
       "path": "templates/15.html",
-      "expected": "c785116c2e699ecdffa5244c683a46bb5837fc52e9e81fedd91b42418ab96bfa",
+      "expected": "91e7380c8b5effa690f647d35faf265af9bcedeb6c93bdc4068bb9babd2caa25",
       "target": "91e7380c8b5effa690f647d35faf265af9bcedeb6c93bdc4068bb9babd2caa25"
     },
     {
@@ -107,7 +107,7 @@
       "name": null,
       "field": "content",
       "path": "templates/16.html",
-      "expected": "b9118f6f95a6e4ce279558f9345cefdcd574aa612f4383c4b0e8bf556675f1bd",
+      "expected": "5462e708630995cc769966795dd5ea2207f072a1e0da71b97108f5355ea60924",
       "target": "5462e708630995cc769966795dd5ea2207f072a1e0da71b97108f5355ea60924"
     },
     {
@@ -116,8 +116,8 @@
       "name": null,
       "field": "content",
       "path": "templates/4.html",
-      "expected": "a66f2ea3242e9ecb900f6f88cbb39c23da4339ad296e638182ba4fbab957477e",
-      "target": "651e1b00c540f823b911106e580793eb62b27e4f559bea0c3ffab2ea18ef90c0"
+      "expected": "651e1b00c540f823b911106e580793eb62b27e4f559bea0c3ffab2ea18ef90c0",
+      "target": "151ae8deaef6f96b578ae88cf1cdaa6c33cc54f7e25ae43269f50dff9e9a59dd"
     },
     {
       "type": "modTemplate",
@@ -125,7 +125,7 @@
       "name": null,
       "field": "content",
       "path": "templates/14.html",
-      "expected": "3bc4b756be3062b1fac115ad5bae45d9a12657a82f580471ffe09286b6f264b2",
+      "expected": "ce1cda56c19475e3f3427d21c937628b3e3811f84b5f37aeda279ad6cb2aa035",
       "target": "ce1cda56c19475e3f3427d21c937628b3e3811f84b5f37aeda279ad6cb2aa035"
     },
     {
@@ -134,7 +134,7 @@
       "name": "np_header",
       "field": "snippet",
       "path": "chunks/np_header.html",
-      "expected": null,
+      "expected": "4736806569997be28a34973cc03e1869fbb8392945426e5b1febb17e323290bf",
       "target": "4736806569997be28a34973cc03e1869fbb8392945426e5b1febb17e323290bf"
     },
     {
@@ -143,7 +143,7 @@
       "name": "np_footer",
       "field": "snippet",
       "path": "chunks/np_footer.html",
-      "expected": null,
+      "expected": "8234299f4cdbdd84cf3125cfd6e13baccb15dc1312a8c4325ee44efcadabd94e",
       "target": "8234299f4cdbdd84cf3125cfd6e13baccb15dc1312a8c4325ee44efcadabd94e"
     },
     {
@@ -152,7 +152,7 @@
       "name": "np_project",
       "field": "snippet",
       "path": "chunks/np_project.html",
-      "expected": null,
+      "expected": "148cbb6d3fddc9e9eb881c9dffe9a996082604b97c52f5e3b42eca5cc2bc9d67",
       "target": "148cbb6d3fddc9e9eb881c9dffe9a996082604b97c52f5e3b42eca5cc2bc9d67"
     },
     {
@@ -161,7 +161,7 @@
       "name": "np_article",
       "field": "snippet",
       "path": "chunks/np_article.html",
-      "expected": null,
+      "expected": "b5d486a9f5cdb1ba5572d3b6af064caa8a66e253209d9ca36cc34413c0314958",
       "target": "b5d486a9f5cdb1ba5572d3b6af064caa8a66e253209d9ca36cc34413c0314958"
     },
     {
@@ -170,7 +170,7 @@
       "name": "np_services",
       "field": "snippet",
       "path": "chunks/np_services.html",
-      "expected": null,
+      "expected": "168d5af3fca2cca4304bb98ca9411ea6f9770570bd12f79ce7ee14e63fc9e535",
       "target": "168d5af3fca2cca4304bb98ca9411ea6f9770570bd12f79ce7ee14e63fc9e535"
     },
     {
@@ -179,7 +179,7 @@
       "name": "np_support",
       "field": "snippet",
       "path": "chunks/np_support.html",
-      "expected": null,
+      "expected": "c06f93c4c8843fa273fe77ff29bcf9673560ea68054a1956d2e360fd8f067085",
       "target": "c06f93c4c8843fa273fe77ff29bcf9673560ea68054a1956d2e360fd8f067085"
     },
     {
@@ -188,7 +188,7 @@
       "name": "np_feature",
       "field": "snippet",
       "path": "chunks/np_feature.html",
-      "expected": null,
+      "expected": "619e1870480ef4d65bfd4bb7c1b52cf9ec4fe2d4c0b2b9e079da3f54ea0a29ff",
       "target": "619e1870480ef4d65bfd4bb7c1b52cf9ec4fe2d4c0b2b9e079da3f54ea0a29ff"
     },
     {
@@ -197,7 +197,7 @@
       "name": "head_2019",
       "field": "snippet",
       "path": "chunks/head_2019.html",
-      "expected": "668ea5e8680feb73939e026ae2f080a3a8d4e59aa1e79a90893f21e4ee81721b",
+      "expected": "45adeb5df4e9d364298ef4b41bea9e4b95e9a6a04dd021fb7a1dc4ea7868fca0",
       "target": "45adeb5df4e9d364298ef4b41bea9e4b95e9a6a04dd021fb7a1dc4ea7868fca0"
     },
     {
@@ -206,7 +206,7 @@
       "name": "head",
       "field": "snippet",
       "path": "chunks/head.html",
-      "expected": "d0abc0d0b9059cb68271a95764f5631437420fe1d5c7fb21b8daf2a07961473d",
+      "expected": "05cc8351dcb3a37d7f60ec29d7b2ba6ca58109a1c4f5eeebea01463ec259b603",
       "target": "05cc8351dcb3a37d7f60ec29d7b2ba6ca58109a1c4f5eeebea01463ec259b603"
     },
     {
@@ -215,7 +215,7 @@
       "name": "scripts_2019",
       "field": "snippet",
       "path": "chunks/scripts_2019.html",
-      "expected": "02de95a068abf5f41136de14483024f910d278a691a0e6166d157f4951672a6a",
+      "expected": "91e1d135671a590e4785af148550d22a9d6184baabcbbcb319839ba65b2e4df3",
       "target": "91e1d135671a590e4785af148550d22a9d6184baabcbbcb319839ba65b2e4df3"
     },
     {
@@ -224,7 +224,7 @@
       "name": "request_form",
       "field": "snippet",
       "path": "chunks/request_form.html",
-      "expected": "72928d0d1597465a99674eb2e2a63c82c880f5bb8826ae86424450258bb809ee",
+      "expected": "8555c49b3f9a34813fd5fed77be946498233274c83000710a676a9e20020a440",
       "target": "8555c49b3f9a34813fd5fed77be946498233274c83000710a676a9e20020a440"
     },
     {
@@ -233,7 +233,7 @@
       "name": "np_team",
       "field": "snippet",
       "path": "chunks/np_team.html",
-      "expected": null,
+      "expected": "5908a4faab06238a0629f9131a922b0b4f35f5de00a537dfbe5a3f033e14a69f",
       "target": "5908a4faab06238a0629f9131a922b0b4f35f5de00a537dfbe5a3f033e14a69f"
     },
     {
@@ -242,7 +242,7 @@
       "name": null,
       "field": "content",
       "path": "resources/19.html",
-      "expected": "a087138c7713bd5573894ac54c390129ac76dd6704c76374826d97fca84c661b",
+      "expected": "54db4736c5b3e6d506024c540408bca01279db4a1041f538ec4209e2f45d29dc",
       "target": "54db4736c5b3e6d506024c540408bca01279db4a1041f538ec4209e2f45d29dc"
     },
     {
@@ -251,7 +251,7 @@
       "name": null,
       "field": "content",
       "path": "resources/20.html",
-      "expected": "5ab10e4c735722c3bcbe08217cbe33fd6da98030937cc21139e492697af26de7",
+      "expected": "52a430260cefda41a587d259b19605955a8dd754b32ba52c696f226a83792289",
       "target": "52a430260cefda41a587d259b19605955a8dd754b32ba52c696f226a83792289"
     },
     {
@@ -260,7 +260,7 @@
       "name": null,
       "field": "content",
       "path": "resources/22.html",
-      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": "dd723c96771ab2d302982e4788405c51d34b7858461bf4e4dc521b00b8484675",
       "target": "dd723c96771ab2d302982e4788405c51d34b7858461bf4e4dc521b00b8484675"
     },
     {
@@ -269,7 +269,7 @@
       "name": null,
       "field": "content",
       "path": "resources/11.html",
-      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": "390b0ec4c922467b2e8ec6241459d4e64d9fe57d5995968f2070a144637b5414",
       "target": "390b0ec4c922467b2e8ec6241459d4e64d9fe57d5995968f2070a144637b5414"
     },
     {
@@ -278,7 +278,7 @@
       "name": null,
       "field": "content",
       "path": "resources/12.html",
-      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": "99d2ad1260a2bd647b5e71741e952366bb18833924a8d4b44f507133ab2ee90c",
       "target": "99d2ad1260a2bd647b5e71741e952366bb18833924a8d4b44f507133ab2ee90c"
     },
     {
@@ -287,7 +287,7 @@
       "name": null,
       "field": "content",
       "path": "resources/13.html",
-      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": "0818703d0976be0c5ece2bf1db3416088727dcb632f2d9bfca0bbb001c4538af",
       "target": "0818703d0976be0c5ece2bf1db3416088727dcb632f2d9bfca0bbb001c4538af"
     },
     {
@@ -296,8 +296,17 @@
       "name": null,
       "field": "value",
       "path": "tv-values/50.html",
-      "expected": "7e487431847cf03f5e62a57974c31f2888a05f3a1a28daa51981acdd14abc8d1",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "target": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "type": "modSnippet",
+      "id": null,
+      "name": "npLegacyContent",
+      "field": "snippet",
+      "path": "snippets/npLegacyContent.php",
+      "expected": null,
+      "target": "319e0fa559462052882bfc69652e5ba4a0b2d264de7cd8603cffdec7d04954f6"
     }
   ]
 }
