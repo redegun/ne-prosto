@@ -10,5 +10,16 @@
     "integration": "Local car6 interior and outside checked; neighbour/return checked.",
     "syntax": "node --check detail-textures.js tour.js qa-texture.js pass; both release manifests validate. PHP runtime absent on VPS; bridge differs only version/path strings from previously deployed guarded bridge."
   },
-  "deployment": "pending"
+  "deployment": {
+    "commit": "2716f8d0ef95c4f05cb20025f142dfcf3bc3a922",
+    "run": "https://github.com/redegun/ne-prosto/actions/runs/39123640076",
+    "result": "success",
+    "http_hashes": "5/5 match",
+    "backup": "/opt/office1080/ne-prosto-backups/39123640076",
+    "resource100": "Only two embed version strings changed; SHA guard passed",
+    "bridge": "Archived outside webroot, public404",
+    "runner": "Exited0, registered runners0",
+    "live": "Normal reload starts iframe with20261018-texture1; car6 close screenshot; no new tour error",
+    "worklog_id": 7032
+  }
 }
