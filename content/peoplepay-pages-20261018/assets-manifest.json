@@ -120,6 +120,12 @@
     "sha256": "9343a67a3ed2ec97aac670a5a8abc848c681ced90b6babb55d88dd73b2d35dcb"
   },
   {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/cover-card.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/cover-card.webp",
+    "bytes": 53130,
+    "sha256": "cf08154122ee24268762020fbdf231c497d7f475cc2215c078dfb1a09bd7f36f"
+  },
+  {
     "local": "preview/images/godnota/peoplepay-pages-20261018/cover-og.jpg",
     "remote": "/images/godnota/peoplepay-pages-20261018/cover-og.jpg",
     "bytes": 80823,
@@ -132,9 +138,15 @@
     "sha256": "282f2957c4e135c30b96f64b72318f3d586414028ed5283f87c981053530debb"
   },
   {
-    "local": "preview/images/godnota/peoplepay-pages-20261018/cover-card.webp",
-    "remote": "/images/godnota/peoplepay-pages-20261018/cover-card.webp",
-    "bytes": 53130,
-    "sha256": "cf08154122ee24268762020fbdf231c497d7f475cc2215c078dfb1a09bd7f36f"
+    "local": "preview/images/godnota/peoplepay-pages-20261018/editorial-v2.css",
+    "remote": "/images/godnota/peoplepay-pages-20261018/editorial-v2.css",
+    "bytes": 6714,
+    "sha256": "bcd515b43a24103ca7b5bf32b5bc5d728baa87c67e083f7d28815fa569cb3502"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/editorial-v2.js",
+    "remote": "/images/godnota/peoplepay-pages-20261018/editorial-v2.js",
+    "bytes": 860,
+    "sha256": "7b4ec863f30b4ffb3ac77b6ea263679ece85ecedce5507977ce48ab952d8c9e1"
   }
 ]

@@ -1,0 +1,8 @@
+{
+  "resource": 102,
+  "source_template": 8,
+  "template_name": "People Pay editorial article 20261018",
+  "expected_content_sha": "de21e1a0c5e4572fd1f015064537cd4258edfb05d240eebe877873f150ad7878",
+  "target_content_sha": "8e594e56573268b8ea28a4ffc077be6eb606ecf35b59c230ca37b6926d4169a5",
+  "target_template_sha": "754a61df106c809eceb904c3bd4a87aec6b7976d1f027fe5bdee146f6b7e3137"
+}

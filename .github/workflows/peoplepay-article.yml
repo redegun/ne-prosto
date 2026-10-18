@@ -18,7 +18,7 @@ jobs:
       - name: Validate prepared article
         run: |
           python3 content/peoplepay-pages-20261018/publish_ci.py --check
-          if command -v php >/dev/null; then php -l content/peoplepay-pages-20261018/publish_bridge.php; fi
+          if command -v php >/dev/null; then php -l content/peoplepay-pages-20261018/publish_bridge_v2.php; fi
       - name: Back up and publish article with verified assets
         env:
           NE_PROSTO_FTP: ${{ secrets.NE_PROSTO_FTP }}
