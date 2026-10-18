@@ -1,0 +1,107 @@
+[
+  {
+    "name": "services/advertising-480.webp",
+    "sha256": "99ac495b387a94c584c9d3b04104353542e28a082f77fcf767ac4e8578dba2f0",
+    "bytes": 3364
+  },
+  {
+    "name": "services/advertising-960.webp",
+    "sha256": "daf498947c246dd66601dee5da5439bbd5ae7b80b3aef5fe973a53ab07afcf1b",
+    "bytes": 8020
+  },
+  {
+    "name": "services/advertising-1440.webp",
+    "sha256": "0b161ad6fbb27d5cc8c806047160d3c3f7b4449856c6a83169ceda4adbbf4a74",
+    "bytes": 13308
+  },
+  {
+    "name": "services/branding-480.webp",
+    "sha256": "5782cbea77dcf57fe0e946c094cb50e1b9016787da08493292670222e9247cdd",
+    "bytes": 5058
+  },
+  {
+    "name": "services/branding-960.webp",
+    "sha256": "e5028f399644af6dbfbef4dc8345cefd4890cde453bd426aa41ba228090d259b",
+    "bytes": 11422
+  },
+  {
+    "name": "services/branding-1440.webp",
+    "sha256": "576739a0268d8e138c800bcf8af7469592d601ca4b3e20ba44a2c1dd30d7d33e",
+    "bytes": 18496
+  },
+  {
+    "name": "services/packaging-480.webp",
+    "sha256": "ad7e540851a0a1fe810e22584c8b72188f39e1a30aefff525351f78bc05d6c95",
+    "bytes": 3668
+  },
+  {
+    "name": "services/packaging-960.webp",
+    "sha256": "b78c83718979aafa1bbb451384bdb1784a8c70e18c2b6081bc31304b9edf24a6",
+    "bytes": 8636
+  },
+  {
+    "name": "services/packaging-1440.webp",
+    "sha256": "02fffceb888ac36391da0e78f5719e15e5fd3faf15afc96988bdf40d270def97",
+    "bytes": 14500
+  },
+  {
+    "name": "services/promotion-480.webp",
+    "sha256": "36cd236a101778faff58a967ea6eb61fdcdd72e889f6213f1547f6e039e3ee35",
+    "bytes": 3476
+  },
+  {
+    "name": "services/promotion-960.webp",
+    "sha256": "0fff6b5d3b23eeb6f5e64e17db792a06d20d6963e36b8c3a1b19b508040055a5",
+    "bytes": 7874
+  },
+  {
+    "name": "services/promotion-1440.webp",
+    "sha256": "113e9e4583698d9181b10a14eb2cc0f4736a99dfcd16703b62ece4ec2e575167",
+    "bytes": 13102
+  },
+  {
+    "name": "services/social-480.webp",
+    "sha256": "9ac8651524ae7301a10d83b2437e793ba8c5ca4a44648e4b726eec84bb6f8d8d",
+    "bytes": 3924
+  },
+  {
+    "name": "services/social-960.webp",
+    "sha256": "9d771c4e81ddd7f8676596bf671e78168657d9dcc8c1ce36550853002f5272b9",
+    "bytes": 8694
+  },
+  {
+    "name": "services/social-1440.webp",
+    "sha256": "91d11e8d8ac4cd0072b9735783779dce0d1b9eb81258195f72b67ac6d1890212",
+    "bytes": 14012
+  },
+  {
+    "name": "services/support-480.webp",
+    "sha256": "bec809b13cf1fc34f6fc3ad08c4fa28d1df13f6edf2412fdb8707015d36cdbcb",
+    "bytes": 4876
+  },
+  {
+    "name": "services/support-960.webp",
+    "sha256": "e557741c9f074a8f360b3b8543bd1d9b778640f858bb62da91bc58038b00a817",
+    "bytes": 10786
+  },
+  {
+    "name": "services/support-1440.webp",
+    "sha256": "521746a27641ff3cf6c58ab03079661bb38f9aca868cdc9f799be14efd9249ac",
+    "bytes": 17160
+  },
+  {
+    "name": "services/web-480.webp",
+    "sha256": "57e6f66a5215cf12458f66fba6681186fcf3e5aee945ed9a27453825ebcf04cb",
+    "bytes": 5316
+  },
+  {
+    "name": "services/web-960.webp",
+    "sha256": "908e60d5dfeaa2f780f5f1a8c26d01b7253e4e8dbf8b545cea836513c848869f",
+    "bytes": 11236
+  },
+  {
+    "name": "services/web-1440.webp",
+    "sha256": "a30cf67533568503397ae68af4c96b4b2f300f90a16604ee8767183be3e188ed",
+    "bytes": 18392
+  }
+]

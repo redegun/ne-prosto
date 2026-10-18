@@ -1,0 +1,17 @@
+{set $art = ''}
+{if $id == 19}{set $art = 'web'}{/if}
+{if $id == 20}{set $art = 'branding'}{/if}
+{if $id == 22}{set $art = 'advertising'}{/if}
+{if $id == 11}{set $art = 'promotion'}{/if}
+{if $id == 12}{set $art = 'support'}{/if}
+{if $id == 13}{set $art = 'social'}{/if}
+<article class="np-article-card np-related-card">
+{if $art}
+<a class="np-article-card__image np-related-card__art" href="/{$uri}">
+<img class="" src="/assets/neprosto/design-20261018/services/{$art}-960.webp" srcset="/assets/neprosto/design-20261018/services/{$art}-480.webp 480w, /assets/neprosto/design-20261018/services/{$art}-960.webp 960w, /assets/neprosto/design-20261018/services/{$art}-1440.webp 1440w" sizes="(max-width: 700px) 90vw, 44vw" width="1440" height="1080" alt="" loading="lazy" decoding="async">
+</a>
+{elseif $_pls['tv.image']}
+<a class="np-article-card__image" href="/{$uri}"><img src="{$_pls['tv.image'] | phpthumbon : 'w=900&h=650&zc=1&q=85'}" alt="" loading="lazy" decoding="async" width="900" height="650"></a>
+{/if}
+<div><p class="np-kicker">{if $art}Услуги студии{else}Дизайн и практика{/if}</p><h2><a href="/{$uri}">{$pagetitle | htmlent} <span aria-hidden="true">↗</span></a></h2></div>
+</article>

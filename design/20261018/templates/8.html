@@ -26,7 +26,12 @@
 
 	<div class="article">
 		<div class="article-wrapper">
-			<h1 class="article-title">[[*longtitle:empty=`[[*pagetitle]]`]]</h1>
+			<div class="np-detail-heading"><h1 class="article-title">[[*longtitle:empty=`[[*pagetitle]]`]]</h1>[[*id:is=`19`:then=`<figure class="np-service-hero-art"><img class="" src="/assets/neprosto/design-20261018/services/web-960.webp" srcset="/assets/neprosto/design-20261018/services/web-480.webp 480w, /assets/neprosto/design-20261018/services/web-960.webp 960w, /assets/neprosto/design-20261018/services/web-1440.webp 1440w" sizes="(max-width: 700px) 90vw, 45vw" width="1440" height="1080" alt="" loading="eager" decoding="async"></figure>`]]
+[[*id:is=`20`:then=`<figure class="np-service-hero-art"><img class="" src="/assets/neprosto/design-20261018/services/branding-960.webp" srcset="/assets/neprosto/design-20261018/services/branding-480.webp 480w, /assets/neprosto/design-20261018/services/branding-960.webp 960w, /assets/neprosto/design-20261018/services/branding-1440.webp 1440w" sizes="(max-width: 700px) 90vw, 45vw" width="1440" height="1080" alt="" loading="eager" decoding="async"></figure>`]]
+[[*id:is=`22`:then=`<figure class="np-service-hero-art"><img class="" src="/assets/neprosto/design-20261018/services/advertising-960.webp" srcset="/assets/neprosto/design-20261018/services/advertising-480.webp 480w, /assets/neprosto/design-20261018/services/advertising-960.webp 960w, /assets/neprosto/design-20261018/services/advertising-1440.webp 1440w" sizes="(max-width: 700px) 90vw, 45vw" width="1440" height="1080" alt="" loading="eager" decoding="async"></figure>`]]
+[[*id:is=`11`:then=`<figure class="np-service-hero-art"><img class="" src="/assets/neprosto/design-20261018/services/promotion-960.webp" srcset="/assets/neprosto/design-20261018/services/promotion-480.webp 480w, /assets/neprosto/design-20261018/services/promotion-960.webp 960w, /assets/neprosto/design-20261018/services/promotion-1440.webp 1440w" sizes="(max-width: 700px) 90vw, 45vw" width="1440" height="1080" alt="" loading="eager" decoding="async"></figure>`]]
+[[*id:is=`12`:then=`<figure class="np-service-hero-art"><img class="" src="/assets/neprosto/design-20261018/services/support-960.webp" srcset="/assets/neprosto/design-20261018/services/support-480.webp 480w, /assets/neprosto/design-20261018/services/support-960.webp 960w, /assets/neprosto/design-20261018/services/support-1440.webp 1440w" sizes="(max-width: 700px) 90vw, 45vw" width="1440" height="1080" alt="" loading="eager" decoding="async"></figure>`]]
+[[*id:is=`13`:then=`<figure class="np-service-hero-art"><img class="" src="/assets/neprosto/design-20261018/services/social-960.webp" srcset="/assets/neprosto/design-20261018/services/social-480.webp 480w, /assets/neprosto/design-20261018/services/social-960.webp 960w, /assets/neprosto/design-20261018/services/social-1440.webp 1440w" sizes="(max-width: 700px) 90vw, 45vw" width="1440" height="1080" alt="" loading="eager" decoding="async"></figure>`]]</div>
 [[*id:ne=`17`:then=`
 			<div class="article-view">
 				<img src="assets/portfolio/img/ico/ico-eye.svg" alt="" class="article-view__img">
@@ -48,13 +53,13 @@
 			</div>
 [[*id:ne=`17`:then=`
 			<div class="article-similar">
-				<div class="title-divider"><span class="title-divider__text">Ещё интересное</span></div>
+				<div class="title-divider"><span class="title-divider__text">[[*parent:is=`2`:then=`Ещё интересное`:else=`Другие услуги`]]</span></div>
 				<div class="article-similar__items">
 				    [[!pdoResources?
                         &parents=`[[*parent]]`
                         &includeTVs=`image,displayed_tag,HitsPage,imageplus`
                         &includeContent=`1`
-                        &tpl=`blog__item--page`
+                        &tpl=`np_related`
                         &limit=`5`
                         &resources=`-[[*id]]`
                     ]]
