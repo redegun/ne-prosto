@@ -1,0 +1,37 @@
+{
+  "release": "design-20261018-v5",
+  "change": "Home template5 np-journal-grid changed to np-article-grid",
+  "before": {
+    "display": "block",
+    "cardWidth": 1162.625,
+    "sectionHeight": 3329.328125
+  },
+  "desktop": {
+    "viewport": 1440,
+    "display": "grid",
+    "columns": 3,
+    "cardWidth": 415.27,
+    "alignedTop": true,
+    "overflow": false
+  },
+  "mobile": {
+    "viewport": 390,
+    "columns": 1,
+    "cardWidth": 335,
+    "overflow": false
+  },
+  "blog": {
+    "viewport": 1280,
+    "columns": 3,
+    "cardWidth": 366.2,
+    "alignedTop": true,
+    "overflow": false
+  },
+  "ci": "https://github.com/redegun/ne-prosto/actions/runs/39137419562",
+  "screenshots": [
+    "reports/articles-before-20261018.png",
+    "reports/articles-after-desktop-20261018.png",
+    "reports/articles-after-mobile-20261018.png"
+  ],
+  "worklogId": 7051
+}
