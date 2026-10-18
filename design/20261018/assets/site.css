@@ -86,3 +86,10 @@ body.np-template-4{display:block;height:auto;table-layout:auto}.np-template-4 .p
 .np-template-11 .process-wrapper>div[style*="display:flex"]>div>div:last-child{color:var(--np-muted)!important;font-size:17px!important}
 .np-template-11 .process-wrapper>p{font-size:21px!important;max-width:820px!important;margin-left:auto!important}
 @media(max-width:700px){.np-template-11 .process-wrapper>div[style*="display:flex"]{gap:0!important}.np-template-11 .process-wrapper>div[style*="display:flex"]>div{flex-basis:140px!important}.np-template-11 .process-wrapper>div[style*="display:flex"]>div>div:first-child{font-size:32px!important}.np-template-11 .process-wrapper>p{font-size:18px!important}}
+
+.np-template-4 .page__heading h1{font-family:Museo,Arial,sans-serif;font-weight:700}
+.np-template-4 .subheading{display:block;margin:20px 0 0;text-align:left;font-size:22px;line-height:1.45;color:var(--np-muted)}
+.np-template-4 .subheading__layout{display:block;width:auto}.np-template-4 .subheading__text{background:none;padding:0;font:inherit}.np-template-4 .subheading__hr,.np-template-4 .subheading__layout:not(.subheading__layout--text){display:none}
+.np-template-4 .jobs__item{margin:0 0 30px;width:100%}.np-template-4 .jobs__block{margin-left:auto}
+.np-site .request-form input[type=submit]{grid-column:2;margin:0;position:static}
+@media(max-width:700px){.np-template-4 .subheading{font-size:19px}.np-template-4 .jobs__block{margin:0}.np-site .request-form input[type=submit]{grid-column:1}}

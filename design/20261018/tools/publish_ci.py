@@ -1,5 +1,5 @@
 from pathlib import Path
-import os,json,secrets,hashlib,ftplib,io,urllib.request,urllib.error,concurrent.futures
+import os,json,secrets,hashlib,ftplib,io,urllib.request,urllib.error,concurrent.futures,time,re
 ROOT=Path(__file__).resolve().parent.parent
 run=os.environ['GITHUB_RUN_ID'];backup=Path('/opt/office1080/ne-prosto-backups')/run;backup.mkdir(parents=True,exist_ok=True)
 manifest=json.loads((ROOT/'cms-manifest.json').read_text());changes=manifest['changes']
@@ -55,12 +55,19 @@ finally:
  print('Bridge archived; public 404')
 paths=['/','/portfolio/','/uslugi/','/uslugi/sajtyi','/uslugi/logotipyi-firmennyie-stili','/kompaniya/','/kompaniya/klientyi/','/kompaniya/v-rolyax/','/kompaniya/vakansii/','/koordinatyi','/blog/','/blog/gde-brat-foto-i-illyustracii-stoki','/portfolio/firmaflis','/portfolio/logotip-dlya-geodezicheskojkompanii-arshin','/portfolio/presentation-anglomania','/portfolio/poezd-stankin','/portfolio/lrrazbor-poisk']
 def verify(path):
- with urllib.request.urlopen('https://ne-prosto.ru'+path,timeout=90) as r:b=r.read().decode();assert r.status==200
+ for attempt in range(3):
+  try:
+   with urllib.request.urlopen('https://ne-prosto.ru'+path,timeout=90) as r:b=r.read().decode();assert r.status==200
+   break
+  except urllib.error.HTTPError as e:
+   if e.code not in [502,503,504] or attempt==2:raise
+   time.sleep(2*(attempt+1))
+ assert len(re.findall(r'<h1\b',b,re.I))==1,('Missing heading',path)
  assert 'np-site' in b and 'np-header' in b and 'np-footer' in b,path
  assert '[[!pdoResources' not in b and '[[$np_' not in b,path
  (backup/('page-'+str(paths.index(path))+'.html')).write_text(b)
  return path
-with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
  for p in pool.map(verify,paths):print('HTTP and shell OK',p)
 for name,h in assets.items():
  with urllib.request.urlopen('https://ne-prosto.ru/assets/neprosto/design-20261018/'+name+'?run='+run,timeout=30) as r:assert sha(r.read())==h

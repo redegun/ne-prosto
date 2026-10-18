@@ -1,6 +1,6 @@
 {
   "site": "https://ne-prosto.ru/",
-  "release": "design-20261018-v2b",
+  "release": "design-20261018-v3",
   "changes": [
     {
       "type": "modTemplate",
@@ -116,7 +116,7 @@
       "name": null,
       "field": "content",
       "path": "templates/4.html",
-      "expected": "651e1b00c540f823b911106e580793eb62b27e4f559bea0c3ffab2ea18ef90c0",
+      "expected": "151ae8deaef6f96b578ae88cf1cdaa6c33cc54f7e25ae43269f50dff9e9a59dd",
       "target": "151ae8deaef6f96b578ae88cf1cdaa6c33cc54f7e25ae43269f50dff9e9a59dd"
     },
     {
@@ -152,7 +152,7 @@
       "name": "np_project",
       "field": "snippet",
       "path": "chunks/np_project.html",
-      "expected": "148cbb6d3fddc9e9eb881c9dffe9a996082604b97c52f5e3b42eca5cc2bc9d67",
+      "expected": "a43cd19b000c4a683e473ca06acef74c724b69bb5bd8d5e80913f8012dca47ff",
       "target": "a43cd19b000c4a683e473ca06acef74c724b69bb5bd8d5e80913f8012dca47ff"
     },
     {
@@ -198,7 +198,7 @@
       "field": "snippet",
       "path": "chunks/head_2019.html",
       "expected": "45adeb5df4e9d364298ef4b41bea9e4b95e9a6a04dd021fb7a1dc4ea7868fca0",
-      "target": "45adeb5df4e9d364298ef4b41bea9e4b95e9a6a04dd021fb7a1dc4ea7868fca0"
+      "target": "5b0e751fde845e63e91bd9370f11e181d84e9342f0f90c7947db44fdd2f98082"
     },
     {
       "type": "modChunk",
@@ -207,7 +207,7 @@
       "field": "snippet",
       "path": "chunks/head.html",
       "expected": "05cc8351dcb3a37d7f60ec29d7b2ba6ca58109a1c4f5eeebea01463ec259b603",
-      "target": "05cc8351dcb3a37d7f60ec29d7b2ba6ca58109a1c4f5eeebea01463ec259b603"
+      "target": "a4ad81258d2ca169696e767df2c353754fd35ee76a26bd980698977bcfc6c5a6"
     },
     {
       "type": "modChunk",
@@ -305,8 +305,17 @@
       "name": "npLegacyContent",
       "field": "snippet",
       "path": "snippets/npLegacyContent.php",
-      "expected": null,
+      "expected": "b608e7072fa4f888d4fed7ec2b690e4ac4f92ab51b4f3e0e830dab15c31fd5f1",
       "target": "b608e7072fa4f888d4fed7ec2b690e4ac4f92ab51b4f3e0e830dab15c31fd5f1"
+    },
+    {
+      "type": "modResource",
+      "id": 41,
+      "name": null,
+      "field": "pagetitle",
+      "path": "resources/41-pagetitle.txt",
+      "expected": "5a34c863e3ab39e13a9aa202b09d49b777901539360efe073f9497d3dc7b4dd8",
+      "target": "9abc4b1d493d1c31329f1dfeb7060e9b4a9a45201c510053ba4d62505d0752f1"
     }
   ]
 }

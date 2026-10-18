@@ -16,7 +16,7 @@ if(count($changes)<1||count($changes)>50)fail('Invalid count');
 $rows=[];$objects=[];
 foreach($changes as $i=>$c){
  $class=$c['type']??'';$field=$c['field']??'';
- if(!isset($allowed[$class])||$allowed[$class]!==$field)fail('Invalid type/field');
+ if(!isset($allowed[$class])||($allowed[$class]!==$field&&!($class==='modResource'&&(int)$c['id']===41&&in_array($field,['pagetitle','longtitle'],true))))fail('Invalid type/field');
  if(!$c['id']&&!(($class==='modChunk'&&preg_match('/^np_[a-z_]+$/',$c['name']))||($class==='modSnippet'&&$c['name']==='npLegacyContent')))fail('Invalid new object');
  $o=$modx->getObject($class,$c['id']?(int)$c['id']:['name'=>$c['name']]);
  if($c['id']&&!$o)fail('Missing object '.$i);
