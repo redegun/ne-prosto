@@ -7,7 +7,20 @@
     "details": "Source/flow verified: same exterior camera matrix skips repeat rays; selection/upload deferred while camera moving, dead/request/dispose guards retained. Full atlas/tile resolution unchanged.",
     "measurement": "Local logs saved. Render calls observed145/146 baseline vs68 in comparable close view, but do not treat as FPS multiplier; IAB sometimes throttles rAF in inactive views.",
     "adaptiveResolution": "DPR1 test environment remains1. At high DPR the code caps outside movement to1 and restores full DPR<=2 after300ms; physical high-DPR/touch hardware not tested.",
-    "static": "node --check changed JS, git diff --check,7 manifest SHA/size checks and resource100 expected-target SHA guard pass"
+    "static": "node --check changed JS, git diff --check,7 manifest SHA/size checks and resource100 expected-target SHA guard pass",
+    "live": "PASS ordinary case reload uses iframe v=20261018-smooth1; model loads and navigation car1->2->1 works. No new tour console warnings/errors, only pre-existing global Yandex Maps API key warning."
   },
-  "deployment": "pending"
+  "deployment": {
+    "commit": "c67c699306259ce4acf89916582ca687d1aaa42b",
+    "run": "https://github.com/redegun/ne-prosto/actions/runs/39115397718",
+    "conclusion": "success",
+    "httpShaMatches": 7,
+    "resource": 100,
+    "resourceContentSha256": "9b53a8e8e506f70221b28ae10d1924f12e6617e2014a018d34283b2f9b2ad10b",
+    "backup": "/opt/office1080/ne-prosto-backups/39115397718",
+    "bridge": "Archived outside webroot, public404 confirmed",
+    "runner": "Exited0 and unregistered; runner count0",
+    "worklogId": 7015,
+    "screenshot": "reports/smooth-live-20261018.jpg"
+  }
 }
