@@ -1,6 +1,6 @@
 {
   "site": "https://ne-prosto.ru/",
-  "release": "design-20261018-v4",
+  "release": "design-20261018-v5",
   "changes": [
     {
       "type": "modTemplate",
@@ -9,7 +9,7 @@
       "field": "content",
       "path": "templates/5.html",
       "expected": "f8a141cd0a71861425e4531827219714675df90d2a573a4b3514c0444703c394",
-      "target": "f8a141cd0a71861425e4531827219714675df90d2a573a4b3514c0444703c394"
+      "target": "1606550688374e8bb5378b78e582defe3df4c39d553de15a195c0a7e29cac177"
     },
     {
       "type": "modTemplate",
@@ -197,7 +197,7 @@
       "name": "head_2019",
       "field": "snippet",
       "path": "chunks/head_2019.html",
-      "expected": "5b0e751fde845e63e91bd9370f11e181d84e9342f0f90c7947db44fdd2f98082",
+      "expected": "4a0f6ca640adc821789c5b3cc610bd9d6500ab020cbc915dc7e692fc3740b692",
       "target": "4a0f6ca640adc821789c5b3cc610bd9d6500ab020cbc915dc7e692fc3740b692"
     },
     {
@@ -206,7 +206,7 @@
       "name": "head",
       "field": "snippet",
       "path": "chunks/head.html",
-      "expected": "a4ad81258d2ca169696e767df2c353754fd35ee76a26bd980698977bcfc6c5a6",
+      "expected": "54fc9d7a54ee88a50d06b74040f72d8cae97ce25a241e79ebbdcc071381161c0",
       "target": "54fc9d7a54ee88a50d06b74040f72d8cae97ce25a241e79ebbdcc071381161c0"
     },
     {
