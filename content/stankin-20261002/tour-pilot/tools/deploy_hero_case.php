@@ -38,6 +38,15 @@ if(($in['action']??'')==='publish'){
   $next->fromArray(['templatename'=>$name,'description'=>'Full-width cover and immediate 3D viewer for STANKIN resource 100','content'=>$spec['template']['content'],'category'=>$t->get('category')]);
   if(!$next->save()){http_response_code(500);echo json_encode(['error'=>'Template creation failed']);exit;}
  }
+ // Preserve the original template's TV bindings in the new isolated template.
+ foreach($modx->getCollection('modTemplateVarTemplate',['templateid'=>15]) as $binding){
+  $where=['tmplvarid'=>$binding->get('tmplvarid'),'templateid'=>$next->get('id')];
+  if(!$modx->getObject('modTemplateVarTemplate',$where)){
+   $copy=$modx->newObject('modTemplateVarTemplate');
+   $copy->fromArray(array_merge($where,['rank'=>$binding->get('rank')]));
+   if(!$copy->save()){http_response_code(500);echo json_encode(['error'=>'TV binding copy failed']);exit;}
+  }
+ }
  try{
   $r->set('content',$spec['resource']['content']);$r->set('template',$next->get('id'));
   if(!$r->save()){throw new Exception('Resource save failed');}

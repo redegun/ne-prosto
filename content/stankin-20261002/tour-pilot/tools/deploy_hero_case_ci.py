@@ -69,7 +69,7 @@ def main():
    assert after[key+'_sha']==m[key+'_sha']['target'],key+' readback mismatch'
   (backup/'cms-after.json').write_text(json.dumps(after,ensure_ascii=False,indent=2))
   with urllib.request.urlopen(WEB+'portfolio/poezd-stankin',timeout=60) as resp:html=resp.read().decode()
-  assert 'hero.css?v=20261018-hero1' in html and html.count('<h1')==1 and len(html)>30000
+  assert 'hero.css?v=20261018-hero1' in html and html.count('<h1')==1 and len(html.encode())>30000
   assert html.index('st-case__hero') < html.index('id="tour"') < html.index('st-case__brief')
   assert 'process-title__text' not in html and '20261018-screen1' in html
   (backup/'case-after.html').write_text(html)
