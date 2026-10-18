@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+[[$head_2019]]
+
+<body class="np-site np-template-8 article-page [[*parent:is=`2`:then=`np-article-page`:else=`np-service-detail`]]">
+
+[[$np_header]]
+<main id="np-main">
+
+<div class="breadcrumbs">
+		<div class="breadcrumbs-wrapper">
+			<div class="breadcrumbs-items">
+[[pdoCrumbs?
+	&fastMode=`1`
+	&outputSeparator=`<span class="breadcrumbs-cursor">&rsaquo;</span>`
+	&tplHome=`@INLINE <a href="/" class="breadcrumbs-item">Непросто</a>`
+	&showHome=`1`
+	&tplWrapper=`@INLINE {$output}`
+	&tplMax=`@INLINE &nbsp;...&nbsp;`
+	&tpl=`@INLINE <a href="{$link}" class="breadcrumbs-item">{$menutitle}</a>`
+	&tplCurrent=`@INLINE <span class="breadcrumbs-item breadcrumbs-item_active">[[+menutitle]]</span>`
+]]
+			</div>
+		</div>
+	</div>
+
+	<div class="article">
+		<div class="article-wrapper">
+			<h1 class="article-title">[[*longtitle:empty=`[[*pagetitle]]`]]</h1>
+[[*id:ne=`17`:then=`
+			<div class="article-view">
+				<img src="assets/portfolio/img/ico/ico-eye.svg" alt="" class="article-view__img">
+				<div class="article-view__count">[[!HitsPage? &saveTv=`true`]]</div>
+			</div>
+`]]
+			[[*page__image--big:notempty=`
+    [[ImagePlus?
+        &tvname=`page__image--big`
+        &docid=`[[*id]]`
+        &type=`tpl`
+        &tpl=`page__image--big`
+    ]]
+`]]
+			<div class="article-content">[[*parent:ne=`2`:then=`<p class="np-service-intro">[[*introtext]]</p>`]]
+				[[*content]]
+				[[*id:ne=`17`:then=`<div class="article-publishing">[[!dateAgo?&input=`[[*publishedon]]`]]</div>`]]
+				[[*author:notempty=`<div class="post__autor">[[*author]]</div>`]]
+			</div>
+[[*id:ne=`17`:then=`
+			<div class="article-similar">
+				<div class="title-divider"><span class="title-divider__text">Ещё интересное</span></div>
+				<div class="article-similar__items">
+				    [[!pdoResources?
+                        &parents=`[[*parent]]`
+                        &includeTVs=`image,displayed_tag,HitsPage,imageplus`
+                        &includeContent=`1`
+                        &tpl=`blog__item--page`
+                        &limit=`5`
+                        &resources=`-[[*id]]`
+                    ]]
+
+				</div>
+			</div>
+`]]
+		</div>
+	</div>
+
+</main>
+[[$np_footer]]
+[[$scripts_2019]]
+</body>
+</html>

@@ -1,0 +1,45 @@
+<div class="request" id="request">
+		<div class="request-wrapper">
+			<p class="np-kicker">Начнём с разговора</p><h2 class="title-main">Обсудить проект</h2>
+			<div class="title-divider"><span class="title-divider__text">Расскажите о задаче — мы свяжемся с вами.</span></div>
+			<div class="form__results form__results--hidden"></div>
+[[!AjaxForm?
+&snippet=`FormIt`
+&hooks=`spam,email`
+&emailFrom=`info@[[++http_host]]`
+&form=`@INLINE <form action="" class="request-form js-validateForm" enctype="multipart/form-data">
+                <input class="form__input form__input--hidden" value="" name="email">
+				<div class="form-field form-field_name">
+					<label for="np-name">Ваше имя</label><input type="text" id="np-name" name="name" autocomplete="name" aria-label="Ваше имя" required class="form-input request-form__input" placeholder="Представьтесь" data-req>
+					<div class="form-field__prompt">Заполните поле</div>
+				</div>
+				<div class="form-field form-field_mail">
+					<label for="np-contact">Электронная почта</label><input type="email" id="np-contact" name="contact" autocomplete="email" aria-label="Электронная почта" required class="form-input request-form__input" placeholder="Почта" data-req>
+					<div class="form-field__prompt">Укажите верный e-mail</div>
+				</div>
+				<div class="form-field form-field_textarea">
+					<label for="np-message">О проекте</label><textarea id="np-message" name="message" rows="5" aria-label="О проекте" class="form-textarea request-form__textarea" placeholder="Вам слово"></textarea>
+				</div>
+				<label class="form-field form-field_attachment">
+					<img src="assets/portfolio/img/ico/ico-paperclip.svg" alt="">
+					<span>Прикрепить файл</span>
+					<!-- <input type="file" class="form-attachment__input" name="attachment" accept=".doc,.docx,.jpg,.jpeg,.png,.pdf" /> -->
+					<input type="file" name="attachment" multiple="multiple" class="request-form_attachment" accept=".doc,.docx,.jpg,.jpeg,.png,.pdf" />
+				</label>
+				<input type="submit" name="send" class="form-submit request-form_submit" value="Отправить">
+			</form>`
+&emailTpl=`project-form__email`
+&emailSubject=`Непросто. Сообщение из формы обратной связи`
+&emailTo=`redegun@gmail.com,[[++e-mail]]`
+&validate=`contact:email:required,name:required,email:blank`
+&successMessage=`Спасибо! Сообщение отправлено. Мы свяжемся с вами.`
+&validationErrorMessage=`[[+errors]]`
+&errTpl=`[[+error]]`
+&clearFieldsOnSuccess=`1`
+&validationErrorBulkTpl=`[[+error]]`
+&name.vTextRequired=`не&nbsp;указано&nbsp;имя`
+&contact.vTextRequired=`не&nbsp;указана&nbsp;почта&nbsp;или&nbsp;телефон`
+&frontend_js=`[[+assetsUrl]]js/custom.js`
+]]
+		</div>
+	</div>

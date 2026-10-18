@@ -1,0 +1,26 @@
+name: Publish Neprosto editorial design
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ne-prosto-stankin-deploy
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, neprosto-once]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - name: Validate release sources
+        run: |
+          node --check design/20261018/assets/site.js
+          python3 -m py_compile design/20261018/tools/publish_ci.py
+          if command -v php >/dev/null; then php -l design/20261018/tools/publish_bridge.php; fi
+      - name: Back up, apply guarded CMS changes and verify public pages
+        env:
+          NE_PROSTO_FTP: ${{ secrets.NE_PROSTO_FTP }}
+        run: python3 design/20261018/tools/publish_ci.py

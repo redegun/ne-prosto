@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+[[$head_2019]]
+
+<body class="np-site np-template-12 portfolio-work-page">
+
+[[$np_header]]
+<main id="np-main">
+
+<div class="breadcrumbs">
+		<div class="breadcrumbs-wrapper">
+			<div class="breadcrumbs-items">
+[[pdoCrumbs?
+	&fastMode=`1`
+	&outputSeparator=`<span class="breadcrumbs-cursor">&rsaquo;</span>`
+	&tplHome=`@INLINE <a href="/" class="breadcrumbs-item">Непросто</a>`
+	&showHome=`1`
+	&tplWrapper=`@INLINE {$output}`
+	&tplMax=`@INLINE &nbsp;...&nbsp;`
+	&tpl=`@INLINE <a href="{$link}" class="breadcrumbs-item">{$menutitle}</a>`
+	&tplCurrent=`@INLINE <span class="breadcrumbs-item breadcrumbs-item_active">[[+menutitle]]</span>`
+]]
+			</div>
+		</div>
+	</div>
+
+<div class="project">
+		<h1 class="title-main">[[*longtitle:empty=`[[*pagetitle]]`]]</h1>
+		[[*introtext:!empty=`
+		<div class="project-target">
+			[[*introtext]]
+		</div>
+		`]]
+		<div class="project-settings">
+[[getImageList?
+&tvname=`twocolumn`
+&limit=`1`
+&tpl=`@CODE: <div class="project-settings__description">
+				[[+one]]
+			</div>
+			<div class="project-settings__solution">
+				[[+two]]
+			</div>`
+]]
+		</div>
+	</div>
+
+	<div class="project-work">
+		<div class="project-work-wrapper">
+
+			<div class="project-work__item">
+[[pdoNeighbors?
+	&tplPrev=`@INLINE <a href="{$link}" class="project-nav project-nav_left">
+					<span class="project-nav__prev">Предыдущая работа</span>
+				</a>`
+	&tplNext=`@INLINE <a href="{$link}" class="project-nav project-nav_right">
+					<span class="project-nav__next">Следующая работа</span>
+				</a>`
+	&fastMode=`1`
+	&tplWrapper=`@INLINE {$prev}`
+]]
+				<div class="project-work__content">
+				[[*content]]
+
+					<div class="project-execution">
+						<div class="project-execution__content">
+							[[*client:!empty=`<div class="project-execution__title project-customer__title">Слово заказчику</div>`]]
+							[[*specialists:!empty=`<div class="project-execution__title project-team__title">Над проектом работали</div>`]]
+							[[*examples:!empty=`<div class="project-execution__title project-further__title">Ещё работы для этого клиента</div>`]]
+							[[*client:!empty=`<div class="project-customer">
+								<div class="project-customer__cite">
+									<span class="project-customer__commas">«</span>
+									<div class="project-customer__text">
+										[[#[[*client]].opinion:striptags:ellipsis=`300`]]<br><a href="[[~10]]">все отзывы</a>
+									</div>
+									<span class="project-customer__commas">»</span>
+								</div>
+								<div class="project-customer__name">[[#[[*client]].author]]</div>
+								<div class="project-customer__status">[[#[[*client]].position]]</div>
+							</div>`]]
+
+[[getImageList?
+&tvname=`specialists`
+&tpl=`@CODE: <div class="project-team__text">
+									<b>[[+role]]:</b> [[+name]]
+								</div>`
+&wrapperTpl=`@CODE: <div class="project-team">[[+output]]</div>`
+]]
+
+[[pdoResources?
+    &resources=`[[*examples:empty=`1`]]`
+	&fastMode=`1`
+	&limit=`0`
+	&depth=`0`
+	&parents=`23`
+	&tplWrapper=`@INLINE <div class="project-further">{$output}</div>`
+	&tpl=`@INLINE <div class="project-further__item">
+									&ndash;&nbsp;<a href="{$uri}" class="project-further__link">{$pagetitle}</a>
+								</div>`
+]]
+						</div>
+						<div class="project-execution__relation">
+							<div class="project-socnet">
+							    [[$share]]
+
+							</div>
+							<div class="project-developer">
+								<img src="assets/portfolio/img/ico/ico-cup.svg" alt="" class="project-developer__img">
+								<a href="/" class="project-developer__link">Это было непросто</a>
+							</div>
+						</div>
+					</div>
+				</div>
+[[pdoNeighbors?
+	&tplPrev=`@INLINE <a href="{$link}" class="project-nav project-nav_left">
+					<span class="project-nav__prev">Предыдущая работа</span>
+				</a>`
+	&tplNext=`@INLINE <a href="{$link}" class="project-nav project-nav_right">
+					<span class="project-nav__next">Следующая работа</span>
+				</a>`
+	&fastMode=`1`
+	&tplWrapper=`@INLINE {$next}`
+]]
+			</div>
+		</div>
+	</div>
+
+	<div class="invitation">
+		<div class="invitation-wrapper">
+			<div class="invitation-text">Если хотите, чтобы ваш проект выглядет так же круто — обращайтесь, с радостью вам поможем.</div>
+			<a href="[[~7]]#request" class="invitation-button">Обсудить проект</a>
+		</div>
+	</div>
+
+[[pdoResources?
+&tplWrapper=`@INLINE <div class="project-similar">
+		<div class="project-similar-wrapper">
+			<div class="title-divider">
+				<span class="title-divider__text">Похожие работы</span>
+			</div>
+			<div class="project-similar__items">{$output}</div>
+		</div>
+	</div>`
+&includeTVs=`image`
+&tpl=`@INLINE <div class="project-similar__item">
+					<img src="{$_pls['tv.image'] | phpthumbon : "w=900&h=650&zc=0&q=85"}" alt="{($longtitle?:$pagetitle) | htmlent}" class="project-similar__img">
+					<div class="project-similar__description">
+					{if $pagetitle | preg_match : '/\«.+\»/'}
+                        {$pagetitle | preg_replace : '/(\«.+\»)/': "<a href=\"{$uri}\" class=\"project-similar__link\">$1</a>"}
+                    {else}
+                        <a href="{$uri}" class="project-similar__link">{$pagetitle}</a>
+                    {/if}
+                    </div>
+				</div>`
+&limit=`5`
+&parents=`23`
+&where=`[[!TaggerMyGetRelatedWhere?&groups=`2`&resources=`[[*id]]`]]`
+]]
+
+
+
+
+</main>
+[[$np_footer]]
+[[$scripts_2019]]
+</body>
+</html>

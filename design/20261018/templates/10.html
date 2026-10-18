@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+[[$head_2019]]
+
+<body class="np-site np-template-10 about-page">
+
+[[$np_header]]
+<main id="np-main">
+
+<div class="clients">
+		<div class="clients-wrapper">
+			<h1 class="title-main">[[*longtitle:empty=`[[*pagetitle]]`]]</h1>
+			<div class="title-divider"><span class="title-divider__text">[[*introtext]]</span></div>
+			<div class="clients-intro">[[*content]]</div>
+
+			<div class="opinions">
+[[pdoResources?
+ &parents=`10`
+ &resources=`-36`
+    &sortby=`menuindex`
+    &sortdir=`ASC`
+    &includeTVs=`imageplus,opinion,author,position`
+    &tvFilters=`opinion!==`
+    &includeContent=`1`
+    &tpl=`@INLINE <div class="opinion-item">
+					<div class="opinion-content">
+					{'ddTypograph' | snippet : [
+                        'text' => $_pls['tv.opinion'],
+                        'optAlign' => 1
+                    ]}
+						<div class="opinion-angle">
+							<div class="opinion-angle__span"></div>
+							<div class="opinion-angle__blank"></div>
+							<div class="opinion-angle__fill"></div>
+						</div>
+					</div>
+					<div class="opinion-author">
+					    {if $_pls['tv.imageplus']['sourceImg']['src']}
+					    {'ImagePlus' | snippet : [
+                            'tvname' => 'imageplus',
+                            'docid' => $id,
+                            'type' => 'tpl',
+                            'tpl' => 'opinion__photo'
+                        ]}
+						{/if}
+						<div class="opinion-author__info">
+							<div class="opinion-author__name">{$_pls['tv.author']?:$pagetitle}</div>
+							<div class="opinion-author__status">{$_pls['tv.position']?:''}</div>
+						</div>
+					</div>
+				</div>`
+    &limit=`0`
+]]
+			</div>
+
+
+		</div>
+	</div>
+
+	<div class="invitation">
+		<div class="invitation-wrapper">
+			<div class="invitation-text">Мы всегда открыты для новых интересных проектов и готовы начать обсуждение прямо сейчас.</div>
+			<a href="[[~7]]#request" class="invitation-button">Обсудить проект</a>
+		</div>
+	</div>
+
+</main>
+[[$np_footer]]
+[[$scripts_2019]]
+</body>
+</html>

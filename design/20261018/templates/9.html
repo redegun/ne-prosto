@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+[[$head_2019]]
+<body class="np-site article-page np-template-9">
+[[$np_header]]
+<main id="np-main"><header class="np-page-hero np-wrap"><p class="np-kicker">Знания, инструменты, наблюдения</p><div><h1>Годнота</h1><p>То, что помогает<br>делать лучше.</p></div></header><section class="np-journal np-wrap"><nav class="np-filters" aria-label="Рубрики статей">
+[[!blog__all? &tpl=`menu__tag` &hereTpl=`menu__tag--active` &text=`Все статьи` &placeholder=`tag` &target=`2`]]
+[[!TaggerGetTagsFromList? &rowTpl=`menu__tag` &hereTpl=`menu__tag--active` &groups=`3` &limit=`all` &target=`2` &tagsList=`[[*displayed_tags]]`]]
+</nav><div class="np-article-grid">[[!pdoResources? &parents=`2` &includeTVs=`image` &limit=`0` &tpl=`np_article` &where=`[[!TaggerGetResourcesWhere? &where=`{"isfolder":0}`]]`]]</div></section></main>
+[[$np_footer]]
+[[$scripts_2019]]
+</body></html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+[[$head_2019]]
+<body class="np-site portfolio-page np-template-1">
+[[$np_header]]
+<main id="np-main"><header class="np-page-hero np-wrap"><p class="np-kicker">Работы студии</p><div><h1>Портфолио</h1><p>Разные задачи.<br>Один внимательный подход.</p></div></header><section class="np-portfolio np-wrap"><nav class="np-filters" aria-label="Категории портфолио">
+[[!blog__all? &tpl=`menu__tag` &hereTpl=`menu__tag--active` &text=`Все работы` &placeholder=`tag` &target=`23`]]
+[[!TaggerGetTagsFromList? &rowTpl=`menu__tag` &hereTpl=`menu__tag--active` &groups=`2` &limit=`all` &target=`23` &tagsList=`[[*displayed_tags]]`]]
+</nav><div class="np-project-grid">[[!pdoResources? &parents=`23` &sortby=`menuindex` &sortdir=`DESC` &includeTVs=`image` &limit=`0` &tpl=`np_project` &where=`[[!TaggerGetResourcesWhere? &where=`{"isfolder":0}`]]`]]</div></section></main>
+[[$np_footer]]
+[[$scripts_2019]]
+</body></html>

@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<title>[[*titl:notempty=`[[*titl]]`:empty=`[[*pagetitle]] - [[++site_name]]`]]</title>
+[[*noindex]]
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<meta property="og:description" content="">
+<meta property="og:site_name" content="[[++site_name]]">
+
+<style type="text/css">
+    [[getResourceField? &id=`6` &field=`content`]]
+</style>
+<script type="text/javascript">
+    var headCSS = document.getElementsByTagName("html")[0].getAttribute("class") || "";
+    document.getElementsByTagName("html")[0].setAttribute("class",headCSS +" js");
+</script>
+    [[!MinifyX?
+        &minifyCss=`0`
+        &cssSources=`
+            [[styles]]
+            fonts/Museo/Museo.css,
+            fonts/Proxima-Nova/ProximaNova.css,
+            assets/blocks/page/page.css,
+            assets/blocks/menu/menu.css,
+            assets/blocks/menu/--bottom/menu--bottom.css,
+            assets/blocks/menu/--top/menu--top.css,
+            assets/blocks/width/width.css,
+            assets/blocks/heading/heading.css,
+            assets/blocks/subheading/subheading.css,
+            assets/blocks/logo/logo.css,
+            assets/blocks/link/link.css,
+            assets/blocks/header/header.css
+    `]]
+[[!+MinifyX.css]]
+<!---->
+<base href="[[++site_url]]">
+<link rel="stylesheet" href="/assets/neprosto/design-20261018/site.css?v=1">
+<script defer src="/assets/neprosto/design-20261018/site.js?v=1"></script>

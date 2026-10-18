@@ -1,0 +1,24 @@
+<head>
+    <base href="[[++site_url]]">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    [[MinifyX?
+        &minifyCss=`0`
+        &cssSources=`
+            /assets/portfolio/css/normalize.css
+            ,/assets/portfolio/css/style.css
+    `]]
+    [[+MinifyX.css]]
+
+	<title>[[*titl:notempty=`[[*titl]]`:empty=`[[*pagetitle]] - [[++site_name]]`]]</title>
+	<meta name="description" content="[[*desc:empty=`[[*description]]`]]">
+	<meta property="og:title" content="[[*titl:notempty=`[[*titl]]`:empty=`[[*pagetitle]] - [[++site_name]]`]]" />
+	<meta property="og:description" content="[[*desc:empty=`[[*description]]`]]" />
+	<meta property="og:url" content="[[~[[*id]]?scheme=`full`]]" />
+	<meta property="og:image" content="[[++site_url]][[*image]]" />
+	<meta property="og:site_name" content="[[++site_name]]" />
+	[[*noindex]]
+<link rel="stylesheet" href="/assets/neprosto/design-20261018/site.css?v=1">
+<script defer src="/assets/neprosto/design-20261018/site.js?v=1"></script>
+</head>
