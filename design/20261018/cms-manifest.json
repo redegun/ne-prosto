@@ -1,6 +1,6 @@
 {
   "site": "https://ne-prosto.ru/",
-  "release": "design-20261018-v3",
+  "release": "design-20261018-v4",
   "changes": [
     {
       "type": "modTemplate",
@@ -197,8 +197,8 @@
       "name": "head_2019",
       "field": "snippet",
       "path": "chunks/head_2019.html",
-      "expected": "45adeb5df4e9d364298ef4b41bea9e4b95e9a6a04dd021fb7a1dc4ea7868fca0",
-      "target": "5b0e751fde845e63e91bd9370f11e181d84e9342f0f90c7947db44fdd2f98082"
+      "expected": "5b0e751fde845e63e91bd9370f11e181d84e9342f0f90c7947db44fdd2f98082",
+      "target": "4a0f6ca640adc821789c5b3cc610bd9d6500ab020cbc915dc7e692fc3740b692"
     },
     {
       "type": "modChunk",
@@ -206,8 +206,8 @@
       "name": "head",
       "field": "snippet",
       "path": "chunks/head.html",
-      "expected": "05cc8351dcb3a37d7f60ec29d7b2ba6ca58109a1c4f5eeebea01463ec259b603",
-      "target": "a4ad81258d2ca169696e767df2c353754fd35ee76a26bd980698977bcfc6c5a6"
+      "expected": "a4ad81258d2ca169696e767df2c353754fd35ee76a26bd980698977bcfc6c5a6",
+      "target": "54fc9d7a54ee88a50d06b74040f72d8cae97ce25a241e79ebbdcc071381161c0"
     },
     {
       "type": "modChunk",
@@ -314,7 +314,7 @@
       "name": null,
       "field": "pagetitle",
       "path": "resources/41-pagetitle.txt",
-      "expected": "5a34c863e3ab39e13a9aa202b09d49b777901539360efe073f9497d3dc7b4dd8",
+      "expected": "9abc4b1d493d1c31329f1dfeb7060e9b4a9a45201c510053ba4d62505d0752f1",
       "target": "9abc4b1d493d1c31329f1dfeb7060e9b4a9a45201c510053ba4d62505d0752f1"
     }
   ]
