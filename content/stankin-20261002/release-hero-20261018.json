@@ -1,0 +1,29 @@
+{
+  "resource": 100,
+  "template": 15,
+  "resource_sha": {
+    "expected": "c14d5dfeb90bb482ab71199d3039e4caf1927b24a80e9b102aa20286d6223060",
+    "target": "bfd2c4655ce7b6a9afb8418e906a5a52d032f194f7ae9fb116b425fcd4218eab"
+  },
+  "template_sha": {
+    "expected": "c785116c2e699ecdffa5244c683a46bb5837fc52e9e81fedd91b42418ab96bfa",
+    "target": "b9118f6f95a6e4ce279558f9345cefdcd574aa612f4383c4b0e8bf556675f1bd"
+  },
+  "files": [
+    {
+      "name": "hero.css",
+      "sha256": "aab2966e9a58a068495c37454d6369db659800f4500c1c9a0a147a84ea2b9521",
+      "bytes": 8049
+    },
+    {
+      "name": "hero-train-960.webp",
+      "sha256": "6d63cebd93b0032854a8431a8c0b2fdc6c4847465a52ec40350faaa76efebc3a",
+      "bytes": 147256
+    },
+    {
+      "name": "hero-train-1920.webp",
+      "sha256": "43a7d131302430cdc4bc874f4786d3f452c311bd75a7574c049374442adc7cea",
+      "bytes": 511206
+    }
+  ]
+}
