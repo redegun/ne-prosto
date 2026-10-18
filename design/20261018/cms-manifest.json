@@ -1,6 +1,6 @@
 {
   "site": "https://ne-prosto.ru/",
-  "release": "design-20261018-v8",
+  "release": "design-20261018-v9",
   "changes": [
     {
       "type": "modTemplate",
@@ -180,7 +180,7 @@
       "field": "snippet",
       "path": "chunks/np_support.html",
       "expected": "2ecb5199062229844a11ca2bc7c77c29615ad6163c56259331a97d6f83028f7e",
-      "target": "2ecb5199062229844a11ca2bc7c77c29615ad6163c56259331a97d6f83028f7e"
+      "target": "5acf8c7784acd0d6f446e9a6e44b44fbac9869f814a332f95f27d4a0ab473b19"
     },
     {
       "type": "modChunk",
@@ -197,8 +197,8 @@
       "name": "head_2019",
       "field": "snippet",
       "path": "chunks/head_2019.html",
-      "expected": "08de200f999c37e40772dc85b223b22621b915e85ca9dacf2040fac360325aa6",
-      "target": "38040df875767dea99c8c42c0c6139a5dc28e9793556fe0f1a1fc4bcfa78cce1"
+      "expected": "38040df875767dea99c8c42c0c6139a5dc28e9793556fe0f1a1fc4bcfa78cce1",
+      "target": "ef1c54782747269f96e27440f6f978aec265602134c2585256459ab3b5e8e844"
     },
     {
       "type": "modChunk",
@@ -206,8 +206,8 @@
       "name": "head",
       "field": "snippet",
       "path": "chunks/head.html",
-      "expected": "5dc98df69675d4ea742c3fd0a397d3ea56b3bdd403deb5599cc09361cae91d92",
-      "target": "4e5e872fcbe651552c5bc27b47a78996c753f4312d583e1cf90721ca657fd608"
+      "expected": "4e5e872fcbe651552c5bc27b47a78996c753f4312d583e1cf90721ca657fd608",
+      "target": "6a596f7a475615b9042044d581d38b328be19482cca384bdb02c3bef587edb2e"
     },
     {
       "type": "modChunk",

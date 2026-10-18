@@ -138,3 +138,6 @@ body.np-template-4{display:block;height:auto;table-layout:auto}.np-template-4 .p
 .np-article-page .np-related-card h2{font-size:clamp(24px,2.2vw,32px);line-height:1.18}
 .np-article-page .np-related-card h2 a{display:block}
 .np-article-page .np-related-card h2 span{display:none}
+
+.np-services-page{padding-bottom:96px}
+@media(max-width:700px){.np-services-page{padding-bottom:64px}}
