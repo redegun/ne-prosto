@@ -2,8 +2,8 @@
   "resource": 100,
   "template": 15,
   "resource_sha": {
-    "expected": "c14d5dfeb90bb482ab71199d3039e4caf1927b24a80e9b102aa20286d6223060",
-    "target": "bfd2c4655ce7b6a9afb8418e906a5a52d032f194f7ae9fb116b425fcd4218eab"
+    "expected": "bfd2c4655ce7b6a9afb8418e906a5a52d032f194f7ae9fb116b425fcd4218eab",
+    "target": "f0f5b1b3093bf2e80cc001b1bcced4d101afebae2d48311ed32297c842f657d4"
   },
   "template_sha": {
     "expected": "c785116c2e699ecdffa5244c683a46bb5837fc52e9e81fedd91b42418ab96bfa",

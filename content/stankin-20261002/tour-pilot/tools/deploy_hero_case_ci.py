@@ -72,6 +72,7 @@ def main():
   assert 'hero.css?v=20261018-hero1' in html and html.count('<h1')==1 and len(html.encode())>30000
   assert html.index('st-case__hero') < html.index('id="tour"') < html.index('st-case__brief')
   assert 'process-title__text' not in html and '20261018-screen1' in html
+  assert 'class="st-case__hero-link" href="/portfolio/poezd-stankin#tour"' in html
   (backup/'case-after.html').write_text(html)
   print('Dedicated template:',after['resource']['template'],flush=True)
   print('Case and template published and HTTP verified; backup:',backup,flush=True)
