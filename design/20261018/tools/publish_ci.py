@@ -77,7 +77,7 @@ def verify(path):
  assert '[[!pdoResources' not in b and '[[$np_' not in b,path
  if path.startswith('/uslugi/') and path!='/uslugi/' or path.startswith('/podderzhka/'):
   assert 'np-service-hero-art' in b and 'np-related-card__art' in b,path
-  assert 'noimage_' not in b and '{$art}' not in b,path
+  assert 'noimage_' not in b and '{$art}' not in b and 'vakansii2.' not in b,path
   assert 'Другие услуги' in b,path
  (backup/('page-'+str(paths.index(path))+'.html')).write_text(b)
  return path

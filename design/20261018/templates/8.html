@@ -38,13 +38,15 @@
 				<div class="article-view__count">[[!HitsPage? &saveTv=`true`]]</div>
 			</div>
 `]]
-			[[*page__image--big:notempty=`
+			[[*parent:is=`2`:then=`
+[[*page__image--big:notempty=`
     [[ImagePlus?
         &tvname=`page__image--big`
         &docid=`[[*id]]`
         &type=`tpl`
         &tpl=`page__image--big`
     ]]
+`]]
 `]]
 			<div class="article-content">[[*parent:ne=`2`:then=`<p class="np-service-intro">[[*introtext]]</p>`]]
 				[[*content]]
