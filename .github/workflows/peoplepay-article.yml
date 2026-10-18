@@ -1,0 +1,25 @@
+name: Publish People Pay article
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ne-prosto-stankin-deploy
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, neprosto-once]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - name: Validate prepared article
+        run: |
+          python3 content/peoplepay-pages-20261018/publish_ci.py --check
+          if command -v php >/dev/null; then php -l content/peoplepay-pages-20261018/publish_bridge.php; fi
+      - name: Back up and publish article with verified assets
+        env:
+          NE_PROSTO_FTP: ${{ secrets.NE_PROSTO_FTP }}
+        run: python3 -u content/peoplepay-pages-20261018/publish_ci.py
