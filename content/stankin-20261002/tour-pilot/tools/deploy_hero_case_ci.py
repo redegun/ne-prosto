@@ -42,6 +42,7 @@ def main():
   mkdir(f,str(Path(REMOTE+'/'+path).parent));f.storbinary('STOR '+REMOTE+'/'+path,io.BytesIO(source))
  try:
   before=call('read')
+  print('Current resource template:',before['resource']['template'],'uses:',before['template_users'],flush=True)
   (backup/'cms-before.json').write_text(json.dumps(before,ensure_ascii=False,indent=2))
   for key in ['resource','template']:
    assert before[key+'_sha'] in [m[key+'_sha']['expected'],m[key+'_sha']['target']],key+' changed since preparation'
@@ -72,6 +73,7 @@ def main():
   assert html.index('st-case__hero') < html.index('id="tour"') < html.index('st-case__brief')
   assert 'process-title__text' not in html and '20261018-screen1' in html
   (backup/'case-after.html').write_text(html)
+  print('Dedicated template:',after['resource']['template'],flush=True)
   print('Case and template published and HTTP verified; backup:',backup,flush=True)
  finally:
   with connect() as f:
