@@ -198,7 +198,7 @@
       "field": "snippet",
       "path": "chunks/head_2019.html",
       "expected": "08de200f999c37e40772dc85b223b22621b915e85ca9dacf2040fac360325aa6",
-      "target": "58694b23e0bc0624dd96c9b2d3faa1823d42315b082fce85c6f6b032e6a35ea6"
+      "target": "38040df875767dea99c8c42c0c6139a5dc28e9793556fe0f1a1fc4bcfa78cce1"
     },
     {
       "type": "modChunk",
