@@ -1,0 +1,47 @@
+{
+  "release": "design-20261018-v4",
+  "date": "2026-10-18",
+  "htmlPages": 68,
+  "automatedIssues": 0,
+  "viewports": [
+    320,
+    390,
+    1440
+  ],
+  "mobileFamilies": [
+    "home",
+    "portfolio",
+    "company",
+    "clients",
+    "team",
+    "vacancies",
+    "article",
+    "legacy-case",
+    "stankin"
+  ],
+  "filter": {
+    "before": 29,
+    "logos": 7
+  },
+  "menu": {
+    "click": true,
+    "escape": true
+  },
+  "forms": {
+    "requiredValidation": true,
+    "vacancyReveal": true,
+    "emailSent": false
+  },
+  "trainAutostart": true,
+  "urlsPreserved": true,
+  "seo": "Preserved; stripped U+0003 in resource41 pagetitle",
+  "knownExistingIssue": "https://github.com/redegun/ne-prosto/issues/3",
+  "ci": "https://github.com/redegun/ne-prosto/actions/runs/39136901081",
+  "screenshots": [
+    "reports/site-home-desktop-20261018.png",
+    "reports/site-home-mobile-20261018.png"
+  ],
+  "worklogId": 7047,
+  "runnerCountAfter": 0,
+  "issue4": "closed"
+}
