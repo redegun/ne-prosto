@@ -25,6 +25,7 @@ for x,label,v,g in [(75,'БЛОГ','39 554','83'),(875,'СТРАНЫ И КАРТ
  txt(x,507,label,23,True,'#666a62');txt(x,562,v,78,True);txt(x,665,'поисковых визита' if x==75 else 'поисковых визитов',25,False,'#666a62');txt(x+400,562,g,78,True);txt(x+400,665,'целевых визита' if x==75 else 'целевых визитов',25,False,'#666a62')
 txt(75,808,'Целевой визит — визит с автоцелью формы, не подтверждённая заявка CRM.',22,False,'#666a62')
 im.save(D/'cover.webp',quality=94,method=6);im.resize((1200,675),Image.Resampling.LANCZOS).save(D/'cover-og.jpg',quality=92)
+card=Image.new('RGB',(1800,1300),'#f6f6f1');card.paste(im,(100,200));card.save(D/'cover-card.webp',quality=94,method=6)
 srcmd=(S/'article.md').read_text().split('\n',1)[1].lstrip()
 content=BS(markdown.markdown(srcmd,extensions=['tables']),'html.parser');meta={Path(v['file']).name:v for v in items}
 for tag in list(content.select('img')):
@@ -49,7 +50,7 @@ css='''.np-pp-article{min-width:0}.np-pp-article .np-pp-byline{font-size:14px;li
 body=f'<link rel="stylesheet" href="{A}article.css?v=20261018-1">\n'+str(wrapper);(P/'content.html').write_text(body)
 title='Какие страницы приводят к обращениям на сайте People Pay'
 desc='Разбор People Pay за 90 дней: поисковый трафик, визиты с формой и вклад главной, блога, страниц карт и услуг. С цифрами и примерами доработок.'
-payload={'pagetitle':title,'longtitle':title,'menutitle':'People Pay — трафик и обращения','alias':U.rsplit('/',1)[1],'parent':2,'template':8,'published':0,'deleted':0,'hidemenu':0,'isfolder':0,'searchable':1,'cacheable':1,'richtext':0,'context_key':'web','class_key':'modDocument','content_type':1,'uri_override':1,'uri':U.lstrip('/'),'introtext':'Блог даёт 84% поискового трафика. Страницы карт — почти столько же целевых визитов при значительно меньшей посещаемости. Разбираем данные и работы на People Pay.','description':desc,'content':body,'tvs':{'titl':'Какие страницы приводят к обращениям — People Pay | Непросто','desc':desc,'image':(A+'cover.webp').lstrip('/'),'page__image--big':'','author':'Антон Ветров','noindex':'','displayed_tag':''}}
+payload={'pagetitle':title,'longtitle':title,'menutitle':'People Pay — трафик и обращения','alias':U.rsplit('/',1)[1],'parent':2,'template':8,'published':0,'deleted':0,'hidemenu':0,'isfolder':0,'searchable':1,'cacheable':1,'richtext':0,'context_key':'web','class_key':'modDocument','content_type':1,'uri_override':1,'uri':U.lstrip('/'),'introtext':'Блог даёт 84% поискового трафика. Страницы карт — почти столько же целевых визитов при значительно меньшей посещаемости. Разбираем данные и работы на People Pay.','description':desc,'content':body,'tvs':{'titl':'Какие страницы приводят к обращениям — People Pay | Непросто','desc':desc,'image':(A+'cover-card.webp').lstrip('/'),'page__image--big':'','author':'Антон Ветров','noindex':'','displayed_tag':''}}
 (P/'payload.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2))
 soup=BS((P/'source-page.html').read_text(),'html.parser')
 if soup.base:soup.base.decompose()
@@ -59,7 +60,7 @@ for field in ['.article-view','.article-publishing','.post__autor','.article-wra
  for e in soup.select(field):e.decompose()
 soup.h1.string=title
 slot=soup.select_one('.article-content');slot.clear();slot.append(BS(body,'html.parser'))
-for sel,val in [('meta[property="og:title"]',payload['tvs']['titl']),('meta[property="og:description"],meta[name="description"]',desc),('meta[property="og:url"]','https://ne-prosto.ru'+U),('meta[property="og:image"]','https://ne-prosto.ru'+A+'cover.webp')]:
+for sel,val in [('meta[property="og:title"]',payload['tvs']['titl']),('meta[property="og:description"],meta[name="description"]',desc),('meta[property="og:url"]','https://ne-prosto.ru'+U),('meta[property="og:image"]','https://ne-prosto.ru'+A+'cover-card.webp')]:
  for tag in soup.select(sel):tag['content']=val
 for m in soup.select('meta[name="robots"],link[rel="canonical"]'):m.decompose()
 soup.head.append(soup.new_tag('meta',attrs={'name':'robots','content':'noindex,nofollow'}));soup.head.append(soup.new_tag('link',rel='canonical',href='https://ne-prosto.ru'+U))

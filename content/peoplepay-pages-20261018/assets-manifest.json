@@ -130,5 +130,11 @@
     "remote": "/images/godnota/peoplepay-pages-20261018/cover.webp",
     "bytes": 49204,
     "sha256": "282f2957c4e135c30b96f64b72318f3d586414028ed5283f87c981053530debb"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/cover-card.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/cover-card.webp",
+    "bytes": 53130,
+    "sha256": "cf08154122ee24268762020fbdf231c497d7f475cc2215c078dfb1a09bd7f36f"
   }
 ]

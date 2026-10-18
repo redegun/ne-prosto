@@ -8,14 +8,14 @@ def validate():
  assert p['parent']==2 and p['template']==8 and p['published']==0
  assert p['uri']=='blog/peoplepay-kakie-stranicy-prinosyat-obrashcheniya'
  assert p['content']==(P/'content.html').read_text()
- assert len(m)==22 and len({a['remote'] for a in m})==22
+ assert len(m)==23 and len({a['remote'] for a in m})==len(m)
  for a in m:
   assert a['remote'].startswith('/images/godnota/peoplepay-pages-20261018/')
   b=(P/a['local']).read_bytes();assert len(b)==a['bytes'] and sha(b)==a['sha256']
  return p,m
 def main():
  payload,assets=validate()
- if '--check' in sys.argv:print('Validated article payload and all 22 whitelisted assets');return
+ if '--check' in sys.argv:print('Validated article payload and all 23 whitelisted assets');return
  run=os.environ['GITHUB_RUN_ID'];backup=Path('/opt/office1080/ne-prosto-backups')/run;backup.mkdir(parents=True,exist_ok=True)
  creds=json.loads(os.environ['NE_PROSTO_FTP']);token=secrets.token_urlsafe(40);path='_agent_tmp/peoplepay-'+run+'/'+secrets.token_hex(12)+'.php'
  source=(P/'publish_bridge.php').read_text().replace('TOKEN_SHA',sha(token.encode())).replace('PAYLOAD_BASE64',base64.b64encode(json.dumps(payload,ensure_ascii=False).encode()).decode()).encode()
@@ -61,7 +61,7 @@ def main():
     if not exists:
      tmp=target+'.upload-'+run;f.storbinary('STOR '+tmp,io.BytesIO((P/a['local']).read_bytes()));check=io.BytesIO();f.retrbinary('RETR '+tmp,check.write);assert sha(check.getvalue())==a['sha256'];f.rename(tmp,target)
   for a in assets:assert sha(fetch(WEB.rstrip('/')+a['remote']+'?release='+run))==a['sha256']
-  print('All 22 assets match public HTTP SHA256',flush=True)
+  print('All 23 assets match public HTTP SHA256',flush=True)
   stage=call('stage');assert stage['ok'] and stage['content_sha']==sha(payload['content'].encode());(backup/'cms-staged.json').write_text(json.dumps(stage,ensure_ascii=False,indent=2))
   result=call('publish');published=True;assert result['ok'] and result['state']['resource']['published'];assert result['state']['template_sha']==before['template_sha']
   (backup/'cms-after.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
