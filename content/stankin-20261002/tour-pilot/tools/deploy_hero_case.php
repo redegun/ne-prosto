@@ -43,7 +43,9 @@ if(($in['action']??'')==='publish'){
   $where=['tmplvarid'=>$binding->get('tmplvarid'),'templateid'=>$next->get('id')];
   if(!$modx->getObject('modTemplateVarTemplate',$where)){
    $copy=$modx->newObject('modTemplateVarTemplate');
-   $copy->fromArray(array_merge($where,['rank'=>$binding->get('rank')]));
+   $copy->set('tmplvarid',$binding->get('tmplvarid'));
+   $copy->set('templateid',$next->get('id'));
+   $copy->set('rank',$binding->get('rank'));
    if(!$copy->save()){http_response_code(500);echo json_encode(['error'=>'TV binding copy failed']);exit;}
   }
  }
@@ -60,6 +62,8 @@ if(($in['action']??'')==='publish'){
 }
 echo json_encode([
  'resource'=>$r->toArray(),'template'=>$t->toArray(),
+ 'tv_bindings'=>$modx->getCount('modTemplateVarTemplate',['templateid'=>$t->get('id')]),
+ 'source_tv_bindings'=>$modx->getCount('modTemplateVarTemplate',['templateid'=>15]),
  'template_users'=>$modx->getCount('modResource',['template'=>$t->get('id')]),
  'resource_sha'=>hash('sha256',$r->get('content')),
  'template_sha'=>hash('sha256',$t->get('content'))

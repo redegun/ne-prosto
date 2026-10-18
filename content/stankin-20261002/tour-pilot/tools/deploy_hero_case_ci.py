@@ -18,7 +18,7 @@ def validate():
  return m
 def main():
  m=validate()
- if '--check' in sys.argv:print('Validated hero assets, resource 100 and dedicated template 15');return
+ if '--check' in sys.argv:print('Validated hero assets and isolated resource 100 template');return
  credentials=json.loads(os.environ['NE_PROSTO_FTP']);run=os.environ['GITHUB_RUN_ID']
  backup=Path('/opt/office1080/ne-prosto-backups')/run;backup.mkdir(parents=True,exist_ok=True)
  def connect():
@@ -37,7 +37,12 @@ def main():
  source=(ROOT/'tour-pilot/tools/deploy_hero_case.php').read_text().replace('TOKEN_SHA',digest(token.encode())).replace('SPEC_BASE64',base64.b64encode(json.dumps(spec,ensure_ascii=False).encode()).decode()).encode()
  def call(action):
   req=urllib.request.Request(WEB+path,data=json.dumps({'action':action}).encode(),headers={'Content-Type':'application/json','X-Stankin-Key':token})
-  with urllib.request.urlopen(req,timeout=90) as resp:return json.load(resp)
+  try:
+   with urllib.request.urlopen(req,timeout=90) as resp:return json.load(resp)
+  except urllib.error.HTTPError as error:
+   try:message=json.loads(error.read()).get('error','Bridge error')
+   except (ValueError,UnicodeError):message='Non-JSON bridge response'
+   raise RuntimeError('Bridge HTTP '+str(error.code)+': '+message) from None
  with connect() as f:
   mkdir(f,str(Path(REMOTE+'/'+path).parent));f.storbinary('STOR '+REMOTE+'/'+path,io.BytesIO(source))
  try:
@@ -65,6 +70,7 @@ def main():
    with urllib.request.urlopen(WEB+'images/portfolio/stankin/'+row['name']+'?release='+run,timeout=40) as resp:data=resp.read()
    assert digest(data)==row['sha256'],'Asset HTTP hash mismatch'
   after=call('publish')
+  assert after['tv_bindings']==after['source_tv_bindings'],'Template TV bindings not preserved'
   for key in ['resource','template']:
    assert after[key+'_sha']==m[key+'_sha']['target'],key+' readback mismatch'
   (backup/'cms-after.json').write_text(json.dumps(after,ensure_ascii=False,indent=2))
