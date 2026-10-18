@@ -1,0 +1,74 @@
+[
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":30,\"triangles\":89090,\"textures\":16,\"car\":3,\"camera\":[11.223422520704935,2.8300378311737537,30.709040656914755],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"pick\":{\"n\":1,\"meanMs\":0.2,\"p95Ms\":0.2,\"maxMs\":0.2},\"details\":{\"n\":1,\"meanMs\":0.1,\"p95Ms\":0.1,\"maxMs\":0.1},\"render\":{\"n\":3,\"meanMs\":64.77,\"p95Ms\":4,\"maxMs\":188.6},\"frameCpu\":{\"n\":3,\"meanMs\":65.17,\"p95Ms\":4.3,\"maxMs\":189.4}}}",
+    "timestamp": "2026-10-18T12:25:29.620Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":46,\"triangles\":116830,\"textures\":17,\"car\":3,\"camera\":[10.326286083026572,3.1293803700603724,33.23704411230405],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":3,\"meanMs\":5.47,\"p95Ms\":3.1,\"maxMs\":10.6},\"frameCpu\":{\"n\":3,\"meanMs\":5.5,\"p95Ms\":3.1,\"maxMs\":10.6}}}",
+    "timestamp": "2026-10-18T12:25:32.634Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":9,\"calls\":124,\"triangles\":343094,\"textures\":21,\"car\":3,\"camera\":[5.483411579358013,3.865580376892672,37.783841116279405],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":9,\"meanMs\":7.2,\"p95Ms\":11.3,\"maxMs\":16},\"frameCpu\":{\"n\":9,\"meanMs\":7.29,\"p95Ms\":11.4,\"maxMs\":16.1}}}",
+    "timestamp": "2026-10-18T12:25:35.630Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":122,\"triangles\":343091,\"textures\":21,\"car\":3,\"camera\":[4.544926720357319,3.9740929377795493,38.13833938152406],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.7,\"p95Ms\":1.6,\"maxMs\":1.9},\"frameCpu\":{\"n\":3,\"meanMs\":1.8,\"p95Ms\":1.7,\"maxMs\":2}}}",
+    "timestamp": "2026-10-18T12:25:38.630Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":2,\"calls\":129,\"triangles\":379259,\"textures\":21,\"car\":3,\"camera\":[4.024814953862817,4.032659505743335,38.28947685858356],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":2,\"meanMs\":2.3,\"p95Ms\":1.6,\"maxMs\":3},\"frameCpu\":{\"n\":2,\"meanMs\":2.35,\"p95Ms\":1.7,\"maxMs\":3}}}",
+    "timestamp": "2026-10-18T12:25:41.626Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":135,\"triangles\":393972,\"textures\":21,\"car\":3,\"camera\":[3.3812037618223334,4.104004651086234,38.43460596764362],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":3,\"meanMs\":2.23,\"p95Ms\":2.2,\"maxMs\":2.4},\"frameCpu\":{\"n\":3,\"meanMs\":2.37,\"p95Ms\":2.3,\"maxMs\":2.5}}}",
+    "timestamp": "2026-10-18T12:25:44.621Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":133,\"triangles\":391432,\"textures\":21,\"car\":3,\"camera\":[2.874704684472064,4.1594986778144625,38.51745977650526],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":3,\"meanMs\":2.8,\"p95Ms\":3,\"maxMs\":3.5},\"frameCpu\":{\"n\":3,\"meanMs\":2.97,\"p95Ms\":3.1,\"maxMs\":3.6}}}",
+    "timestamp": "2026-10-18T12:25:47.634Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":132,\"triangles\":391425,\"textures\":21,\"car\":3,\"camera\":[2.4780623094700216,4.202672648652753,38.56355944708956],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":3,\"meanMs\":2.2,\"p95Ms\":2.2,\"maxMs\":2.3},\"frameCpu\":{\"n\":3,\"meanMs\":2.23,\"p95Ms\":2.3,\"maxMs\":2.3}}}",
+    "timestamp": "2026-10-18T12:25:50.623Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":130,\"triangles\":391313,\"textures\":21,\"car\":3,\"camera\":[2.1683155526645725,4.236267743314402,38.58824979665133],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":3,\"meanMs\":2.27,\"p95Ms\":2.3,\"maxMs\":2.3},\"frameCpu\":{\"n\":3,\"meanMs\":2.33,\"p95Ms\":2.4,\"maxMs\":2.4}}}",
+    "timestamp": "2026-10-18T12:25:53.624Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":130,\"triangles\":391313,\"textures\":21,\"car\":3,\"camera\":[1.9268048424881234,4.262413041277702,38.600670444216185],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":3,\"meanMs\":2.3,\"p95Ms\":2.3,\"maxMs\":2.6},\"frameCpu\":{\"n\":3,\"meanMs\":2.37,\"p95Ms\":2.4,\"maxMs\":2.7}}}",
+    "timestamp": "2026-10-18T12:25:56.633Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":2,\"calls\":130,\"triangles\":391313,\"textures\":21,\"car\":3,\"camera\":[1.7962257503585253,4.276537614389253,38.60490174464285],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":2,\"meanMs\":2.55,\"p95Ms\":2.3,\"maxMs\":2.8},\"frameCpu\":{\"n\":2,\"meanMs\":2.85,\"p95Ms\":2.8,\"maxMs\":2.9}}}",
+    "timestamp": "2026-10-18T12:26:00.621Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":128,\"triangles\":385178,\"textures\":21,\"car\":3,\"camera\":[1.6369713370159231,4.293757590438943,38.60770576590606],\"target\":[1.334627496000218,2.3664150645635327,28.69552057743379],\"fov\":12.312391947694987,\"buffer\":[2560,538],\"canvasCSS\":[2558,538],\"transition\":false,\"visible\":true,\"pixelRatio\":1.0007818608287724,\"timings\":{\"render\":{\"n\":3,\"meanMs\":429.8,\"p95Ms\":1.9,\"maxMs\":1285.8},\"frameCpu\":{\"n\":3,\"meanMs\":429.83,\"p95Ms\":1.9,\"maxMs\":1285.9}}}",
+    "timestamp": "2026-10-18T12:26:03.212Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-screen1"
+  }
+]

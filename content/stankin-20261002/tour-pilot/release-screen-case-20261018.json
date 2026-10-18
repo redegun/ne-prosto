@@ -1,0 +1,27 @@
+{
+  "resource": 100,
+  "expected": "226cb1a466cb9196facb7864e974e26cadaccd5c450a662bd915f50660d30ef2",
+  "target": "c14d5dfeb90bb482ab71199d3039e4caf1927b24a80e9b102aa20286d6223060",
+  "replacements": [
+    {
+      "old": " Для знакомства с интерьером есть маршрут из пяти точек.",
+      "new": ""
+    },
+    {
+      "old": "Начать 3D-экскурсию →",
+      "new": "Открыть 3D-модель →"
+    },
+    {
+      "old": "Открыть экскурсию отдельно →",
+      "new": "Открыть 3D-просмотр отдельно →"
+    },
+    {
+      "old": "embed.css?v=20261018-texture1",
+      "new": "embed.css?v=20261018-screen1"
+    },
+    {
+      "old": "embed.js?v=20261018-texture1",
+      "new": "embed.js?v=20261018-screen1"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
-import { setupAutoHideControls } from './ui-controls.js?v=idle1';
-import { createEffects } from './effects.js?v=wide1';
+import { setupAutoHideControls } from './ui-controls.js?v=screen1';
+import { createEffects } from './effects.js?v=screen1';
 import { DetailTextures } from './detail-textures.js?v=texture1';
 import { improveMaterials, setupLighting } from './appearance.js?v=station2';
 import { createStation } from './station.js?v=smooth1';
@@ -17,6 +17,21 @@ const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(58,1,.025,650);
 let renderer,effects,lighting,controls,station,floor,model,overview,details;
 let renderDirty=true,sceneVisible=true,frameRequest=0,profileFrames=0;
 const fullPixelRatio=Math.min(devicePixelRatio,2);
+function pixelRatio(width,height){
+ const cap=mode==='outside'?1.5:2;
+ return Math.min(fullPixelRatio,cap,2560/Math.max(width,height),Math.sqrt(2000000/(width*height)));
+}
+function viewFov(){
+ if(mode!=='outside')return zoomed?28:58;
+ const base=Math.min(outsideWide?45:64,THREE.MathUtils.radToDeg(2*Math.atan(Math.tan(THREE.MathUtils.degToRad(50))/camera.aspect)));
+ return base*(zoomed?28/64:1);
+}
+function stopOrbitMotion(){
+ // Drain OrbitControls inertia through its public API, then restore the exact pose.
+ const position=camera.position.clone(),rotation=camera.quaternion.clone(),target=controls.target.clone(),damping=controls.enableDamping;
+ controls.enableDamping=false;controls.update();controls.enableDamping=damping;
+ camera.position.copy(position);camera.quaternion.copy(rotation);controls.target.copy(target);
+}
 let cameraChangedAt=0;
 function cameraChanged(){cameraChangedAt=performance.now();invalidate();}
 const profiling=new URLSearchParams(location.search).has('profile'),timings={};
@@ -37,44 +52,39 @@ function wake(){if(renderer&&sceneVisible&&!document.hidden&&!frameRequest)frame
 function invalidate(){renderDirty=true;wake();}
 function suspend(){cancelAnimationFrame(frameRequest);frameRequest=0;keys.clear();held.clear();}
 if(new URLSearchParams(location.search).has('profile'))setInterval(()=>{
- if(renderer&&ready){console.log('TOUR_PROFILE '+JSON.stringify({mode,frames:profileFrames,calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,textures:renderer.info.memory.textures,visible:sceneVisible,pixelRatio:renderer.getPixelRatio(),timings:timingSummary()}));profileFrames=0;}
+ if(renderer&&ready){console.log('TOUR_PROFILE '+JSON.stringify({mode,frames:profileFrames,calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,textures:renderer.info.memory.textures,car:currentCar,camera:camera.position.toArray(),target:controls.target.toArray(),fov:camera.fov,buffer:[renderer.domElement.width,renderer.domElement.height],canvasCSS:[renderer.domElement.clientWidth,renderer.domElement.clientHeight],transition:!!transition,visible:sceneVisible,pixelRatio:renderer.getPixelRatio(),timings:timingSummary()}));profileFrames=0;}
 },3000);
-let mode='outside',currentCar=1,busy=false,ready=false,step=0,yaw=0,pitch=0,drag=null,pickStart=null;
+let mode='outside',currentCar=1,busy=false,ready=false,yaw=0,pitch=0,drag=null,pickStart=null;
 let outsideFramed=false,outsideWide=false,outsideDetailCar=0,detailCandidate=0,detailCandidateAt=0,detailRetryAt=0;
 let pendingHover=null;
 let transition=null,lastTime=0,zoomed=false,lastRequest={mode:'outside',car:1};
 const autoControls=setupAutoHideControls(viewer);
 const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();
 const outsideHint=()=>matchMedia('(max-width:720px)').matches?'Нажмите на вагон, чтобы войти':'A/D — вдоль поезда · W/S — ближе/дальше · Нажмите на вагон, чтобы войти';
-const stops=[
- {title:'Вход в салон',p:[0,2.12,6],t:[0,2.12,0]},
- {title:'Оформление левой стены',p:[0,2.12,3.5],t:[-1.25,2.1,1]},
- {title:'Центр вагона',p:[0,2.12,0],t:[1.2,2.1,-1.8]},
- {title:'Оформление у дверей',p:[0,2.12,-3.5],t:[-1.25,2.1,-4.8]},
- {title:'Взгляд вдоль салона',p:[0,2.12,-5.8],t:[0,2.12,6]}
-];
 const v=a=>new THREE.Vector3(...a);
 function syncAngles(){const d=new THREE.Vector3();camera.getWorldDirection(d);pitch=Math.asin(THREE.MathUtils.clamp(d.y,-1,1));yaw=Math.atan2(-d.x,-d.z);}
 function look(){invalidate();camera.rotation.order='YXZ';camera.rotation.set(pitch,yaw,0);const d=new THREE.Vector3();camera.getWorldDirection(d);controls.target.copy(camera.position).add(d);}
-function view(p,t,animate=true){
- keys.clear();held.clear();invalidate();const target=v(t);
- if(animate&&!reduced)transition={from:camera.position.clone(),to:v(p),fromTarget:controls.target.clone(),target,start:performance.now()};
- else{transition=null;camera.position.copy(v(p));controls.target.copy(target);camera.lookAt(target);syncAngles();}
+function view(p,t,animate=true,fov=camera.fov){
+ keys.clear();held.clear();invalidate();stopOrbitMotion();const target=v(t);
+ if(animate&&!reduced)transition={from:camera.position.clone(),to:v(p),fromTarget:controls.target.clone(),target,fromFov:camera.fov,toFov:fov,start:performance.now()};
+ else{transition=null;camera.position.copy(v(p));controls.target.copy(target);camera.fov=fov;camera.updateProjectionMatrix();camera.lookAt(target);syncAngles();}
+ controls.enabled=ready&&mode==='outside'&&!transition;
+ if(profiling&&transition)console.log('TOUR_TRANSITION '+JSON.stringify({car:currentCar,from:transition.from.toArray(),to:transition.to.toArray(),fromTarget:transition.fromTarget.toArray(),target:transition.target.toArray(),fromFov:transition.fromFov,toFov:transition.toFov,buffer:[renderer.domElement.width,renderer.domElement.height]}));
 }
-function setZoom(enabled){
- invalidate();zoomed=enabled;camera.fov=enabled?28:mode==='outside'?(outsideWide?45:64):58;camera.updateProjectionMatrix();
+function setZoom(enabled,apply=true){
+ invalidate();zoomed=enabled;if(apply){camera.fov=viewFov();camera.updateProjectionMatrix();}
  $('zoom').textContent=enabled?'Общий вид':'Ближе';$('zoom').setAttribute('aria-pressed',String(enabled));
 }
 function fitOutside(animate=false){
  if(!overview)return;
- outsideFramed=false;outsideWide=true;setZoom(false);station.setCloseView(false);releaseOutsideDetails();updateControls();
+ outsideFramed=false;outsideWide=true;setZoom(false,false);const fov=viewFov();station.setCloseView(false);releaseOutsideDetails();updateControls();
  // A broadside view gives each carriage comparable size and a useful click target.
  const box=new THREE.Box3().setFromObject(overview.root),target=box.getCenter(new THREE.Vector3());
  target.y=2.4;
  const direction=new THREE.Vector3(1,.34,.35).normalize();
  const right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),direction).normalize();
  const up=new THREE.Vector3().crossVectors(direction,right).normalize();
- const tanV=Math.tan(THREE.MathUtils.degToRad(camera.fov*.5)),tanH=tanV*camera.aspect;
+ const tanV=Math.tan(THREE.MathUtils.degToRad(fov*.5)),tanH=tanV*camera.aspect;
  // Keep the orbit anchor on the train; fit distance rather than moving the anchor far away.
  box.min.x=-3.5;box.max.x=9.8;box.min.y=-.4;box.max.y=6.2;
  let distance=8;
@@ -86,7 +96,7 @@ function fitOutside(animate=false){
  camera.far=Math.max(650,distance*2);camera.updateProjectionMatrix();
  // A portrait overview needs more distance; do not fade its graphics into the background.
  if(scene.fog){scene.fog.near=Math.max(180,distance*1.25);scene.fog.far=Math.max(550,distance*3);}
- view(target.clone().addScaledVector(direction,distance*1.02).toArray(),target.toArray(),animate);
+ view(target.clone().addScaledVector(direction,distance*1.02).toArray(),target.toArray(),animate,fov);
 }
 function releaseOutsideDetails(){
  if(outsideDetailCar){details?.dispose();details=null;outsideDetailCar=0;}
@@ -94,14 +104,14 @@ function releaseOutsideDetails(){
 }
 function showOutsideCar(car=currentCar,animate=true){
  if(!overview)return;
- outsideFramed=true;outsideWide=false;currentCar=THREE.MathUtils.clamp(car,1,8);setZoom(false);
+ outsideFramed=true;outsideWide=false;currentCar=THREE.MathUtils.clamp(car,1,8);setZoom(false,false);const fov=viewFov();
  const box=new THREE.Box3().setFromObject(overview.cars[currentCar-1]);
  // The platform already occludes the wheels: fit the visible body, not the hidden undercarriage.
  box.min.y=Math.max(box.min.y,1.095);
  const target=new THREE.Vector3(0,(box.min.y+box.max.y)/2,overview.centers[currentCar-1]);
  // Platform top is 1.095 m; eye level is 1.65 m above it.
  const eye=1.095+1.65,slant=camera.aspect<.9?.45:.12;
- const probe=new THREE.PerspectiveCamera(camera.fov,camera.aspect,.15,650);
+ const probe=new THREE.PerspectiveCamera(fov,camera.aspect,.15,650);
  const corners=[];
  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])corners.push(new THREE.Vector3(x,y,z));
  let near=4,far=120;
@@ -113,8 +123,18 @@ function showOutsideCar(car=currentCar,animate=true){
  }
  controls.maxDistance=450;camera.far=650;camera.updateProjectionMatrix();
  if(scene.fog){scene.fog.near=180;scene.fog.far=550;}
- view([far,eye,target.z+far*slant],target.toArray(),animate);
+ view([far,eye,target.z+far*slant],target.toArray(),animate,fov);
  updateControls();$('hint').textContent=outsideHint();
+}
+function navigateOutsideCar(car){
+ if(!overview)return;
+ if(outsideWide){showOutsideCar(car);return;}
+ currentCar=THREE.MathUtils.clamp(car,1,8);
+ const target=controls.target.clone(),position=camera.position.clone();
+ const delta=overview.centers[currentCar-1]-target.z;
+ target.z+=delta;position.z+=delta;
+ // Travel along the platform without changing distance, angle or zoom.
+ view(position.toArray(),target.toArray());updateControls();
 }
 function nearestOutsideCar(){
  if(!overview)return currentCar;
@@ -134,7 +154,7 @@ function updateOutsideDetails(now){
 }
 function focusOrbit(){
  if(!ready||mode!=='outside'||!overview)return;
- outsideFramed=false;transition=null;
+ outsideFramed=false;transition=null;controls.enabled=true;
  camera.updateMatrixWorld();
  ray.setFromCamera(new THREE.Vector2(0,0),camera);
  let target=overview.hitBounds(ray.ray)?.point;
@@ -159,17 +179,18 @@ function moveOutside(forward,right,dt){
  }
  controls.update();
 }
-function resize(){
+function resize(reframe=true){
  if(!renderer)return;invalidate();const box=host.getBoundingClientRect();if(!box.width||!box.height)return;
- renderer.setSize(box.width,box.height,false);camera.aspect=box.width/box.height;camera.updateProjectionMatrix();
- effects?.resize(box.width,box.height);if(ready&&mode==='outside'){if(outsideWide)fitOutside(false);else if(outsideFramed&&!zoomed)showOutsideCar(currentCar,false);}
+ renderer.setPixelRatio(pixelRatio(box.width,box.height));renderer.setSize(box.width,box.height,false);
+ camera.aspect=box.width/box.height;camera.fov=viewFov();camera.updateProjectionMatrix();
+ effects?.resize(box.width,box.height);if(reframe!==false&&ready&&mode==='outside'){if(outsideWide)fitOutside(false);else if(outsideFramed&&!zoomed)showOutsideCar(currentCar,false);}
 }
 function updateControls(){
  viewer.dataset.mode=mode;
  if(window.parent!==window)window.parent.postMessage({type:'stankin:mode',mode},location.origin);
  document.querySelectorAll('.modes button').forEach(b=>{b.disabled=!ready;b.setAttribute('aria-pressed',String(b.id===mode));});
  $('reset').disabled=!ready;$('zoom').disabled=!ready;$('car').disabled=busy;
- $('walk').hidden=!ready||mode!=='inside';$('route').hidden=!ready||mode!=='guided';
+ $('walk').hidden=!ready||mode!=='inside';
  $('all-train').hidden=mode!=='outside';$('all-train').disabled=!ready;
  $('all-train').setAttribute('aria-pressed',String(outsideWide));
  $('outside-nav').hidden=!ready||mode!=='outside';
@@ -186,14 +207,12 @@ function setupMode(next){
  controls.minDistance=next==='outside'?3.5:3;
  controls.minPolarAngle=next==='outside'?Math.PI*.14:0;
  controls.maxPolarAngle=next==='outside'?Math.PI*.4995:Math.PI*.48;
- host.style.cursor=next==='outside'?'grab':'grab';
+ host.style.cursor='grab';resize(false);
 }
-function showStep(animate=true){const s=stops[step];view(s.p,s.t,animate);$('step').textContent=String(step+1).padStart(2,'0')+' / 05';$('stop-title').textContent=s.title;$('prev').disabled=step===0;$('next').disabled=step===4;}
 function applyMode(next,animate=true){
- setupMode(next);setZoom(false);updateControls();
+ setupMode(next);setZoom(false,false);updateControls();
  if(next==='outside'){showOutsideCar(currentCar,animate);$('hint').textContent=outsideHint();}
- if(next==='inside'){view([0,2.12,6],[0,2.12,0],animate);$('hint').textContent='Потяните, чтобы осмотреться. Для движения — стрелки на экране или клавиши WASD.';}
- if(next==='guided'){step=0;showStep(animate);$('hint').textContent='Переключайте точки стрелками. Потяните, чтобы осмотреться на остановке.';}
+ if(next==='inside'){view([0,2.12,6],[0,2.12,0],animate,viewFov());$('hint').textContent='Потяните, чтобы осмотреться. Для движения — стрелки на экране или клавиши WASD.';}
 }
 function clearAssets(){
  effects?.setHighlight(null);details?.dispose();details=null;outsideDetailCar=0;detailCandidate=0;detailRetryAt=0;
@@ -247,7 +266,8 @@ function frame(now){
  if(transition){
   cameraChanged();const a=THREE.MathUtils.clamp((now-transition.start)/650,0,1),e=a*a*(3-2*a);
   camera.position.lerpVectors(transition.from,transition.to,e);controls.target.lerpVectors(transition.fromTarget,transition.target,e);camera.lookAt(controls.target);
-  if(a===1){transition=null;syncAngles();}
+  camera.fov=THREE.MathUtils.lerp(transition.fromFov,transition.toFov,e);camera.updateProjectionMatrix();
+  if(a===1){transition=null;syncAngles();controls.enabled=ready&&mode==='outside';}
  }else if(ready&&mode==='outside'){
   const f=Number(keys.has('KeyW')||keys.has('ArrowUp'))-Number(keys.has('KeyS')||keys.has('ArrowDown'));
   const r=Number(keys.has('KeyD')||keys.has('ArrowRight'))-Number(keys.has('KeyA')||keys.has('ArrowLeft'));
@@ -264,8 +284,6 @@ function frame(now){
  }
  if(ready&&mode==='outside')station.setCloseView(!outsideWide&&camera.position.y<5.9&&camera.position.x>-3&&camera.position.x<74);
  const outsideMoving=mode==='outside'&&(transition||keys.size||pointers.size||now-cameraChangedAt<300);
- const ratio=outsideMoving?Math.min(fullPixelRatio,1):fullPixelRatio;
- if(renderer.getPixelRatio()!==ratio){renderer.setPixelRatio(ratio);renderDirty=true;}
  if(outsideMoving&&overview?.highlighted)highlightCar(0);
  if(mode==='outside')details?.setSuspended(!!outsideMoving);
  if(ready&&!transition&&(!outsideMoving||mode!=='outside')){
@@ -308,7 +326,7 @@ function highlightCar(car){
 }
 try{
  renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
- renderer.info.autoReset=false;renderer.setPixelRatio(fullPixelRatio);renderer.outputColorSpace=THREE.SRGBColorSpace;
+ renderer.info.autoReset=false;renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.SRGBColorSpace;
  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;host.appendChild(renderer.domElement);
  controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.08;controls.zoomToCursor=true;controls.screenSpacePanning=true;controls.rotateSpeed=.55;controls.addEventListener('change',cameraChanged);
  lighting=setupLighting(scene,renderer);station=createStation(180);scene.add(station);
@@ -323,12 +341,11 @@ try{
  document.addEventListener('visibilitychange',()=>{if(document.hidden)suspend();else invalidate();});
  wake();open('outside');
 }catch(e){$('loading').hidden=false;document.querySelector('.loading-title').textContent='3D-просмотр недоступен';$('load-text').textContent='Откройте кейс с фотографиями или попробуйте другой браузер.';console.error(e);}
-['outside','inside','guided'].forEach(m=>$(m).onclick=()=>open(m));
+['outside','inside'].forEach(m=>$(m).onclick=()=>open(m));
 $('all-train').onclick=()=>{if(ready){if(outsideWide)showOutsideCar(currentCar);else fitOutside(true);}};
-$('car-back').onclick=()=>{if(ready&&currentCar>1)showOutsideCar(currentCar-1);};
-$('car-forward').onclick=()=>{if(ready&&currentCar<8)showOutsideCar(currentCar+1);};
+$('car-back').onclick=()=>{if(ready&&currentCar>1)navigateOutsideCar(currentCar-1);};
+$('car-forward').onclick=()=>{if(ready&&currentCar<8)navigateOutsideCar(currentCar+1);};
 $('reset').onclick=()=>applyMode(mode);$('zoom').onclick=()=>{if(ready){if(mode==='outside')focusOrbit();setZoom(!zoomed);}};
-$('prev').onclick=()=>{if(step>0){step--;showStep();}};$('next').onclick=()=>{if(step<4){step++;showStep();}};
 $('retry').onclick=()=>renderer&&!renderer.getContext().isContextLost()?open(lastRequest.mode,lastRequest.car):location.reload();
 $('car').onchange=()=>open('inside',Number($('car').value));
 function closeTools(){viewer.classList.remove('tools-open');$('tools-toggle').setAttribute('aria-expanded','false');}
@@ -375,8 +392,6 @@ viewer.addEventListener('keydown',e=>{
  if((mode==='inside'||mode==='outside')&&['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)){
   e.preventDefault();if(!e.repeat){if(mode==='outside')focusOrbit();const f=['KeyW','ArrowUp'].includes(e.code)?1:['KeyS','ArrowDown'].includes(e.code)?-1:0,r=['KeyD','ArrowRight'].includes(e.code)?1:['KeyA','ArrowLeft'].includes(e.code)?-1:0;if(mode==='outside')moveOutside(f,r,.08);else move(f,r,.08);}keys.add(e.code);
  }
- if(mode==='guided'&&e.code==='ArrowRight'&&step<4){e.preventDefault();step++;showStep();}
- if(mode==='guided'&&e.code==='ArrowLeft'&&step>0){e.preventDefault();step--;showStep();}
 });
 window.addEventListener('keyup',e=>keys.delete(e.code));
 host.addEventListener('blur',()=>{keys.clear();held.clear();});

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-18",
+  "version": "20261018-screen1",
+  "request": "Remove guided mode and fix large-monitor outside jitter / zoom after next-car navigation. User supplied 18.57s1920x1080 video recorded2026-10-18 15-20-31.",
+  "changes": [
+    "Removed guided mode, route controls, keyboard handlers, five-stop copy; retained outside/inside manual viewing.",
+    "Fixed CSS canvas width/height100%, independent of intrinsic drawing buffer.",
+    "Stable render resolution per viewport/mode; no allocation/DPR switching at movement start/stop. Budget2M pixels/2560long edge; outside DPRcap1.5, interior2. Composer follows same ratio; multisampling2.",
+    "Horizontal exterior FOV capped100deg on panoramic windows. Next/previous translates camera and target equally along train preserving zoom/distance/angle. Orbit inertia flushed without moving current pose; intentional framing transitions interpolate FOV."
+  ],
+  "verification": {
+    "canvas_regression": "Real CSS fixture at DPR1,1.25,1.5,2: old canvas expands up to5120x1080 in2560x540 host; fixed stays2560x540 in all cases.",
+    "integration2560": "Iframe CSS2558x538, buffer2560x538 at emulateddevicePixelRatio2. Same buffer before/after drag. Next1→2 preservesx11.357971,y2.745,FOV28.142610. Zoom+next2→3 preservesFOV12.312392. Inside/outside and wholetrain/return functional.",
+    "integration3840": "Forced iframe width3840,height540 (visible browser1280: large frame clipped in test wrapper), innercanvasCSS3838x538; buffer2560x358. Next1→2 FOV18.968123 unchanged; x/y unchanged, position.z and target.z both shift−19.545775.",
+    "scope": "Browser sizing/DPR emulation, not benchmark on reporter GPU. IAB throttles background rAF; no FPS claim.",
+    "syntax": "nodechecks and release manifest validations passed; gitdiffcheckpassed.",
+    "console": "Test tabs have an unattributed MutationObserver error at initial load without source URL; production tour continues and controls complete. Verify live page after deployment."
+  },
+  "deployment": "pending"
+}

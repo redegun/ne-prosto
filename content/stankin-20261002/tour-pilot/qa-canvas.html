@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><title>Canvas sizing regression</title><link rel="stylesheet" href="./tour.css?v=screen1"><style>.fixture{position:fixed;left:-10000px;top:0;width:2560px!important;height:540px!important}pre{white-space:pre-wrap}</style><h1>Размер canvas при масштабе экрана</h1><pre id="result">Проверка…</pre><div class="fixture" id="legacy"><canvas></canvas></div><div class="fixture" id="canvas"><canvas></canvas></div><script>
+const checks=[];
+for(const dpr of [1,1.25,1.5,2]){
+ const row={dpr};
+ for(const id of ['legacy','canvas']){
+  const host=document.getElementById(id),canvas=host.firstElementChild;
+  canvas.width=Math.floor(host.clientWidth*dpr);canvas.height=Math.floor(host.clientHeight*dpr);
+  const box=canvas.getBoundingClientRect();
+  row[id]={width:box.width,height:box.height,fits:box.width===host.clientWidth&&box.height===host.clientHeight};
+ }
+ checks.push(row);
+}
+document.getElementById('result').textContent=JSON.stringify({pass:checks.every(x=>x.canvas.fits)&&checks.filter(x=>x.dpr>1).every(x=>!x.legacy.fits),checks},null,2);
+</script>

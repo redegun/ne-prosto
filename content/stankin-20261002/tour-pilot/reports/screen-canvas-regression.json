@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "dpr": 1,
+      "legacy": {
+        "width": 2560,
+        "height": 540,
+        "fits": true
+      },
+      "canvas": {
+        "width": 2560,
+        "height": 540,
+        "fits": true
+      }
+    },
+    {
+      "dpr": 1.25,
+      "legacy": {
+        "width": 3200,
+        "height": 675,
+        "fits": false
+      },
+      "canvas": {
+        "width": 2560,
+        "height": 540,
+        "fits": true
+      }
+    },
+    {
+      "dpr": 1.5,
+      "legacy": {
+        "width": 3840,
+        "height": 810,
+        "fits": false
+      },
+      "canvas": {
+        "width": 2560,
+        "height": 540,
+        "fits": true
+      }
+    },
+    {
+      "dpr": 2,
+      "legacy": {
+        "width": 5120,
+        "height": 1080,
+        "fits": false
+      },
+      "canvas": {
+        "width": 2560,
+        "height": 540,
+        "fits": true
+      }
+    }
+  ]
+}

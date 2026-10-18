@@ -1,6 +1,6 @@
 // Hide visual chrome without removing keyboard or assistive-technology access.
 export function setupAutoHideControls(viewer) {
- const surfaces=viewer.querySelectorAll('.modes,.view-actions,.tools-toggle,.outside-nav,.walk,.route,.hint');
+ const surfaces=viewer.querySelectorAll('.modes,.view-actions,.tools-toggle,.outside-nav,.walk,.hint');
  surfaces.forEach(el=>el.dataset.tourControls='');
  const controlSelector='[data-tour-controls]';
  const activePointers=new Set(),wakingTouches=new Set();
