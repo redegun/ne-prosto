@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-18",
+  "url": "https://ne-prosto.ru/portfolio/poezd-stankin",
+  "release": "20261018-hero1",
+  "commit": "09a51ac51df162f6ead0fbd37362b0211db91765",
+  "ci": "https://github.com/redegun/ne-prosto/actions/runs/39130381030",
+  "resource": 100,
+  "template": 16,
+  "previous_template": 15,
+  "previous_template_unchanged": true,
+  "template_tv_bindings": 7,
+  "work_log": 7039,
+  "checks": {
+    "single_h1": true,
+    "order": [
+      "hero",
+      "tour",
+      "brief",
+      "concept"
+    ],
+    "gallery_images_preserved": 19,
+    "video_iframes_preserved": 4,
+    "team_preserved": true,
+    "photo_credits_preserved": true,
+    "metadata_preserved": [
+      "title",
+      "description",
+      "robots"
+    ],
+    "hero_anchor": "/portfolio/poezd-stankin#tour",
+    "viewer_loads_on_click": true,
+    "desktop_outside_to_inside": true,
+    "mobile_hero_anchor_and_inside": true
+  },
+  "live_viewports": [
+    {
+      "css_width": 1425,
+      "horizontal_overflow": 0,
+      "exterior_height": 432,
+      "interior_height": 680
+    },
+    {
+      "css_width": 375,
+      "horizontal_overflow": 0,
+      "interior_height": 590.796875,
+      "cover_variant": "960w"
+    }
+  ],
+  "preview_widths_without_overflow": [
+    305,
+    375,
+    753,
+    1425,
+    1905,
+    2545
+  ],
+  "assets": {
+    "hero_css_bytes": 8049,
+    "webp_960_bytes": 147256,
+    "webp_1920_bytes": 511206,
+    "new_javascript_bytes": 0
+  },
+  "backup": "/opt/office1080/ne-prosto-backups/39130089001/cms-before.json",
+  "final_backup": "/opt/office1080/ne-prosto-backups/39130381030",
+  "note": "Renderer and model modules remain screen1. No device FPS benchmark was part of this layout change."
+}
