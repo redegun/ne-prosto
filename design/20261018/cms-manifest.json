@@ -1,6 +1,6 @@
 {
   "site": "https://ne-prosto.ru/",
-  "release": "design-20261018-v2",
+  "release": "design-20261018-v2b",
   "changes": [
     {
       "type": "modTemplate",
@@ -153,7 +153,7 @@
       "field": "snippet",
       "path": "chunks/np_project.html",
       "expected": "148cbb6d3fddc9e9eb881c9dffe9a996082604b97c52f5e3b42eca5cc2bc9d67",
-      "target": "148cbb6d3fddc9e9eb881c9dffe9a996082604b97c52f5e3b42eca5cc2bc9d67"
+      "target": "a43cd19b000c4a683e473ca06acef74c724b69bb5bd8d5e80913f8012dca47ff"
     },
     {
       "type": "modChunk",
@@ -306,7 +306,7 @@
       "field": "snippet",
       "path": "snippets/npLegacyContent.php",
       "expected": null,
-      "target": "319e0fa559462052882bfc69652e5ba4a0b2d264de7cd8603cffdec7d04954f6"
+      "target": "b608e7072fa4f888d4fed7ec2b690e4ac4f92ab51b4f3e0e830dab15c31fd5f1"
     }
   ]
 }
