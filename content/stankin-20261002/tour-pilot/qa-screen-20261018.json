@@ -14,7 +14,18 @@
     "integration3840": "Forced iframe width3840,height540 (visible browser1280: large frame clipped in test wrapper), innercanvasCSS3838x538; buffer2560x358. Next1→2 FOV18.968123 unchanged; x/y unchanged, position.z and target.z both shift−19.545775.",
     "scope": "Browser sizing/DPR emulation, not benchmark on reporter GPU. IAB throttles background rAF; no FPS claim.",
     "syntax": "nodechecks and release manifest validations passed; gitdiffcheckpassed.",
-    "console": "Test tabs have an unattributed MutationObserver error at initial load without source URL; production tour continues and controls complete. Verify live page after deployment."
+    "console": "Test tabs have an unattributed MutationObserver error at initial load without source URL; production tour continues and controls complete. Verify live page after deployment.",
+    "live": "Normal reload loads20261018-screen1; mode buttons only Outside/Inside; no route promise in case. At400px canvas398x248 matches host; next1→2 works. At1920 desktop wholecar fits; returned2→1. Only known sitewide Yandex Maps warning; no new tour/MutationObserver error. Screenshot reports/screen-live-20261018.png. Browser viewport reset."
   },
-  "deployment": "pending"
+  "deployment": {
+    "commit": "2b0196dd87a6574f4b4c1e107c7b2add5622662f",
+    "run": "https://github.com/redegun/ne-prosto/actions/runs/39127598449",
+    "result": "success",
+    "verified_http_files": 7,
+    "backup": "/opt/office1080/ne-prosto-backups/39127598449",
+    "resource100": "5 exact replacements, expected/target SHA matched",
+    "bridge": "Archived outside webroot; public404",
+    "runner": "Exited0; registeredrunners0",
+    "worklog_id": 7036
+  }
 }
