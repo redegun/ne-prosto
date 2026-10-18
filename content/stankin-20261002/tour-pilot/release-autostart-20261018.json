@@ -1,0 +1,37 @@
+{
+  "release": "20261018-autostart1",
+  "expected_live": {
+    "embed.js": "d317cdd8be86f23b27680241fa7d41ee497ef3eb72724f99f37b5ad3887d25b8",
+    "embed.css": "04479b2829bfd74f00a609b1f890865955f7a10c8452cd78219bd5b2374d6f33",
+    "tour.js": "4468dc647a494b52143965cf45dd7f3f0a1a4756b33944a34c13e51e7bb5deb1",
+    "loader.js": "02b53a97a01bb6c495e75ed3e3a30331005b4a6d590a02d3914c7177b833187f",
+    "index.html": "cd56f3917ee97189feb12e5b74f65cb1b43605eeaabdf7c0b2cf1bf48919fbea"
+  },
+  "files": [
+    {
+      "path": "embed.js",
+      "bytes": 1948,
+      "sha256": "684a9fa213c75c2609bec17e4357e01a5ec42c6727233f3198e5dcb12f4b3b4c"
+    },
+    {
+      "path": "embed.css",
+      "bytes": 1454,
+      "sha256": "3a8c7b7972a1a3fe5cc4ad8f6b7b5f63e44837be34a825c04211a52ef3584e4e"
+    },
+    {
+      "path": "tour.js",
+      "bytes": 28988,
+      "sha256": "1d281c5ff7cb30d4305360f84e666b857e47d0340258f541a2db025f75045aa2"
+    },
+    {
+      "path": "loader.js",
+      "bytes": 588,
+      "sha256": "4f3e1105a5cc214bebbd30015f835367a4e07cc1bc0924945e6378e5240cba17"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5024,
+      "sha256": "678338cc21389028c59319903c3fa3b1860512e9bc9ae6440da73e616d145824"
+    }
+  ]
+}

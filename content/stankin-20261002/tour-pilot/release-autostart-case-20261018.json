@@ -1,0 +1,15 @@
+{
+  "resource": 100,
+  "expected": "f0f5b1b3093bf2e80cc001b1bcced4d101afebae2d48311ed32297c842f657d4",
+  "target": "afba772caad5de8887baf4a138426bfca903ea0c2edaabe874798e9bf2ff8536",
+  "replacements": [
+    {
+      "old": "embed.css?v=20261018-screen1",
+      "new": "embed.css?v=20261018-autostart1"
+    },
+    {
+      "old": "embed.js?v=20261018-screen1",
+      "new": "embed.js?v=20261018-autostart1"
+    }
+  ]
+}

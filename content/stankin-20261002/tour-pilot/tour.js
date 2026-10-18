@@ -249,7 +249,7 @@ async function open(next,car=currentCar){
   // Prepare the base shader variants behind the loading screen.
   await renderer.compileAsync(scene,camera);
   ready=true;$('loading').hidden=true;applyMode(next,false);
-  if(document.activeElement===document.body||viewer.contains(document.activeElement))host.focus({preventScroll:true});
+  if((window.parent===window||document.hasFocus())&&(document.activeElement===document.body||viewer.contains(document.activeElement)))host.focus({preventScroll:true});
  }catch(e){clearAssets();error('Проверьте соединение и попробуйте ещё раз. Можно также выбрать вагон в списке.');console.error(e);}
  finally{busy=false;updateControls();}
 }

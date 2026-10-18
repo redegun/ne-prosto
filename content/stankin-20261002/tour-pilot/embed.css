@@ -11,3 +11,9 @@
  .st-case .st-tour-launch span{font-size:15px;padding:15px 20px}
  .st-case .st-tour-frame[data-view="inside"]{height:clamp(440px,70svh,640px)}
 }
+
+/* One short entrance; no continuous animation while the train renders. */
+@media(prefers-reduced-motion:no-preference){
+ .st-case .st-tour-frame{animation:st-tour-enter .3s cubic-bezier(.22,1,.36,1)}
+}
+@keyframes st-tour-enter{from{opacity:0}to{opacity:1}}
