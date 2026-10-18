@@ -1,0 +1,17 @@
+{
+  "release": "design-20261018-v9",
+  "ci": "39140675813",
+  "verified_objects": 36,
+  "assets": 23,
+  "services": 7,
+  "webp_files": 21,
+  "webp_total_bytes": 205320,
+  "browser_checks": {
+    "home": "illustrated service rows visible; four images loaded; no horizontal overflow; no console errors",
+    "service_catalogue": "all seven themes; desktop1440 and phone320; headings fit within columns",
+    "service_detail": "web hero and related two cards; 1440desktop/390mobile; no placeholder; old body cover absent; share image points to new WebP",
+    "articles": "original photo cards retained; long titles scoped to32px desktop; header image only on article parent2"
+  },
+  "source": "illustrations/ne-prosto-services.blend",
+  "status": "temporary illustration set accepted by Anton, not final visual direction"
+}
