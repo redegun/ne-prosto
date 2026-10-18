@@ -26,12 +26,12 @@ jobs:
           node --check train-overview.js
           node --check effects.js
           node --check ui-controls.js
-          python3 tools/deploy_idle_ci.py --check
-          python3 tools/deploy_idle_case_ci.py --check
-      - name: Publish scoped controls and version case embed links
+          python3 tools/deploy_smooth_ci.py --check
+          python3 tools/deploy_smooth_case_ci.py --check
+      - name: Publish movement optimizations and version case embed links
         working-directory: content/stankin-20261002/tour-pilot
         env:
           NE_PROSTO_FTP: ${{ secrets.NE_PROSTO_FTP }}
         run: |
-          python3 -u tools/deploy_idle_ci.py
-          python3 -u tools/deploy_idle_case_ci.py
+          python3 -u tools/deploy_smooth_ci.py
+          python3 -u tools/deploy_smooth_case_ci.py

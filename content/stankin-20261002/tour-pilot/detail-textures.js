@@ -2,7 +2,7 @@ import * as THREE from 'three';
 const SLOT_COUNT=6, UV_SPLIT=.425;
 export class DetailTextures {
  constructor(renderer,root,car,{exteriorOnly=false,onChange=()=>{}}={}){
-  this.onChange=onChange;this.exteriorOnly=exteriorOnly;
+  this.onChange=onChange;this.exteriorOnly=exteriorOnly;this.sampleView=null;this.suspended=false;this.uploads=[];
   this.renderer=renderer;this.root=root;this.car=car;this.dead=false;this.next=0;this.retryAfter=new Map();this.meshes=[];this.materials=new Set();this.manifests={};
   this.mobile=matchMedia('(max-width:720px)').matches;this.limit=this.mobile?4:6;
   this.slots=Array.from({length:SLOT_COUNT},()=>({key:null,texture:null,request:0}));
@@ -27,15 +27,32 @@ export class DetailTextures {
   });
   this.ready=this.loader.loadAsync('./exterior/car-'+car+'.jpg?v=20261015').then(texture=>{
    if(this.dead){texture.dispose();return;}
-   this.configure(texture);this.exterior=texture;this.uniforms.exteriorBase.value=texture;this.uniforms.exteriorReady.value=true;this.onChange();
+   this.configure(texture);this.commitTexture(texture,()=>{this.exterior=texture;this.uniforms.exteriorBase.value=texture;this.uniforms.exteriorReady.value=true;});
   });
-  for(const domain of (exteriorOnly?[1]:[0,1]))fetch(this.folder(domain)+'/manifest.json').then(r=>{if(!r.ok)throw Error('Details unavailable');return r.json();}).then(m=>{if(!this.dead){this.manifests[domain]=m;this.next=0;this.onChange();}}).catch(()=>{});
+  for(const domain of (exteriorOnly?[1]:[0,1]))fetch(this.folder(domain)+'/manifest.json').then(r=>{if(!r.ok)throw Error('Details unavailable');return r.json();}).then(m=>{if(!this.dead){this.manifests[domain]=m;this.next=0;this.sampleView=null;this.onChange();}}).catch(()=>{});
+ }
+ commitTexture(texture,apply){
+  if(this.dead){texture.dispose();return;}
+  if(this.exteriorOnly&&this.suspended){this.uploads.push({texture,apply});return;}
+  if(this.exteriorOnly)this.renderer.initTexture(texture);
+  apply();this.onChange();
+ }
+ setSuspended(value){
+  this.suspended=value;
+  if(!value&&this.uploads.length){const pending=this.uploads;this.uploads=[];pending.forEach(({texture,apply})=>this.commitTexture(texture,apply));}
  }
  folder(domain){return './'+(domain?'exterior-details':'details')+'/car-'+this.car;}
  configure(texture){texture.colorSpace=THREE.SRGBColorSpace;texture.flipY=false;texture.anisotropy=Math.min(16,this.renderer.capabilities.getMaxAnisotropy());texture.wrapS=texture.wrapT=THREE.ClampToEdgeWrapping;}
  update(now,camera){
   if(this.dead||now<this.next)return;this.next=now+650;
   camera.updateMatrixWorld();this.root.updateMatrixWorld(true);
+  if(this.exteriorOnly){
+   const view=camera.matrixWorld.elements.concat(camera.projectionMatrix.elements);
+   let retry=false;
+   for(const [key,at] of this.retryAfter)if(now>=at){this.retryAfter.delete(key);retry=true;}
+   if(!retry&&this.sampleView&&view.every((value,i)=>Math.abs(value-this.sampleView[i])<.00001))return;
+   this.sampleView=view;
+  }
   const scores=new Map();
   for(const y of [-.75,-.3,.15,.6])for(const x of [-.94,-.6,-.25,.25,.6,.94]){
    this.point.set(x,y);this.ray.setFromCamera(this.point,camera);
@@ -61,11 +78,14 @@ export class DetailTextures {
    const [domainString,cell]=key.split(':'),domain=Number(domainString);
    this.loader.load(this.folder(domain)+'/'+cell+(this.mobile?'-mobile':'')+'.jpg',texture=>{
     if(this.dead||slot.key!==key||slot.request!==request){texture.dispose();return;}
-    this.configure(texture);slot.texture=texture;this.uniforms['detailMap'+i].value=texture;
-    this.uniforms['detailCell'+i].value.set(...cell.split('-').map(Number),domain);
-    this.uniforms['detailRect'+i].value.fromArray(this.manifests[domain].tiles[cell].rect);this.onChange();
+    this.configure(texture);this.commitTexture(texture,()=>{
+     if(this.dead||slot.key!==key||slot.request!==request){texture.dispose();return;}
+     slot.texture=texture;this.uniforms['detailMap'+i].value=texture;
+     this.uniforms['detailCell'+i].value.set(...cell.split('-').map(Number),domain);
+     this.uniforms['detailRect'+i].value.fromArray(this.manifests[domain].tiles[cell].rect);
+    });
    },undefined,()=>{if(!this.dead&&slot.key===key&&slot.request===request){slot.key=null;this.retryAfter.set(key,performance.now()+30000);}});
   }
  }
- dispose(){this.dead=true;for(const [m,old] of this.previous){m.onBeforeCompile=old.compile;m.customProgramCacheKey=old.key;m.needsUpdate=true;}this.previous.clear();this.exterior?.dispose();for(const slot of this.slots)slot.texture?.dispose();this.meshes=[];this.materials.clear();}
+ dispose(){this.dead=true;this.uploads.forEach(({texture})=>texture.dispose());this.uploads=[];for(const [m,old] of this.previous){m.onBeforeCompile=old.compile;m.customProgramCacheKey=old.key;m.needsUpdate=true;}this.previous.clear();this.exterior?.dispose();for(const slot of this.slots)slot.texture?.dispose();this.meshes=[];this.materials.clear();}
 }

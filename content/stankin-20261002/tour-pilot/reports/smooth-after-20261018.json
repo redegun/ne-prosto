@@ -1,0 +1,302 @@
+[
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":85,\"triangles\":230238,\"textures\":14,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":180,\"meanMs\":0,\"p95Ms\":0,\"maxMs\":0.1},\"frameCpu\":{\"n\":180,\"meanMs\":0.03,\"p95Ms\":0.1,\"maxMs\":0.2}}}",
+    "timestamp": "2026-10-18T09:24:02.506Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":4,\"calls\":87,\"triangles\":258952,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":127,\"meanMs\":0,\"p95Ms\":0,\"maxMs\":0.1},\"frameCpu\":{\"n\":130,\"meanMs\":3.54,\"p95Ms\":0.1,\"maxMs\":451.5},\"pick\":{\"n\":1,\"meanMs\":0.2,\"p95Ms\":0.2,\"maxMs\":0.2},\"render\":{\"n\":4,\"meanMs\":114.05,\"p95Ms\":2.6,\"maxMs\":451.1}}}",
+    "timestamp": "2026-10-18T09:24:05.506Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":149,\"triangles\":433639,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":10.67,\"p95Ms\":8.3,\"maxMs\":16.7},\"frameCpu\":{\"n\":3,\"meanMs\":10.67,\"p95Ms\":8.3,\"maxMs\":16.7}}}",
+    "timestamp": "2026-10-18T09:24:08.509Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":8,\"calls\":154,\"triangles\":441003,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":8,\"meanMs\":2.24,\"p95Ms\":2.5,\"maxMs\":3.6},\"frameCpu\":{\"n\":8,\"meanMs\":2.29,\"p95Ms\":2.6,\"maxMs\":3.6}}}",
+    "timestamp": "2026-10-18T09:24:11.504Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":98,\"triangles\":280145,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.07,\"p95Ms\":0.9,\"maxMs\":1.4},\"frameCpu\":{\"n\":3,\"meanMs\":1.17,\"p95Ms\":1,\"maxMs\":1.6}}}",
+    "timestamp": "2026-10-18T09:24:14.512Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":2,\"calls\":107,\"triangles\":301867,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":2,\"meanMs\":1.15,\"p95Ms\":1,\"maxMs\":1.3},\"frameCpu\":{\"n\":2,\"meanMs\":1.2,\"p95Ms\":1,\"maxMs\":1.4}}}",
+    "timestamp": "2026-10-18T09:24:17.515Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":9,\"calls\":160,\"triangles\":455026,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":9,\"meanMs\":1.43,\"p95Ms\":1.8,\"maxMs\":2.6},\"frameCpu\":{\"n\":9,\"meanMs\":1.56,\"p95Ms\":1.8,\"maxMs\":2.9},\"pick\":{\"n\":1,\"meanMs\":0.1,\"p95Ms\":0.1,\"maxMs\":0.1}}}",
+    "timestamp": "2026-10-18T09:24:20.511Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":158,\"triangles\":454363,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.33,\"p95Ms\":1.3,\"maxMs\":1.5},\"frameCpu\":{\"n\":3,\"meanMs\":1.33,\"p95Ms\":1.3,\"maxMs\":1.5}}}",
+    "timestamp": "2026-10-18T09:24:23.517Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":158,\"triangles\":454363,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.4,\"p95Ms\":1.5,\"maxMs\":1.5},\"frameCpu\":{\"n\":3,\"meanMs\":1.43,\"p95Ms\":1.5,\"maxMs\":1.5}}}",
+    "timestamp": "2026-10-18T09:24:26.512Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":7,\"calls\":156,\"triangles\":442647,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":7,\"meanMs\":1.46,\"p95Ms\":1.8,\"maxMs\":1.9},\"frameCpu\":{\"n\":7,\"meanMs\":1.51,\"p95Ms\":1.8,\"maxMs\":2}}}",
+    "timestamp": "2026-10-18T09:24:29.510Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":155,\"triangles\":441005,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.2,\"p95Ms\":1.2,\"maxMs\":1.3},\"frameCpu\":{\"n\":3,\"meanMs\":1.27,\"p95Ms\":1.2,\"maxMs\":1.4}}}",
+    "timestamp": "2026-10-18T09:24:32.517Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":154,\"triangles\":441003,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.27,\"p95Ms\":1.2,\"maxMs\":1.5},\"frameCpu\":{\"n\":3,\"meanMs\":1.27,\"p95Ms\":1.2,\"maxMs\":1.5}}}",
+    "timestamp": "2026-10-18T09:24:35.519Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":153,\"triangles\":438857,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.2,\"p95Ms\":1.1,\"maxMs\":1.4},\"frameCpu\":{\"n\":3,\"meanMs\":1.27,\"p95Ms\":1.2,\"maxMs\":1.4}}}",
+    "timestamp": "2026-10-18T09:24:38.511Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":153,\"triangles\":438857,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.7,\"p95Ms\":1.4,\"maxMs\":2.5},\"frameCpu\":{\"n\":3,\"meanMs\":1.73,\"p95Ms\":1.5,\"maxMs\":2.5}}}",
+    "timestamp": "2026-10-18T09:24:41.510Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":152,\"triangles\":436730,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.47,\"p95Ms\":1.4,\"maxMs\":1.8},\"frameCpu\":{\"n\":3,\"meanMs\":1.47,\"p95Ms\":1.4,\"maxMs\":1.8}}}",
+    "timestamp": "2026-10-18T09:24:44.507Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":151,\"triangles\":432228,\"textures\":21,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.47,\"p95Ms\":1.4,\"maxMs\":1.9},\"frameCpu\":{\"n\":3,\"meanMs\":1.53,\"p95Ms\":1.4,\"maxMs\":2}}}",
+    "timestamp": "2026-10-18T09:24:47.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"inside\",\"frames\":4,\"calls\":1179,\"triangles\":388580,\"textures\":20,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":4,\"meanMs\":226.67,\"p95Ms\":298.2,\"maxMs\":506.8},\"frameCpu\":{\"n\":6,\"meanMs\":151.88,\"p95Ms\":301,\"maxMs\":508.6},\"pick\":{\"n\":1,\"meanMs\":0,\"p95Ms\":0,\"maxMs\":0},\"details\":{\"n\":2,\"meanMs\":2.3,\"p95Ms\":1.8,\"maxMs\":2.8}}}",
+    "timestamp": "2026-10-18T09:24:50.515Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"inside\",\"frames\":0,\"calls\":1179,\"triangles\":388580,\"textures\":20,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":2.8,\"p95Ms\":3,\"maxMs\":3.5},\"frameCpu\":{\"n\":3,\"meanMs\":2.8,\"p95Ms\":3,\"maxMs\":3.5}}}",
+    "timestamp": "2026-10-18T09:24:53.514Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"inside\",\"frames\":0,\"calls\":1179,\"triangles\":388580,\"textures\":20,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":1.87,\"p95Ms\":1.8,\"maxMs\":2},\"frameCpu\":{\"n\":3,\"meanMs\":1.87,\"p95Ms\":1.8,\"maxMs\":2}}}",
+    "timestamp": "2026-10-18T09:24:56.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_BATCHES [{\"car\":1,\"before\":{\"meshes\":61,\"triangles\":57239},\"after\":{\"meshes\":20,\"triangles\":57239}},{\"car\":2,\"before\":{\"meshes\":59,\"triangles\":56447},\"after\":{\"meshes\":19,\"triangles\":56447}},{\"car\":3,\"before\":{\"meshes\":59,\"triangles\":56447},\"after\":{\"meshes\":19,\"triangles\":56447}},{\"car\":4,\"before\":{\"meshes\":59,\"triangles\":56448},\"after\":{\"meshes\":19,\"triangles\":56448}},{\"car\":5,\"before\":{\"meshes\":59,\"triangles\":56447},\"after\":{\"meshes\":19,\"triangles\":56447}},{\"car\":6,\"before\":{\"meshes\":59,\"triangles\":56447},\"after\":{\"meshes\":19,\"triangles\":56447}},{\"car\":7,\"before\":{\"meshes\":59,\"triangles\":56447},\"after\":{\"meshes\":19,\"triangles\":56447}},{\"car\":8,\"before\":{\"meshes\":61,\"triangles\":57194},\"after\":{\"meshes\":20,\"triangles\":57194}}]",
+    "timestamp": "2026-10-18T09:24:57.349Z",
+    "url": "http://127.0.0.1:8766/train-overview.js?v=smooth1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":85,\"triangles\":230238,\"textures\":10,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":1,\"meanMs\":3.5,\"p95Ms\":3.5,\"maxMs\":3.5},\"frameCpu\":{\"n\":8,\"meanMs\":8.89,\"p95Ms\":3.5,\"maxMs\":65.5},\"render\":{\"n\":3,\"meanMs\":22.5,\"p95Ms\":1.1,\"maxMs\":65.5}}}",
+    "timestamp": "2026-10-18T09:24:59.510Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":85,\"triangles\":230238,\"textures\":10,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":0.93,\"p95Ms\":0.9,\"maxMs\":1},\"frameCpu\":{\"n\":3,\"meanMs\":0.93,\"p95Ms\":0.9,\"maxMs\":1}}}",
+    "timestamp": "2026-10-18T09:25:02.506Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":85,\"triangles\":230238,\"textures\":10,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.13,\"p95Ms\":0.9,\"maxMs\":1.6},\"frameCpu\":{\"n\":3,\"meanMs\":1.17,\"p95Ms\":1,\"maxMs\":1.6}}}",
+    "timestamp": "2026-10-18T09:25:05.513Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":85,\"triangles\":230238,\"textures\":10,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.5,\"p95Ms\":1.2,\"maxMs\":2.3},\"frameCpu\":{\"n\":3,\"meanMs\":1.57,\"p95Ms\":1.3,\"maxMs\":2.4}}}",
+    "timestamp": "2026-10-18T09:25:08.509Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":85,\"triangles\":230238,\"textures\":10,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1,\"p95Ms\":1,\"maxMs\":1.1},\"frameCpu\":{\"n\":3,\"meanMs\":1.03,\"p95Ms\":1,\"maxMs\":1.1}}}",
+    "timestamp": "2026-10-18T09:25:11.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":85,\"triangles\":230238,\"textures\":10,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1,\"p95Ms\":1,\"maxMs\":1.1},\"frameCpu\":{\"n\":3,\"meanMs\":1.03,\"p95Ms\":1.1,\"maxMs\":1.1}}}",
+    "timestamp": "2026-10-18T09:25:14.514Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":3,\"calls\":85,\"triangles\":230238,\"textures\":10,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":3,\"meanMs\":1.17,\"p95Ms\":1.3,\"maxMs\":1.4},\"frameCpu\":{\"n\":3,\"meanMs\":1.23,\"p95Ms\":1.4,\"maxMs\":1.4}}}",
+    "timestamp": "2026-10-18T09:25:17.509Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":2,\"calls\":85,\"triangles\":230238,\"textures\":10,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":2,\"meanMs\":1.2,\"p95Ms\":0.9,\"maxMs\":1.5},\"frameCpu\":{\"n\":3,\"meanMs\":0.87,\"p95Ms\":0.9,\"maxMs\":1.6},\"details\":{\"n\":1,\"meanMs\":0,\"p95Ms\":0,\"maxMs\":0}}}",
+    "timestamp": "2026-10-18T09:25:20.509Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":1,\"calls\":85,\"triangles\":230238,\"textures\":16,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":2,\"meanMs\":1.55,\"p95Ms\":1.2,\"maxMs\":1.9},\"frameCpu\":{\"n\":3,\"meanMs\":46.87,\"p95Ms\":2.4,\"maxMs\":137},\"render\":{\"n\":1,\"meanMs\":137,\"p95Ms\":137,\"maxMs\":137}}}",
+    "timestamp": "2026-10-18T09:25:23.906Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":2,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":2,\"meanMs\":0.95,\"p95Ms\":0.9,\"maxMs\":1},\"frameCpu\":{\"n\":3,\"meanMs\":1.07,\"p95Ms\":1,\"maxMs\":1.2},\"details\":{\"n\":1,\"meanMs\":1.2,\"p95Ms\":1.2,\"maxMs\":1.2}}}",
+    "timestamp": "2026-10-18T09:25:26.509Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":2,\"meanMs\":0.85,\"p95Ms\":0.8,\"maxMs\":0.9},\"frameCpu\":{\"n\":2,\"meanMs\":0.85,\"p95Ms\":0.8,\"maxMs\":0.9}}}",
+    "timestamp": "2026-10-18T09:25:29.506Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":1,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":1,\"meanMs\":1.5,\"p95Ms\":1.5,\"maxMs\":1.5},\"frameCpu\":{\"n\":3,\"meanMs\":1.27,\"p95Ms\":1.5,\"maxMs\":1.5},\"details\":{\"n\":2,\"meanMs\":1.15,\"p95Ms\":0.8,\"maxMs\":1.5}}}",
+    "timestamp": "2026-10-18T09:25:32.518Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":1,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":1,\"meanMs\":0.9,\"p95Ms\":0.9,\"maxMs\":0.9},\"frameCpu\":{\"n\":3,\"meanMs\":0.9,\"p95Ms\":0.9,\"maxMs\":1},\"details\":{\"n\":2,\"meanMs\":0.9,\"p95Ms\":0.8,\"maxMs\":1}}}",
+    "timestamp": "2026-10-18T09:25:35.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":1,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":2,\"meanMs\":0.75,\"p95Ms\":0.7,\"maxMs\":0.8},\"frameCpu\":{\"n\":3,\"meanMs\":0.97,\"p95Ms\":0.8,\"maxMs\":1.3},\"render\":{\"n\":1,\"meanMs\":1.2,\"p95Ms\":1.2,\"maxMs\":1.2}}}",
+    "timestamp": "2026-10-18T09:25:38.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":1.1,\"p95Ms\":0.9,\"maxMs\":1.6},\"frameCpu\":{\"n\":3,\"meanMs\":1.1,\"p95Ms\":0.9,\"maxMs\":1.6}}}",
+    "timestamp": "2026-10-18T09:25:41.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":1,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":2,\"meanMs\":0.75,\"p95Ms\":0.7,\"maxMs\":0.8},\"frameCpu\":{\"n\":3,\"meanMs\":1.13,\"p95Ms\":0.8,\"maxMs\":1.9},\"render\":{\"n\":1,\"meanMs\":1.8,\"p95Ms\":1.8,\"maxMs\":1.8}}}",
+    "timestamp": "2026-10-18T09:25:44.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.87,\"p95Ms\":0.8,\"maxMs\":1},\"frameCpu\":{\"n\":3,\"meanMs\":0.9,\"p95Ms\":0.9,\"maxMs\":1}}}",
+    "timestamp": "2026-10-18T09:25:47.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.87,\"p95Ms\":0.8,\"maxMs\":1},\"frameCpu\":{\"n\":3,\"meanMs\":0.93,\"p95Ms\":0.9,\"maxMs\":1.1}}}",
+    "timestamp": "2026-10-18T09:25:50.506Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":1.23,\"p95Ms\":1.1,\"maxMs\":1.6},\"frameCpu\":{\"n\":3,\"meanMs\":1.23,\"p95Ms\":1.1,\"maxMs\":1.6}}}",
+    "timestamp": "2026-10-18T09:25:53.504Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":1,\"calls\":85,\"triangles\":230238,\"textures\":17,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"render\":{\"n\":1,\"meanMs\":1,\"p95Ms\":1,\"maxMs\":1},\"frameCpu\":{\"n\":3,\"meanMs\":1.2,\"p95Ms\":1.1,\"maxMs\":1.6},\"details\":{\"n\":2,\"meanMs\":1.2,\"p95Ms\":0.9,\"maxMs\":1.5}}}",
+    "timestamp": "2026-10-18T09:25:56.506Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":7,\"calls\":85,\"triangles\":230238,\"textures\":10,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":1,\"meanMs\":1.5,\"p95Ms\":1.5,\"maxMs\":1.5},\"frameCpu\":{\"n\":8,\"meanMs\":1.1,\"p95Ms\":1.3,\"maxMs\":1.6},\"render\":{\"n\":7,\"meanMs\":1,\"p95Ms\":1.1,\"maxMs\":1.3}}}",
+    "timestamp": "2026-10-18T09:25:59.508Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":1,\"calls\":85,\"triangles\":230238,\"textures\":23,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.6,\"p95Ms\":0.9,\"maxMs\":0.9},\"frameCpu\":{\"n\":3,\"meanMs\":171.7,\"p95Ms\":1.5,\"maxMs\":513.6},\"render\":{\"n\":1,\"meanMs\":512.6,\"p95Ms\":512.6,\"maxMs\":512.6}}}",
+    "timestamp": "2026-10-18T09:26:03.207Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":1,\"calls\":85,\"triangles\":230238,\"textures\":24,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":1.03,\"p95Ms\":1.1,\"maxMs\":1.3},\"render\":{\"n\":1,\"meanMs\":0.7,\"p95Ms\":0.7,\"maxMs\":0.7},\"frameCpu\":{\"n\":3,\"meanMs\":1.33,\"p95Ms\":1.3,\"maxMs\":1.5}}}",
+    "timestamp": "2026-10-18T09:26:05.508Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":2,\"calls\":67,\"triangles\":173791,\"textures\":18,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.93,\"p95Ms\":0.8,\"maxMs\":1.5},\"frameCpu\":{\"n\":4,\"meanMs\":1.2,\"p95Ms\":1.2,\"maxMs\":1.6},\"render\":{\"n\":2,\"meanMs\":0.9,\"p95Ms\":0.7,\"maxMs\":1.1}}}",
+    "timestamp": "2026-10-18T09:26:08.506Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":67,\"triangles\":173791,\"textures\":18,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.5,\"p95Ms\":0.5,\"maxMs\":0.5},\"frameCpu\":{\"n\":3,\"meanMs\":0.53,\"p95Ms\":0.5,\"maxMs\":0.6}}}",
+    "timestamp": "2026-10-18T09:26:11.506Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":67,\"triangles\":173791,\"textures\":18,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.67,\"p95Ms\":0.7,\"maxMs\":0.8},\"frameCpu\":{\"n\":3,\"meanMs\":0.7,\"p95Ms\":0.8,\"maxMs\":0.8}}}",
+    "timestamp": "2026-10-18T09:26:14.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":67,\"triangles\":173791,\"textures\":18,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.53,\"p95Ms\":0.6,\"maxMs\":0.6},\"frameCpu\":{\"n\":3,\"meanMs\":0.57,\"p95Ms\":0.6,\"maxMs\":0.6}}}",
+    "timestamp": "2026-10-18T09:26:17.504Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":67,\"triangles\":173791,\"textures\":18,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.5,\"p95Ms\":0.5,\"maxMs\":0.6},\"frameCpu\":{\"n\":3,\"meanMs\":0.53,\"p95Ms\":0.5,\"maxMs\":0.6}}}",
+    "timestamp": "2026-10-18T09:26:20.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":67,\"triangles\":173791,\"textures\":18,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.43,\"p95Ms\":0.5,\"maxMs\":0.8},\"frameCpu\":{\"n\":3,\"meanMs\":0.53,\"p95Ms\":0.5,\"maxMs\":1}}}",
+    "timestamp": "2026-10-18T09:26:23.505Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  },
+  {
+    "level": "log",
+    "message": "TOUR_PROFILE {\"mode\":\"outside\",\"frames\":0,\"calls\":67,\"triangles\":173791,\"textures\":18,\"visible\":true,\"pixelRatio\":1,\"timings\":{\"details\":{\"n\":3,\"meanMs\":0.37,\"p95Ms\":0.1,\"maxMs\":0.9},\"frameCpu\":{\"n\":3,\"meanMs\":0.43,\"p95Ms\":0.2,\"maxMs\":1}}}",
+    "timestamp": "2026-10-18T09:26:26.506Z",
+    "url": "http://127.0.0.1:8766/tour.js?v=20261018-idle1"
+  }
+]

@@ -57,7 +57,9 @@ export function createStation(length=180){
  // Continue the platform under it and omit foreground columns in this cutaway view.
  const platformExtension=box([65,.09,length],[42.25,1.05,0],stone);
  platformExtension.visible=false;
+ let closeView=null;
  station.setCloseView=enabled=>{
+  if(enabled===closeView)return;closeView=enabled;
   roof.visible=enabled;platformExtension.visible=enabled;foreground.forEach(o=>{o.visible=!enabled;});
   roof.scale.x=enabled?80:13.2;roof.position.x=enabled?36.7:3.2;
  };

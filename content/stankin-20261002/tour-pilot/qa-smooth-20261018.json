@@ -1,0 +1,13 @@
+{
+  "version": "20261018-smooth1",
+  "checks": {
+    "batching": "PASS all8 cars:476 meshes before,154 after; per-car triangle counts identical; branding material/UV excluded from merging.",
+    "visual": "PASS desktop car1/car2 and rotated view; branding, windows, lighting, coupling retained. Mobile viewport390x844: exterior frame375x250 (inner373x248).",
+    "navigation": "PASS held D, drag without entering, next-car, full-train toggle, click car2 -> salon2, return outside. No tour console warnings/errors.",
+    "details": "Source/flow verified: same exterior camera matrix skips repeat rays; selection/upload deferred while camera moving, dead/request/dispose guards retained. Full atlas/tile resolution unchanged.",
+    "measurement": "Local logs saved. Render calls observed145/146 baseline vs68 in comparable close view, but do not treat as FPS multiplier; IAB sometimes throttles rAF in inactive views.",
+    "adaptiveResolution": "DPR1 test environment remains1. At high DPR the code caps outside movement to1 and restores full DPR<=2 after300ms; physical high-DPR/touch hardware not tested.",
+    "static": "node --check changed JS, git diff --check,7 manifest SHA/size checks and resource100 expected-target SHA guard pass"
+  },
+  "deployment": "pending"
+}

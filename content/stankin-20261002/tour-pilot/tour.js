@@ -1,9 +1,9 @@
 import { setupAutoHideControls } from './ui-controls.js?v=idle1';
 import { createEffects } from './effects.js?v=wide1';
-import { DetailTextures } from './detail-textures.js?v=wide1';
+import { DetailTextures } from './detail-textures.js?v=smooth1';
 import { improveMaterials, setupLighting } from './appearance.js?v=station2';
-import { createStation } from './station.js?v=wide1';
-import { TrainOverview, disposeTree } from './train-overview.js?v=human1';
+import { createStation } from './station.js?v=smooth1';
+import { TrainOverview, disposeTree } from './train-overview.js?v=smooth1';
 import * as THREE from 'three';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -16,14 +16,32 @@ const draco=new DRACOLoader().setDecoderPath('./vendor/draco/').setWorkerLimit(2
 const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(58,1,.025,650);
 let renderer,effects,lighting,controls,station,floor,model,overview,details;
 let renderDirty=true,sceneVisible=true,frameRequest=0,profileFrames=0;
+const fullPixelRatio=Math.min(devicePixelRatio,2);
+let cameraChangedAt=0;
+function cameraChanged(){cameraChangedAt=performance.now();invalidate();}
+const profiling=new URLSearchParams(location.search).has('profile'),timings={};
+function timed(label,task){
+ if(!profiling)return task();
+ const start=performance.now();try{return task();}finally{(timings[label]??=[]).push(performance.now()-start);}
+}
+function timingSummary(){
+ const summary={};
+ for(const [name,values] of Object.entries(timings)){
+  const sorted=values.sort((a,b)=>a-b);
+  summary[name]={n:values.length,meanMs:+(values.reduce((a,b)=>a+b,0)/values.length).toFixed(2),p95Ms:+sorted[Math.floor((sorted.length-1)*.95)].toFixed(2),maxMs:+sorted.at(-1).toFixed(2)};
+  delete timings[name];
+ }
+ return summary;
+}
 function wake(){if(renderer&&sceneVisible&&!document.hidden&&!frameRequest)frameRequest=requestAnimationFrame(frame);}
 function invalidate(){renderDirty=true;wake();}
 function suspend(){cancelAnimationFrame(frameRequest);frameRequest=0;keys.clear();held.clear();}
 if(new URLSearchParams(location.search).has('profile'))setInterval(()=>{
- if(renderer&&ready){console.log('TOUR_PROFILE '+JSON.stringify({mode,frames:profileFrames,calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,textures:renderer.info.memory.textures,visible:sceneVisible}));profileFrames=0;}
+ if(renderer&&ready){console.log('TOUR_PROFILE '+JSON.stringify({mode,frames:profileFrames,calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,textures:renderer.info.memory.textures,visible:sceneVisible,pixelRatio:renderer.getPixelRatio(),timings:timingSummary()}));profileFrames=0;}
 },3000);
 let mode='outside',currentCar=1,busy=false,ready=false,step=0,yaw=0,pitch=0,drag=null,pickStart=null;
 let outsideFramed=false,outsideWide=false,outsideDetailCar=0,detailCandidate=0,detailCandidateAt=0,detailRetryAt=0;
+let pendingHover=null;
 let transition=null,lastTime=0,zoomed=false,lastRequest={mode:'outside',car:1};
 const autoControls=setupAutoHideControls(viewer);
 const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();
@@ -117,10 +135,9 @@ function updateOutsideDetails(now){
 function focusOrbit(){
  if(!ready||mode!=='outside'||!overview)return;
  outsideFramed=false;transition=null;
- camera.updateMatrixWorld();overview.root.updateMatrixWorld(true);
+ camera.updateMatrixWorld();
  ray.setFromCamera(new THREE.Vector2(0,0),camera);
- const hit=ray.intersectObjects(overview.cars,true)[0];
- let target=hit?.point;
+ let target=overview.hitBounds(ray.ray)?.point;
  if(!target){
   // The vertical train plane also handles a centre ray passing through a window/gap.
   const point=ray.ray.intersectPlane(new THREE.Plane(new THREE.Vector3(1,0,0),0),new THREE.Vector3());
@@ -210,6 +227,8 @@ async function open(next,car=currentCar){
    model.traverse(o=>{if(o.isMesh)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>{if(m.map)m.map.anisotropy=Math.min(16,renderer.capabilities.getMaxAnisotropy());});});
    scene.add(model);details=new DetailTextures(renderer,model,car,{onChange:invalidate});$('load-text').textContent='Подключаем оформление…';await details.ready;
   }
+  // Prepare the base shader variants behind the loading screen.
+  await renderer.compileAsync(scene,camera);
   ready=true;$('loading').hidden=true;applyMode(next,false);
   if(document.activeElement===document.body||viewer.contains(document.activeElement))host.focus({preventScroll:true});
  }catch(e){clearAssets();error('Проверьте соединение и попробуйте ещё раз. Можно также выбрать вагон в списке.');console.error(e);}
@@ -222,10 +241,11 @@ function move(forward,right,dt){
  camera.position.y=2.12;look();
 }
 function frame(now){
+ const cpuStart=profiling?performance.now():0;
  frameRequest=0;if(!renderer||!sceneVisible||document.hidden)return;
  const dt=Math.min((now-lastTime)/1000,.05);lastTime=now;
  if(transition){
-  invalidate();const a=THREE.MathUtils.clamp((now-transition.start)/650,0,1),e=a*a*(3-2*a);
+  cameraChanged();const a=THREE.MathUtils.clamp((now-transition.start)/650,0,1),e=a*a*(3-2*a);
   camera.position.lerpVectors(transition.from,transition.to,e);controls.target.lerpVectors(transition.fromTarget,transition.target,e);camera.lookAt(controls.target);
   if(a===1){transition=null;syncAngles();}
  }else if(ready&&mode==='outside'){
@@ -238,16 +258,30 @@ function frame(now){
   const r=Number(keys.has('KeyD')||keys.has('ArrowRight')||held.has('right'))-Number(keys.has('KeyA')||keys.has('ArrowLeft')||held.has('left'));
   if(f||r)move(f,r,dt);
  }
+ if(pendingHover){
+  const event=pendingHover;pendingHover=null;
+  if(ready&&mode==='outside'&&!pointers.size&&!keys.size&&!transition&&now-cameraChangedAt>150)highlightCar(pickedCar(event));
+ }
  if(ready&&mode==='outside')station.setCloseView(!outsideWide&&camera.position.y<5.9&&camera.position.x>-3&&camera.position.x<74);
- if(ready&&!transition){if(mode==='outside')updateOutsideDetails(now);details?.update(now,camera);}
- if(renderDirty){renderDirty=false;renderer.info.reset();effects.render();profileFrames++;}
+ const outsideMoving=mode==='outside'&&(transition||keys.size||pointers.size||now-cameraChangedAt<300);
+ const ratio=outsideMoving?Math.min(fullPixelRatio,1):fullPixelRatio;
+ if(renderer.getPixelRatio()!==ratio){renderer.setPixelRatio(ratio);renderDirty=true;}
+ if(outsideMoving&&overview?.highlighted)highlightCar(0);
+ if(mode==='outside')details?.setSuspended(!!outsideMoving);
+ if(ready&&!transition&&(!outsideMoving||mode!=='outside')){
+  if(mode==='outside')updateOutsideDetails(now);
+  timed('details',()=>details?.update(now,camera));
+ }
+ if(renderDirty){renderDirty=false;renderer.info.reset();timed('render',()=>effects.render());profileFrames++;}
+ if(profiling)(timings.frameCpu??=[]).push(performance.now()-cpuStart);
  wake();
 }
-function pickedCar(e){
+function pickedCar(e){return timed('pick',()=>pickCarGeometry(e));}
+function pickCarGeometry(e){
  if(!overview)return 0;
  const rect=host.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);
- camera.updateMatrixWorld();overview.root.updateMatrixWorld(true);ray.setFromCamera(pointer,camera);
- const direct=ray.intersectObjects(overview.cars,true)[0]?.object.userData.car;
+ camera.updateMatrixWorld();ray.setFromCamera(pointer,camera);
+ const direct=overview.hitBounds(ray.ray)?.car;
  if(direct)return direct;
  // At full-train scale the body is thin: allow a 44 px high hit area around each car.
  let nearest=0,best=Infinity;
@@ -274,9 +308,9 @@ function highlightCar(car){
 }
 try{
  renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
- renderer.info.autoReset=false;renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;
+ renderer.info.autoReset=false;renderer.setPixelRatio(fullPixelRatio);renderer.outputColorSpace=THREE.SRGBColorSpace;
  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;host.appendChild(renderer.domElement);
- controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.08;controls.zoomToCursor=true;controls.screenSpacePanning=true;controls.rotateSpeed=.55;controls.addEventListener('change',invalidate);
+ controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.08;controls.zoomToCursor=true;controls.screenSpacePanning=true;controls.rotateSpeed=.55;controls.addEventListener('change',cameraChanged);
  lighting=setupLighting(scene,renderer);station=createStation(180);scene.add(station);
  floor=new THREE.Mesh(new THREE.PlaneGeometry(150,150),new THREE.MeshStandardMaterial({color:0x10151b,roughness:1,envMapIntensity:.05}));
  floor.rotation.x=-Math.PI/2;floor.position.y=-.12;scene.add(floor);
@@ -320,7 +354,7 @@ host.addEventListener('pointerdown',e=>{
 host.addEventListener('pointermove',e=>{
  if(mode==='outside'){
   if(pickStart&&Math.hypot(e.clientX-pickStart.x,e.clientY-pickStart.y)>7)pickStart=null;
-  if(ready&&!pointers.size&&e.pointerType==='mouse')highlightCar(pickedCar(e));
+  if(ready&&!pointers.size&&e.pointerType==='mouse')pendingHover={clientX:e.clientX,clientY:e.clientY};
   return;
  }
  if(!drag)return;yaw-=(e.clientX-drag.x)*.004;pitch=THREE.MathUtils.clamp(pitch-(e.clientY-drag.y)*.003,-1.05,1.05);
@@ -333,7 +367,7 @@ host.addEventListener('pointerup',e=>{
  }
  pickStart=null;drag=null;
 });
-host.addEventListener('pointerleave',()=>{if(mode==='outside'&&ready)highlightCar(0);});
+host.addEventListener('pointerleave',()=>{pendingHover=null;if(mode==='outside'&&ready)highlightCar(0);});
 ['pointercancel','lostpointercapture'].forEach(n=>host.addEventListener(n,e=>{pointers.delete(e.pointerId);pickStart=null;drag=null;}));
 viewer.addEventListener('keydown',e=>{
  if(!ready||transition||e.target.matches('select,input,textarea'))return;
