@@ -1,0 +1,38 @@
+{
+  "status": "prepared_not_published",
+  "date": "2026-10-18",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "all_5_figures_loaded": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "all_5_figures_loaded": true,
+      "table_scrolls_locally": true
+    },
+    {
+      "width": 320,
+      "height": 800,
+      "overflow": false
+    }
+  ],
+  "h1_count": 1,
+  "screenshots": [
+    "desktop.png",
+    "mobile.png",
+    "desktop-top.png",
+    "mobile-top.png",
+    "desktop-chart.png"
+  ],
+  "visual_review": "Desktop top and graph, mobile top, all 5 source illustrations and new cover inspected. The old source article hero was removed from the preview.",
+  "limitations": [
+    "Static preview uses live template 8 shell; actual CMS rendering and placement in /blog/ require post-deploy verification.",
+    "One favicon 404 belongs to preview proxy; no claim that production has this issue.",
+    "No CMS resources created, no FTP uploads, no GitHub push or workflow dispatch."
+  ]
+}

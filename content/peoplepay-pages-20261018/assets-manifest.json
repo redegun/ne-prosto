@@ -1,0 +1,134 @@
+[
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/01-traffic-and-goals-1280.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/01-traffic-and-goals-1280.webp",
+    "bytes": 49074,
+    "sha256": "25a928ef7abad04b167acf0a42792365ddf7cf84c9f09568c8acc3243b685d2a"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/01-traffic-and-goals-2560.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/01-traffic-and-goals-2560.webp",
+    "bytes": 102242,
+    "sha256": "a61031d049435c32ff9ec6c954e5f830e5f980a36f813c5b9c91bd1b5ff7548f"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/01-traffic-and-goals-640.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/01-traffic-and-goals-640.webp",
+    "bytes": 19250,
+    "sha256": "c9cf05b62d397ea4d786b3858c60c000bf06b949c1552fdc8e4d39fc666dd911"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/01-traffic-and-goals.png",
+    "remote": "/images/godnota/peoplepay-pages-20261018/01-traffic-and-goals.png",
+    "bytes": 130542,
+    "sha256": "26b556d1ba159d9950b08f12941420d1ac93c8b04491a9b5eb59aacec5d12e8e"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/02-goal-visit-rate-1280.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/02-goal-visit-rate-1280.webp",
+    "bytes": 44158,
+    "sha256": "f3db8b6e3022808fd7a857fe50a3d21c2d4f378ff8b4b097fa854a8dda10e106"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/02-goal-visit-rate-2560.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/02-goal-visit-rate-2560.webp",
+    "bytes": 95558,
+    "sha256": "474bc50aa4507a77a8b0e027b9d18435f5fe545c9789464926fecb6e5e2cbb75"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/02-goal-visit-rate-640.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/02-goal-visit-rate-640.webp",
+    "bytes": 16680,
+    "sha256": "90049b70851ff4aa55a8451521fbdeca708393afdb6ed849146ad6aa231fd888"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/02-goal-visit-rate.png",
+    "remote": "/images/godnota/peoplepay-pages-20261018/02-goal-visit-rate.png",
+    "bytes": 124058,
+    "sha256": "6a0f069ac637cfc77fed0a47d3b1f747536deada8d415396a674dc004f7872d4"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/03-home-quiz-1280.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/03-home-quiz-1280.webp",
+    "bytes": 89186,
+    "sha256": "c543c4bff110210972ec23a6b2ae485b52c9732c3273ae3768852663a14c75aa"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/03-home-quiz-1400.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/03-home-quiz-1400.webp",
+    "bytes": 97286,
+    "sha256": "34bc7ec35cc4f015140c1d5c8c5729964e1374c6c491219c24950e443d4ccab3"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/03-home-quiz-640.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/03-home-quiz-640.webp",
+    "bytes": 34154,
+    "sha256": "6266f37556cd1862e7b2d331f6f15c800017c70c992d3c19e34601240a632763"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/03-home-quiz.png",
+    "remote": "/images/godnota/peoplepay-pages-20261018/03-home-quiz.png",
+    "bytes": 359421,
+    "sha256": "309520ae3a6bd7f167d31c28da6fa0167bec7eca1853a1ac83c5861170247d99"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/04-cards-catalog-1280.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/04-cards-catalog-1280.webp",
+    "bytes": 109532,
+    "sha256": "d7acc6cc4b0fd8a4f05325146c0da88c6b797af6bbfe79e807ffc2d542e49a87"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/04-cards-catalog-1400.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/04-cards-catalog-1400.webp",
+    "bytes": 128800,
+    "sha256": "b4e5b587600cfd64b63f3a1148ebde11c3a85655c00ce87df21686ec409f5b05"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/04-cards-catalog-640.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/04-cards-catalog-640.webp",
+    "bytes": 35632,
+    "sha256": "ee8cbc4e470c2fc06993143b314836354e36932c76d9c76a95670c1314f60a56"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/04-cards-catalog.png",
+    "remote": "/images/godnota/peoplepay-pages-20261018/04-cards-catalog.png",
+    "bytes": 119403,
+    "sha256": "e50e32504093fb99f909eef4b67723d606e614a1f0c6c4cd233614886b663fe0"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/05-blog-travel-form-640.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/05-blog-travel-form-640.webp",
+    "bytes": 41800,
+    "sha256": "a840b523aa605877a05c74ac0bda6cc1daf523dfb4cafd1feedbe927f87da7ef"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/05-blog-travel-form-760.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/05-blog-travel-form-760.webp",
+    "bytes": 51686,
+    "sha256": "76e755ca9d1ffbcde4e3d78e7ac3a981600dff1eeb71388270788a3f0bf689a6"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/05-blog-travel-form.png",
+    "remote": "/images/godnota/peoplepay-pages-20261018/05-blog-travel-form.png",
+    "bytes": 93973,
+    "sha256": "b2092d6a2c4c656607e19d9087d5cc25f6fae9a429bd43106e90c483374ec981"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/article.css",
+    "remote": "/images/godnota/peoplepay-pages-20261018/article.css",
+    "bytes": 1209,
+    "sha256": "9343a67a3ed2ec97aac670a5a8abc848c681ced90b6babb55d88dd73b2d35dcb"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/cover-og.jpg",
+    "remote": "/images/godnota/peoplepay-pages-20261018/cover-og.jpg",
+    "bytes": 80823,
+    "sha256": "d28a59a9adfc1b7d510936c9bf3abca3345af19bf0353d513b889c07c5f16475"
+  },
+  {
+    "local": "preview/images/godnota/peoplepay-pages-20261018/cover.webp",
+    "remote": "/images/godnota/peoplepay-pages-20261018/cover.webp",
+    "bytes": 49204,
+    "sha256": "282f2957c4e135c30b96f64b72318f3d586414028ed5283f87c981053530debb"
+  }
+]
