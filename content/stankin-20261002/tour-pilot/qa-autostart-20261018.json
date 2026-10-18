@@ -1,0 +1,60 @@
+{
+  "release": "20261018-autostart1",
+  "commit": "d35f63b9cefeab52d522558632867c9edc6c8002",
+  "url": "https://ne-prosto.ru/portfolio/poezd-stankin",
+  "ci": "https://github.com/redegun/ne-prosto/actions/runs/39131795494",
+  "ci_result": "success",
+  "worklog": 7042,
+  "preview": {
+    "desktop_before_frames": 0,
+    "desktop_after_scroll_frames": 1,
+    "focus_before_and_after_load": "BODY",
+    "scroll_before_and_after_load": 720,
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "mobile_before_frames": 0,
+    "mobile_after_scroll_frames": 1,
+    "mobile_scroll": 844,
+    "state_after_scroll_to_top_and_back": "Вагон 01 · внутри",
+    "loading_after_return": false
+  },
+  "live": {
+    "desktop_viewport": [
+      1440,
+      900
+    ],
+    "desktop_before_frames": 0,
+    "desktop_after_scroll_frames": 1,
+    "loaded_status": "Вагон 01 · снаружи",
+    "focus_after_load": "BODY",
+    "loading_hidden": true,
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "mobile_direct_hash_autostart": true,
+    "mobile_frame_height": 250,
+    "mobile_enter_car": "Вагон 01 · внутри",
+    "horizontal_overflow": false,
+    "console_errors": []
+  },
+  "verification": {
+    "static_sha_readback": 5,
+    "cms_exact_replacements": 2,
+    "template": "16 unchanged",
+    "bridge_public_status": 404,
+    "runner_exit": 0,
+    "registered_runners_after": 0
+  },
+  "screenshots": [
+    "reports/autostart-before-20261018.png",
+    "reports/autostart-live-20261018.png",
+    "reports/autostart-mobile-20261018.png"
+  ],
+  "limitations": [
+    "Mobile width emulation, not a physical phone",
+    "No new GPU FPS benchmark; rendering settings unchanged"
+  ]
+}
