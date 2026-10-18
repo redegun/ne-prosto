@@ -1,6 +1,6 @@
 import { setupAutoHideControls } from './ui-controls.js?v=idle1';
 import { createEffects } from './effects.js?v=wide1';
-import { DetailTextures } from './detail-textures.js?v=smooth1';
+import { DetailTextures } from './detail-textures.js?v=texture1';
 import { improveMaterials, setupLighting } from './appearance.js?v=station2';
 import { createStation } from './station.js?v=smooth1';
 import { TrainOverview, disposeTree } from './train-overview.js?v=smooth1';

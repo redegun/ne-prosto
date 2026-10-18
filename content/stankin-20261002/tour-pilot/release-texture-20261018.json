@@ -1,0 +1,37 @@
+{
+  "version": "20261018-texture1",
+  "files": [
+    {
+      "path": "detail-textures.js",
+      "bytes": 7542,
+      "sha256": "fb1c388fec93b3c51474985e193cae5d26b3d0e420c666f034c33d9ad61a123b"
+    },
+    {
+      "path": "tour.js",
+      "bytes": 27926,
+      "sha256": "0e4fb5dd36f8c522e2d18de6896398f0990c9da482dd980016366a93fabd4511"
+    },
+    {
+      "path": "loader.js",
+      "bytes": 586,
+      "sha256": "cafbeeeb499abe5f54e590bb4ae5801a930b7c344e9a20dd6909100dd5f87354"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5406,
+      "sha256": "a0f167bc0c3a8a4ed4d190399775c2ad637f1c158437d5739dc550e9b152c2f3"
+    },
+    {
+      "path": "embed.js",
+      "bytes": 1150,
+      "sha256": "ab71961f606a425039194a2185261d6e7327e0278e996eae465e6535e04c0c24"
+    }
+  ],
+  "expected_live": {
+    "detail-textures.js": "11a4d09e62e800878d9e4eb562fcbd3ce6a805a1e99fdcc63bdcdea363dd2c42",
+    "tour.js": "294b2a7b448db9bc060413bf2a7efab9b710b847867cbc11add7987c2d02391c",
+    "loader.js": "0d41dbe195bdb10f761becb11fe3453270c877cb30f6969e49c5d87178083cbc",
+    "index.html": "099b5dd48cd20187cf498b06b8ab186ee8c018bc5b66d495dd7efeaaddd86c20",
+    "embed.js": "c987f1fb6adc29ebd211f831ba2be2d7ea1773a7cf35aa56ab90481e301d0675"
+  }
+}

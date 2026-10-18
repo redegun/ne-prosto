@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-18",
+  "version": "20261018-texture1",
+  "issue": "Sixth carriage exterior texture breaks on close hover / revisit",
+  "root_cause": "DetailTextures patched and restored the same material; Three reuses cached programs and uniforms and can keep disposed session textures on reattachment. Switching direct/composer paths exposes further program variants.",
+  "fix": "Session-owned cloned branding materials; restore original mesh material references and dispose clones on release. Base textures, UV, geometry unchanged.",
+  "verification": {
+    "before": "Legacy car6 reproduction failed uniform identity after first release/recreate (6 of 9 phases fail).",
+    "after": "Five cycles with actual car6 GLB and HD tiles; close/hover/leave uniform identity all pass; framebuffer hashes equal per phase across all cycles; 11 textures each cycle, programs12/13 with no growth.",
+    "integration": "Local car6 interior and outside checked; neighbour/return checked.",
+    "syntax": "node --check detail-textures.js tour.js qa-texture.js pass; both release manifests validate. PHP runtime absent on VPS; bridge differs only version/path strings from previously deployed guarded bridge."
+  },
+  "deployment": "pending"
+}

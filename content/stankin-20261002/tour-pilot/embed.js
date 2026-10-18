@@ -8,7 +8,7 @@ document.querySelectorAll('[data-stankin-tour]').forEach(link=>{
   const frame=document.createElement('iframe');
   frame.className='st-tour-frame';frame.dataset.view='outside';
   frame.title='3D-экскурсия по восьми вагонам поезда СТАНКИН';
-  frame.src=link.href+'?embed=1&v=20261018-smooth1'+(new URLSearchParams(location.search).has('profile')?'&profile=1':'');frame.allow='fullscreen';frame.allowFullscreen=true;
+  frame.src=link.href+'?embed=1&v=20261018-texture1'+(new URLSearchParams(location.search).has('profile')?'&profile=1':'');frame.allow='fullscreen';frame.allowFullscreen=true;
   const origin=new URL(frame.src).origin;
   window.addEventListener('message',event=>{
    if(event.source!==frame.contentWindow||event.origin!==origin||event.data?.type!=='stankin:mode')return;

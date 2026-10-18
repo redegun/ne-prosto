@@ -1,0 +1,122 @@
+{
+  "result": "FAIL",
+  "cycles": [
+    {
+      "cycle": 1,
+      "phase": "close",
+      "pass": true,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 4,
+      "programs": 5
+    },
+    {
+      "cycle": 1,
+      "phase": "hover",
+      "pass": true,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 7,
+      "programs": 12
+    },
+    {
+      "cycle": 1,
+      "phase": "leave",
+      "pass": true,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 7,
+      "programs": 12
+    },
+    {
+      "cycle": 2,
+      "phase": "close",
+      "pass": false,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": false
+        }
+      ],
+      "textures": 8,
+      "programs": 12
+    },
+    {
+      "cycle": 2,
+      "phase": "hover",
+      "pass": false,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": false
+        }
+      ],
+      "textures": 8,
+      "programs": 12
+    },
+    {
+      "cycle": 2,
+      "phase": "leave",
+      "pass": false,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": false
+        }
+      ],
+      "textures": 8,
+      "programs": 12
+    },
+    {
+      "cycle": 3,
+      "phase": "close",
+      "pass": false,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": false
+        }
+      ],
+      "textures": 8,
+      "programs": 12
+    },
+    {
+      "cycle": 3,
+      "phase": "hover",
+      "pass": false,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": false
+        }
+      ],
+      "textures": 8,
+      "programs": 12
+    },
+    {
+      "cycle": 3,
+      "phase": "leave",
+      "pass": false,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": false
+        }
+      ],
+      "textures": 8,
+      "programs": 12
+    }
+  ]
+}

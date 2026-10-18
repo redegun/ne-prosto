@@ -7,8 +7,22 @@ export class DetailTextures {
   this.mobile=matchMedia('(max-width:720px)').matches;this.limit=this.mobile?4:6;
   this.slots=Array.from({length:SLOT_COUNT},()=>({key:null,texture:null,request:0}));
   this.ray=new THREE.Raycaster();this.point=new THREE.Vector2();this.loader=new THREE.TextureLoader();
-  root.traverse(o=>{if(o.isMesh&&(Array.isArray(o.material)?o.material:[o.material]).some(m=>m.map&&/^vagon/i.test(m.name))){this.meshes.push(o);(Array.isArray(o.material)?o.material:[o.material]).filter(m=>m.map&&/^vagon/i.test(m.name)).forEach(m=>this.materials.add(m));}});
-  this.base=[...this.materials][0]?.map;this.previous=new Map([...this.materials].map(m=>[m,{compile:m.onBeforeCompile,key:m.customProgramCacheKey}]));
+  // Keep the base material intact. Three caches programs and their uniforms per
+  // material; reusing a patched material can retain a disposed detail session.
+  this.previous=new Map();const clones=new Map();
+  root.traverse(mesh=>{
+   if(!mesh.isMesh)return;
+   const source=Array.isArray(mesh.material)?mesh.material:[mesh.material];
+   if(!source.some(m=>m.map&&/^vagon/i.test(m.name)))return;
+   this.meshes.push(mesh);this.previous.set(mesh,mesh.material);
+   const mapped=source.map(material=>{
+    if(!material.map||!/^vagon/i.test(material.name))return material;
+    if(!clones.has(material))clones.set(material,material.clone());
+    const clone=clones.get(material);this.materials.add(clone);return clone;
+   });
+   mesh.material=Array.isArray(mesh.material)?mapped:mapped[0];
+  });
+  this.base=[...this.materials][0]?.map;
   this.uniforms={exteriorBase:{value:this.base},exteriorReady:{value:false}};
   for(let i=0;i<SLOT_COUNT;i++){this.uniforms['detailMap'+i]={value:this.base};this.uniforms['detailCell'+i]={value:new THREE.Vector3(-99,-99,-1)};this.uniforms['detailRect'+i]={value:new THREE.Vector4(0,0,1,1)};}
   this.materials.forEach(material=>{
@@ -87,5 +101,14 @@ export class DetailTextures {
    },undefined,()=>{if(!this.dead&&slot.key===key&&slot.request===request){slot.key=null;this.retryAfter.set(key,performance.now()+30000);}});
   }
  }
- dispose(){this.dead=true;this.uploads.forEach(({texture})=>texture.dispose());this.uploads=[];for(const [m,old] of this.previous){m.onBeforeCompile=old.compile;m.customProgramCacheKey=old.key;m.needsUpdate=true;}this.previous.clear();this.exterior?.dispose();for(const slot of this.slots)slot.texture?.dispose();this.meshes=[];this.materials.clear();}
+ dispose(){
+  if(this.dead)return;this.dead=true;
+  this.uploads.forEach(({texture})=>texture.dispose());this.uploads=[];
+  for(const [mesh,material] of this.previous)mesh.material=material;
+  this.previous.clear();
+  // Disposing a material releases its shader/uniform cache, not shared maps.
+  this.materials.forEach(material=>material.dispose());this.materials.clear();
+  this.exterior?.dispose();for(const slot of this.slots)slot.texture?.dispose();
+  this.meshes=[];
+ }
 }

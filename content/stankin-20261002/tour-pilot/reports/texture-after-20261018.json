@@ -1,0 +1,215 @@
+{
+  "result": "PASS",
+  "cycles": [
+    {
+      "cycle": 1,
+      "phase": "close",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 12
+    },
+    {
+      "cycle": 1,
+      "phase": "hover",
+      "pass": true,
+      "pixelHash": 1047789927,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    },
+    {
+      "cycle": 1,
+      "phase": "leave",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    },
+    {
+      "cycle": 2,
+      "phase": "close",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 12
+    },
+    {
+      "cycle": 2,
+      "phase": "hover",
+      "pass": true,
+      "pixelHash": 1047789927,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    },
+    {
+      "cycle": 2,
+      "phase": "leave",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    },
+    {
+      "cycle": 3,
+      "phase": "close",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 12
+    },
+    {
+      "cycle": 3,
+      "phase": "hover",
+      "pass": true,
+      "pixelHash": 1047789927,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    },
+    {
+      "cycle": 3,
+      "phase": "leave",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    },
+    {
+      "cycle": 4,
+      "phase": "close",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 12
+    },
+    {
+      "cycle": 4,
+      "phase": "hover",
+      "pass": true,
+      "pixelHash": 1047789927,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    },
+    {
+      "cycle": 4,
+      "phase": "leave",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    },
+    {
+      "cycle": 5,
+      "phase": "close",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 12
+    },
+    {
+      "cycle": 5,
+      "phase": "hover",
+      "pass": true,
+      "pixelHash": 1047789927,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    },
+    {
+      "cycle": 5,
+      "phase": "leave",
+      "pass": true,
+      "pixelHash": 140941014,
+      "checks": [
+        {
+          "name": "vagon_5(Таня).011",
+          "current": true
+        }
+      ],
+      "textures": 11,
+      "programs": 13
+    }
+  ]
+}
