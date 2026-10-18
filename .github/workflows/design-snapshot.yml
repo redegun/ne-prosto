@@ -1,0 +1,21 @@
+name: Inspect Neprosto design
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ne-prosto-stankin-deploy
+  cancel-in-progress: false
+jobs:
+  snapshot:
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, neprosto-once]
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - name: Save CMS structure and archive read bridge
+        env:
+          NE_PROSTO_FTP: ${{ secrets.NE_PROSTO_FTP }}
+        run: python3 design/20261018/tools/snapshot_ci.py
