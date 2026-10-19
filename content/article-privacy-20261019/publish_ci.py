@@ -7,11 +7,11 @@ def validate():
  assert sha(p['content'].encode())==rel['target_content_sha']
  for x in m:
   b=(P/x['local']).read_bytes();assert sha(b)==x['sha256'] and len(b)==x['bytes'];assert x['remote'].startswith('/images/godnota/stranicy-i-obrashcheniya/')
- for text in [p['content'],p['pagetitle'],p['introtext'],p['description'],str(p['tvs']),(P/'template.html').read_text()]:assert not any(x in text.lower() for x in ['people','2026','90 дней','39 554','4 211','июля','октября'])
+ for text in [p['content'],p['pagetitle'],p['introtext'],p['description'],str(p['tvs']),(P/'template.html').read_text()]:assert not any(x in text.lower() for x in ['2026','90 дней','39 554','4 211','46 925','47 925','1901','428','315','июля','октября','нячанг','nha-trang','232481135'])
  return p,m,rel
 def main():
  p,m,rel=validate()
- if '--check' in sys.argv:print('Validated anonymised text, metadata, template and three public assets');return
+ if '--check' in sys.argv:print('Validated named case, percentage charts, protected details and three public assets');return
  run=os.environ['GITHUB_RUN_ID'];b=Path('/opt/office1080/ne-prosto-backups')/run;b.mkdir(parents=True,exist_ok=True);c=json.loads(os.environ['NE_PROSTO_FTP']);key=secrets.token_urlsafe(40);path='_agent_tmp/editorial-privacy-'+run+'/'+secrets.token_hex(12)+'.php'
  spec={'payload':p,'release':rel,'template':(P/'template.html').read_text()};source=(P/'bridge.php').read_text().replace('TOKEN_SHA',sha(key.encode())).replace('SPEC_BASE64',base64.b64encode(json.dumps(spec,ensure_ascii=False).encode()).decode()).encode()
  def ftp():
@@ -64,7 +64,8 @@ def main():
    text=get(W+u).decode()
    assert rel['old_uri'] not in text and '/images/godnota/peoplepay-pages-20261018/' not in text
    if u==p['uri']:
-    assert not any(x in text.lower() for x in ['peoplepay','people-pay','people pay','39 554','4 211','20.07','17.10'])
+    assert not any(x in text.lower() for x in ['39 554','4 211','46 925','20.07','17.10','232481135'])
+    assert 'People Pay' in text and 'pp-data-chart' in text and 'pp-rate-chart' in text
     assert text.lower().count('<h1')==1 and 'pp-neutral-flow' in text
   retired_urls=[W+rel['old_uri']]+[W.rstrip('/')+x for x in json.loads((P/'retire-caches.json').read_text())]
   old=json.loads((P.parent/'peoplepay-pages-20261018/assets-manifest.json').read_text())
