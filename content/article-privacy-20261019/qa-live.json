@@ -1,0 +1,30 @@
+{
+  "status": "published",
+  "date": "2026-10-19",
+  "run": "39231093347",
+  "resource": 102,
+  "url": "https://ne-prosto.ru/blog/kakie-stranicy-pomogayut-poluchat-obrashcheniya",
+  "client_mentions_in_full_html": false,
+  "digits_in_article_text": false,
+  "client_screenshots": 0,
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "toc_collapsed": true
+    }
+  ],
+  "retired_urls_404_verified": 27,
+  "public_assets_verified_sha256": 3,
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "sitemap_old_uri_absent": true
+}
