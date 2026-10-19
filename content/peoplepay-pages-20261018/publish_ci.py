@@ -4,6 +4,7 @@ P=Path(__file__).resolve().parent
 WEB='https://ne-prosto.ru/';REMOTE='ne-prosto/public_html'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 def validate():
+ if (P/"PUBLICATION_RETIRED.md").exists(): raise SystemExit("This case is retired from public use; use article-privacy-20261019")
  p=json.loads((P/'payload.json').read_text());m=json.loads((P/'assets-manifest.json').read_text())
  assert p['parent']==2 and p['template']==8 and p['published']==0
  assert p['uri']=='blog/peoplepay-kakie-stranicy-prinosyat-obrashcheniya'

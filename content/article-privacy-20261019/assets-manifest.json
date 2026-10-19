@@ -1,0 +1,20 @@
+[
+  {
+    "local": "assets/cover.webp",
+    "remote": "/images/godnota/stranicy-i-obrashcheniya/cover.webp",
+    "bytes": 27778,
+    "sha256": "695e0a2ea01e9bcd19236cc5bd212b2b09d1c5f49651e808b32408b5899acb32"
+  },
+  {
+    "local": "assets/editorial.css",
+    "remote": "/images/godnota/stranicy-i-obrashcheniya/editorial.css",
+    "bytes": 7475,
+    "sha256": "0d781ec5f24e3abdf9324de7819e59e27ea1cb220119e2d2ad317da5a24c1f62"
+  },
+  {
+    "local": "assets/editorial.js",
+    "remote": "/images/godnota/stranicy-i-obrashcheniya/editorial.js",
+    "bytes": 860,
+    "sha256": "7b4ec863f30b4ffb3ac77b6ea263679ece85ecedce5507977ce48ab952d8c9e1"
+  }
+]
