@@ -1,0 +1,17 @@
+{
+  "status": "draft_not_published",
+  "source": "clients/lrrazbor/research/search-2026-10/",
+  "test_empty_queries": 400,
+  "nonempty_after": 195,
+  "rounded_public_percentage": 49,
+  "successful_queries_compared": 300,
+  "decreased_result_count": 0,
+  "method": "Recomputed first-column result counts from t_zero400_patched.tsv; paired t_ok_before.tsv with t_ok_patched.tsv by identical query order.",
+  "limits": [
+    "Test subset, not all site queries",
+    "Result existence does not prove relevance",
+    "No sales or enquiry growth claim",
+    "No public absolute volumes, dates, customer query strings, specific implementation details"
+  ],
+  "old_draft": "content/lrrazbor-poisk-20261008/ preserved untouched"
+}
