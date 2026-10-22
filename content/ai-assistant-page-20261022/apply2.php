@@ -1,0 +1,20 @@
+<?php
+define("MODX_API_MODE", true);
+require "/home/r/redegun/ne-prosto/public_html/index.php";
+$dir=__DIR__;
+$t=$modx->getObject("modTemplate",13); $cur=$t->get("content");
+if (hash("sha256",$cur)!=="9aaa6ec1ccccde40566bbffaba88c2226353e323d17b9e1c9d5133e99af4b793") die("t13 guard\n");
+$old='<a href="/koordinatyi#request" style="display:block"><span>ИИ-ассистент для бизнеса';
+$new='<a href="/uslugi/ii-assistent-dlya-biznesa" style="display:block"><span>ИИ-ассистент для бизнеса';
+if (substr_count($cur,$old)!==1) die("t13 needle\n");
+$n13=str_replace($old,$new,$cur);
+$c=$modx->getObject("modChunk",["name"=>"np_related"]); $cc=$c->get("snippet");
+if (hash("sha256",$cc)!=="cda85c069231d81c8fd4e7eadfb758b0cec85571097c12630fb74743ad3f54fd") die("chunk guard\n");
+$o2='<p class="np-kicker">{if $art}Услуги студии'; $n2='<p class="np-kicker">{if $art || $id == 103}Услуги студии';
+if (substr_count($cc,$o2)!==1) die("chunk needle\n");
+$ncc=str_replace($o2,$n2,$cc);
+$t->set("content",$n13); if(!$t->save()) die("t13 save\n");
+$c->set("snippet",$ncc); if(!$c->save()) die("chunk save\n");
+$modx->cacheManager->refresh();
+file_put_contents("$dir/template13.after.html",$n13); file_put_contents("$dir/np_related.after.html",$ncc);
+echo "ok t13 ",hash("sha256",$n13)," np_related ",hash("sha256",$ncc),"\n";

@@ -1,3 +1,4 @@
+{if $id != 103}
 {set $art = ''}
 {if $id == 19}{set $art = 'web'}{/if}
 {if $id == 20}{set $art = 'branding'}{/if}
@@ -15,3 +16,5 @@
 {/if}
 <div><p class="np-kicker">{if $art}Услуги студии{else}Дизайн и практика{/if}</p><h2><a href="/{$uri}">{$pagetitle | htmlent} <span aria-hidden="true">↗</span></a></h2></div>
 </article>
+
+{/if}

@@ -26,8 +26,8 @@
       "name": null,
       "field": "content",
       "path": "templates/13.html",
-      "expected": "9aaa6ec1ccccde40566bbffaba88c2226353e323d17b9e1c9d5133e99af4b793",
-      "target": "9aaa6ec1ccccde40566bbffaba88c2226353e323d17b9e1c9d5133e99af4b793"
+      "expected": "d513a9c4abb5825aad2317b189f81f8a6f7d68f2f9fb2fd80deb4d78ca22a775",
+      "target": "d513a9c4abb5825aad2317b189f81f8a6f7d68f2f9fb2fd80deb4d78ca22a775"
     },
     {
       "type": "modTemplate",
@@ -323,8 +323,8 @@
       "name": "np_related",
       "field": "snippet",
       "path": "chunks/np_related.html",
-      "expected": "cda85c069231d81c8fd4e7eadfb758b0cec85571097c12630fb74743ad3f54fd",
-      "target": "cda85c069231d81c8fd4e7eadfb758b0cec85571097c12630fb74743ad3f54fd"
+      "expected": "ff8c39d869f10a79fd1f18666a8364d18f62bba4fe38808c8c0cc766f36e1459",
+      "target": "ff8c39d869f10a79fd1f18666a8364d18f62bba4fe38808c8c0cc766f36e1459"
     }
   ]
 }
