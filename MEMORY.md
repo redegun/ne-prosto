@@ -7,7 +7,15 @@
 - [Статья People Pay](memory/peoplepay-article.md): проверенные цифры, публикационная сборка, предпросмотр и статус выпуска.
 - [Общий редизайн сайта](memory/redesign.md): активные шаблоны, исходники, выпуск и проверка.
 - [Кейс СТАНКИН и интерактивная экскурсия](memory/stankin.md): ресурс 100, исходники, авторство, публикация, данные для доработки.
+- [Хаб «ИИ-ассистент для бизнеса»](content/ai-assistant-hub-20261022/README.md): Wordstat-семантика услуги и 9 статей, перелинковка (#501, 22.10, ждёт выбора Лены).
+- [Категория ИИ-услуг на /uslugi/](content/uslugi-category-20261022/README.md): Wordstat по названиям, рекомендация «ИИ для бизнеса» (#507, 22.10, ждёт выбора Лены).
 - Журнал выполненных работ: [log/2026-10.md](log/2026-10.md).
 - Технический README экскурсии: [content/stankin-20261002/tour-pilot/README.md](content/stankin-20261002/tour-pilot/README.md).
 
 Доступы читаются только серверно из clients/antonvetrov/ACCESS.md. Не переносить секреты в этот репозиторий.
+
+## PHP и движок (с 2026-10-22, #449)
+- PHP 8.3.36 через CGI: блок `task 449` в начале `public_html/.htaccess` → `cgi-bin/php83.cgi` (вне git). В панели Timeweb видно 7.2 — не путать. `php_value` в .htaccess не действует; настройки — `-d` в php83.cgi.
+- MODX 2.8.8-pl. Правки дополнений под PHP 8 помечены `task449 php8` (ddTypograph EMT.php, getResources, SiblingNav, MIGX) — при обновлении этих пакетов проверить, что новая версия совместима с 8.3.
+- В Fenom-шаблонах TV ImagePlus — строка JSON, не массив: не обращаться `['sourceImg']` (на 8.3 фатал).
+- SSH: `redegun@vh306.timeweb.ru` (ключ ПК). Откат PHP — удалить блок до `# task 449 END`.
