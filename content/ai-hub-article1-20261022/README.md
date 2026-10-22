@@ -12,3 +12,10 @@
 
 Бэкап: хостинг ~/ne-prosto/_agent_archives/task512/ (parent2-children.before.json, resource.after.json, content.html, create.php). Откат — снять с публикации ресурс 104 и удалить картинку.
 Проверка 22.10: 200, 1 H1, title/description, og:image; 1440/390 без горизонтальной прокрутки, JS-ошибок нет; в /blog/ карточка первой.
+
+## Иллюстрации (#515, 22.10)
+- Лена не видела картинок (была только типографская обложка). Сгенерированы 4 иллюстрации Polza.ai openai/gpt-image-2.5-flare (1536×1024, стиль: матовый 3D, графит/молочный/лайм, без текста), промпты в task515/.
+- Обложка (TV image + page__image--big, og:image, карточка блога) → images/godnota/zayavki-messendzhery/hero.jpg — под H1.
+- В тексте 3 <figure class="np-article-figure"> (srcset 768/1200): после 1-го абзаца разделов «Где теряются заявки» (kanaly), «Почему клиент не ждёт» (klient-zhdet), «Где помогает ИИ-ассистент» (assistent).
+- Бэкап: хостинг ~/ne-prosto/_agent_archives/task515/ (resource104.before.json, old-cover.jpg, apply.php). Откат: вернуть content и TV из before.json.
+- Проверено 1440/390: все 4 картинки грузятся, видимы, без горизонтальной прокрутки и JS-ошибок.
