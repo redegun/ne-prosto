@@ -1,4 +1,4 @@
-/* task 520: оглавление статьи блога по H2 */
+/* task 520: оглавление статьи блога по H2; task 529: обёртка .np-toc-rail — sticky не выходит за текст */
 (function(){
   var body=document.body;
   if(!body||!body.classList.contains('np-article-page'))return;
@@ -25,7 +25,8 @@
     li.appendChild(a);ol.appendChild(li);links.push(a);
   });
   nav.appendChild(ol);
-  content.parentNode.insertBefore(nav,content);
+  var rail=document.createElement('div');rail.className='np-toc-rail';rail.appendChild(nav);
+  content.parentNode.insertBefore(rail,content);
   var mq=window.matchMedia('(min-width:1101px)');
   function sync(){nav.open=mq.matches||nav.dataset.userOpen==='1'}
   sync();

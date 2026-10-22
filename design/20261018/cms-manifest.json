@@ -62,8 +62,8 @@
       "name": null,
       "field": "content",
       "path": "templates/8.html",
-      "expected": "33ea6a385fe31bf8b32931917a945e1c75eca4861efbd4be583ebc8ebdda499f",
-      "target": "33ea6a385fe31bf8b32931917a945e1c75eca4861efbd4be583ebc8ebdda499f"
+      "expected": "b7a064c71b5a1083cb023c56e1c1c61d7804789c76d0b1242669f2b02f2ce292",
+      "target": "b7a064c71b5a1083cb023c56e1c1c61d7804789c76d0b1242669f2b02f2ce292"
     },
     {
       "type": "modTemplate",
