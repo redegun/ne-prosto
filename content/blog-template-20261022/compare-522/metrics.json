@@ -1,0 +1,578 @@
+{
+ "neprosto-1920": {
+  "vw": 1920,
+  "docW": 1920,
+  "pageH": 8106,
+  "h1": {
+   "text": "Куда пропадают заявки из мессенджеров, пока менеджер занят",
+   "x": 160,
+   "y": 255,
+   "w": 1175,
+   "h": 311,
+   "fontSize": "96px"
+  },
+  "para": {
+   "x": 160,
+   "y": 1204,
+   "w": 780,
+   "h": 132,
+   "fontSize": "20px",
+   "lineHeight": "33px",
+   "chars": 74
+  },
+  "imgs": [
+   {
+    "src": "hero.745b5a4528c182d5e16bf60d19e81ec7.jpg",
+    "x": 160,
+    "y": 640,
+    "w": 780,
+    "h": 520,
+    "natural": "1536x1024"
+   },
+   {
+    "src": "kanaly.jpg",
+    "x": 160,
+    "y": 1708,
+    "w": 780,
+    "h": 520,
+    "natural": "900x600"
+   },
+   {
+    "src": "klient-zhdet.jpg",
+    "x": 160,
+    "y": 2988,
+    "w": 780,
+    "h": 520,
+    "natural": "900x600"
+   },
+   {
+    "src": "assistent.jpg",
+    "x": 160,
+    "y": 5100,
+    "w": 780,
+    "h": 520,
+    "natural": "900x600"
+   }
+  ],
+  "toc": null,
+  "date": null,
+  "author": null,
+  "h2count": 13
+ },
+ "neprosto-1366": {
+  "vw": 1366,
+  "docW": 1366,
+  "pageH": 8024,
+  "h1": {
+   "text": "Куда пропадают заявки из мессенджеров, пока менеджер занят",
+   "x": 55,
+   "y": 255,
+   "w": 1142,
+   "h": 274,
+   "fontSize": "84.692px"
+  },
+  "para": {
+   "x": 55,
+   "y": 1167,
+   "w": 780,
+   "h": 132,
+   "fontSize": "20px",
+   "lineHeight": "33px",
+   "chars": 74
+  },
+  "imgs": [
+   {
+    "src": "hero.745b5a4528c182d5e16bf60d19e81ec7.jpg",
+    "x": 55,
+    "y": 603,
+    "w": 780,
+    "h": 520,
+    "natural": "1536x1024"
+   },
+   {
+    "src": "kanaly.jpg",
+    "x": 55,
+    "y": 1670,
+    "w": 780,
+    "h": 520,
+    "natural": "900x600"
+   },
+   {
+    "src": "klient-zhdet.jpg",
+    "x": 55,
+    "y": 2949,
+    "w": 780,
+    "h": 520,
+    "natural": "900x600"
+   },
+   {
+    "src": "assistent.jpg",
+    "x": 55,
+    "y": 5057,
+    "w": 780,
+    "h": 520,
+    "natural": "900x600"
+   }
+  ],
+  "toc": null,
+  "date": null,
+  "author": null,
+  "h2count": 13
+ },
+ "neprosto-mobile": {
+  "vw": 390,
+  "docW": 390,
+  "pageH": 9717,
+  "h1": {
+   "text": "Куда пропадают заявки из мессенджеров, пока менеджер занят",
+   "x": 20,
+   "y": 248,
+   "w": 350,
+   "h": 200,
+   "fontSize": "37.05px"
+  },
+  "para": {
+   "x": 20,
+   "y": 856,
+   "w": 350,
+   "h": 238,
+   "fontSize": "18px",
+   "lineHeight": "29.7px",
+   "chars": 37
+  },
+  "imgs": [
+   {
+    "src": "hero.745b5a4528c182d5e16bf60d19e81ec7.jpg",
+    "x": 20,
+    "y": 510,
+    "w": 350,
+    "h": 233,
+    "natural": "1536x1024"
+   },
+   {
+    "src": "kanaly.jpg",
+    "x": 20,
+    "y": 1637,
+    "w": 350,
+    "h": 233,
+    "natural": "390x260"
+   },
+   {
+    "src": "klient-zhdet.jpg",
+    "x": 20,
+    "y": 3008,
+    "w": 350,
+    "h": 233,
+    "natural": "390x260"
+   },
+   {
+    "src": "assistent.jpg",
+    "x": 20,
+    "y": 5646,
+    "w": 350,
+    "h": 233,
+    "natural": "390x260"
+   }
+  ],
+  "toc": null,
+  "date": null,
+  "author": null,
+  "h2count": 13
+ },
+ "kppf-1920": {
+  "vw": 1920,
+  "docW": 1920,
+  "pageH": 15423,
+  "h1": {
+   "text": "Как климат и погода влияют на полиуретановую пленку на автомобиле",
+   "x": 360,
+   "y": 217,
+   "w": 878,
+   "h": 158,
+   "fontSize": "44px"
+  },
+  "para": {
+   "x": 360,
+   "y": 383,
+   "w": 878,
+   "h": 113,
+   "fontSize": "16px",
+   "lineHeight": "23.2px",
+   "chars": 104
+  },
+  "imgs": [
+   {
+    "src": "ppf_plenka00026.jpg",
+    "x": 360,
+    "y": 659,
+    "w": 878,
+    "h": 905,
+    "natural": "1158x1194"
+   },
+   {
+    "src": "KPPF00048.jpg",
+    "x": 360,
+    "y": 4474,
+    "w": 878,
+    "h": 875,
+    "natural": "1224x1220"
+   },
+   {
+    "src": "ppf_plenka00047.jpg",
+    "x": 360,
+    "y": 6014,
+    "w": 878,
+    "h": 785,
+    "natural": "1156x1034"
+   },
+   {
+    "src": "creative-logo_black.svg",
+    "x": 360,
+    "y": 11755,
+    "w": 878,
+    "h": 503,
+    "natural": "855x490"
+   }
+  ],
+  "toc": {
+   "cls": "article-toc article-toc--mobile",
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0
+  },
+  "date": null,
+  "author": null,
+  "h2count": 16
+ },
+ "kppf-1366": {
+  "vw": 1366,
+  "docW": 1366,
+  "pageH": 15423,
+  "h1": {
+   "text": "Как климат и погода влияют на полиуретановую пленку на автомобиле",
+   "x": 83,
+   "y": 217,
+   "w": 878,
+   "h": 158,
+   "fontSize": "44px"
+  },
+  "para": {
+   "x": 83,
+   "y": 383,
+   "w": 878,
+   "h": 113,
+   "fontSize": "16px",
+   "lineHeight": "23.2px",
+   "chars": 104
+  },
+  "imgs": [
+   {
+    "src": "ppf_plenka00026.jpg",
+    "x": 83,
+    "y": 659,
+    "w": 878,
+    "h": 905,
+    "natural": "1158x1194"
+   },
+   {
+    "src": "KPPF00048.jpg",
+    "x": 83,
+    "y": 4474,
+    "w": 878,
+    "h": 875,
+    "natural": "1224x1220"
+   },
+   {
+    "src": "ppf_plenka00047.jpg",
+    "x": 83,
+    "y": 6014,
+    "w": 878,
+    "h": 785,
+    "natural": "1156x1034"
+   },
+   {
+    "src": "creative-logo_black.svg",
+    "x": 83,
+    "y": 11755,
+    "w": 878,
+    "h": 503,
+    "natural": "855x490"
+   }
+  ],
+  "toc": {
+   "cls": "article-toc article-toc--mobile",
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0
+  },
+  "date": null,
+  "author": null,
+  "h2count": 16
+ },
+ "kppf-mobile": {
+  "vw": 390,
+  "docW": 390,
+  "pageH": 19964,
+  "h1": {
+   "text": "Как климат и погода влияют на полиуретановую пленку на автомобиле",
+   "x": 16,
+   "y": 241,
+   "w": 358,
+   "h": 129,
+   "fontSize": "28px"
+  },
+  "para": {
+   "x": 16,
+   "y": 378,
+   "w": 358,
+   "h": 252,
+   "fontSize": "16px",
+   "lineHeight": "23.2px",
+   "chars": 43
+  },
+  "imgs": [
+   {
+    "src": "ppf_plenka00026.jpg",
+    "x": 16,
+    "y": 893,
+    "w": 358,
+    "h": 369,
+    "natural": "1158x1194"
+   },
+   {
+    "src": "KPPF00048.jpg",
+    "x": 16,
+    "y": 5780,
+    "w": 358,
+    "h": 357,
+    "natural": "1224x1220"
+   },
+   {
+    "src": "creative-logo_black.svg",
+    "x": 16,
+    "y": 7414,
+    "w": 358,
+    "h": 205,
+    "natural": "855x490"
+   },
+   {
+    "src": "creative-logo_black.svg",
+    "x": 16,
+    "y": 15738,
+    "w": 358,
+    "h": 205,
+    "natural": "855x490"
+   }
+  ],
+  "toc": {
+   "cls": "content-side",
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0
+  },
+  "date": null,
+  "author": null,
+  "h2count": 16
+ },
+ "vinyl-1920": {
+  "vw": 1920,
+  "docW": 1920,
+  "pageH": 10713,
+  "h1": {
+   "text": "Можно ли клеить прозрачную плёнку на фары: закон, виды плёнок и практика",
+   "x": 360,
+   "y": 250,
+   "w": 1200,
+   "h": 38,
+   "fontSize": "32px"
+  },
+  "para": {
+   "x": 360,
+   "y": 322,
+   "w": 886,
+   "h": 126,
+   "fontSize": "16px",
+   "lineHeight": "23.2px",
+   "chars": 105
+  },
+  "imgs": [
+   {
+    "src": "fary-banner.webp",
+    "x": 360,
+    "y": 537,
+    "w": 886,
+    "h": 810,
+    "natural": "886x810"
+   },
+   {
+    "src": "consult-form.jpg",
+    "x": 803,
+    "y": 2029,
+    "w": 443,
+    "h": 443,
+    "natural": "1024x1024"
+   },
+   {
+    "src": "ppf-01.webp",
+    "x": 360,
+    "y": 2628,
+    "w": 886,
+    "h": 443,
+    "natural": "886x443"
+   },
+   {
+    "src": "fary-gallery.webp",
+    "x": 360,
+    "y": 3763,
+    "w": 886,
+    "h": 443,
+    "natural": "886x443"
+   }
+  ],
+  "toc": {
+   "cls": "article-side",
+   "x": 1280,
+   "y": 322,
+   "w": 280,
+   "h": 9315
+  },
+  "date": null,
+  "author": "Григорий Арутюнов\nДиректор Creative Team Print",
+  "h2count": 9
+ },
+ "vinyl-1366": {
+  "vw": 1366,
+  "docW": 1366,
+  "pageH": 10713,
+  "h1": {
+   "text": "Можно ли клеить прозрачную плёнку на фары: закон, виды плёнок и практика",
+   "x": 83,
+   "y": 250,
+   "w": 1200,
+   "h": 38,
+   "fontSize": "32px"
+  },
+  "para": {
+   "x": 83,
+   "y": 322,
+   "w": 886,
+   "h": 126,
+   "fontSize": "16px",
+   "lineHeight": "23.2px",
+   "chars": 105
+  },
+  "imgs": [
+   {
+    "src": "fary-banner.webp",
+    "x": 83,
+    "y": 537,
+    "w": 886,
+    "h": 810,
+    "natural": "886x810"
+   },
+   {
+    "src": "consult-form.jpg",
+    "x": 526,
+    "y": 2029,
+    "w": 443,
+    "h": 443,
+    "natural": "1024x1024"
+   },
+   {
+    "src": "ppf-01.webp",
+    "x": 83,
+    "y": 2628,
+    "w": 886,
+    "h": 443,
+    "natural": "886x443"
+   },
+   {
+    "src": "fary-gallery.webp",
+    "x": 83,
+    "y": 3763,
+    "w": 886,
+    "h": 443,
+    "natural": "886x443"
+   }
+  ],
+  "toc": {
+   "cls": "article-side",
+   "x": 1003,
+   "y": 322,
+   "w": 280,
+   "h": 9315
+  },
+  "date": null,
+  "author": "Григорий Арутюнов\nДиректор Creative Team Print",
+  "h2count": 9
+ },
+ "vinyl-mobile": {
+  "vw": 390,
+  "docW": 390,
+  "pageH": 14693,
+  "h1": {
+   "text": "Можно ли клеить прозрачную плёнку на фары: закон, виды плёнок и практика",
+   "x": 16,
+   "y": 174,
+   "w": 358,
+   "h": 86,
+   "fontSize": "24px"
+  },
+  "para": {
+   "x": 16,
+   "y": 874,
+   "w": 358,
+   "h": 265,
+   "fontSize": "16px",
+   "lineHeight": "23.2px",
+   "chars": 43
+  },
+  "imgs": [
+   {
+    "src": "fary-banner.webp",
+    "x": 16,
+    "y": 1298,
+    "w": 358,
+    "h": 327,
+    "natural": "886x810"
+   },
+   {
+    "src": "consult-form.jpg",
+    "x": 16,
+    "y": 2873,
+    "w": 358,
+    "h": 358,
+    "natural": "1024x1024"
+   },
+   {
+    "src": "ppf-01.webp",
+    "x": 16,
+    "y": 3637,
+    "w": 358,
+    "h": 179,
+    "natural": "886x443"
+   },
+   {
+    "src": "fary-gallery.webp",
+    "x": 16,
+    "y": 4786,
+    "w": 358,
+    "h": 179,
+    "natural": "886x443"
+   }
+  ],
+  "toc": {
+   "cls": "article-side",
+   "x": 16,
+   "y": 288,
+   "w": 358,
+   "h": 558
+  },
+  "date": null,
+  "author": "Григорий Арутюнов\nДиректор Creative Team Print",
+  "h2count": 9
+ }
+}
