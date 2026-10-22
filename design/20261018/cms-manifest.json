@@ -71,8 +71,8 @@
       "name": null,
       "field": "content",
       "path": "templates/10.html",
-      "expected": "aff1d0d8c5e621dcf464c666fcf1f6e1e4bf6905aeb542d4b3191b6c7d4a7486",
-      "target": "aff1d0d8c5e621dcf464c666fcf1f6e1e4bf6905aeb542d4b3191b6c7d4a7486"
+      "expected": "1cdbbcc2746ab2680a12f2831482fd07968c18ef59983f666296e38d5f9b6977",
+      "target": "1cdbbcc2746ab2680a12f2831482fd07968c18ef59983f666296e38d5f9b6977"
     },
     {
       "type": "modTemplate",
