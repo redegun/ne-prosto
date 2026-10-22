@@ -1,0 +1,9 @@
+
+/* task 542: вариант 1 Лены (#541) — мягкая подложка как у «Обсудить проект», залитая графитовая кнопка с лаймовым «+» */
+.np-article-page .np-cta{padding:34px 38px 36px;border:0;border-radius:16px;background:#e9ebe4}
+.np-article-page .article-content .np-cta .np-cta__kicker,.np-article-page .article-content .np-cta .np-cta__text{color:#45483f}
+.np-article-page .np-cta .np-cta__button{min-height:52px;padding:13px 22px;border:0;border-radius:10px;background:#191b18;color:#f6f6f1;font-weight:600}
+.np-article-page .np-cta .np-cta__button::after{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#e9f77c;color:#191b18;font-size:20px}
+.np-article-page .np-cta .np-cta__button:focus-visible{outline:2px solid #6a7824;outline-offset:3px}
+@media(hover:hover){.np-article-page .np-cta .np-cta__button:hover{background:#353b2e;color:#f6f6f1}}
+@media(max-width:700px){.np-article-page .np-cta{padding:24px 20px;border-radius:14px}}
