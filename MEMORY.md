@@ -13,6 +13,7 @@
 - [Категория ИИ-услуг на /uslugi/](content/uslugi-category-20261022/README.md): Wordstat по названиям, рекомендация «ИИ для бизнеса» (#507/#508, 22.10: на сайте блок #ii-dlya-biznesa, с 22.10 ссылка ведёт на страницу ассистента, #510).
 - [Страница услуги «ИИ-ассистент для бизнеса»](content/ai-assistant-page-20261022/README.md): ресурс 103 /uslugi/ii-assistent-dlya-biznesa (#510, 22.10), блоки 9/10 скрыты до кейса и статей; карточка 103 скрыта в np_related до иллюстрации.
 - [Статьи хаба ИИ-ассистента](content/ai-hub-article1-20261022/README.md): статья 1 ресурс 104 /blog/kuda-propadayut-zayavki-iz-messendzherov (#512, 22.10); остальные 8 — по порядку #501.
+- [Шаблон статьи блога](content/blog-template-20261022/README.md): template 8 для parent 2 подключает article.css/js — обложка 780px, текст слева, оглавление по H2 (#520, 22.10). Новая статья с H2 получает оглавление сама.
 - Журнал выполненных работ: [log/2026-10.md](log/2026-10.md).
 - Технический README экскурсии: [content/stankin-20261002/tour-pilot/README.md](content/stankin-20261002/tour-pilot/README.md).
 
