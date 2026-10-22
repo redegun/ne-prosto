@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+[[$head_2019]]
+
+<body class="np-site np-template-8 article-page np-service-detail np-doc-page">
+[[$np_header]]
+<main id="np-main">
+
+<div class="breadcrumbs">
+		<div class="breadcrumbs-wrapper">
+			<div class="breadcrumbs-items">
+[[pdoCrumbs?
+	&fastMode=`1`
+	&outputSeparator=`<span class="breadcrumbs-cursor">&rsaquo;</span>`
+	&tplHome=`@INLINE <a href="/" class="breadcrumbs-item">Непросто</a>`
+	&showHome=`1`
+	&tplWrapper=`@INLINE {$output}`
+	&tplMax=`@INLINE &nbsp;...&nbsp;`
+	&tpl=`@INLINE <a href="{$link}" class="breadcrumbs-item">{$menutitle}</a>`
+	&tplCurrent=`@INLINE <span class="breadcrumbs-item breadcrumbs-item_active">[[+menutitle]]</span>`
+]]
+			</div>
+		</div>
+	</div>
+
+	<div class="article">
+		<div class="article-wrapper">
+			<div class="np-detail-heading"><h1 class="article-title">[[*longtitle:empty=`[[*pagetitle]]`]]</h1></div>
+			<div class="article-content">
+				[[*content]]
+			</div>
+		</div>
+	</div>
+
+</main>
+[[$np_footer]]
+[[$scripts_2019]]
+</body>
+</html>
