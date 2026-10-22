@@ -1,6 +1,6 @@
 # ne-prosto.ru — политика, согласие и галочка во всех формах (#543)
 
-Статус: ОПУБЛИКОВАНО 22.10.2026 (решение Антона 22.10: «такие же, как на pe4a.ru»).
+Статус: ОПУБЛИКОВАНО 22.10.2026. **С #547 (22.10): тексты — свои (черновики этапа 1 #543), с pe4a только реквизиты ИП Ветрова; почта везде info@ne-prosto.ru.** Версия «по образцу pe4a» (#543) — в бэкапе task547/before/.
 
 ## Страницы
 - /politika-konfidencialnosti — ресурс 113, текст policy.html (по образцу https://pe4a.ru/o-kompanii/politika-ip-vetrov-a.a.-v-otnoshenii-obrabotki-personalnyix-dannyix/, адаптирован: формы ne-prosto, вакансии, без Метрики — на сайте её нет).
@@ -24,3 +24,9 @@
 
 ## Заметка Антону
 Подать уведомление в реестр операторов ПДн Роскомнадзора (если ИП Ветров ещё не в реестре — одно на все сайты). Заявки ne-prosto по-прежнему приходят на Gmail (redegun@gmail.com + 7232308@gmail.com) — в политике, как на pe4a, пункт о локализации в РФ; если нужна полная чистота — перевести приём на почту домена.
+
+## #547 (22.10): свои тексты и почта info@ne-prosto.ru
+- 113/114: policy.html/consent.html (apply.php) — черновики этапа 1 #543 + реквизиты ИП Ветрова (ИНН 502411688510, ОГРНИП 309502407100023, адрес Нахабино как на pe4a); e-mail info@ne-prosto.ru, срок хранения 3 года, трансграничного пункта нет (MX Timeweb), веб-аналитики нет (Метрики на сайте нет), Яндекс Карта на /koordinatyi упомянута в cookies. Редакция от 22.10.2026.
+- Почта (mail.php): системная настройка `e-mail` = info@ne-prosto.ru (подвал np_footer, шаблон 6 Контакты, request_form); emailTo = `info@ne-prosto.ru` в чанках 26 contacts, 40 jobs__item (раньше ещё taknaprimer@yandex.ru), 93 request_form, шаблоне 3 и сниппете npArticleCta 98; видимый 7232308@gmail.com в чанке 26 и шаблоне 3 заменён. Статические превью _preview/draft-b05c9e2f0a8cddea — тоже. Gmail на сайте не осталось.
+- Ящик info@ne-prosto.ru на Timeweb есть (RCPT TO mx1.timeweb.ru → 250, несуществующий → 550). Тест 22.10 ~22:55 МСК: «Тест #547 почта info@» из «Обсудить проект» (/koordinatyi), CTA статьи 104 и вакансии — FormIt success. Доступа к ящику у агентов нет — получение подтверждает человек.
+- Бэкап: хостинг ~/ne-prosto/_agent_archives/task547/: before/res113.json, res114.json (версия pe4a), before-mail/ (чанки, шаблон, сниппет, настройка e-mail), before-preview.tgz. Откат почты: вернуть тексты из before-mail/, настройку e-mail из setting-e-mail.txt, сбросить кеш.
