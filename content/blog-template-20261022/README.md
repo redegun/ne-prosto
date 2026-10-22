@@ -15,3 +15,6 @@
 
 ## Бэкап и откат
 Хостинг ~/ne-prosto/_agent_archives/task520/: template8.before.html (SHA f30958…), template8.after.html (3e6980…), apply.php/bump.php, article.v1.*. Откат: вернуть content template 8 из template8.before.html (SHA guard 3e6980…), сбросить кеш; article.{css,js} можно оставить (без шаблона не подключаются).
+
+## Статья по центру (#527, 22.10, п.4 #523/#524, выбор Лены)
+article.css: `.article-wrapper{justify-content:center}` вместо `start` (desktop ≥1101px) — блок H1 + текст 780 + «Содержание» 280 стоит по центру, поля равные: 1920 — 372/372, 1440 — 147/147, 1366 — 112/112. Хлебные крошки вне сетки, остались у левого поля (как на макете A из #524). Текст, картинки, шрифты, мобильный вид не менялись. Версия в template 8: article.css?v=3 (кеш у файла год). Проверка: статьи kuda-propadayut…, besplatnye-kirillicheskie-shrifty, upakovka-kotoraya-prodaet-priemy на 1920/1440/1366/390 — 200, без горизонтальной прокрутки и JS-ошибок; услуга ii-assistent-dlya-biznesa article.css не подключает. Скрины и скрипт: center-527/. Бэкап: хостинг _agent_archives/task527/ (article.before.css, template8.before.html SHA 58659f…). Откат: вернуть article.before.css; версию можно не трогать.
