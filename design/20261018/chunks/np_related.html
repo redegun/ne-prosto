@@ -1,4 +1,3 @@
-{if $id != 103}
 {set $art = ''}
 {if $id == 19}{set $art = 'web'}{/if}
 {if $id == 20}{set $art = 'branding'}{/if}
@@ -6,6 +5,7 @@
 {if $id == 11}{set $art = 'promotion'}{/if}
 {if $id == 12}{set $art = 'support'}{/if}
 {if $id == 13}{set $art = 'social'}{/if}
+{if $id == 103}{set $art = 'ai'}{/if}
 <article class="np-article-card np-related-card">
 {if $art}
 <a class="np-article-card__image np-related-card__art" href="/{$uri}">
@@ -16,5 +16,3 @@
 {/if}
 <div><p class="np-kicker">{if $art}Услуги студии{else}Дизайн и практика{/if}</p><h2><a href="/{$uri}">{$pagetitle | htmlent} <span aria-hidden="true">↗</span></a></h2></div>
 </article>
-
-{/if}

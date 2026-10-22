@@ -1,4 +1,4 @@
-"""NE PROSTO: seven editable service still lifes. Blender 5 / Cycles.
+"""NE PROSTO: eight editable service still lifes. Blender 5 / Cycles.
 Run: blender -b --factory-startup -P build_set.py -- --out <dir> [--only web] [--draft]
 Canonical source lives on VPS; local directory is temporary GPU rendering space.
 """
@@ -174,11 +174,38 @@ def social():
     poly('Heart',heart,.10,(.8,-.67,1.02),'ink',.025)
     ring('Shared connection',(-1.1,-.70,.23),.4,.08,'silver',(0,0,0))
     ball('Conversation accent',(1.1,.15,2.35),.19,'silver')
+def sparkle(name,loc,r,m='lime',depth=.2,k=2.6):
+    # four-point "AI" spark: concave superellipse, sharp tips
+    pts=[]
+    for i in range(128):
+        t=i*math.tau/128;c,s=math.cos(t),math.sin(t)
+        pts.append((r*math.copysign(abs(c)**k,c),r*math.copysign(abs(s)**k,s)))
+    return poly(name,pts,depth,loc,m,.03)
+def ai():
+    # AI assistant: graphite chip with a lime spark, an ivory reply bubble in front
+    cx,cz=-.5,1.62
+    plate('Chip / graphite package',(cx,.25,cz),(1.95,.26,1.95),'ink')
+    for dx,dz,w,h in [(0,.66,1.38,.06),(0,-.66,1.38,.06),(-.66,0,.06,1.38),(.66,0,.06,1.38)]:
+        box('Die frame / aluminium',(cx+dx,.1,cz+dz),(w,.05,h),'silver',.02)
+    for i in range(5):
+        o=-.64+i*.32
+        box('Pin / top',(cx+o,.25,cz+1.08),(.13,.14,.26),'silver',.03)
+        box('Pin / bottom',(cx+o,.25,cz-1.08),(.13,.14,.26),'silver',.03)
+        box('Pin / left',(cx-1.08,.25,cz+o),(.26,.14,.13),'silver',.03)
+        box('Pin / right',(cx+1.08,.25,cz+o),(.26,.14,.13),'silver',.03)
+    sparkle('AI spark',(cx,-.04,cz),.52,'lime',.2)
+    sparkle('AI spark / small',(cx+.42,.0,cz+.42),.16,'ivory',.12)
+    plate('Reply bubble',(.95,-.62,.78),(1.6,.24,1.0),'ivory')
+    poly('Reply tail',[(-.2,.1),(.25,.1),(.22,-.30)],.22,(1.35,-.62,.2),'ivory',.035)
+    for i,w in enumerate([1.0,.66]):box('Reply line',(.45+w/2,-.75,1.0-i*.24),(w,.04,.09),'ink',.025)
+    ball('Approved / lime dot',(1.5,-.76,.62),.12,'lime')
+    ring('Messenger ring',(-1.45,-.95,.23),.36,.08,'silver',(0,0,0))
+    ball('Accent pearl',(.95,.2,2.55),.17,'silver')
 bpy.ops.wm.read_factory_settings(use_empty=True)
 M={'paper':mat('Paper / warm neutral','F6F6F1',0,.7),'ivory':mat('Porcelain / warm white','ECEEE5',.05,.29),'ink':mat('Graphite / satin','191B18',.10,.42),'lime':mat('Lime / glazed polymer','C9DF36',.08,.33),'silver':mat('Aluminium / brushed','C5CBC3',.8,.24),'stone':mat('Warm grey / matte','A2AA9A',.05,.42)}
 pref=bpy.context.preferences.addons['cycles'].preferences;pref.compute_device_type='OPTIX';pref.get_devices()
 for d in pref.devices:d.use=d.type=='OPTIX'
-builders={'web':web,'branding':branding,'advertising':advertising,'packaging':packaging,'promotion':promotion,'support':support,'social':social}
+builders={'web':web,'branding':branding,'advertising':advertising,'packaging':packaging,'promotion':promotion,'support':support,'social':social,'ai':ai}
 scenes=[]
 for slug,build in builders.items():
     if args.only and slug!=args.only:continue

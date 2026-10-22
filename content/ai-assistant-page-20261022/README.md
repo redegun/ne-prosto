@@ -11,10 +11,13 @@
 
 ## Сопутствующие правки
 - template 13 (/uslugi/, блок #ii-dlya-biznesa): href /koordinatyi#request → /uslugi/ii-assistent-dlya-biznesa (закрывает #509). SHA 9aaa6e… → d513a9….
-- chunk np_related: весь вывод обёрнут в `{if $id != 103}` — без иллюстрации карточка давала пустую дыру в «Других услугах» на /uslugi/*. Когда будет иллюстрация ИИ — добавить `{if $id == 103}{set $art = ...}` и снять обёртку. SHA cda85c… → ff8c39….
+- chunk np_related (было до #511): весь вывод обёрнут в `{if $id != 103}` — без иллюстрации карточка давала пустую дыру в «Других услугах» на /uslugi/*. Когда будет иллюстрация ИИ — добавить `{if $id == 103}{set $art = ...}` и снять обёртку. SHA cda85c… → ff8c39….
 
 ## Бэкапы
 Хостинг `~/ne-prosto/_agent_archives/task510/`: template13.before.html, template8.before.html, np_related.before.html, parent18-children.before.json (+ after-файлы и скрипты). Откат страницы — снять с публикации/удалить ресурс 103.
 
 ## Проверка (22.10)
 200, один H1, title/description, хлебные крошки Непросто › Услуги; desktop 1440 / mobile 390 без горизонтальной прокрутки, JS-ошибок нет; пустая форма не отправляется (name/contact invalid, POST 0); кнопка ведёт к #request. Регрессия 200: /, /uslugi/, три услуги, три /podderzhka/*, /koordinatyi, /blog/.
+
+## Иллюстрация (#511, 22.10)
+Сцена ai из набора услуг стоит в шапке страницы (template 8), карточка 103 вернулась в «Другие услуги» (np_related: 103→ai, обёртка снята), og:image — ai-1440.webp. Подробно: memory/illustrations.md; скрины task511/.

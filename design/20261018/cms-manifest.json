@@ -62,8 +62,8 @@
       "name": null,
       "field": "content",
       "path": "templates/8.html",
-      "expected": "3e6980dc41290d3e379be39fafe1fac9dbddd554f7f713f9a9cd39ed9fe1ee95",
-      "target": "3e6980dc41290d3e379be39fafe1fac9dbddd554f7f713f9a9cd39ed9fe1ee95"
+      "expected": "58659fd6637f51cf34d6756f8eee009b2c6f20fa83fba5c314868942add40d4d",
+      "target": "58659fd6637f51cf34d6756f8eee009b2c6f20fa83fba5c314868942add40d4d"
     },
     {
       "type": "modTemplate",
@@ -197,8 +197,8 @@
       "name": "head_2019",
       "field": "snippet",
       "path": "chunks/head_2019.html",
-      "expected": "38040df875767dea99c8c42c0c6139a5dc28e9793556fe0f1a1fc4bcfa78cce1",
-      "target": "ef1c54782747269f96e27440f6f978aec265602134c2585256459ab3b5e8e844"
+      "expected": "9f7f58e7c0044818bbb4575d3646865a6defd05f53ddeefd38c55ffd5448d15b",
+      "target": "9f7f58e7c0044818bbb4575d3646865a6defd05f53ddeefd38c55ffd5448d15b"
     },
     {
       "type": "modChunk",
@@ -323,8 +323,8 @@
       "name": "np_related",
       "field": "snippet",
       "path": "chunks/np_related.html",
-      "expected": "ff8c39d869f10a79fd1f18666a8364d18f62bba4fe38808c8c0cc766f36e1459",
-      "target": "ff8c39d869f10a79fd1f18666a8364d18f62bba4fe38808c8c0cc766f36e1459"
+      "expected": "67397e49abcafa249014da3458824997f9205d92f4f9602bdc4d11cedb968cc5",
+      "target": "67397e49abcafa249014da3458824997f9205d92f4f9602bdc4d11cedb968cc5"
     }
   ]
 }
