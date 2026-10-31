@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/blog/gde-brat-foto-i-illyustracii-stoki",
+    "https://ne-prosto.ru/blog/kakie-stranicy-pomogayut-poluchat-obrashcheniya",
+    "https://ne-prosto.ru/blog/skorost-otveta-na-zayavku",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/logotipyi-firmennyie-stili",
+    "https://ne-prosto.ru/uslugi/sajtyi"
+  ],
+  "checked": 0,
+  "fixable": 0
+}
