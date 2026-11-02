@@ -1,0 +1,21 @@
+{
+  "alias": "tovarnyj-znak-i-logotip",
+  "pagetitle": "Регистрация товарного знака: что проверить до дизайна логотипа",
+  "titl": "Товарный знак и логотип: что проверить до дизайна — Непросто",
+  "description": "Регистрация товарного знака до разработки логотипа: как проверить название, подготовить перечень товаров и услуг, обсудить права на макет и задание дизайнеру.",
+  "introtext": "Что проверить до разработки логотипа: название, перечень товаров и услуг, состав знака и условия передачи прав на макет.",
+  "contentFile": "sites/ne-prosto/seo/blog/tovarnyj-znak-i-logotip/article.html",
+  "cover": "sites/ne-prosto/seo/blog/tovarnyj-znak-i-logotip/cover.png",
+  "coverAlt": "Проверка названия и графики перед разработкой логотипа",
+  "images": [
+    {
+      "file": "sites/ne-prosto/seo/blog/tovarnyj-znak-i-logotip/klassifikaciya.png",
+      "name": "klassifikaciya"
+    }
+  ],
+  "cta": {
+    "title": "Готовите новый логотип?",
+    "text": "Обсудим задачу компании и применение фирменного стиля.",
+    "button": "Обсудить мою задачу"
+  }
+}

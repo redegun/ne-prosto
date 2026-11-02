@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/blog/priznaki-chto-pora-na-rebrending",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/logotipyi-firmennyie-stili",
+    "https://www.consultant.ru/document/cons_doc_LAW_509417/ba40f188a9dca425520a1e3a935f95845df06ca8/",
+    "https://www.consultant.ru/document/cons_doc_LAW_64629/26479f35ea4ceb422ecc82a4aeb1aab94d70e92f/",
+    "https://www.consultant.ru/document/cons_doc_LAW_64629/2e83c7a3d54808ca80d8f0b2a034caa0f7122b57/",
+    "https://www.consultant.ru/document/cons_doc_LAW_64629/5e59f46fa72e592f7a8acd44b01e023e03e26944/"
+  ],
+  "checked": 0,
+  "fixable": 0,
+  "manualReview": {
+    "status": "PASS",
+    "htmlSha256": "db5a10ffe24d716ff34cd0288a053b95c717fa997056917335c91114be9aacc4",
+    "studioClaims": "Начало с задачи и контекста, разработка визуального решения, показ на носителях, сайт/печать/реклама/пространство — подтверждены живой страницей услуги. Цен, сроков, гарантий и клиентских кейсов в тексте нет.",
+    "legalClaims": [
+      "ГК РФ 1482 п.1: виды обозначений — подтверждено",
+      "ГК РФ 1483 п.6: сходство, однородные товары и более ранний приоритет — подтверждено",
+      "ГК РФ 1492 п.3 подп.3: перечень по МКТУ — подтверждено",
+      "ГК РФ 1234 п.2: письменная форма — подтверждено",
+      "Роспатент, инструкция 30.10.2025: поиск по названию и изображению — подтверждено"
+    ],
+    "imageReview": "Обе 1536x1024, просмотрены: без текста, букв, логотипов."
+  },
+  "liveQA": {
+    "status": "PASS",
+    "url": "https://ne-prosto.ru/blog/tovarnyj-znak-i-logotip",
+    "h1": [
+      "Регистрация товарного знака: что проверить до дизайна логотипа"
+    ],
+    "title": "Товарный знак и логотип: что проверить до дизайна — Непросто",
+    "description": "Регистрация товарного знака до разработки логотипа: как проверить название, подготовить перечень товаров и услуг, обсудить права на макет и задание дизайнеру.",
+    "ogImage": "https://ne-prosto.ru/images/godnota/blog/tovarnyj-znak-i-logotip.jpg",
+    "cover": "/assets/components/phpthumbof/cache/tovarnyj-znak-i-logotip.7e3472e08759fdea1f4d30c3669a4bab.jpg",
+    "images": {
+      "https://ne-prosto.ru/assets/portfolio/img/ico/ico-eye.svg": 200,
+      "https://ne-prosto.ru/assets/components/phpthumbof/cache/tovarnyj-znak-i-logotip.7e3472e08759fdea1f4d30c3669a4bab.jpg": 200,
+      "https://ne-prosto.ru/images/godnota/blog/tovarnyj-znak-i-logotip/klassifikaciya.jpg": 200,
+      "https://ne-prosto.ru/assets/cache_image/images/godnota/blog/etapy-razrabotki-sajta_900x650_c92.jpg": 200,
+      "https://ne-prosto.ru/assets/cache_image/images/godnota/ii-hub/oshibki-vnedreniya_900x650_c92.jpg": 200,
+      "https://ne-prosto.ru/assets/cache_image/images/godnota/ii-hub/poteryannye-zayavki_900x650_c92.jpg": 200,
+      "https://ne-prosto.ru/assets/cache_image/images/godnota/ii-hub/chto-sprosit_900x650_c92.jpg": 200,
+      "https://ne-prosto.ru/assets/cache_image/images/godnota/ii-hub/novyj-ili-postoyannyj_900x650_c92.jpg": 200
+    },
+    "internalLinks": {
+      "/blog/priznaki-chto-pora-na-rebrending": 200,
+      "/uslugi/logotipyi-firmennyie-stili": 200
+    },
+    "cta": true,
+    "feed": true,
+    "tocScript": true,
+    "mobile": {
+      "width": 390,
+      "scroll": 390,
+      "broken": [],
+      "toc": true,
+      "h1": 1,
+      "cta": 2
+    },
+    "sitemap": true
+  },
+  "indexnow": {
+    "yandex": 202,
+    "indexnow": 202
+  }
+}
