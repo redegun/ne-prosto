@@ -1,300 +1,305 @@
 {
- "version": 1,
- "site": "https://ne-prosto.ru",
- "cocoon": "ne-prosto-blog-uslugi-2026q4",
- "cocoonTitle": "Блог «Годнота»: практические статьи для заказчика — сайты, фирменный стиль, реклама",
- "sourcePlan": "sites/ne-prosto/seo/blog-plan.md",
- "startedDate": "2026-10-31",
- "cadence": "every-2-days",
- "job": "ne-prosto-blog",
- "finished": false,
- "finishedAnnounced": false,
- "publish": "ssh vps-workspace 'cd /root/.openclaw/workspace && bash sites/ne-prosto/seo/autopilot/publish.sh <meta.json> [--dry-run]' (MODX API по SSH: ~/ne-prosto/_autopilot/np-publish.php, parent 2 /blog/, template 8, published=1; картинки images/godnota/blog/)",
- "globalRules": [
-  "Один запуск = ровно ПЕРВАЯ pending-позиция queue по order. Сегодня уже есть done с живым URL — NO_REPLY.",
-  "Формат (уточнение Антона №2, 25.10): продолжаем формат хаба «ИИ-ассистент» (#501/#503, вышел 22–30.10) — практическая статья для владельца небольшого бизнеса/заказчика о том, как устроена работа по услуге студии и что подготовить; ведёт на страницу услуги. Не подборки ресурсов (старый формат 08.2026) и не реклама.",
-  "Объём 5000–7000 знаков без тегов, 5–7 H2, короткие абзацы, 1–2 списка. FAQ и таблицы не обязательны (в хабе их нет). Своего <h1> нет — H1 выводит шаблон из pagetitle.",
-  "Тон — спокойный, разговорный, от лица студии («мы»), во вступлении одна бытовая сцена. Без канцелярита, восклицаний и обещаний. Только русский, латиница — бренды/URL.",
-  "Факты о студии — ТОЛЬКО со страниц услуг (/uslugi/sajtyi, /uslugi/logotipyi-firmennyie-stili, /uslugi/reklamnyie-kampanii, /uslugi/ii-assistent-dlya-biznesa, /podderzhka/*), /portfolio/ и sites/ne-prosto/MEMORY.md. Запрещено: цены, сроки в днях, гарантии, выдуманные клиенты, цифры и проценты «из практики». Кейсы — только реальные из /portfolio/.",
-  "Нормативка (152-ФЗ, ГК РФ, КоАП, требования Роспатента/Роскомнадзора, рекомендации Google/Яндекса) — только из первоисточников через scripts/web-search.py, с номером статьи/документа; неподтверждённое не писать.",
-  "Перелинковка: 1 ссылка на primaryTarget (и обязательно хотя бы одна /uslugi/<alias> — по первой такой ссылке шаблон ставит CTA в конце), 1–2 secondaryTargets/соседние статьи блога; ссылки только относительные от корня, каждая 200.",
-  "Картинки: обложка (TV image + page__image--big) и 1 иллюстрация в теле — gpt-image-2 через ssh vps-workspace 'openclaw infer image generate' в стиле серии (sites/ne-prosto/content/ai-hub-article1-20261022/task515/style.txt), без надписей.",
-  "CTA в середине — поля cta.title/text/button в meta.json (короткий вопрос по теме + 1 строка + «Обсудить мою задачу»); блок конца шаблон ставит сам.",
-  "Не пересекаться с живыми статьями /blog/ и черновиками 2016 года (список «Не пересекаться» в blog-plan.md); дедуп по alias и интенту перед работой. Хаб ИИ-ассистента не продолжать без отдельного решения Лены."
- ],
- "typicalErrors": [
-  "Свой <h1> в content (два H1 = blocker).",
-  "Нет ссылки на /uslugi/… — конечный CTA уйдёт в «default».",
-  "Абсолютные ссылки https://ne-prosto.ru/... — только относительные.",
-  "MODX-теги [[...]] и PHP в content — публикатор отклонит.",
-  "Надписи на сгенерированных картинках."
- ],
- "queue": [
-  {
-   "order": 1,
-   "status": "done",
-   "cluster": "sajty",
-   "alias": "etapy-razrabotki-sajta",
-   "title": "Этапы разработки сайта: что нужно от заказчика на каждом шаге",
-   "keywords": [
-    "этапы разработки сайта",
-    "основные этапы разработки сайта",
-    "этапы разработки сайта по порядку"
-   ],
-   "primaryTarget": "/uslugi/sajtyi",
-   "secondaryTargets": [
-    "/portfolio/"
-   ],
-   "notes": "Wordstat 31.10: «этапы разработки сайта» 705, «основные этапы…» 230. Порядок работы — со страницы /uslugi/sajtyi.",
-   "resourceId": 115,
-   "url": "https://ne-prosto.ru/blog/etapy-razrabotki-sajta",
-   "date": "2026-10-31",
-   "publishedAt": "2026-10-31T10:22:59+03:00",
-   "publishedBy": "task #862 (первая статья, вручную по промпту ne-prosto-blog)",
-   "chars": 6056
-  },
-  {
-   "order": 2,
-   "status": "done",
-   "cluster": "firstil",
-   "alias": "tovarnyj-znak-i-logotip",
-   "title": "Товарный знак и логотип: что проверить до разработки",
-   "keywords": [
-    "регистрация товарного знака",
-    "заявка на регистрацию товарного знака",
-    "роспатент регистрация товарного знака"
-   ],
-   "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
-   "secondaryTargets": [
-    "/blog/priznaki-chto-pora-na-rebrending"
-   ],
-   "notes": "Wordstat 31.10: «регистрация товарного знака» 31055. Угол студии: проверить название/знак до дизайна, классы МКТУ, кому принадлежат права на макет. Нормы — ГК РФ ч. 4 (гл. 76), сайт Роспатента/ФИПС; пошлины и сроки — только с первоисточника или не писать. Не юридическая консультация.",
-   "resourceId": 116,
-   "url": "https://ne-prosto.ru/blog/tovarnyj-znak-i-logotip",
-   "date": "2026-11-02",
-   "publishedAt": "2026-11-02T23:47:43+03:00",
-   "chars": 6450
-  },
-  {
-   "order": 3,
-   "status": "pending",
-   "cluster": "sajty",
-   "alias": "politika-konfidencialnosti-dlya-sajta",
-   "title": "Политика конфиденциальности и согласие на обработку данных: что нужно сайту",
-   "keywords": [
-    "политика конфиденциальности для сайта",
-    "согласие на обработку персональных данных на сайте",
-    "для чего нужна политика конфиденциальности на сайте"
-   ],
-   "primaryTarget": "/uslugi/sajtyi",
-   "secondaryTargets": [
-    "/politika-konfidencialnosti"
-   ],
-   "notes": "Wordstat 31.10: 1727 + 4398. Факты — 152-ФЗ (ст. 9, 18.1) и Роскомнадзор, только с consultant.ru / pd.rkn.gov.ru; штрафы — КоАП ст. 13.11 из первоисточника. Студия делала это на своём сайте (#543): отдельные страницы политики и согласия, галочка в каждой форме."
-  },
-  {
-   "order": 4,
-   "status": "pending",
-   "cluster": "reklama",
-   "alias": "utp-kak-sformulirovat",
-   "title": "Уникальное торговое предложение: как сформулировать, если «у нас как у всех»",
-   "keywords": [
-    "уникальное торговое предложение",
-    "утп уникальное торговое предложение это",
-    "уникальное торговое предложение примеры"
-   ],
-   "primaryTarget": "/uslugi/reklamnyie-kampanii",
-   "secondaryTargets": [
-    "/uslugi/sajtyi"
-   ],
-   "notes": "Wordstat 31.10: «уникальное торговое предложение» 2700. Примеры — абстрактные или известные бренды из источников, без выдуманных клиентов."
-  },
-  {
-   "order": 5,
-   "status": "pending",
-   "cluster": "sajty",
-   "alias": "tekhnicheskoe-zadanie-na-sajt",
-   "title": "Техническое задание на сайт: что подготовить заказчику",
-   "keywords": [
-    "техническое задание на разработку сайта",
-    "как составить тз на сайт",
-    "пример технического задания на разработку сайта"
-   ],
-   "primaryTarget": "/uslugi/sajtyi",
-   "secondaryTargets": [
-    "/blog/etapy-razrabotki-sajta"
-   ],
-   "notes": "Wordstat 31.10: 359. Не дублировать «Этапы разработки» — здесь состав ТЗ (цели, страницы, функции, интеграции, контент, приёмка)."
-  },
-  {
-   "order": 6,
-   "status": "pending",
-   "cluster": "firstil",
-   "alias": "firmennyj-shrift-kak-vybrat",
-   "title": "Фирменный шрифт: как выбрать и не нарушить лицензию",
-   "keywords": [
-    "фирменный шрифт",
-    "как выбрать шрифт для логотипа",
-    "лицензия на шрифт"
-   ],
-   "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
-   "secondaryTargets": [
-    "/blog/besplatnye-kirillicheskie-shrifty"
-   ],
-   "notes": "Wordstat 31.10: «фирменный шрифт» 2605. Не повторять подборку бесплатных шрифтов (ссылкой на неё). Лицензии (OFL, десктоп/веб/приложения) — по первоисточникам."
-  },
-  {
-   "order": 7,
-   "status": "pending",
-   "cluster": "sajty",
-   "alias": "skorost-zagruzki-sajta",
-   "title": "Скорость загрузки сайта: что проверить владельцу и что поправить",
-   "keywords": [
-    "скорость загрузки сайта",
-    "проверить скорость загрузки сайта",
-    "скорость загрузки страницы сайта"
-   ],
-   "primaryTarget": "/uslugi/sajtyi",
-   "secondaryTargets": [
-    "/blog/etapy-razrabotki-sajta"
-   ],
-   "notes": "Wordstat 31.10: 2902, «проверить…» 682. Инструменты (PageSpeed Insights и т.п.) и пороги Core Web Vitals — только из документации Google."
-  },
-  {
-   "order": 8,
-   "status": "pending",
-   "cluster": "reklama",
-   "alias": "koncepciya-reklamnoj-kampanii",
-   "title": "Концепция рекламной кампании: из чего она состоит и как её проверить",
-   "keywords": [
-    "концепция рекламной кампании",
-    "бриф на рекламную кампанию",
-    "бриф на разработку рекламной кампании"
-   ],
-   "primaryTarget": "/uslugi/reklamnyie-kampanii",
-   "secondaryTargets": [
-    "/uslugi/logotipyi-firmennyie-stili"
-   ],
-   "notes": "Wordstat 31.10: 261 + бриф 27. Как на /uslugi/reklamnyie-kampanii: главная мысль → концепция и оформление → адаптация под носители."
-  },
-  {
-   "order": 9,
-   "status": "pending",
-   "cluster": "sajty",
-   "alias": "iz-chego-skladyvaetsya-stoimost-sajta",
-   "title": "Из чего складывается стоимость разработки сайта",
-   "keywords": [
-    "стоимость разработки сайта",
-    "стоимость разработки сайта под ключ",
-    "разработка дизайна сайта стоимость"
-   ],
-   "primaryTarget": "/uslugi/sajtyi",
-   "secondaryTargets": [
-    "/blog/tekhnicheskoe-zadanie-na-sajt"
-   ],
-   "notes": "Wordstat 31.10: 388. Цены студии не называть; факторы стоимости и вопросы к подрядчику."
-  },
-  {
-   "order": 10,
-   "status": "pending",
-   "cluster": "firstil",
-   "alias": "nejming-kompanii",
-   "title": "Нейминг компании: как придумать название и проверить его",
-   "keywords": [
-    "нейминг компании",
-    "как придумать название компании",
-    "проверка названия компании"
-   ],
-   "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
-   "secondaryTargets": [
-    "/blog/tovarnyj-znak-i-logotip"
-   ],
-   "notes": "Wordstat 31.10: 212. Проверки: домен, соцсети, товарные знаки (ФИПС) — без выдуманных сроков."
-  },
-  {
-   "order": 11,
-   "status": "pending",
-   "cluster": "sajty",
-   "alias": "redizajn-sajta",
-   "title": "Редизайн сайта: когда он нужен и что сохранить",
-   "keywords": [
-    "редизайн сайта",
-    "редизайн сайта компании",
-    "сделать редизайн сайта"
-   ],
-   "primaryTarget": "/uslugi/sajtyi",
-   "secondaryTargets": [
-    "/blog/priznaki-chto-pora-na-rebrending"
-   ],
-   "notes": "Wordstat 31.10: 710. Отличать от ребрендинга (ссылка на статью-признаки). Что сохранить: адреса страниц и редиректы, тексты, аналитику."
-  },
-  {
-   "order": 12,
-   "status": "pending",
-   "cluster": "sajty",
-   "alias": "korporativnyj-sajt-razdely",
-   "title": "Корпоративный сайт небольшой компании: какие разделы нужны",
-   "keywords": [
-    "корпоративный сайт",
-    "разработка корпоративного сайта",
-    "структура корпоративного сайта"
-   ],
-   "primaryTarget": "/uslugi/sajtyi",
-   "secondaryTargets": [
-    "/blog/kakie-stranicy-pomogayut-poluchat-obrashcheniya"
-   ],
-   "notes": "Wordstat 31.10: 11830 (много навигационного), «разработка корпоративного сайта» 577. Не дублировать статью People Pay (роль страниц в обращениях) — здесь состав разделов."
-  },
-  {
-   "order": 13,
-   "status": "pending",
-   "cluster": "reklama",
-   "alias": "kreativy-dlya-reklamy",
-   "title": "Креативы для рекламы: как одна идея живёт на разных носителях",
-   "keywords": [
-    "креативы для рекламы",
-    "создание креативов для рекламы",
-    "креатив для рекламы"
-   ],
-   "primaryTarget": "/uslugi/reklamnyie-kampanii",
-   "secondaryTargets": [
-    "/blog/koncepciya-reklamnoj-kampanii"
-   ],
-   "notes": "Wordstat 31.10: 425 + 43. Требования площадок (размеры, маркировка рекламы) — только из первоисточников."
-  },
-  {
-   "order": 14,
-   "status": "pending",
-   "cluster": "sajty",
-   "alias": "semanticheskoe-yadro-sajta",
-   "title": "Семантическое ядро сайта простыми словами: зачем его собирать до структуры",
-   "keywords": [
-    "семантическое ядро сайта",
-    "как собрать семантическое ядро для сайта",
-    "сбор семантического ядра для сайта"
-   ],
-   "primaryTarget": "/podderzhka/prodvizhenie",
-   "secondaryTargets": [
-    "/uslugi/sajtyi"
-   ],
-   "notes": "Wordstat 31.10: 673. Ссылка на /podderzhka/prodvizhenie + /uslugi/sajtyi (для CTA конца). Иллюстрация метода — частотность из нашего хаба ИИ-ассистента (README #501)."
-  },
-  {
-   "order": 15,
-   "status": "pending",
-   "cluster": "sajty",
-   "alias": "kak-napisat-kejs-dlya-sajta",
-   "title": "Как написать кейс для сайта, чтобы ему поверили",
-   "keywords": [
-    "как написать кейс для сайта",
-    "кейсы на сайте",
-    "кейс компании пример"
-   ],
-   "primaryTarget": "/uslugi/sajtyi",
-   "secondaryTargets": [
-    "/portfolio/"
-   ],
-   "notes": "Wordstat: «кейсы на сайте» засорён играми, спрос — хвосты. Примеры — только реальные кейсы студии из /portfolio/ (People Pay, СТАНКИН) с их страниц."
-  }
- ]
+  "version": 1,
+  "site": "https://ne-prosto.ru",
+  "cocoon": "ne-prosto-blog-uslugi-2026q4",
+  "cocoonTitle": "Блог «Годнота»: практические статьи для заказчика — сайты, фирменный стиль, реклама",
+  "sourcePlan": "sites/ne-prosto/seo/blog-plan.md",
+  "startedDate": "2026-10-31",
+  "cadence": "every-2-days",
+  "job": "ne-prosto-blog",
+  "finished": false,
+  "finishedAnnounced": false,
+  "publish": "ssh vps-workspace 'cd /root/.openclaw/workspace && bash sites/ne-prosto/seo/autopilot/publish.sh <meta.json> [--dry-run]' (MODX API по SSH: ~/ne-prosto/_autopilot/np-publish.php, parent 2 /blog/, template 8, published=1; картинки images/godnota/blog/)",
+  "globalRules": [
+    "Один запуск = ровно ПЕРВАЯ pending-позиция queue по order. Сегодня уже есть done с живым URL — NO_REPLY.",
+    "Формат (уточнение Антона №2, 25.10): продолжаем формат хаба «ИИ-ассистент» (#501/#503, вышел 22–30.10) — практическая статья для владельца небольшого бизнеса/заказчика о том, как устроена работа по услуге студии и что подготовить; ведёт на страницу услуги. Не подборки ресурсов (старый формат 08.2026) и не реклама.",
+    "Объём 5000–7000 знаков без тегов, 5–7 H2, короткие абзацы, 1–2 списка. FAQ и таблицы не обязательны (в хабе их нет). Своего <h1> нет — H1 выводит шаблон из pagetitle.",
+    "Тон — спокойный, разговорный, от лица студии («мы»), во вступлении одна бытовая сцена. Без канцелярита, восклицаний и обещаний. Только русский, латиница — бренды/URL.",
+    "Факты о студии — ТОЛЬКО со страниц услуг (/uslugi/sajtyi, /uslugi/logotipyi-firmennyie-stili, /uslugi/reklamnyie-kampanii, /uslugi/ii-assistent-dlya-biznesa, /podderzhka/*), /portfolio/ и sites/ne-prosto/MEMORY.md. Запрещено: цены, сроки в днях, гарантии, выдуманные клиенты, цифры и проценты «из практики». Кейсы — только реальные из /portfolio/.",
+    "Нормативка (152-ФЗ, ГК РФ, КоАП, требования Роспатента/Роскомнадзора, рекомендации Google/Яндекса) — только из первоисточников через scripts/web-search.py, с номером статьи/документа; неподтверждённое не писать.",
+    "Перелинковка: 1 ссылка на primaryTarget (и обязательно хотя бы одна /uslugi/<alias> — по первой такой ссылке шаблон ставит CTA в конце), 1–2 secondaryTargets/соседние статьи блога; ссылки только относительные от корня, каждая 200.",
+    "Картинки: обложка (TV image + page__image--big) и 1 иллюстрация в теле — gpt-image-2 через ssh vps-workspace 'openclaw infer image generate' в стиле серии (sites/ne-prosto/content/ai-hub-article1-20261022/task515/style.txt), без надписей.",
+    "CTA в середине — поля cta.title/text/button в meta.json (короткий вопрос по теме + 1 строка + «Обсудить мою задачу»); блок конца шаблон ставит сам.",
+    "Не пересекаться с живыми статьями /blog/ и черновиками 2016 года (список «Не пересекаться» в blog-plan.md); дедуп по alias и интенту перед работой. Хаб ИИ-ассистента не продолжать без отдельного решения Лены."
+  ],
+  "typicalErrors": [
+    "Свой <h1> в content (два H1 = blocker).",
+    "Нет ссылки на /uslugi/… — конечный CTA уйдёт в «default».",
+    "Абсолютные ссылки https://ne-prosto.ru/... — только относительные.",
+    "MODX-теги [[...]] и PHP в content — публикатор отклонит.",
+    "Надписи на сгенерированных картинках."
+  ],
+  "queue": [
+    {
+      "order": 1,
+      "status": "done",
+      "cluster": "sajty",
+      "alias": "etapy-razrabotki-sajta",
+      "title": "Этапы разработки сайта: что нужно от заказчика на каждом шаге",
+      "keywords": [
+        "этапы разработки сайта",
+        "основные этапы разработки сайта",
+        "этапы разработки сайта по порядку"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/portfolio/"
+      ],
+      "notes": "Wordstat 31.10: «этапы разработки сайта» 705, «основные этапы…» 230. Порядок работы — со страницы /uslugi/sajtyi.",
+      "resourceId": 115,
+      "url": "https://ne-prosto.ru/blog/etapy-razrabotki-sajta",
+      "date": "2026-10-31",
+      "publishedAt": "2026-10-31T10:22:59+03:00",
+      "publishedBy": "task #862 (первая статья, вручную по промпту ne-prosto-blog)",
+      "chars": 6056
+    },
+    {
+      "order": 2,
+      "status": "done",
+      "cluster": "firstil",
+      "alias": "tovarnyj-znak-i-logotip",
+      "title": "Товарный знак и логотип: что проверить до разработки",
+      "keywords": [
+        "регистрация товарного знака",
+        "заявка на регистрацию товарного знака",
+        "роспатент регистрация товарного знака"
+      ],
+      "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
+      "secondaryTargets": [
+        "/blog/priznaki-chto-pora-na-rebrending"
+      ],
+      "notes": "Wordstat 31.10: «регистрация товарного знака» 31055. Угол студии: проверить название/знак до дизайна, классы МКТУ, кому принадлежат права на макет. Нормы — ГК РФ ч. 4 (гл. 76), сайт Роспатента/ФИПС; пошлины и сроки — только с первоисточника или не писать. Не юридическая консультация.",
+      "resourceId": 116,
+      "url": "https://ne-prosto.ru/blog/tovarnyj-znak-i-logotip",
+      "date": "2026-11-02",
+      "publishedAt": "2026-11-02T23:47:43+03:00",
+      "chars": 6450
+    },
+    {
+      "order": 3,
+      "status": "done",
+      "cluster": "sajty",
+      "alias": "politika-konfidencialnosti-dlya-sajta",
+      "title": "Политика конфиденциальности и согласие на обработку данных: что нужно сайту",
+      "keywords": [
+        "политика конфиденциальности для сайта",
+        "согласие на обработку персональных данных на сайте",
+        "для чего нужна политика конфиденциальности на сайте"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/politika-konfidencialnosti"
+      ],
+      "notes": "Wordstat 31.10: 1727 + 4398. Факты — 152-ФЗ (ст. 9, 18.1) и Роскомнадзор, только с consultant.ru / pd.rkn.gov.ru; штрафы — КоАП ст. 13.11 из первоисточника. Студия делала это на своём сайте (#543): отдельные страницы политики и согласия, галочка в каждой форме.",
+      "resourceId": 117,
+      "url": "https://ne-prosto.ru/blog/politika-konfidencialnosti-dlya-sajta",
+      "date": "2026-11-04",
+      "publishedAt": "2026-11-04T23:46:59+03:00",
+      "chars": 6420
+    },
+    {
+      "order": 4,
+      "status": "pending",
+      "cluster": "reklama",
+      "alias": "utp-kak-sformulirovat",
+      "title": "Уникальное торговое предложение: как сформулировать, если «у нас как у всех»",
+      "keywords": [
+        "уникальное торговое предложение",
+        "утп уникальное торговое предложение это",
+        "уникальное торговое предложение примеры"
+      ],
+      "primaryTarget": "/uslugi/reklamnyie-kampanii",
+      "secondaryTargets": [
+        "/uslugi/sajtyi"
+      ],
+      "notes": "Wordstat 31.10: «уникальное торговое предложение» 2700. Примеры — абстрактные или известные бренды из источников, без выдуманных клиентов."
+    },
+    {
+      "order": 5,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "tekhnicheskoe-zadanie-na-sajt",
+      "title": "Техническое задание на сайт: что подготовить заказчику",
+      "keywords": [
+        "техническое задание на разработку сайта",
+        "как составить тз на сайт",
+        "пример технического задания на разработку сайта"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/blog/etapy-razrabotki-sajta"
+      ],
+      "notes": "Wordstat 31.10: 359. Не дублировать «Этапы разработки» — здесь состав ТЗ (цели, страницы, функции, интеграции, контент, приёмка)."
+    },
+    {
+      "order": 6,
+      "status": "pending",
+      "cluster": "firstil",
+      "alias": "firmennyj-shrift-kak-vybrat",
+      "title": "Фирменный шрифт: как выбрать и не нарушить лицензию",
+      "keywords": [
+        "фирменный шрифт",
+        "как выбрать шрифт для логотипа",
+        "лицензия на шрифт"
+      ],
+      "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
+      "secondaryTargets": [
+        "/blog/besplatnye-kirillicheskie-shrifty"
+      ],
+      "notes": "Wordstat 31.10: «фирменный шрифт» 2605. Не повторять подборку бесплатных шрифтов (ссылкой на неё). Лицензии (OFL, десктоп/веб/приложения) — по первоисточникам."
+    },
+    {
+      "order": 7,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "skorost-zagruzki-sajta",
+      "title": "Скорость загрузки сайта: что проверить владельцу и что поправить",
+      "keywords": [
+        "скорость загрузки сайта",
+        "проверить скорость загрузки сайта",
+        "скорость загрузки страницы сайта"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/blog/etapy-razrabotki-sajta"
+      ],
+      "notes": "Wordstat 31.10: 2902, «проверить…» 682. Инструменты (PageSpeed Insights и т.п.) и пороги Core Web Vitals — только из документации Google."
+    },
+    {
+      "order": 8,
+      "status": "pending",
+      "cluster": "reklama",
+      "alias": "koncepciya-reklamnoj-kampanii",
+      "title": "Концепция рекламной кампании: из чего она состоит и как её проверить",
+      "keywords": [
+        "концепция рекламной кампании",
+        "бриф на рекламную кампанию",
+        "бриф на разработку рекламной кампании"
+      ],
+      "primaryTarget": "/uslugi/reklamnyie-kampanii",
+      "secondaryTargets": [
+        "/uslugi/logotipyi-firmennyie-stili"
+      ],
+      "notes": "Wordstat 31.10: 261 + бриф 27. Как на /uslugi/reklamnyie-kampanii: главная мысль → концепция и оформление → адаптация под носители."
+    },
+    {
+      "order": 9,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "iz-chego-skladyvaetsya-stoimost-sajta",
+      "title": "Из чего складывается стоимость разработки сайта",
+      "keywords": [
+        "стоимость разработки сайта",
+        "стоимость разработки сайта под ключ",
+        "разработка дизайна сайта стоимость"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/blog/tekhnicheskoe-zadanie-na-sajt"
+      ],
+      "notes": "Wordstat 31.10: 388. Цены студии не называть; факторы стоимости и вопросы к подрядчику."
+    },
+    {
+      "order": 10,
+      "status": "pending",
+      "cluster": "firstil",
+      "alias": "nejming-kompanii",
+      "title": "Нейминг компании: как придумать название и проверить его",
+      "keywords": [
+        "нейминг компании",
+        "как придумать название компании",
+        "проверка названия компании"
+      ],
+      "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
+      "secondaryTargets": [
+        "/blog/tovarnyj-znak-i-logotip"
+      ],
+      "notes": "Wordstat 31.10: 212. Проверки: домен, соцсети, товарные знаки (ФИПС) — без выдуманных сроков."
+    },
+    {
+      "order": 11,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "redizajn-sajta",
+      "title": "Редизайн сайта: когда он нужен и что сохранить",
+      "keywords": [
+        "редизайн сайта",
+        "редизайн сайта компании",
+        "сделать редизайн сайта"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/blog/priznaki-chto-pora-na-rebrending"
+      ],
+      "notes": "Wordstat 31.10: 710. Отличать от ребрендинга (ссылка на статью-признаки). Что сохранить: адреса страниц и редиректы, тексты, аналитику."
+    },
+    {
+      "order": 12,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "korporativnyj-sajt-razdely",
+      "title": "Корпоративный сайт небольшой компании: какие разделы нужны",
+      "keywords": [
+        "корпоративный сайт",
+        "разработка корпоративного сайта",
+        "структура корпоративного сайта"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/blog/kakie-stranicy-pomogayut-poluchat-obrashcheniya"
+      ],
+      "notes": "Wordstat 31.10: 11830 (много навигационного), «разработка корпоративного сайта» 577. Не дублировать статью People Pay (роль страниц в обращениях) — здесь состав разделов."
+    },
+    {
+      "order": 13,
+      "status": "pending",
+      "cluster": "reklama",
+      "alias": "kreativy-dlya-reklamy",
+      "title": "Креативы для рекламы: как одна идея живёт на разных носителях",
+      "keywords": [
+        "креативы для рекламы",
+        "создание креативов для рекламы",
+        "креатив для рекламы"
+      ],
+      "primaryTarget": "/uslugi/reklamnyie-kampanii",
+      "secondaryTargets": [
+        "/blog/koncepciya-reklamnoj-kampanii"
+      ],
+      "notes": "Wordstat 31.10: 425 + 43. Требования площадок (размеры, маркировка рекламы) — только из первоисточников."
+    },
+    {
+      "order": 14,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "semanticheskoe-yadro-sajta",
+      "title": "Семантическое ядро сайта простыми словами: зачем его собирать до структуры",
+      "keywords": [
+        "семантическое ядро сайта",
+        "как собрать семантическое ядро для сайта",
+        "сбор семантического ядра для сайта"
+      ],
+      "primaryTarget": "/podderzhka/prodvizhenie",
+      "secondaryTargets": [
+        "/uslugi/sajtyi"
+      ],
+      "notes": "Wordstat 31.10: 673. Ссылка на /podderzhka/prodvizhenie + /uslugi/sajtyi (для CTA конца). Иллюстрация метода — частотность из нашего хаба ИИ-ассистента (README #501)."
+    },
+    {
+      "order": 15,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "kak-napisat-kejs-dlya-sajta",
+      "title": "Как написать кейс для сайта, чтобы ему поверили",
+      "keywords": [
+        "как написать кейс для сайта",
+        "кейсы на сайте",
+        "кейс компании пример"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/portfolio/"
+      ],
+      "notes": "Wordstat: «кейсы на сайте» засорён играми, спрос — хвосты. Примеры — только реальные кейсы студии из /portfolio/ (People Pay, СТАНКИН) с их страниц."
+    }
+  ]
 }

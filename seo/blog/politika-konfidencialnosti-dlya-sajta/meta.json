@@ -1,0 +1,21 @@
+{
+  "alias": "politika-konfidencialnosti-dlya-sajta",
+  "pagetitle": "Политика конфиденциальности для сайта: документы и формы",
+  "titl": "Политика конфиденциальности для сайта и согласие — Непросто",
+  "description": "Политика конфиденциальности для сайта и согласие на обработку данных: что подготовить владельцу бизнеса, передать разработчику и проверить в формах перед запуском.",
+  "introtext": "Что подготовить для политики и согласия, как проследить путь заявки и проверить формы вместе с разработчиком.",
+  "contentFile": "sites/ne-prosto/seo/blog/politika-konfidencialnosti-dlya-sajta/article.html",
+  "cover": "sites/ne-prosto/seo/blog/politika-konfidencialnosti-dlya-sajta/cover.png",
+  "coverAlt": "Форма заявки, политика конфиденциальности и отдельное согласие на столе студии",
+  "images": [
+    {
+      "file": "sites/ne-prosto/seo/blog/politika-konfidencialnosti-dlya-sajta/put-zayavki.png",
+      "name": "put-zayavki"
+    }
+  ],
+  "cta": {
+    "title": "Готовите формы для сайта?",
+    "text": "Обсудим задачу сайта, поля форм и путь заявки.",
+    "button": "Обсудить мою задачу"
+  }
+}

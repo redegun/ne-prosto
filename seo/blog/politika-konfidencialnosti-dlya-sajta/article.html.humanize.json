@@ -1,0 +1,19 @@
+{
+ "status": "PASS",
+ "file": "sites/ne-prosto/seo/blog/politika-konfidencialnosti-dlya-sajta/article.html",
+ "words": 906,
+ "sections": 6,
+ "not_x_but_y": 0,
+ "refrains": {
+  "не доказывает": 0,
+  "не заменяет": 0,
+  "не гарантирует": 0,
+  "по инструкции/документации": 0
+ },
+ "morals": 0,
+ "callouts": 0,
+ "labels": 0,
+ "leaks": 0,
+ "fails": [],
+ "warns": []
+}

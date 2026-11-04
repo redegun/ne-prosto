@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/blog/etapy-razrabotki-sajta",
+    "https://ne-prosto.ru/politika-konfidencialnosti",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/soglasie-na-obrabotku-personalnyh-dannyh",
+    "https://ne-prosto.ru/uslugi/sajtyi",
+    "https://www.consultant.ru/document/cons_doc_LAW_61801/6c94959bc017ac80140621762d2ac59f6006b08c/",
+    "https://www.consultant.ru/document/cons_doc_LAW_61801/eeeebe22bf738fd65bb66b95cc278911ae2525ee/"
+  ],
+  "checked": 0,
+  "fixable": 0,
+  "manualReview": {
+    "status": "PASS",
+    "claims": [
+      {
+        "claim": "Публикация политики на страницах сбора",
+        "source": "https://www.consultant.ru/document/cons_doc_LAW_61801/eeeebe22bf738fd65bb66b95cc278911ae2525ee/",
+        "reference": "152-ФЗ, ст.18.1 ч.2"
+      },
+      {
+        "claim": "Отдельность и однозначность согласия",
+        "source": "https://www.consultant.ru/document/cons_doc_LAW_61801/6c94959bc017ac80140621762d2ac59f6006b08c/",
+        "reference": "152-ФЗ, ст.9 ч.1"
+      },
+      {
+        "claim": "Доказательство согласия или другого основания возложено на оператора",
+        "source": "https://www.consultant.ru/document/cons_doc_LAW_61801/6c94959bc017ac80140621762d2ac59f6006b08c/",
+        "reference": "152-ФЗ, ст.9 ч.3"
+      },
+      {
+        "claim": "Студия начинает с брифа, материалов, структуры; готовит дизайн и подключает формы",
+        "source": "https://ne-prosto.ru/uslugi/sajtyi"
+      },
+      {
+        "claim": "Политика студии описывает заявки и отклики, цели и контакты; согласие отдельно",
+        "source": "https://ne-prosto.ru/politika-konfidencialnosti"
+      },
+      {
+        "claim": "Ссылки на документы доступны из форм",
+        "source": "https://ne-prosto.ru/blog/etapy-razrabotki-sajta"
+      }
+    ],
+    "limitations": "Не юридическое заключение. Цены, гарантии, сроки, штрафы и выдуманные кейсы отсутствуют."
+  },
+  "research": {
+    "intent": "Практическая подготовка политики и согласия для владельца сайта",
+    "competitorCoverage": "Шаблоны, генераторы, состав политики, cookies, размещение и частые ошибки. Наш угол: путь заявки, задания разработчику, серверная проверка и редакция согласия.",
+    "limitations": "Один нерелевантный результат Google Translate в топ-5; allo.tochka.com недоступен: TLS certificate error; остальные релевантные страницы прочитаны."
+  }
+}
