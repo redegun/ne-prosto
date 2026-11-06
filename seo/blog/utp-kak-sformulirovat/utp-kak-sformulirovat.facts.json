@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/reklamnyie-kampanii",
+    "https://ne-prosto.ru/uslugi/sajtyi"
+  ],
+  "checked": 0,
+  "fixable": 0,
+  "manualReview": {
+    "result": "PASS",
+    "studioClaims": "Состав рекламной услуги и работа над сайтом сверены с живыми primaryTarget/secondaryTargets; выдуманных кейсов, цен, сроков, гарантий нет. Примеры условные.",
+    "sources": [
+      "https://ne-prosto.ru/uslugi/reklamnyie-kampanii",
+      "https://ne-prosto.ru/uslugi/sajtyi",
+      "https://ne-prosto.ru/portfolio/"
+    ]
+  }
+}

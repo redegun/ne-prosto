@@ -1,0 +1,21 @@
+{
+ "status": "PASS",
+ "file": "sites/ne-prosto/seo/blog/utp-kak-sformulirovat/article.html",
+ "words": 919,
+ "sections": 6,
+ "not_x_but_y": 1,
+ "refrains": {
+  "не доказывает": 0,
+  "не заменяет": 0,
+  "не гарантирует": 0,
+  "по инструкции/документации": 0
+ },
+ "morals": 0,
+ "callouts": 0,
+ "labels": 0,
+ "leaks": 0,
+ "fails": [],
+ "warns": [
+  "почти нет конкретики: 0 цифр на 919 слов — проверь, есть ли факты из источников клиента"
+ ]
+}
