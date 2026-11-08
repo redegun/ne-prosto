@@ -1,0 +1,9 @@
+/* task 1726: живые обложки Stageshow (карточки портфолио и страницы кейсов) */
+.np-ss{display:block;position:relative}
+.np-ss__v{display:block;position:relative;overflow:hidden;background:var(--np-ss-bg,#eee);border-radius:16px}
+.np-ss__v video,.np-ss__v img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.np-ss--case{margin:0 0 30px}
+.np-ss--case .np-ss__v--wide{max-width:960px}
+.np-ss--case .np-ss__v--tall{display:none;max-width:358px;margin:0 auto}
+.np-ss--card .np-ss__v{border-radius:inherit}
+@media (max-width:767px){.np-ss--case .np-ss__v--wide{display:none}.np-ss--case .np-ss__v--tall{display:block}}

@@ -31,3 +31,7 @@ build_cms.py — исторический генератор v1, заблоки�
 
 ## Иллюстрации услуг
 Семь временно принятых Blender-композиций вместо заглушек: memory/illustrations.md. Интегрированы в общие блоки, template8 и np_related. Старое тестовое изображение услуги19 заменено и в body, и вOG. Финальная проверка/backup CI39140675813, 36objects/23assets.
+
+## Живые обложки Stageshow (#1726, 08.11.2026)
+Карточки vinyl-tm/kppf/merci в `np_project` (ветка Fenom по `$uri`) и блок `[[$np_ss_case]]` первой строкой content кейсов 83/84/85; стили/скрипт `/assets/neprosto/stageshow/stageshow.{css,js}` в head/head_2019. Выкатка: MODX API по SSH с SHA guard и правкой cms-manifest. Новый кейс и откат: content/stageshow-1726/README.md.
+Факт с 22.10: правки шаблонов и чанков (#508–#529, #543, #1726) идут через MODX API по SSH (`php < script.php`), CI design-publish.yml с 19.10 не запускался. Живой site.css содержит стили #543, которых нет в репозитории (`assets/site.css`); CI-выпуск в таком виде их бы затёр.

@@ -152,8 +152,8 @@
       "name": "np_project",
       "field": "snippet",
       "path": "chunks/np_project.html",
-      "expected": "a43cd19b000c4a683e473ca06acef74c724b69bb5bd8d5e80913f8012dca47ff",
-      "target": "a43cd19b000c4a683e473ca06acef74c724b69bb5bd8d5e80913f8012dca47ff"
+      "expected": "ce0a7683bd99a4d962425b8985ad49200bae0e2c19e3efe5de78fdd34d77c3bd",
+      "target": "ce0a7683bd99a4d962425b8985ad49200bae0e2c19e3efe5de78fdd34d77c3bd"
     },
     {
       "type": "modChunk",
@@ -197,8 +197,8 @@
       "name": "head_2019",
       "field": "snippet",
       "path": "chunks/head_2019.html",
-      "expected": "9f7f58e7c0044818bbb4575d3646865a6defd05f53ddeefd38c55ffd5448d15b",
-      "target": "9f7f58e7c0044818bbb4575d3646865a6defd05f53ddeefd38c55ffd5448d15b"
+      "expected": "7f2bb9fb9887105f4682c2637e38b252ae4026facc5ead3796a534b8d45cc697",
+      "target": "7f2bb9fb9887105f4682c2637e38b252ae4026facc5ead3796a534b8d45cc697"
     },
     {
       "type": "modChunk",
@@ -206,8 +206,8 @@
       "name": "head",
       "field": "snippet",
       "path": "chunks/head.html",
-      "expected": "4e5e872fcbe651552c5bc27b47a78996c753f4312d583e1cf90721ca657fd608",
-      "target": "6a596f7a475615b9042044d581d38b328be19482cca384bdb02c3bef587edb2e"
+      "expected": "526cc6ea21c55e89d87a97edf50ba6e5c48737f5fb88d6e1a44fdf822db49a74",
+      "target": "526cc6ea21c55e89d87a97edf50ba6e5c48737f5fb88d6e1a44fdf822db49a74"
     },
     {
       "type": "modChunk",
@@ -325,6 +325,15 @@
       "path": "chunks/np_related.html",
       "expected": "67397e49abcafa249014da3458824997f9205d92f4f9602bdc4d11cedb968cc5",
       "target": "67397e49abcafa249014da3458824997f9205d92f4f9602bdc4d11cedb968cc5"
+    },
+    {
+      "type": "modChunk",
+      "id": null,
+      "name": "np_ss_case",
+      "field": "snippet",
+      "path": "chunks/np_ss_case.html",
+      "expected": "6e8271b265578e078c3f027318232c8bbfdb1e92728b794b0f8d2531674bc71f",
+      "target": "6e8271b265578e078c3f027318232c8bbfdb1e92728b794b0f8d2531674bc71f"
     }
   ]
 }
