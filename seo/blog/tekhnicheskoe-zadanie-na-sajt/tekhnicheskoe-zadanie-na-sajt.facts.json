@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/blog/etapy-razrabotki-sajta",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/sajtyi"
+  ],
+  "checked": 0,
+  "fixable": 0
+}

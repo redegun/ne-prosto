@@ -121,7 +121,7 @@
     },
     {
       "order": 5,
-      "status": "pending",
+      "status": "done",
       "cluster": "sajty",
       "alias": "tekhnicheskoe-zadanie-na-sajt",
       "title": "Техническое задание на сайт: что подготовить заказчику",
@@ -134,7 +134,12 @@
       "secondaryTargets": [
         "/blog/etapy-razrabotki-sajta"
       ],
-      "notes": "Wordstat 31.10: 359. Не дублировать «Этапы разработки» — здесь состав ТЗ (цели, страницы, функции, интеграции, контент, приёмка)."
+      "notes": "Wordstat 31.10: 359. Не дублировать «Этапы разработки» — здесь состав ТЗ (цели, страницы, функции, интеграции, контент, приёмка).",
+      "resourceId": 120,
+      "url": "https://ne-prosto.ru/blog/tekhnicheskoe-zadanie-na-sajt",
+      "date": "2026-11-08",
+      "publishedAt": "2026-11-08T23:48:20+03:00",
+      "chars": 6741
     },
     {
       "order": 6,

@@ -1,0 +1,21 @@
+{
+  "alias": "tekhnicheskoe-zadanie-na-sajt",
+  "pagetitle": "Техническое задание на сайт: что подготовить заказчику",
+  "titl": "Техническое задание на разработку сайта: состав — Непросто",
+  "description": "Техническое задание на разработку сайта: как описать страницы, функции, материалы и приёмку. Что подготовить заказчику и какие вопросы обсудить со студией.",
+  "introtext": "Как описать будущий сайт, чтобы заказчик и разработчик одинаково понимали результат. Разбираем страницы, функции, материалы и проверку готовой работы.",
+  "contentFile": "sites/ne-prosto/seo/blog/tekhnicheskoe-zadanie-na-sajt/article.html",
+  "cover": "sites/ne-prosto/seo/blog/tekhnicheskoe-zadanie-na-sajt/cover.png",
+  "coverAlt": "Рабочий стол студии со схемой страниц и макетом сайта",
+  "images": [
+    {
+      "file": "sites/ne-prosto/seo/blog/tekhnicheskoe-zadanie-na-sajt/scenarii.png",
+      "name": "scenarii"
+    }
+  ],
+  "cta": {
+    "title": "Что включить в задание на сайт?",
+    "text": "Разберём задачу, состав материалов и структуру будущего сайта.",
+    "button": "Обсудить мою задачу"
+  }
+}
