@@ -1,0 +1,49 @@
+/* «Что сделали» — блок кейса и карточка портфолио (#1882). Палитра и шрифты — из site.css. */
+.np-did{margin:56px 0 40px;border-top:1px solid var(--np-line,#d8dbd2);padding-top:28px}
+.np-did__head h2{font-size:clamp(26px,2.6vw,40px);line-height:1.1;margin:0 0 18px;max-width:900px}
+.np-did__types{list-style:none;margin:0 0 22px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.np-did__types li{font-size:14px;line-height:1;padding:8px 12px;border:1px solid var(--np-line,#d8dbd2);color:var(--np-ink,#191b18)}
+.np-did__types li span{color:var(--np-muted,#666a62);margin-left:4px}
+.np-did__list{border-top:1px solid var(--np-line,#d8dbd2)}
+.np-did__item{border-bottom:1px solid var(--np-line,#d8dbd2)}
+.np-did__item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:270px minmax(0,1fr) 28px;align-items:center;gap:24px;padding:20px 0;min-height:44px}
+.np-did__item summary::-webkit-details-marker{display:none}
+.np-did__item summary:focus-visible{outline:2px solid var(--np-ink,#191b18);outline-offset:4px}
+.np-did__meta{display:flex;align-items:center;gap:12px;min-width:0}
+.np-did__tag{font-size:12px;line-height:1;letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;background:var(--np-accent,#e9f77c);color:var(--np-ink,#191b18);white-space:nowrap}
+.np-did__date{font-size:14px;color:var(--np-muted,#666a62);white-space:nowrap}
+.np-did__title{font-size:clamp(19px,1.6vw,24px);line-height:1.25;font-weight:600;color:var(--np-ink,#191b18)}
+.np-did__plus{position:relative;width:28px;height:28px;justify-self:end}
+.np-did__plus:before,.np-did__plus:after{content:"";position:absolute;left:6px;right:6px;top:13px;height:2px;background:var(--np-ink,#191b18);transition:transform .2s}
+.np-did__plus:after{transform:rotate(90deg)}
+.np-did__item[open] .np-did__plus:after{transform:rotate(0)}
+.np-did__item summary:hover .np-did__title{text-decoration:underline;text-underline-offset:4px}
+.np-did__body{padding:0 0 26px 294px}
+.np-did__body dl{margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.np-did__body dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--np-muted,#666a62);margin:0 0 8px}
+.np-did__body dd{margin:0;font-size:17px;line-height:1.5;color:var(--np-ink,#191b18)}
+.np-did__shots{display:grid;gap:16px;margin-top:24px}
+.np-did__shots--2{grid-template-columns:1fr 1fr}
+.np-did__shots--1{grid-template-columns:minmax(0,640px)}
+.np-did__shots figure{margin:0}
+.np-template-11 .process-wrapper .np-did__shots img,.np-did__shots img{display:block;width:100%;height:auto;border:1px solid var(--np-line,#d8dbd2);border-radius:0}
+.np-did__shots figcaption{font-size:13px;color:var(--np-muted,#666a62);margin-top:8px}
+@media (max-width:1024px){
+  .np-did__item summary{grid-template-columns:minmax(0,1fr) 28px;gap:8px 12px}
+  .np-did__meta{grid-column:1/2;grid-row:1}
+  .np-did__title{grid-column:1/2;grid-row:2}
+  .np-did__plus{grid-column:2;grid-row:1/3}
+  .np-did__body{padding-left:0}
+}
+@media (max-width:700px){
+  .np-did{margin:40px 0 28px}
+  .np-did__body dl{grid-template-columns:1fr;gap:16px}
+  .np-did__body dd{font-size:16px}
+  .np-did__shots--2{grid-template-columns:1fr}
+}
+/* карточка /portfolio/ */
+.np-did-card{margin-top:14px;display:flex;flex-direction:column;gap:10px}
+.np-did-card__tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.np-did-card__tags li{font-size:12px;line-height:1;letter-spacing:.04em;padding:6px 8px;border:1px solid var(--np-line,#d8dbd2);color:var(--np-ink,#191b18)}
+.np-project__caption .np-did-card__metric{margin:0;font-size:15px;line-height:1.35;color:var(--np-muted,#666a62);max-width:600px}
+.np-did-card__metric b{font-family:Museo,Arial,sans-serif;font-size:22px;color:var(--np-ink,#191b18);margin-right:4px;background:var(--np-accent,#e9f77c);padding:0 4px}

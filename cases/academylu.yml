@@ -1,0 +1,100 @@
+client: academylu
+name: Academylu
+site: academylu.ru
+portfolio: /portfolio/academylu
+updated: 2026-11-09
+tags:
+- сайт
+- SEO
+- контент
+- автоматизация
+metric: null
+cases:
+- id: academylu-blog-autopilot
+  date: 2026-10
+  type: автоматизация
+  title: 'Блог по расписанию: пн, ср, пт'
+  task: Блог держался на ручных публикациях и встал с июля, а свежие статьи нужны каждую неделю.
+  done: Запустили автопилот на три публикации в неделю по плану из трёх коконов (комнатные растения, участки по размерам, хвойные). Каждая статья с картинками и ссылками на смежные темы.
+  result: С 12 октября вышло 14 новых статей, зимние и комнатные темы идут по очереди.
+  before: null
+  after: null
+  sources:
+  - clients/academylu/memory/reference_academylu_blog_cocoon.md
+  - clients/academylu/log/2026-10.md (05.10)
+  - orch#1841
+  - rix build.json rows academylu
+- id: academylu-feed
+  date: 2026-09
+  type: автоматизация
+  title: Лента работ из Telegram-канала
+  task: Свежие объекты студии публиковались в Telegram, а на сайте разделы работ не пополнялись.
+  done: 'Настроили ночной импорт постов канала на сайт: фото и видео сжимаются, к каждой работе подбирается услуга, у видео есть постер. Под работой блок «Услуга по этой работе».'
+  result: Новые объекты сами попадают на сайт и ведут к нужным услугам.
+  before: null
+  after: null
+  sources:
+  - clients/academylu/memory/reference_academylu_lenta_pipeline.md
+  - clients/academylu/memory/reference_academylu_lenta_service_links.md
+  - clients/academylu/log/2026-09.md (03-08.09)
+- id: academylu-subservices
+  date: 2026-08
+  type: SEO
+  title: Подуслуги под реальный спрос
+  task: 'Услуги были общими, а клиенты ищут конкретное: спил, корчевание, консервация автополива, теплица, новогоднее оформление.'
+  done: По спросу из Wordstat и по ленте работ добавили десятки подуслуг в 7 категориях, к ним коммерческие блоки (этапы, гарантии, доводы), свои hero-картинки и отзывы. Добавили новую категорию «Новогоднее оформление» и услугу «Теплица и грядки под ключ».
+  result: У сайта 110+ страниц услуг и подуслуг с одной структурой, у каждой свой ответ на запрос.
+  before: null
+  after: null
+  sources:
+  - clients/academylu/memory/project_academylu_subservices.md
+  - clients/academylu/memory/reference_academylu_service_gap_blocks.md
+  - clients/academylu/log/2026-07.md
+  - clients/academylu/log/2026-08.md
+  - clients/academylu/log/2026-10.md (18.10)
+- id: academylu-regions
+  date: 2026-08
+  type: SEO
+  title: 'География: хабы городов'
+  task: Заказчики ищут ландшафтные услуги по своему региону.
+  done: Сделали раздел регионов с хабами 15 городов и страницами услуга × город, разобрались с дублями и закрепили canonical и карту сайта.
+  result: Региональный раздел работает без каннибализации и входит в sitemap.
+  before: null
+  after: null
+  sources:
+  - clients/academylu/memory/reference_academylu_regions.md
+  - clients/academylu/log/2026-08.md (10, 19.08)
+- id: academylu-home
+  date: 2026-08
+  type: дизайн
+  title: 'Главная: карусель по категориям и мега-меню'
+  task: Главная не показывала, какие услуги есть, и меню было тесным.
+  done: Сделали первый экран-карусель по категориям, десктопное мега-меню, интро-видео и сезонный блок. Позже заменили картинки на реальные фото объектов.
+  result: Посетитель сразу видит направления и переходит в нужное, сезонные предложения меняются на главной.
+  before: null
+  after: null
+  sources:
+  - clients/academylu/memory/reference_academylu_hero_carousel.md
+  - clients/academylu/log/2026-08.md (05.08)
+  - clients/academylu/log/2026-10.md (12.10)
+- id: academylu-reviews-links
+  date: 2026-10
+  type: контент
+  title: Отзывы из Яндекса и размещение в каталогах
+  task: На сайте мало отзывов, а внешних ссылок на студию почти нет.
+  done: Перенесли отзывы из Яндекс.Бизнеса на страницу отзывов, довели их число с 6 до 13, разместили карточки студии в профильных каталогах со ссылкой на сайт.
+  result: На странице больше живых отзывов, у студии появились внешние упоминания.
+  before: null
+  after: null
+  sources:
+  - clients/academylu/memory/reference_academylu_yandex_reviews.md
+  - clients/academylu/log/2026-10.md (05-06.10)
+notes: 'metric: null. Относительной цифры нет.
+
+  Academylu - услуги ландшафта (не обучение), по памяти клиента. Число подуслуг ''десятки'' - по портфолио 110+ страниц, точный счёт не сверял (36 по плану + 7 + 3 + новые).
+
+  Новый кейс на ne-prosto уже есть и охватывает сайт на Astro, блог (77 статей), услуги, отзывы, мега-меню.
+
+  Не включено: чистка репо/дисков, вынос media, сбои автопилота.
+
+  Уточнение Антона 09.11 (#1882): круги Rix — доводка нашей же вёрстки, мини-кейсы из них убраны.'

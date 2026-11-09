@@ -1,0 +1,122 @@
+[
+ {
+  "cls": 0.020210981689788025,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/portfolio/merci",
+  "w": 1440,
+  "code": 200,
+  "errs": []
+ },
+ {
+  "cls": 0.0014503227746699245,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/portfolio/kppf",
+  "w": 1440,
+  "code": 200,
+  "errs": []
+ },
+ {
+  "cls": 3.1306740089699074e-05,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/portfolio/",
+  "w": 1440,
+  "code": 200,
+  "errs": []
+ },
+ {
+  "cls": 6.55223705150463e-06,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/",
+  "w": 1440,
+  "code": 200,
+  "errs": []
+ },
+ {
+  "cls": 0.030352201636043595,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/portfolio/vinyl-tm",
+  "w": 1440,
+  "code": 200,
+  "errs": []
+ },
+ {
+  "cls": 0,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/portfolio/merci",
+  "w": 390,
+  "code": 200,
+  "errs": []
+ },
+ {
+  "cls": 0,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/portfolio/kppf",
+  "w": 390,
+  "code": 200,
+  "errs": []
+ },
+ {
+  "cls": 0,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/portfolio/",
+  "w": 390,
+  "code": 200,
+  "errs": []
+ },
+ {
+  "cls": 0,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/",
+  "w": 390,
+  "code": 200,
+  "errs": []
+ },
+ {
+  "cls": 0,
+  "h1": 1,
+  "ov": 0,
+  "did": 0,
+  "card": 0,
+  "footer": true,
+  "url": "https://ne-prosto.ru/portfolio/vinyl-tm",
+  "w": 390,
+  "code": 200,
+  "errs": []
+ }
+]
