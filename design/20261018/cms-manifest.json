@@ -152,8 +152,8 @@
       "name": "np_project",
       "field": "snippet",
       "path": "chunks/np_project.html",
-      "expected": "d5592ca9b61fae68006c17e7fd641d2d66f6fc96193cd7a0b8e7332adcb1af2a",
-      "target": "d5592ca9b61fae68006c17e7fd641d2d66f6fc96193cd7a0b8e7332adcb1af2a"
+      "expected": "67963da844c72ad772886487b86cd6fbde51020e9f2ae29bc1754c69af2fe7d7",
+      "target": "67963da844c72ad772886487b86cd6fbde51020e9f2ae29bc1754c69af2fe7d7"
     },
     {
       "type": "modChunk",
