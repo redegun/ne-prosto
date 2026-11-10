@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/blog/besplatnye-kirillicheskie-shrifty",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/logotipyi-firmennyie-stili",
+    "https://openfontlicense.org/documents/OFL.txt"
+  ],
+  "checked": 0,
+  "fixable": 0,
+  "manualReview": {
+    "status": "PASS",
+    "studioClaims": "Типографика как часть фирменного стиля и показ решения на носителях подтверждены живой страницей услуги. Цены, сроки, гарантии и кейсы не заявлены.",
+    "sources": [
+      {
+        "url": "https://www.paratype.ru/eula",
+        "checked": "Десктоп, веб, логотип в кривых, мобильное приложение; условия зависят от продукта."
+      },
+      {
+        "url": "https://openfontlicense.org/documents/OFL.txt",
+        "checked": "Полный текст OFL 1.1 прочитан curl на VPS; разрешения и пункты 1,2,3,5 совпадают с пересказом."
+      }
+    ],
+    "dedup": "sitemap, лента, план и list MODX — пересечений нет",
+    "images": "Две картинки просмотрены, текста и логотипов нет"
+  }
+}

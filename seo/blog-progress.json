@@ -143,7 +143,7 @@
     },
     {
       "order": 6,
-      "status": "pending",
+      "status": "done",
       "cluster": "firstil",
       "alias": "firmennyj-shrift-kak-vybrat",
       "title": "Фирменный шрифт: как выбрать и не нарушить лицензию",
@@ -156,7 +156,12 @@
       "secondaryTargets": [
         "/blog/besplatnye-kirillicheskie-shrifty"
       ],
-      "notes": "Wordstat 31.10: «фирменный шрифт» 2605. Не повторять подборку бесплатных шрифтов (ссылкой на неё). Лицензии (OFL, десктоп/веб/приложения) — по первоисточникам."
+      "notes": "Wordstat 31.10: «фирменный шрифт» 2605. Не повторять подборку бесплатных шрифтов (ссылкой на неё). Лицензии (OFL, десктоп/веб/приложения) — по первоисточникам.",
+      "resourceId": 121,
+      "url": "https://ne-prosto.ru/blog/firmennyj-shrift-kak-vybrat",
+      "date": "2026-11-10",
+      "publishedAt": "2026-11-10T23:47:55.671966+03:00",
+      "chars": 6564
     },
     {
       "order": 7,

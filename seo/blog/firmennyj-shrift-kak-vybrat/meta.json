@@ -1,0 +1,21 @@
+{
+  "alias": "firmennyj-shrift-kak-vybrat",
+  "pagetitle": "Фирменный шрифт: как выбрать и не нарушить лицензию",
+  "titl": "Фирменный шрифт: выбор и проверка лицензии — Непросто",
+  "description": "Как выбрать фирменный шрифт для сайта, логотипа и рабочих документов. Проверяем кириллицу, читаемость, условия лицензии и передачу файлов сотрудникам компании.",
+  "introtext": "Шрифт должен работать и в логотипе, и в повседневных материалах. Разбираем, что проверить на макете и в лицензии до утверждения фирменного стиля.",
+  "contentFile": "sites/ne-prosto/seo/blog/firmennyj-shrift-kak-vybrat/article.html",
+  "cover": "sites/ne-prosto/seo/blog/firmennyj-shrift-kak-vybrat/cover.png",
+  "coverAlt": "Рабочий стол студии с макетами фирменного стиля",
+  "images": [
+    {
+      "file": "sites/ne-prosto/seo/blog/firmennyj-shrift-kak-vybrat/nositeli.png",
+      "name": "nositeli"
+    }
+  ],
+  "cta": {
+    "title": "Выбираете шрифт для компании?",
+    "text": "Обсудим типографику и её применение в фирменном стиле.",
+    "button": "Обсудить мою задачу"
+  }
+}
