@@ -165,7 +165,7 @@
     },
     {
       "order": 7,
-      "status": "pending",
+      "status": "done",
       "cluster": "sajty",
       "alias": "skorost-zagruzki-sajta",
       "title": "Скорость загрузки сайта: что проверить владельцу и что поправить",
@@ -178,7 +178,12 @@
       "secondaryTargets": [
         "/blog/etapy-razrabotki-sajta"
       ],
-      "notes": "Wordstat 31.10: 2902, «проверить…» 682. Инструменты (PageSpeed Insights и т.п.) и пороги Core Web Vitals — только из документации Google."
+      "notes": "Wordstat 31.10: 2902, «проверить…» 682. Инструменты (PageSpeed Insights и т.п.) и пороги Core Web Vitals — только из документации Google.",
+      "resourceId": 122,
+      "url": "https://ne-prosto.ru/blog/skorost-zagruzki-sajta",
+      "date": "2026-11-12",
+      "publishedAt": "2026-11-12T23:46:44.888967+03:00",
+      "chars": 6463
     },
     {
       "order": 8,

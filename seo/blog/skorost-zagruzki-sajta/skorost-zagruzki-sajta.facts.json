@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [
+    {
+      "kind": "term",
+      "value": "28 дней",
+      "context": "Первый показывает накопленный опыт пользователей за предыдущие 28 дней.",
+      "msg": "срок «28 дней» не найден в фактах клиента/на сайте"
+    }
+  ],
+  "warningsTotal": 1,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://developers.google.com/search/docs/appearance/core-web-vitals",
+    "https://developers.google.com/speed/docs/insights/v5/about",
+    "https://ne-prosto.ru/blog/etapy-razrabotki-sajta",
+    "https://ne-prosto.ru/blog/tekhnicheskoe-zadanie-na-sajt",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/sajtyi"
+  ],
+  "checked": 0,
+  "fixable": 0,
+  "manualReview": {
+    "verdict": "PASS",
+    "studio": "Состав работы совпадает с живой /uslugi/sajtyi; цен, сроков, гарантий, клиентов и цифр из практики нет.",
+    "warningResolved": "28 дней — период сбора данных Google, не срок услуги студии. Подтверждено About PageSpeed Insights v5, Real-user experience data.",
+    "source": "https://developers.google.com/speed/docs/insights/v5/about",
+    "verified": [
+      "28-дневное окно и достаточная выборка, переход к данным сайта",
+      "Пороги 2,5 с / 200 мс / 0,1 и 75-й процентиль",
+      "Лабораторные данные Lighthouse и различие с полевыми",
+      "Колебания результатов между запусками"
+    ]
+  }
+}
