@@ -17,6 +17,6 @@ SHA: head bb6563be… → a36c4484…, head_2019 c48a4a5f… → 6aabe95c… М�
 Откат: вернуть в обоих чанках `[[*noindex]]` (или `snippet` из `*.before.html`), сбросить кеш MODX.
 
 ## Проверка
-- `robots_scan.py` по всем 89 опубликованным HTML-ресурсам до/после (`before.json`, `after.json`): 88 — `max-image-preview:large`, 1 (index-new) — `noindex, nofollow` как было; коды ответа, число H1 и `</head>` не изменились.
+- `robots_scan.py` по всем 89 опубликованным HTML-ресурсам до/после (`scan-before.json`, `scan-after.json`): 88 — `max-image-preview:large`, 1 (index-new) — `noindex, nofollow` как было; коды ответа, число H1 и `</head>` не изменились.
 - `img-check.py https://ne-prosto.ru/blog/skorost-zagruzki-sajta` → `IMG_CHECK: PASS`, строки `IMG_SITE` нет.
 - Playwright 1440/390 (`shots.py`, `qa.json`): главная, статья, блог, вакансии — 200, H1=1, без горизонтальной прокрутки, битых картинок и ошибок JS нет.
