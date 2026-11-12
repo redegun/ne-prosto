@@ -1,0 +1,130 @@
+[
+ {
+  "w": 1440,
+  "url": "https://ne-prosto.ru/",
+  "code": 200,
+  "errs": [],
+  "sw": 1440,
+  "iw": 1440,
+  "h1": 1,
+  "header": true,
+  "footer": true,
+  "broken": [],
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "shot": "shots/1440-ne-prosto.ru.png"
+ },
+ {
+  "w": 1440,
+  "url": "https://ne-prosto.ru/blog/skorost-zagruzki-sajta",
+  "code": 200,
+  "errs": [],
+  "sw": 1440,
+  "iw": 1440,
+  "h1": 1,
+  "header": true,
+  "footer": true,
+  "broken": [],
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "shot": "shots/1440-skorost-zagruzki-sajta.png"
+ },
+ {
+  "w": 1440,
+  "url": "https://ne-prosto.ru/blog/",
+  "code": 200,
+  "errs": [],
+  "sw": 1440,
+  "iw": 1440,
+  "h1": 1,
+  "header": true,
+  "footer": true,
+  "broken": [],
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "shot": "shots/1440-blog.png"
+ },
+ {
+  "w": 1440,
+  "url": "https://ne-prosto.ru/kompaniya/vakansii/",
+  "code": 200,
+  "errs": [],
+  "sw": 1440,
+  "iw": 1440,
+  "h1": 1,
+  "header": true,
+  "footer": true,
+  "broken": [],
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "shot": "shots/1440-vakansii.png"
+ },
+ {
+  "w": 390,
+  "url": "https://ne-prosto.ru/",
+  "code": 200,
+  "errs": [],
+  "sw": 390,
+  "iw": 390,
+  "h1": 1,
+  "header": true,
+  "footer": true,
+  "broken": [],
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "shot": "shots/390-ne-prosto.ru.png"
+ },
+ {
+  "w": 390,
+  "url": "https://ne-prosto.ru/blog/skorost-zagruzki-sajta",
+  "code": 200,
+  "errs": [],
+  "sw": 390,
+  "iw": 390,
+  "h1": 1,
+  "header": true,
+  "footer": true,
+  "broken": [],
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "shot": "shots/390-skorost-zagruzki-sajta.png"
+ },
+ {
+  "w": 390,
+  "url": "https://ne-prosto.ru/blog/",
+  "code": 200,
+  "errs": [],
+  "sw": 390,
+  "iw": 390,
+  "h1": 1,
+  "header": true,
+  "footer": true,
+  "broken": [],
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "shot": "shots/390-blog.png"
+ },
+ {
+  "w": 390,
+  "url": "https://ne-prosto.ru/kompaniya/vakansii/",
+  "code": 200,
+  "errs": [],
+  "sw": 390,
+  "iw": 390,
+  "h1": 1,
+  "header": true,
+  "footer": true,
+  "broken": [],
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "shot": "shots/390-vakansii.png"
+ }
+]
