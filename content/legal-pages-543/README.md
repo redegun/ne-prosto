@@ -3,7 +3,7 @@
 Статус: ОПУБЛИКОВАНО 22.10.2026. **С #547 (22.10): тексты — свои (черновики этапа 1 #543), с pe4a только реквизиты ИП Ветрова; почта везде info@ne-prosto.ru.** Версия «по образцу pe4a» (#543) — в бэкапе task547/before/.
 
 ## Страницы
-- /politika-konfidencialnosti — ресурс 113, текст policy.html (по образцу https://pe4a.ru/o-kompanii/politika-ip-vetrov-a.a.-v-otnoshenii-obrabotki-personalnyix-dannyix/, адаптирован: формы ne-prosto, вакансии, без Метрики — на сайте её нет).
+- /politika-konfidencialnosti — ресурс 113, текст policy.html (по образцу https://pe4a.ru/o-kompanii/politika-ip-vetrov-a.a.-v-otnoshenii-obrabotki-personalnyix-dannyix/, адаптирован: формы ne-prosto, вакансии, без Метрики — на сайте её нет). **С 14.11 (#2452) Метрика на сайте есть: в политику добавлены разделы про неё (2, 3, 5.3, 7), редакция от 14.11.2026, policy.html обновлён — content/metrika-2452/README.md.**
 - /soglasie-na-obrabotku-personalnyh-dannyh — ресурс 114, consent.html (на pe4a отдельного согласия нет — написано в той же логике).
 - Оператор ИП Ветров А.А., ИНН 502411688510 (сверен с Эльбой GET /organizations), ОГРНИП и адрес — как на pe4a; e-mail для запросов da@pe4a.ru (как на pe4a, домен на Timeweb, не Gmail — трансграничный пункт не нужен). Телефон — сайта ne-prosto.
 - Шаблон 19 «Документ» (template-doc.html): шапка, крошки, H1, текст, подвал. hidemenu=1, searchable=1.

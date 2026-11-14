@@ -1,0 +1,106 @@
+{
+ "home-1440": {
+  "url": "/",
+  "ym_defined": true,
+  "tag_js": true,
+  "pageview_hit": true,
+  "goals": [
+   "lead_form"
+  ],
+  "mock_posts": [
+   "https://ne-prosto.ru/assets/components/ajaxform/action.php"
+  ],
+  "js_errors": [],
+  "overflow": false,
+  "h1": 1
+ },
+ "home-390": {
+  "url": "/",
+  "ym_defined": true,
+  "tag_js": true,
+  "pageview_hit": true,
+  "goals": [],
+  "mock_posts": [],
+  "js_errors": [],
+  "overflow": false,
+  "h1": 1
+ },
+ "contacts-1440": {
+  "url": "/koordinatyi",
+  "ym_defined": true,
+  "tag_js": true,
+  "pageview_hit": true,
+  "goals": [
+   "lead_form"
+  ],
+  "mock_posts": [
+   "https://ne-prosto.ru/assets/components/ajaxform/action.php"
+  ],
+  "js_errors": [],
+  "overflow": false,
+  "h1": 1
+ },
+ "article-1440": {
+  "url": "/blog/skorost-zagruzki-sajta",
+  "ym_defined": true,
+  "tag_js": true,
+  "pageview_hit": true,
+  "goals": [
+   "lead_form"
+  ],
+  "mock_posts": [
+   "https://ne-prosto.ru/assets/components/ajaxform/action.php"
+  ],
+  "js_errors": [],
+  "overflow": false,
+  "h1": 1
+ },
+ "article-390": {
+  "url": "/blog/skorost-zagruzki-sajta",
+  "ym_defined": true,
+  "tag_js": true,
+  "pageview_hit": true,
+  "goals": [],
+  "mock_posts": [],
+  "js_errors": [],
+  "overflow": false,
+  "h1": 1
+ },
+ "jobs-1440": {
+  "url": "/kompaniya/vakansii/",
+  "ym_defined": true,
+  "tag_js": true,
+  "pageview_hit": true,
+  "goals": [
+   "job_form"
+  ],
+  "mock_posts": [
+   "https://ne-prosto.ru/assets/components/ajaxform/action.php"
+  ],
+  "js_errors": [],
+  "overflow": false,
+  "h1": 1
+ },
+ "policy-1440": {
+  "url": "/politika-konfidencialnosti",
+  "ym_defined": true,
+  "tag_js": true,
+  "pageview_hit": true,
+  "goals": [],
+  "mock_posts": [],
+  "js_errors": [],
+  "overflow": false,
+  "h1": 1
+ },
+ "policy-390": {
+  "url": "/politika-konfidencialnosti",
+  "ym_defined": true,
+  "tag_js": true,
+  "pageview_hit": true,
+  "goals": [],
+  "mock_posts": [],
+  "js_errors": [],
+  "overflow": false,
+  "h1": 1
+ }
+}

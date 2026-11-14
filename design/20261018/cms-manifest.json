@@ -197,8 +197,8 @@
       "name": "head_2019",
       "field": "snippet",
       "path": "chunks/head_2019.html",
-      "expected": "6aabe95c62b361d9406a61c7e7b13baf15f4a879dd43a47fb9cb345c810986bf",
-      "target": "6aabe95c62b361d9406a61c7e7b13baf15f4a879dd43a47fb9cb345c810986bf"
+      "expected": "c98449cf502b509684d14915daa0a680ab52aca5fa66ca7b72bebd8202a30c92",
+      "target": "c98449cf502b509684d14915daa0a680ab52aca5fa66ca7b72bebd8202a30c92"
     },
     {
       "type": "modChunk",
@@ -206,8 +206,8 @@
       "name": "head",
       "field": "snippet",
       "path": "chunks/head.html",
-      "expected": "a36c44842e98acba0cd6ab5137b1c4b96a2435156b835d7c6515772fff91972a",
-      "target": "a36c44842e98acba0cd6ab5137b1c4b96a2435156b835d7c6515772fff91972a"
+      "expected": "e45b705617bc0cc783059ce5b7a458b4690522980df6600c370d5c056b69a61b",
+      "target": "e45b705617bc0cc783059ce5b7a458b4690522980df6600c370d5c056b69a61b"
     },
     {
       "type": "modChunk",
