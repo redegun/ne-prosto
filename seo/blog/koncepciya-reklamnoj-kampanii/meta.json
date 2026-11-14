@@ -1,0 +1,21 @@
+{
+  "alias": "koncepciya-reklamnoj-kampanii",
+  "pagetitle": "Концепция рекламной кампании: как её проверить",
+  "titl": "Концепция рекламной кампании: проверка идеи — Непросто",
+  "description": "Концепция рекламной кампании: что подготовить к брифу, как оценить идею и оформление, проверить макеты на разных носителях и согласовать их до изготовления рекламы.",
+  "introtext": "Как проверить рекламную идею до изготовления материалов. Что собрать к брифу, о чём спросить на презентации и как обсуждать макеты без спора о вкусах.",
+  "contentFile": "sites/ne-prosto/seo/blog/koncepciya-reklamnoj-kampanii/article.html",
+  "cover": "sites/ne-prosto/seo/blog/koncepciya-reklamnoj-kampanii/cover.png",
+  "coverAlt": "Общая идея рекламной кампании объединяет плакат, баннер и экран телефона",
+  "images": [
+    {
+      "file": "sites/ne-prosto/seo/blog/koncepciya-reklamnoj-kampanii/nositeli.png",
+      "name": "nositeli"
+    }
+  ],
+  "cta": {
+    "title": "Как проверить идею вашей кампании?",
+    "text": "Поможем определить главную мысль и выразить её в рекламных материалах.",
+    "button": "Обсудить мою задачу"
+  }
+}

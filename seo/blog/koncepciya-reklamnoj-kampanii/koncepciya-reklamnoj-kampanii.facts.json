@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/blog/utp-kak-sformulirovat",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/logotipyi-firmennyie-stili",
+    "https://ne-prosto.ru/uslugi/reklamnyie-kampanii"
+  ],
+  "checked": 0,
+  "fixable": 0,
+  "manualReview": {
+    "result": "PASS",
+    "claims": [
+      {
+        "claim": "Студия начинает с содержания, определяет главную мысль, разрабатывает концепцию и оформление, адаптирует к носителям",
+        "source": "https://ne-prosto.ru/uslugi/reklamnyie-kampanii",
+        "result": "confirmed"
+      },
+      {
+        "claim": "Фирменный стиль включает знак, цвет, типографику и графику, применяется в рекламе",
+        "source": "https://ne-prosto.ru/uslugi/logotipyi-firmennyie-stili",
+        "result": "confirmed"
+      },
+      {
+        "claim": "Поможем определить главную мысль и выразить её в рекламных материалах",
+        "source": "https://ne-prosto.ru/uslugi/reklamnyie-kampanii",
+        "result": "confirmed"
+      }
+    ],
+    "portfolioChecked": "https://ne-prosto.ru/portfolio/",
+    "unverifiedPricesDeadlinesGuaranteesCases": 0
+  }
+}

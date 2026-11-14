@@ -187,7 +187,7 @@
     },
     {
       "order": 8,
-      "status": "pending",
+      "status": "done",
       "cluster": "reklama",
       "alias": "koncepciya-reklamnoj-kampanii",
       "title": "Концепция рекламной кампании: из чего она состоит и как её проверить",
@@ -200,7 +200,12 @@
       "secondaryTargets": [
         "/uslugi/logotipyi-firmennyie-stili"
       ],
-      "notes": "Wordstat 31.10: 261 + бриф 27. Как на /uslugi/reklamnyie-kampanii: главная мысль → концепция и оформление → адаптация под носители."
+      "notes": "Wordstat 31.10: 261 + бриф 27. Как на /uslugi/reklamnyie-kampanii: главная мысль → концепция и оформление → адаптация под носители.",
+      "resourceId": 123,
+      "url": "https://ne-prosto.ru/blog/koncepciya-reklamnoj-kampanii",
+      "date": "2026-11-14",
+      "publishedAt": "2026-11-14T23:46:29.459630+03:00",
+      "chars": 6634
     },
     {
       "order": 9,
