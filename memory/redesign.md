@@ -19,7 +19,7 @@
 На главной нет JS errors. Старое предупреждение ключа Яндекс Карт остаётся отдельной задачей #3.
 
 ## Выпуск и восстановление
-Только GitHub Actions design-publish.yml, main, одноразовый office1080/neprosto-once. Финальный run39136901081 success (commit73c4387), предыдущий v3 run39136772846 success. Проверены CMS readback/SHA и публичные assets. Временные bridge архивированы за webroot и отвечают404. Runner снят с регистрации.
+До 18.10 — GitHub Actions design-publish.yml, main, одноразовый office1080/neprosto-once (последний запуск 18.10.2026, `gh run list`). С 22.10 шаблоны и чанки выкатываются через MODX API по SSH — см. «Факт с 22.10» ниже; перед CI-выпуском свести репо с живыми значениями, иначе он откатит #543. Финальный run39136901081 success (commit73c4387), предыдущий v3 run39136772846 success. Проверены CMS readback/SHA и публичные assets. Временные bridge архивированы за webroot и отвечают404. Runner снят с регистрации.
 Исходный CMS snapshot: sources/cms-snapshot.json; полный backup v1 /opt/office1080/ne-prosto-backups/39136228964/cms-before.json. Копии на VPS sources/releases/<run>/; финальный backup39136901081. Не копировать этот каталог на тонкий клиент.
 Выпуск v2 первоначально откатил поля из-за trim при сохранении modSnippet; v2b применён, но HTTP проверка получила кратковременный502 после сброса кеша. Затем все68 страниц прошли; CI v3/v4 успешны. HTTP проверка повторяет только502/503/504, до3попыток.
 build_cms.py — исторический генератор v1, заблокирован после появления releases/v1.json. Не запускать для дальнейших правок. Брать текущий manifest, сохранять его в releases, переносить target→expected до изменения файлов, пересчитывать targetSHA и повышать query-версию CSS/JS в head/head_2019. Проверять соседние шаблоны.

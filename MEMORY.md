@@ -35,6 +35,9 @@
 - MODX 2.8.8-pl. Правки дополнений под PHP 8 помечены `task449 php8` (ddTypograph EMT.php, getResources, SiblingNav, MIGX) — при обновлении этих пакетов проверить, что новая версия совместима с 8.3.
 - В Fenom-шаблонах TV ImagePlus — строка JSON, не массив: не обращаться `['sourceImg']` (на 8.3 фатал).
 - SSH: `redegun@vh306.timeweb.ru` — ключ ПК и с 31.10 ключ VPS `/root/.ssh/ne-prosto_publish` (полный shell, `command=` Timeweb игнорирует; проверено входом 01.11). Откат PHP — удалить блок до `# task 449 END`.
+- CLI по SSH (#2148, 13.11): `php` в PATH — 8.2.35, не 8.3 (CGI-обёртка — только для веба). Скрипты MODX запускать `/opt/php83/bin/php` явно, как `seo/autopilot/publish.sh`; `php < script.php` из старых README идёт на 8.2.
+- MODX при сохранении modSnippet обрезает пробелы и переводы строк в конце кода (#1882; то же у v2 в memory/redesign.md): SHA-guard сверять по readback после записи.
+- Локальный `.git/info/exclude` (только на VPS, не в git) молча исключает из коммитов `content/**/{before.json,structure.json,preview.html,endpoint-state.json,endpoint-*-state.json,sources/}`, `design/20261018/{sources,preview}/`, `__pycache__/` (#2148). Нужен файл с таким именем в git — переименовать или `git add -f`.
 
 ## Архив (устарело 2026-11-01)
 - «Доступы читаются только серверно из clients/antonvetrov/ACCESS.md» и «SSH: … (ключ ПК)» как единственный доступ — уточнено: SSH по ключам ПК и VPS, без ACCESS.md (DOC_DRIFT #532, #862).
