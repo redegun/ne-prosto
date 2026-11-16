@@ -1,0 +1,21 @@
+{
+  "alias": "iz-chego-skladyvaetsya-stoimost-sajta",
+  "pagetitle": "Из чего складывается стоимость разработки сайта",
+  "titl": "Стоимость разработки сайта: как сравнить сметы — Непросто",
+  "description": "Из чего складывается стоимость разработки сайта: страницы, дизайн, функции и материалы. Как сравнить сметы подрядчиков и заранее обсудить дополнительные расходы.",
+  "introtext": "Одинаковое «нужен сайт компании» приносит разные сметы. Разбираемся, какие работы сравнивать и что уточнить до согласования бюджета.",
+  "contentFile": "sites/ne-prosto/seo/blog/iz-chego-skladyvaetsya-stoimost-sajta/article.html",
+  "cover": "sites/ne-prosto/seo/blog/iz-chego-skladyvaetsya-stoimost-sajta/cover.png",
+  "coverAlt": "Модули сайта, смета и калькулятор на столе студии",
+  "images": [
+    {
+      "file": "sites/ne-prosto/seo/blog/iz-chego-skladyvaetsya-stoimost-sajta/smeta.png",
+      "name": "smeta"
+    }
+  ],
+  "cta": {
+    "title": "Что входит в смету вашего сайта?",
+    "text": "Обсудим задачу, страницы и материалы для будущего сайта.",
+    "button": "Обсудить мою задачу"
+  }
+}

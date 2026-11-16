@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/blog/tekhnicheskoe-zadanie-na-sajt",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/sajtyi"
+  ],
+  "checked": 0,
+  "fixable": 0,
+  "manualReview": {
+    "status": "PASS",
+    "claims": [
+      {
+        "claim": "Начинаем с брифа, разбираем задачу и состав материалов, проектируем структуру и путь посетителя",
+        "source": "https://ne-prosto.ru/uslugi/sajtyi",
+        "verdict": "confirmed"
+      },
+      {
+        "claim": "Помогаем с поддержкой, новыми страницами, контентом и продвижением",
+        "source": "https://ne-prosto.ru/uslugi/sajtyi",
+        "verdict": "confirmed"
+      }
+    ],
+    "commercialClaims": "Цен, сроков, гарантий и вымышленных кейсов нет",
+    "research": {
+      "query": "стоимость разработки сайта",
+      "intent": "Стоимость и состав разработки, сравнение предложений",
+      "gap": "Сопоставление состава смет, неизвестные условия интеграций и расходы после запуска",
+      "note": "Цены конкурентов не использованы"
+    }
+  }
+}

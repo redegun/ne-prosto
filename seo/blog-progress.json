@@ -209,7 +209,7 @@
     },
     {
       "order": 9,
-      "status": "pending",
+      "status": "done",
       "cluster": "sajty",
       "alias": "iz-chego-skladyvaetsya-stoimost-sajta",
       "title": "Из чего складывается стоимость разработки сайта",
@@ -222,7 +222,12 @@
       "secondaryTargets": [
         "/blog/tekhnicheskoe-zadanie-na-sajt"
       ],
-      "notes": "Wordstat 31.10: 388. Цены студии не называть; факторы стоимости и вопросы к подрядчику."
+      "notes": "Wordstat 31.10: 388. Цены студии не называть; факторы стоимости и вопросы к подрядчику.",
+      "resourceId": 124,
+      "url": "https://ne-prosto.ru/blog/iz-chego-skladyvaetsya-stoimost-sajta",
+      "date": "2026-11-16",
+      "publishedAt": "2026-11-16T23:47:44.114351+03:00",
+      "chars": 6471
     },
     {
       "order": 10,
