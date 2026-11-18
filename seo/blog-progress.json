@@ -231,7 +231,7 @@
     },
     {
       "order": 10,
-      "status": "pending",
+      "status": "done",
       "cluster": "firstil",
       "alias": "nejming-kompanii",
       "title": "Нейминг компании: как придумать название и проверить его",
@@ -244,7 +244,12 @@
       "secondaryTargets": [
         "/blog/tovarnyj-znak-i-logotip"
       ],
-      "notes": "Wordstat 31.10: 212. Проверки: домен, соцсети, товарные знаки (ФИПС) — без выдуманных сроков."
+      "notes": "Wordstat 31.10: 212. Проверки: домен, соцсети, товарные знаки (ФИПС) — без выдуманных сроков.",
+      "resourceId": 125,
+      "url": "https://ne-prosto.ru/blog/nejming-kompanii",
+      "date": "2026-11-18",
+      "publishedAt": "2026-11-18T23:46:32.271583+03:00",
+      "chars": 6785
     },
     {
       "order": 11,

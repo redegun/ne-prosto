@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/blog/tovarnyj-znak-i-logotip",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/logotipyi-firmennyie-stili"
+  ],
+  "checked": 0,
+  "fixable": 0
+}
