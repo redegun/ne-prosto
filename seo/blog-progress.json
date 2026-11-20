@@ -253,7 +253,7 @@
     },
     {
       "order": 11,
-      "status": "pending",
+      "status": "done",
       "cluster": "sajty",
       "alias": "redizajn-sajta",
       "title": "Редизайн сайта: когда он нужен и что сохранить",
@@ -266,7 +266,12 @@
       "secondaryTargets": [
         "/blog/priznaki-chto-pora-na-rebrending"
       ],
-      "notes": "Wordstat 31.10: 710. Отличать от ребрендинга (ссылка на статью-признаки). Что сохранить: адреса страниц и редиректы, тексты, аналитику."
+      "notes": "Wordstat 31.10: 710. Отличать от ребрендинга (ссылка на статью-признаки). Что сохранить: адреса страниц и редиректы, тексты, аналитику.",
+      "resourceId": 126,
+      "url": "https://ne-prosto.ru/blog/redizajn-sajta",
+      "date": "2026-11-20",
+      "publishedAt": "2026-11-20T23:47:10.901615+03:00",
+      "chars": 6603
     },
     {
       "order": 12,

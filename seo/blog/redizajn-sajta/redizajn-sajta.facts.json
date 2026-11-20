@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
+    "https://ne-prosto.ru/blog/priznaki-chto-pora-na-rebrending",
+    "https://ne-prosto.ru/blog/tekhnicheskoe-zadanie-na-sajt",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/sajtyi"
+  ],
+  "checked": 0,
+  "fixable": 0
+}
