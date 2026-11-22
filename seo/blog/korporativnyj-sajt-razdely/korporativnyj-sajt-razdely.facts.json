@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://ne-prosto.ru/blog/kakie-stranicy-pomogayut-poluchat-obrashcheniya",
+    "https://ne-prosto.ru/blog/tekhnicheskoe-zadanie-na-sajt",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/sajtyi"
+  ],
+  "checked": 0,
+  "fixable": 0,
+  "manualReview": {
+    "status": "PASS",
+    "studioClaims": [
+      "Старт с задачи, состава материалов и структуры подтверждён /uslugi/sajtyi",
+      "Макеты и разработка подтверждены /uslugi/sajtyi",
+      "Статья People Pay проверена; аналитика из неё не пересказывается"
+    ],
+    "unsupportedCommercialClaims": 0,
+    "sources": [
+      "https://ne-prosto.ru/uslugi/sajtyi",
+      "https://ne-prosto.ru/portfolio/"
+    ],
+    "researchLimited": "Бесплатный поиск VPS недоступен; запасной поиск дал выдачу, полное чтение большинства конкурентов недоступно. Нормативные и числовые утверждения не использованы."
+  }
+}

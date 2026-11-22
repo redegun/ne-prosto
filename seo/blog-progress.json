@@ -275,7 +275,7 @@
     },
     {
       "order": 12,
-      "status": "pending",
+      "status": "done",
       "cluster": "sajty",
       "alias": "korporativnyj-sajt-razdely",
       "title": "Корпоративный сайт небольшой компании: какие разделы нужны",
@@ -288,7 +288,12 @@
       "secondaryTargets": [
         "/blog/kakie-stranicy-pomogayut-poluchat-obrashcheniya"
       ],
-      "notes": "Wordstat 31.10: 11830 (много навигационного), «разработка корпоративного сайта» 577. Не дублировать статью People Pay (роль страниц в обращениях) — здесь состав разделов."
+      "notes": "Wordstat 31.10: 11830 (много навигационного), «разработка корпоративного сайта» 577. Не дублировать статью People Pay (роль страниц в обращениях) — здесь состав разделов.",
+      "resourceId": 127,
+      "url": "https://ne-prosto.ru/blog/korporativnyj-sajt-razdely",
+      "date": "2026-11-22",
+      "publishedAt": "2026-11-22T23:47:44.073350+03:00",
+      "chars": 6855
     },
     {
       "order": 13,
