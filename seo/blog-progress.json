@@ -1,10 +1,10 @@
 {
   "version": 1,
   "site": "https://ne-prosto.ru",
-  "cocoon": "ne-prosto-blog-uslugi-2026q4",
-  "cocoonTitle": "Блог «Годнота»: практические статьи для заказчика — сайты, фирменный стиль, реклама",
+  "cocoon": "ne-prosto-blog-ekspluataciya-i-priemka-2026q4",
+  "cocoonTitle": "Годнота: как принять и поддерживать сайт, фирменный стиль и рекламу",
   "sourcePlan": "sites/ne-prosto/seo/blog-plan.md",
-  "startedDate": "2026-10-31",
+  "startedDate": "2026-11-25",
   "cadence": "every-2-days",
   "job": "ne-prosto-blog",
   "finished": false,
@@ -350,6 +350,265 @@
         "/portfolio/"
       ],
       "notes": "Wordstat: «кейсы на сайте» засорён играми, спрос — хвосты. Примеры — только реальные кейсы студии из /portfolio/ (People Pay, СТАНКИН) с их страниц."
+    },
+    {
+      "order": 16,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "komu-prinadlezhit-domen",
+      "title": "Кому принадлежит домен сайта и как это проверить",
+      "keywords": [
+        "кому принадлежит домен"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/blog/etapy-razrabotki-sajta"
+      ],
+      "notes": "Информационный интент. Как проверить администратора домена и оформить доступ на компанию. Keys.so, Москва, 25.11.2026: 2661 широкая, 328 в кавычках, 317 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 17,
+      "status": "pending",
+      "cluster": "firstil",
+      "alias": "firmennye-cveta",
+      "title": "Фирменные цвета: как согласовать палитру для экрана и печати",
+      "keywords": [
+        "фирменные цвета"
+      ],
+      "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
+      "secondaryTargets": [
+        "/blog/servisy-dlya-podbora-cveta"
+      ],
+      "notes": "Информационный интент. Как принять готовую палитру на реальных носителях: контраст, версии для экрана и печати. Без подборки сервисов. Keys.so, Москва, 25.11.2026: 7290 широкая, 21 в кавычках, 21 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 18,
+      "status": "pending",
+      "cluster": "reklama",
+      "alias": "mediaplan-reklamnoj-kampanii",
+      "title": "Медиаплан рекламной кампании: что проверить перед согласованием",
+      "keywords": [
+        "медиаплан рекламной кампании"
+      ],
+      "primaryTarget": "/uslugi/reklamnyie-kampanii",
+      "secondaryTargets": [
+        "/blog/koncepciya-reklamnoj-kampanii"
+      ],
+      "notes": "Информационный интент. Как читать таблицу размещений, календарь и бюджет по каналам. Концепцию и креативы считать уже согласованными. Keys.so, Москва, 25.11.2026: 134 широкая, 3 в кавычках, 3 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 19,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "perenos-sajta-na-drugoj-hosting",
+      "title": "Как перенести сайт на другой хостинг и проверить, что всё работает",
+      "keywords": [
+        "как перенести сайт на другой хостинг"
+      ],
+      "primaryTarget": "/podderzhka/podderzhka",
+      "secondaryTargets": [
+        "/uslugi/sajtyi",
+        "/blog/redizajn-sajta"
+      ],
+      "notes": "Информационный интент. Перенос на другой сервер с сохранением домена и URL, проверка копии, DNS и почты. Без смены структуры и редизайна. Keys.so, Москва, 25.11.2026: 198 широкая, 28 в кавычках, 28 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 20,
+      "status": "pending",
+      "cluster": "firstil",
+      "alias": "sostav-brendbuka",
+      "title": "Что входит в брендбук и как принять его у дизайнера",
+      "keywords": [
+        "что входит в брендбук"
+      ],
+      "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
+      "secondaryTargets": [
+        "/blog/instrumenty-dlya-firmennogo-stilya"
+      ],
+      "notes": "Информационный интент. Как проверить комплект правил, исходников и примеров перед передачей команде. Без обзора сервисов и без ТЗ на фирстиль. Keys.so, Москва, 25.11.2026: 156 широкая, 60 в кавычках, 60 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 21,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "proverka-adaptivnosti-sajta",
+      "title": "Как проверить адаптивность сайта перед приёмкой",
+      "keywords": [
+        "проверка адаптивности сайта"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/blog/etapy-razrabotki-sajta"
+      ],
+      "notes": "Информационный интент. Проверка меню, таблиц, форм и навигации на разных экранах. Скорость загрузки за рамками. Keys.so, Москва, 25.11.2026: 81 широкая, 20 в кавычках, 20 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 22,
+      "status": "pending",
+      "cluster": "reklama",
+      "alias": "ocenka-effektivnosti-reklamnoj-kampanii",
+      "title": "Как оценить эффективность рекламной кампании по заявкам",
+      "keywords": [
+        "как оценить эффективность рекламной кампании"
+      ],
+      "primaryTarget": "/uslugi/reklamnyie-kampanii",
+      "secondaryTargets": [
+        "/blog/koncepciya-reklamnoj-kampanii"
+      ],
+      "notes": "Информационный интент. Как сверить расходы, заявки и их качество после запуска. Без разбора структуры сайта и без выбора оффера. Keys.so, Москва, 25.11.2026: 50 широкая, 4 в кавычках, 4 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 23,
+      "status": "pending",
+      "cluster": "firstil",
+      "alias": "ohrannoe-pole-logotipa",
+      "title": "Охранное поле логотипа: как проверить отступы на макете",
+      "keywords": [
+        "охранное поле логотипа"
+      ],
+      "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
+      "secondaryTargets": [
+        "/blog/tovarnyj-znak-i-logotip"
+      ],
+      "notes": "Информационный интент. Как измерить свободное пространство вокруг знака на носителе. Без юридической охраны и без обзора брендбука. Keys.so, Москва, 25.11.2026: 509 широкая, 148 в кавычках, 148 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 24,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "rezervnoe-kopirovanie-sajta",
+      "title": "Резервное копирование сайта: как проверить, что копия восстановится",
+      "keywords": [
+        "резервное копирование сайта"
+      ],
+      "primaryTarget": "/podderzhka/podderzhka",
+      "secondaryTargets": [
+        "/uslugi/sajtyi",
+        "/blog/etapy-razrabotki-sajta"
+      ],
+      "notes": "Информационный интент. Что сохранить, где хранить и как проверить восстановление отдельно от рабочего сайта. Без сценария переезда. Keys.so, Москва, 25.11.2026: 119 широкая, 2 в кавычках, 2 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 25,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "kontent-dlya-sajta-inventarizaciya",
+      "title": "Контент для сайта: как собрать материалы и назначить ответственных",
+      "keywords": [
+        "контент для сайта"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/blog/korporativnyj-sajt-razdely"
+      ],
+      "notes": "Информационный интент. Как вести реестр материалов, согласовать авторство и собрать файлы. Без выбора разделов, написания кейса и поиска стоков. Keys.so, Москва, 25.11.2026: 3189 широкая, 3 в кавычках, 3 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 26,
+      "status": "pending",
+      "cluster": "firstil",
+      "alias": "firmennyj-pattern",
+      "title": "Фирменный паттерн: где он нужен и как проверить его на носителях",
+      "keywords": [
+        "фирменный паттерн"
+      ],
+      "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
+      "secondaryTargets": [
+        "/blog/instrumenty-dlya-firmennogo-stilya"
+      ],
+      "notes": "Информационный интент. Как проверить повтор, масштаб и читаемость паттерна на разных носителях. Без подбора палитры и без дизайна упаковки. Keys.so, Москва, 25.11.2026: 330 широкая, 34 в кавычках, 30 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 27,
+      "status": "pending",
+      "cluster": "reklama",
+      "alias": "celevaya-auditoriya-dlya-reklamy",
+      "title": "Как определить целевую аудиторию для рекламы по данным о клиентах",
+      "keywords": [
+        "как определить целевую аудиторию для рекламы"
+      ],
+      "primaryTarget": "/uslugi/reklamnyie-kampanii",
+      "secondaryTargets": [
+        "/blog/utp-kak-sformulirovat"
+      ],
+      "notes": "Информационный интент. Как из интервью и истории заказов собрать сегменты для показа. Без формулирования УТП и выбора художественной идеи. Keys.so, Москва, 25.11.2026: 27 широкая, 2 в кавычках, 2 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 28,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "forma-zayavki-na-sajte",
+      "title": "Форма заявки на сайте: как выбрать поля и проверить отправку",
+      "keywords": [
+        "форма заявки на сайте"
+      ],
+      "primaryTarget": "/uslugi/sajtyi",
+      "secondaryTargets": [
+        "/blog/politika-konfidencialnosti-dlya-sajta"
+      ],
+      "notes": "Информационный интент. Как проверить обязательные поля, сообщения об ошибках, повторную отправку и доставку. Без обзора правовых документов и сценариев обработки менеджером. Keys.so, Москва, 25.11.2026: 776 широкая, 2 в кавычках, 2 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 29,
+      "status": "pending",
+      "cluster": "sajty",
+      "alias": "stranica-404-dlya-posetitelej",
+      "title": "Как сделать страницу 404, с которой можно продолжить поиск",
+      "keywords": [
+        "как сделать страницу 404"
+      ],
+      "primaryTarget": "/podderzhka/podderzhka",
+      "secondaryTargets": [
+        "/uslugi/sajtyi",
+        "/blog/redizajn-sajta"
+      ],
+      "notes": "Информационный интент. Как проверить HTTP 404 и дать человеку путь к нужному разделу. Без миграции, массовых редиректов и смены структуры. Keys.so, Москва, 25.11.2026: 64 широкая, 2 в кавычках, 2 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 30,
+      "status": "pending",
+      "cluster": "firstil",
+      "alias": "monohromnyj-logotip",
+      "title": "Монохромный логотип: когда нужна одноцветная версия",
+      "keywords": [
+        "монохромный логотип"
+      ],
+      "primaryTarget": "/uslugi/logotipyi-firmennyie-stili",
+      "secondaryTargets": [
+        "/blog/instrumenty-dlya-firmennogo-stilya"
+      ],
+      "notes": "Информационный интент. Как принять одноцветные версии знака для светлого и тёмного фона, штампа и маркировки. Без подбора палитры и правил отступов. Keys.so, Москва, 25.11.2026: 275 широкая, 24 в кавычках, 23 точная в месяц.",
+      "source": "task-#4921"
+    },
+    {
+      "order": 31,
+      "status": "pending",
+      "cluster": "reklama",
+      "alias": "posadochnaya-stranica-dlya-reklamy",
+      "title": "Посадочная страница для рекламы: что сверить с объявлением до запуска",
+      "keywords": [
+        "посадочная страница для рекламы"
+      ],
+      "primaryTarget": "/uslugi/reklamnyie-kampanii",
+      "secondaryTargets": [
+        "/blog/kreativy-dlya-reklamy"
+      ],
+      "notes": "Информационный интент. Как проверить совпадение обещания, условий и кнопки с конкретным объявлением. Без обзора видов лендингов, услуги разработки и аналитики страниц People Pay. Keys.so, Москва, 25.11.2026: 40 широкая, 2 в кавычках, 2 точная в месяц.",
+      "source": "task-#4921"
     }
   ]
 }
