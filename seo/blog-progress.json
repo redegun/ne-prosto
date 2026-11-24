@@ -297,7 +297,7 @@
     },
     {
       "order": 13,
-      "status": "pending",
+      "status": "done",
       "cluster": "reklama",
       "alias": "kreativy-dlya-reklamy",
       "title": "Креативы для рекламы: как одна идея живёт на разных носителях",
@@ -310,7 +310,12 @@
       "secondaryTargets": [
         "/blog/koncepciya-reklamnoj-kampanii"
       ],
-      "notes": "Wordstat 31.10: 425 + 43. Требования площадок (размеры, маркировка рекламы) — только из первоисточников."
+      "notes": "Wordstat 31.10: 425 + 43. Требования площадок (размеры, маркировка рекламы) — только из первоисточников.",
+      "resourceId": 128,
+      "url": "https://ne-prosto.ru/blog/kreativy-dlya-reklamy",
+      "date": "2026-11-24",
+      "publishedAt": "2026-11-24T23:46:52.096873+03:00",
+      "chars": 6641
     },
     {
       "order": 14,
