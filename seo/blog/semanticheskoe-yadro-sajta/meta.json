@@ -1,0 +1,21 @@
+{
+  "alias": "semanticheskoe-yadro-sajta",
+  "pagetitle": "Семантическое ядро сайта: зачем собирать его до структуры",
+  "titl": "Семантическое ядро сайта до разработки структуры — Непросто",
+  "description": "Семантическое ядро сайта помогает понять, какие страницы нужны покупателю. Объясняем, что подготовить для сбора запросов и как проверить готовый файл специалиста.",
+  "introtext": "Как связать поисковые запросы с будущими страницами сайта. Что подготовить владельцу бизнеса и на что смотреть при приёмке семантического ядра.",
+  "contentFile": "sites/ne-prosto/seo/blog/semanticheskoe-yadro-sajta/article.html",
+  "cover": "sites/ne-prosto/seo/blog/semanticheskoe-yadro-sajta/cover.png",
+  "coverAlt": "Поисковые запросы, собранные в группы для структуры сайта",
+  "images": [
+    {
+      "file": "sites/ne-prosto/seo/blog/semanticheskoe-yadro-sajta/struktura.png",
+      "name": "struktura"
+    }
+  ],
+  "cta": {
+    "title": "Какие страницы нужны вашему сайту?",
+    "text": "Обсудим задачу, материалы и структуру будущего сайта.",
+    "button": "Обсудить мою задачу"
+  }
+}

@@ -319,7 +319,7 @@
     },
     {
       "order": 14,
-      "status": "pending",
+      "status": "done",
       "cluster": "sajty",
       "alias": "semanticheskoe-yadro-sajta",
       "title": "Семантическое ядро сайта простыми словами: зачем его собирать до структуры",
@@ -332,7 +332,12 @@
       "secondaryTargets": [
         "/uslugi/sajtyi"
       ],
-      "notes": "Wordstat 31.10: 673. Ссылка на /podderzhka/prodvizhenie + /uslugi/sajtyi (для CTA конца). Иллюстрация метода — частотность из нашего хаба ИИ-ассистента (README #501)."
+      "notes": "Wordstat 31.10: 673. Ссылка на /podderzhka/prodvizhenie + /uslugi/sajtyi (для CTA конца). Иллюстрация метода — частотность из нашего хаба ИИ-ассистента (README #501).",
+      "resourceId": 129,
+      "url": "https://ne-prosto.ru/blog/semanticheskoe-yadro-sajta",
+      "date": "2026-11-26",
+      "publishedAt": "2026-11-26T23:46:22.348399+03:00",
+      "chars": 6392
     },
     {
       "order": 15,

@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "fails": [],
+  "warnings": [],
+  "warningsTotal": 0,
+  "infra": [],
+  "models": {},
+  "sourcesFetched": [
+    "https://direct.yandex.ru/base/articles/semanticheskoe-yadro-sajta",
+    "https://ne-prosto.ru/blog/tekhnicheskoe-zadanie-na-sajt",
+    "https://ne-prosto.ru/podderzhka/prodvizhenie",
+    "https://ne-prosto.ru/portfolio/",
+    "https://ne-prosto.ru/uslugi/sajtyi"
+  ],
+  "checked": 0,
+  "fixable": 0,
+  "manualReview": {
+    "status": "PASS",
+    "checks": [
+      "Исторический Wordstat 22.10.2026: 11/0 и 581/186, регион Россия; сверено с README хаба #501; в тексте отмечена историческая дата, прогнозов нет.",
+      "Выбор названия услуги соответствует README #501 и странице ИИ-ассистента.",
+      "Структура и тексты в продвижении — живая /podderzhka/prodvizhenie.",
+      "Бриф, материалы, структура и страницы — живая /uslugi/sajtyi.",
+      "Кейсы, цены, сроки, гарантии и вымышленные клиенты отсутствуют; /portfolio/ просмотрено."
+    ],
+    "humanizeAllowLeaks": {
+      "семантическое ядро": "Предмет и основной ключ статьи",
+      "ключевых слов": "Тематический термин сбора поисковых запросов"
+    },
+    "research": "Прочитаны пять релевантных страниц выдачи; выдача засорена VK, они исключены. Общие подтемы: сбор, очистка, группировка, частотность. Дополнение статьи: участие владельца, связь запросов со страницами и приёмка файла."
+  }
+}
