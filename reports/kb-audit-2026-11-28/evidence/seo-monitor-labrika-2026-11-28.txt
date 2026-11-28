@@ -1,0 +1,9 @@
+# SEO Monitor и журнал лаборатории (supabase-vps, только SELECT, 28.11.2026), строки по ne-prosto:
+client_settings|0
+audit_findings|0
+query_position_history|0
+seo_alerts|0
+---lab_rollouts
+0
+
+# Labrika (MCP, labrika_project_find_by_domain ne-prosto.ru, 28.11.2026): count=0 — проекта нет, готовых отчётов нет, платных запусков не делали.

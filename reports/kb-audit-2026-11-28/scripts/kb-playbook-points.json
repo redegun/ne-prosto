@@ -1,0 +1,1109 @@
+[
+{
+"id": "TECH-1",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 1,
+"line": 91,
+"text": "Семантическая HTML-вёрстка (header/nav/main/article/section, корректная иерархия h1–h6) обязательна — упрощает чанкование для AI-краулеров (см. `40_ai_seo/03_multimodal_semantic.md`).",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-2",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 2,
+"line": 93,
+"text": "Использовать только релевантную и поддерживаемую разметку, совпадающую с видимым содержимым страницы: например Product/Offer, Article и Breadcrumb. `FAQPage` не внедрять ради Google rich result: функция перестала показываться 7 мая 2026 года, документация удал",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | к SEO-CONT-141 | сценарий СЦ-006 | источник: Google Search, 2026-06-12 | практика: —_"
+},
+{
+"id": "TECH-3",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 3,
+"line": 95,
+"text": "robots.txt и meta robots не блокируют AI-краулеров и полезные разделы (сверка с `40_ai_seo/05_technical_checklist.md`).",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-4",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 4,
+"line": 97,
+"text": "Скорость и Core Web Vitals — минимальный технический барьер: сами по себе не поднимают в топ, но их провал ограничивает тир документа (Mustang/CompressedQualitySignals, см. `10_basics/`).",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-5",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 5,
+"line": 99,
+"text": "Единый канонический URL на страницу, без дублей по параметрам/слэшам/регистру.",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-6",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 6,
+"line": 101,
+"text": "SSG, SSR и prerendering допустимы; CSR требует проверки rendered HTML/links. Выбирать архитектуру по продукту и проверять через live render/URL Inspection, а не объявлять SSG единственным индексируемым вариантом.",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-7",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 7,
+"line": 103,
+"text": "Sitemap — источник обнаружения/приоритетных canonical URL, не гарантия crawl/index/ranking. `robots.txt` управляет crawling; для запрета индексации нужен доступный crawler'у `noindex`/X-Robots-Tag или авторизация.",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-8",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 8,
+"line": 105,
+"text": "Lighthouse использовать для lab-диагностики и regression checks; реальный CWV оценивать по CrUX/Search Console/RUM. Цель — хорошие метрики и UX, не обязательные 100/100.",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-9",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 9,
+"line": 108,
+"text": "Googlebot не должен упираться в bot-check / JS-interstitial / капчу: ключевые страницы обязаны отдаваться и без JavaScript, и без прохождения проверки — иначе краулер индексирует заглушку, а не контент. Проверять «глазами бота» (URL Inspection, рендер без JS).",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | источник: дайджест W30, 2026-07-20 | практика: —_"
+},
+{
+"id": "TECH-10",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 10,
+"line": 110,
+"text": "Self-referential canonical — стандарт по умолчанию: каждая индексируемая страница указывает `<link rel=canonical>` на саму себя (уточняет правило 5). _(обновление · дайджест W30, 2026-07-20)_",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | источник: дайджест W30, 2026-07-20 | практика: —_"
+},
+{
+"id": "TECH-11",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 11,
+"line": 112,
+"text": "`lastmod` в sitemap выставлять только при достоверной дате реального изменения страницы; массовый «свежий» lastmod на всех URL обесценивает сигнал, и Google его игнорирует. _(обновление · дайджест W30, 2026-07-20)_",
+"kb": "_kb: тип правило | сила 1 | проверяется | sitemap | к SEO-TECH-001 | сценарий СЦ-008 | источник: Google Search Central | практика: omodox-2026-11-26-lastmod-exp018_"
+},
+{
+"id": "TECH-12",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 12,
+"line": 115,
+"text": "Белый список полезных user-agent держать в актуальном виде и не блокировать их robots.txt/WAF: Google-InspectionTool, Google-GeminiNotebook, StoreBot, GPTBot/OpenAI и др. (сверка с `40_ai_seo/05_technical_checklist.md`). _(обновление · дайджест W30, 2026-07-20",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | источник: дайджест W30, 2026-07-20 | практика: —_"
+},
+{
+"id": "TECH-13",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 13,
+"line": 117,
+"text": "Product-разметка товаров — по полноте: `Product.category`, актуальные цена/наличие в `offers`, длительность акции (`priceValidUntil` / sale duration). Неполный Product markup ослабляет rich-результаты и Merchant Center. _(обновление · дайджест W28, 2026-07-13)",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | источник: дайджест W28, 2026-07-13 | практика: —_"
+},
+{
+"id": "TECH-14",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 14,
+"line": 119,
+"text": "Для e-commerce мониторить Merchant Center (включая AI/agentic Performance-отчёты) и изменения требований к product markup — отдельный технический сигнал наравне с CWV. _(обновление · дайджест W30, 2026-07-20)_",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | источник: дайджест W30, 2026-07-20 | практика: —_"
+},
+{
+"id": "TECH-15",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 15,
+"line": 121,
+"text": "Трекинг-обёртки URL (`google.com/goto` и подобные редиректы) учитывать при разборе аналитики и логов: они искажают атрибуцию переходов из органики (реферер/канал) — сверять «сырой» органик по GSC, а не только по счётчику. _(обновление · дайджест W28, 2026-07-1",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | источник: дайджест W28, 2026-07-13 | практика: —_"
+},
+{
+"id": "TECH-16",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Правила",
+"n": 16,
+"line": 123,
+"text": "Google Business Profile: апелляции по блокировке карточки подавать через встроенную в форму загрузку доказательств (документы/фото прямо в апелляции) — влияет на локальную видимость. _(обновление · дайджест W28, 2026-07-13; раздел local-SEO ещё не выделен — см",
+"kb": "_kb: тип правило | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | источник: дайджест W28, 2026-07-13 | практика: —_"
+},
+{
+"id": "TECH-E1",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 1,
+"line": 128,
+"text": "div-вёрстка без семантических тегов — краулерам и AI сложнее вычленить структуру/чанки страницы.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-E2",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 2,
+"line": 130,
+"text": "Отсутствующая или неполная микроразметка (например, Product есть, а Review/Rating — нет).",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-E3",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 3,
+"line": 132,
+"text": "Дубли страниц из-за параметров URL / www vs без www / http vs https без канонизации.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-E4",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 4,
+"line": 134,
+"text": "Блокировка полезных разделов в robots.txt «по привычке» (закрыли фильтры/пагинацию целиком вместо точечной настройки).",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-E5",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 5,
+"line": 136,
+"text": "Игнорирование мобильной вёрстки/адаптива при mobile-first индексации.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-E6",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 6,
+"line": 138,
+"text": "Генерация sitemap/robots агентом без проверки URL, canonical, статусов и unintended Disallow — массовые ложные сигналы или потеря crawling.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TECH-E7",
+"file": "kb/seo/40_technical/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 7,
+"line": 140,
+"text": "Бесконечный fix-loop ради Lighthouse 100 с крупными изменениями, когда field CWV не подтверждает проблему.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | technical-seo, markup, semantic-html, schema | практика: —_"
+},
+{
+"id": "TAUDIT-1",
+"file": "kb/seo/40_technical/technical-audit-checklist.md",
+"section": "Практические выводы",
+"n": 1,
+"line": 124,
+"text": "Быструю проверку (фильтры, вирусы, история) делать **до** начала любых работ",
+"kb": "_kb: тип правило | сила 1 | внешняя | audit, checklist, technical, import-2026-10-06 | практика: —_"
+},
+{
+"id": "TAUDIT-2",
+"file": "kb/seo/40_technical/technical-audit-checklist.md",
+"section": "Практические выводы",
+"n": 2,
+"line": 126,
+"text": "Санкции и фильтры Яндекса — первое, что нужно исключить",
+"kb": "_kb: тип правило | сила 1 | внешняя | audit, checklist, technical, import-2026-10-06 | практика: —_"
+},
+{
+"id": "TAUDIT-3",
+"file": "kb/seo/40_technical/technical-audit-checklist.md",
+"section": "Практические выводы",
+"n": 3,
+"line": 128,
+"text": "Site Analyser — базовый инструмент технического аудита (краулер + плагин)",
+"kb": "_kb: тип правило | сила 1 | внешняя | audit, checklist, technical, import-2026-10-06 | практика: —_"
+},
+{
+"id": "TAUDIT-4",
+"file": "kb/seo/40_technical/technical-audit-checklist.md",
+"section": "Практические выводы",
+"n": 4,
+"line": 130,
+"text": "Шаблон сайта влияет на всю позиционку — анализировать отдельно, не только конкретные страницы",
+"kb": "_kb: тип правило | сила 1 | внешняя | audit, checklist, technical, import-2026-10-06 | практика: —_"
+},
+{
+"id": "TITLE-1",
+"file": "kb/seo/30_onpage/title-goldmine.md",
+"section": "Практические выводы",
+"n": 1,
+"line": 80,
+"text": "Если Google переписывает ваш title — скорее всего H1 лучше отражает суть страницы",
+"kb": "_kb: тип правило | сила 1 | внешняя | title, snippet, onpage, import-2026-10-06 | практика: —_"
+},
+{
+"id": "TITLE-2",
+"file": "kb/seo/30_onpage/title-goldmine.md",
+"section": "Практические выводы",
+"n": 2,
+"line": 82,
+"text": "Следить за тем, что показывается в SERP (GSC → Поиск → Запросы, сравнить с реальным title)",
+"kb": "_kb: тип правило | сила 1 | внешняя | title, snippet, onpage, import-2026-10-06 | практика: —_"
+},
+{
+"id": "TITLE-3",
+"file": "kb/seo/30_onpage/title-goldmine.md",
+"section": "Практические выводы",
+"n": 3,
+"line": 84,
+"text": "Title и H1 должны быть согласованы — не идентичны, но об одном",
+"kb": "_kb: тип правило | сила 1 | внешняя | title, snippet, onpage, import-2026-10-06 | практика: —_"
+},
+{
+"id": "TITLE-4",
+"file": "kb/seo/30_onpage/title-goldmine.md",
+"section": "Практические выводы",
+"n": 4,
+"line": 86,
+"text": "Избегать шаблонов типа «[Город] | [Ключевик] | [Бренд]» — риск `goldmineHasBoilerplateInTitle`",
+"kb": "_kb: тип правило | сила 1 | внешняя | title, snippet, onpage, import-2026-10-06 | практика: —_"
+},
+{
+"id": "TITLE-5",
+"file": "kb/seo/30_onpage/title-goldmine.md",
+"section": "Практические выводы",
+"n": 5,
+"line": 88,
+"text": "Оптимальная длина: ~55-60 символов (не обрезается на большинстве устройств)",
+"kb": "_kb: тип правило | сила 1 | внешняя | title, snippet, onpage, import-2026-10-06 | практика: —_"
+},
+{
+"id": "IMGALT-1",
+"file": "kb/seo/30_onpage/images-alt.md",
+"section": "Правила для аудита",
+"n": 1,
+"line": 46,
+"text": "**Критичная ошибка:** `<img src=\"...\">` без атрибута alt вообще",
+"kb": "_kb: тип правило | сила 1 | внешняя | images, alt, onpage, import-2026-10-06 | практика: —_"
+},
+{
+"id": "IMGALT-2",
+"file": "kb/seo/30_onpage/images-alt.md",
+"section": "Правила для аудита",
+"n": 2,
+"line": 48,
+"text": "**ОК:** `alt=\"\"` на декоративных изображениях",
+"kb": "_kb: тип правило | сила 1 | внешняя | images, alt, onpage, import-2026-10-06 | практика: —_"
+},
+{
+"id": "IMGALT-3",
+"file": "kb/seo/30_onpage/images-alt.md",
+"section": "Правила для аудита",
+"n": 3,
+"line": 50,
+"text": "**Предупреждение:** `alt=\"\"` на крупных контентных картинках",
+"kb": "_kb: тип правило | сила 1 | внешняя | images, alt, onpage, import-2026-10-06 | практика: —_"
+},
+{
+"id": "LINK-1",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Правила",
+"n": 1,
+"line": 41,
+"text": "Анкоры разнообразны: точное вхождение, разбавленное, брендовое, безанкорное («подробнее», URL) — без доминирования одного типа.",
+"kb": "_kb: тип правило | сила 1 | внешняя | onpage, interlinking, anchors, internal-links | практика: —_"
+},
+{
+"id": "LINK-2",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Правила",
+"n": 2,
+"line": 43,
+"text": "Ссылки идут от тематически близких страниц (см. `30_onpage/internal-linking-rag-2026-pyryaev.md` — близость по смыслу через эмбеддинги), а не расставляются случайно.",
+"kb": "_kb: тип правило | сила 1 | внешняя | onpage, interlinking, anchors, internal-links | практика: —_"
+},
+{
+"id": "LINK-3",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Правила",
+"n": 3,
+"line": 45,
+"text": "Пилар-страницы (топикал-хабы) получают больше входящих внутренних ссылок, чем рядовые подстраницы.",
+"kb": "_kb: тип правило | сила 1 | внешняя | onpage, interlinking, anchors, internal-links | практика: —_"
+},
+{
+"id": "LINK-4",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Правила",
+"n": 4,
+"line": 47,
+"text": "Каждая новая страница получает минимум несколько внутренних ссылок с релевантных существующих страниц в момент публикации — не остаётся страницей-сиротой.",
+"kb": "_kb: тип правило | сила 2 | подтверждено | onpage, interlinking, anchors, internal-links | к SEO-ONP-011 | сценарий СЦ-007 | практика: omodox-2026-11-13-internal-links_"
+},
+{
+"id": "LINK-5",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Правила",
+"n": 5,
+"line": 49,
+"text": "Ссылки вставляются в тело текста в естественном контексте, а не только блоком «читайте также» в конце.",
+"kb": "_kb: тип правило | сила 1 | внешняя | onpage, interlinking, anchors, internal-links | практика: —_"
+},
+{
+"id": "LINK-E1",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 1,
+"line": 54,
+"text": "Все анкоры — точное вхождение ключа («перелинковка в лоб») — паттерн, похожий на манипуляцию.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | onpage, interlinking, anchors, internal-links | практика: —_"
+},
+{
+"id": "LINK-E2",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 2,
+"line": 56,
+"text": "Ссылки идут только «снизу вверх» (карточка → категория), без обратной перелинковки категория → карточки/статьи.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | onpage, interlinking, anchors, internal-links | практика: —_"
+},
+{
+"id": "LINK-E3",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 3,
+"line": 58,
+"text": "Страницы-сироты без единой входящей внутренней ссылки — выпадают из перелинковки полностью.",
+"kb": "_kb: тип ошибка | сила 2 | подтверждено | onpage, interlinking, anchors, internal-links | к SEO-ONP-011 | практика: omodox-2026-11-13-internal-links_"
+},
+{
+"id": "LINK-E4",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 4,
+"line": 60,
+"text": "Блок «читайте также» без контекста в самом тексте — теряется вес и релевантность анкора.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | onpage, interlinking, anchors, internal-links | практика: —_"
+},
+{
+"id": "LINK-E5",
+"file": "kb/seo/30_onpage/playbook-interlinking.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 5,
+"line": 62,
+"text": "Массовая автоматическая перелинковка (RAG/LLM) без ревизии — ссылка вставлена не в тему, нужен QA-шаг.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | onpage, interlinking, anchors, internal-links | практика: —_"
+},
+{
+"id": "TREL-1",
+"file": "kb/seo/30_onpage/textual-relevance.md",
+"section": "Практические выводы",
+"n": 1,
+"line": 98,
+"text": "Основа позиционки — **ширина** (LSI-покрытие), а не глубина (число вхождений ключей)",
+"kb": "_kb: тип правило | сила 1 | внешняя | relevance, text, yandex, onpage | практика: —_"
+},
+{
+"id": "TREL-2",
+"file": "kb/seo/30_onpage/textual-relevance.md",
+"section": "Практические выводы",
+"n": 2,
+"line": 100,
+"text": "Всё строим от анализа **правильных конкурентов** — не ТОП 3 агрегаторов, а подобных нам",
+"kb": "_kb: тип правило | сила 1 | внешняя | relevance, text, yandex, onpage | практика: —_"
+},
+{
+"id": "TREL-3",
+"file": "kb/seo/30_onpage/textual-relevance.md",
+"section": "Практические выводы",
+"n": 3,
+"line": 102,
+"text": "Набив руку, весь процесс занимает ~30 минут на страницу",
+"kb": "_kb: тип правило | сила 1 | внешняя | relevance, text, yandex, onpage | практика: —_"
+},
+{
+"id": "TREL-4",
+"file": "kb/seo/30_onpage/textual-relevance.md",
+"section": "Практические выводы",
+"n": 4,
+"line": 104,
+"text": "КНДР — критичный этап: без нужных блоков контента ранжирование ограничено",
+"kb": "_kb: тип правило | сила 1 | внешняя | relevance, text, yandex, onpage | практика: —_"
+},
+{
+"id": "TREL-5",
+"file": "kb/seo/30_onpage/textual-relevance.md",
+"section": "Практические выводы",
+"n": 5,
+"line": 106,
+"text": "Мегаиндекс — «бедолага», но всё ещё полезен для анализа глубины",
+"kb": "_kb: тип правило | сила 1 | внешняя | relevance, text, yandex, onpage | практика: —_"
+},
+{
+"id": "PTYPE-1",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Правила",
+"n": 1,
+"line": 46,
+"text": "Коммерческая страница (категория/товар/услуга) обязана содержать: цену/условия, явный CTA (заявка/корзина/звонок), элементы доверия (отзывы, сертификаты, гарантии).",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-2",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Правила",
+"n": 2,
+"line": 48,
+"text": "Информационная страница (статья/гайд) обязана содержать: чёткий ответ на интент в первом экране (лид-абзац), структуру H2/H3 по подтемам, минимум прямых продаж.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-3",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Правила",
+"n": 3,
+"line": 50,
+"text": "У каждой страницы — один явный интент (коммерческий/информационный/навигационный); смешение снижает релевантность под оба типа запросов.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-4",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Правила",
+"n": 4,
+"line": 52,
+"text": "Информационные страницы ведут перелинковкой на коммерческие (конверсионный мостик), а не наоборот.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-5",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Правила",
+"n": 5,
+"line": 54,
+"text": "Тип страницы определяет структуру шаблона (chunk/tpl на CMS) — типовой шаблон заводится один раз, а не вручную под каждую страницу.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-6",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Правила",
+"n": 6,
+"line": 56,
+"text": "Страница `услуга × город` допустима только при реальном обслуживании региона и уникальной полезности: локальные условия/цены/сроки, доказательства работ, адрес/логистика, отзывы/кейсы и самостоятельный путь пользователя.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-7",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Правила",
+"n": 7,
+"line": 58,
+"text": "Контентный шаблон переиспользуется как структура, но факты и ценность не должны сводиться к замене города/ключа.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-8",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Правила",
+"n": 8,
+"line": 61,
+"text": "Порог полезности для индексации: страница обязана давать самостоятельную ценность и UX-качество (уникальная польза, читаемость, отсутствие «пустых»/шаблонно-дублирующих страниц). Тонкие и малополезные страницы Google всё чаще не индексирует вовсе — качество ст",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | источник: дайджест W30, 2026-07-20 | практика: —_"
+},
+{
+"id": "PTYPE-9",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Правила",
+"n": 9,
+"line": 63,
+"text": "Для товарной карточки разделять спецификации, подтверждённые тесты и экспертные выводы; не выводить пользовательский результат напрямую из характеристики без доказательства. Полный workflow: `product-card-serp-ai-audit.md`. _(обновление · Upgrade, 2026-08-11)_",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | источник: Upgrade, 2026-08-11 | практика: —_"
+},
+{
+"id": "PTYPE-E1",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 1,
+"line": 68,
+"text": "Продающий текст «в лоб» на информационной статье (баннеры/CTA через каждые 2 абзаца) — не соответствует интенту, отталкивает.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-E2",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 2,
+"line": 70,
+"text": "Карточка категории/товара без цены и наличия — ни пользователь, ни Google не считывают коммерческую ценность страницы.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-E3",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 3,
+"line": 72,
+"text": "Один шаблон на все типы страниц — структура инфостатьи скопирована в карточку услуги.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-E4",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 4,
+"line": 74,
+"text": "Отсутствие явного intent-match: страница пытается ответить и на «купить X», и на «что такое X» одновременно (риск каннибализации, см. `20_semantics/playbook-core-distribution.md`).",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-E5",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 5,
+"line": 76,
+"text": "Забытые доверительные элементы (отзывы/гарантии/лицензии) на коммерческих страницах с высоким чеком/B2B.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PTYPE-E6",
+"file": "kb/seo/50_content/playbook-page-types.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 6,
+"line": 78,
+"text": "Матрица из сотен похожих regional/service URL, ведущих в одну и ту же форму без локальной ценности — риск doorway abuse.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, page-types, commercial-pages, informational-pages | практика: —_"
+},
+{
+"id": "PROTO-1",
+"file": "kb/seo/50_content/page-prototype.md",
+"section": "Практические выводы",
+"n": 1,
+"line": 85,
+"text": "Прототип экономит время и деньги на разработке — меньше переделок",
+"kb": "_kb: тип правило | сила 1 | внешняя | prototype, page-types, content, import-2026-10-06 | практика: —_"
+},
+{
+"id": "PROTO-2",
+"file": "kb/seo/50_content/page-prototype.md",
+"section": "Практические выводы",
+"n": 2,
+"line": 87,
+"text": "Гибридная таблица элементов → прототип → ТЗ — это единый конвейер",
+"kb": "_kb: тип правило | сила 1 | внешняя | prototype, page-types, content, import-2026-10-06 | практика: —_"
+},
+{
+"id": "PROTO-3",
+"file": "kb/seo/50_content/page-prototype.md",
+"section": "Практические выводы",
+"n": 3,
+"line": 89,
+"text": "КНДР из таблицы определяет минимальный набор элементов; всё остальное — усиление",
+"kb": "_kb: тип правило | сила 1 | внешняя | prototype, page-types, content, import-2026-10-06 | практика: —_"
+},
+{
+"id": "PROTO-4",
+"file": "kb/seo/50_content/page-prototype.md",
+"section": "Практические выводы",
+"n": 4,
+"line": 91,
+"text": "Figma — де-факто стандарт для прототипирования (бесплатна для базового использования)",
+"kb": "_kb: тип правило | сила 1 | внешняя | prototype, page-types, content, import-2026-10-06 | практика: —_"
+},
+{
+"id": "TEXT-1",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Правила",
+"n": 1,
+"line": 25,
+"text": "Title: точное или близкое вхождение ВЧ-запроса (главного ключа кластера) ближе к началу; длина ~50–60 символов.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-2",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Правила",
+"n": 2,
+"line": 27,
+"text": "H1: один на странице, содержит ВЧ + при необходимости уточнение (СЧ), не дублирует title слово в слово.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-3",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Правила",
+"n": 3,
+"line": 29,
+"text": "H2/H3: покрывают СЧ/НЧ подтемы кластера естественно, без принудительной вставки ключа в каждый заголовок.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-4",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Правила",
+"n": 4,
+"line": 31,
+"text": "Плотность ключа в теле — не абсолютный процент, а ориентир на топ-10 конкурентов (логика TF-IDF/BM25: важны термы, которые статистически значимы для темы, а не голое повторение ключа).",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-5",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Правила",
+"n": 5,
+"line": 33,
+"text": "Объём текста — не самоцель; достаточность определяется покрытием интентов и подтем (см. `20_semantics/`), а не количеством символов.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | к SEO-CONT-001 | практика: —_"
+},
+{
+"id": "TEXT-6",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Правила",
+"n": 6,
+"line": 35,
+"text": "SERP-анализ нужен для gap map: интенты, сущности, вопросы, форматы ответа и пробелы. Не усреднять механически длину/H2/изображения топ-3 и не копировать их формулу.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-7",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Правила",
+"n": 7,
+"line": 37,
+"text": "Голос клиента строить на evidence pack: реальные транскрипты, письма, факты, цены, сроки, истории, мнения и запрещённые утверждения. Юмор — опция бренда, не универсальный SEO-фактор.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-8",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Правила",
+"n": 8,
+"line": 39,
+"text": "Каждый факт, число и кейс должны иметь источник; правдоподобный AI-текст без подтверждения не публикуется.",
+"kb": "_kb: тип правило | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-E1",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 1,
+"line": 44,
+"text": "Механическое повторение ключа по «формуле плотности 2–3%» — переспам/тошнота, риск фильтра.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-E2",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 2,
+"line": 46,
+"text": "Однотипные вариации ключа во всех H2 подряд («Ключ + слово», «Ключ + слово 2» …).",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-E3",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 3,
+"line": 48,
+"text": "«Вода» для увеличения объёма без новой информации/сущностей — Google оценивает purpose fulfillment, не длину (см. `10_basics/drmax-evidence-based-seo-2026.md`).",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-E4",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 4,
+"line": 50,
+"text": "Определение нужных вхождений «из головы», без анализа топ-10 выдачи по кластеру.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-E5",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 5,
+"line": 52,
+"text": "Title и H1 совпадают дословно — теряется дополнительный охват вариаций запроса.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-E6",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 6,
+"line": 54,
+"text": "Переписывание топа выдачи с сохранением той же структуры и тезисов — производный commodity-контент без собственного effort.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "TEXT-E7",
+"file": "kb/seo/50_content/playbook-text.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 7,
+"line": 56,
+"text": "«Оживление» текста выдуманным опытом, статистикой, юмором или мнением компании — репутационный и фактический риск.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | content, text-optimization, keyword-density, bm25 | практика: —_"
+},
+{
+"id": "CANNIB-1",
+"file": "kb/seo/20_semantics/cannibalization.md",
+"section": "Практические выводы",
+"n": 1,
+"line": 101,
+"text": "Каннибализация — частая проблема при росте сайта (много страниц = много конфликтов)",
+"kb": "_kb: тип правило | сила 1 | внешняя | cannibalization, structure, semantics, import-2026-10-06 | практика: —_"
+},
+{
+"id": "CANNIB-2",
+"file": "kb/seo/20_semantics/cannibalization.md",
+"section": "Практические выводы",
+"n": 2,
+"line": 103,
+"text": "Проверять регулярно: при снятии позиций всегда смотреть, **какой URL** ранжируется",
+"kb": "_kb: тип правило | сила 1 | внешняя | cannibalization, structure, semantics, import-2026-10-06 | практика: —_"
+},
+{
+"id": "CANNIB-3",
+"file": "kb/seo/20_semantics/cannibalization.md",
+"section": "Практические выводы",
+"n": 3,
+"line": 105,
+"text": "Первый шаг — правильная перелинковка: это быстрее и безопаснее, чем удаление",
+"kb": "_kb: тип правило | сила 1 | внешняя | cannibalization, structure, semantics, import-2026-10-06 | практика: —_"
+},
+{
+"id": "CANNIB-4",
+"file": "kb/seo/20_semantics/cannibalization.md",
+"section": "Практические выводы",
+"n": 4,
+"line": 107,
+"text": "Слияние страниц = потеря части URL, делать с редиректами и осторожно",
+"kb": "_kb: тип правило | сила 1 | внешняя | cannibalization, structure, semantics, import-2026-10-06 | практика: —_"
+},
+{
+"id": "STRUCT-1",
+"file": "kb/seo/20_semantics/site-structure.md",
+"section": "Практические выводы",
+"n": 1,
+"line": 130,
+"text": "**Структура вторична** по отношению к семантике — сначала семантика, потом структура",
+"kb": "_kb: тип правило | сила 1 | внешняя | structure, semantics, import-2026-10-06 | практика: —_"
+},
+{
+"id": "STRUCT-2",
+"file": "kb/seo/20_semantics/site-structure.md",
+"section": "Практические выводы",
+"n": 2,
+"line": 132,
+"text": "Эталон — конкуренты из ТОП, **подобные** нам по типу сайта",
+"kb": "_kb: тип правило | сила 1 | внешняя | structure, semantics, import-2026-10-06 | практика: —_"
+},
+{
+"id": "STRUCT-3",
+"file": "kb/seo/20_semantics/site-structure.md",
+"section": "Практические выводы",
+"n": 3,
+"line": 134,
+"text": "Плитка тегов — простой инструмент расширить охват запросов и перелинковку",
+"kb": "_kb: тип правило | сила 1 | внешняя | structure, semantics, import-2026-10-06 | практика: —_"
+},
+{
+"id": "STRUCT-4",
+"file": "kb/seo/20_semantics/site-structure.md",
+"section": "Практические выводы",
+"n": 4,
+"line": 136,
+"text": "Открывать страницы к индексации только после полного наполнения",
+"kb": "_kb: тип правило | сила 1 | внешняя | structure, semantics, import-2026-10-06 | практика: —_"
+},
+{
+"id": "STRUCT-5",
+"file": "kb/seo/20_semantics/site-structure.md",
+"section": "Практические выводы",
+"n": 5,
+"line": 138,
+"text": "Проверять и ускорять индексацию через боты",
+"kb": "_kb: тип правило | сила 1 | внешняя | structure, semantics, import-2026-10-06 | практика: —_"
+},
+{
+"id": "ENTITY-E1",
+"file": "kb/seo/40_ai_seo/07_entity_characterization.md",
+"section": "Типовые ошибки",
+"n": 1,
+"line": 105,
+"text": "Выдавать патент за описание действующего ranking-фактора.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | ai-seo, entity, brand, knowledge-graph | практика: —_"
+},
+{
+"id": "ENTITY-E2",
+"file": "kb/seo/40_ai_seo/07_entity_characterization.md",
+"section": "Типовые ошибки",
+"n": 2,
+"line": 107,
+"text": "Строить «граф» из маркетинговых обещаний без доказательств.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | ai-seo, entity, brand, knowledge-graph | практика: —_"
+},
+{
+"id": "ENTITY-E3",
+"file": "kb/seo/40_ai_seo/07_entity_characterization.md",
+"section": "Типовые ошибки",
+"n": 3,
+"line": 109,
+"text": "Требовать дословно одинаковый текст на всех площадках вместо смысловой и фактической согласованности.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | ai-seo, entity, brand, knowledge-graph | практика: —_"
+},
+{
+"id": "ENTITY-E4",
+"file": "kb/seo/40_ai_seo/07_entity_characterization.md",
+"section": "Типовые ошибки",
+"n": 4,
+"line": 111,
+"text": "Создавать фиктивные профили, отзывы, локации или партнёров ради связности.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | ai-seo, entity, brand, knowledge-graph | практика: —_"
+},
+{
+"id": "ENTITY-E5",
+"file": "kb/seo/40_ai_seo/07_entity_characterization.md",
+"section": "Типовые ошибки",
+"n": 5,
+"line": 113,
+"text": "Размечать в JSON-LD то, чего нет в видимом контенте.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | ai-seo, entity, brand, knowledge-graph | практика: —_"
+},
+{
+"id": "ENTITY-E6",
+"file": "kb/seo/40_ai_seo/07_entity_characterization.md",
+"section": "Типовые ошибки",
+"n": 6,
+"line": 115,
+"text": "Считать общий отзыв «отличная команда» сильным подтверждением конкретной услуги.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | ai-seo, entity, brand, knowledge-graph | практика: —_"
+},
+{
+"id": "ENTITY-E7",
+"file": "kb/seo/40_ai_seo/07_entity_characterization.md",
+"section": "Типовые ошибки",
+"n": 7,
+"line": 117,
+"text": "Смешивать разные интенты, аудитории и географии в одну сущность без явных связей.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | ai-seo, entity, brand, knowledge-graph | практика: —_"
+},
+{
+"id": "ENTITY-E8",
+"file": "kb/seo/40_ai_seo/07_entity_characterization.md",
+"section": "Типовые ошибки",
+"n": 8,
+"line": 119,
+"text": "Автоматически принимать отрицательный отзыв за истинный атрибут бренда без проверки репрезентативности и контекста.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | ai-seo, entity, brand, knowledge-graph | практика: —_"
+},
+{
+"id": "BRAND-1",
+"file": "kb/seo/60_offpage/brand-signals.md",
+"section": "Практические выводы",
+"n": 1,
+"line": 98,
+"text": "Брендовые кампании = SEO-инвестиции (растёт P* и авторитет)",
+"kb": "_kb: тип правило | сила 1 | внешняя | brand, offpage, entity, import-2026-10-06 | практика: —_"
+},
+{
+"id": "BRAND-2",
+"file": "kb/seo/60_offpage/brand-signals.md",
+"section": "Практические выводы",
+"n": 2,
+"line": 100,
+"text": "Яндекс Бизнес с реальной геопривязкой — обязательный базовый шаг для локального SEO",
+"kb": "_kb: тип правило | сила 1 | внешняя | brand, offpage, entity, import-2026-10-06 | практика: —_"
+},
+{
+"id": "BRAND-3",
+"file": "kb/seo/60_offpage/brand-signals.md",
+"section": "Практические выводы",
+"n": 3,
+"line": 102,
+"text": "Директ по качественным конверсионным страницам даёт поведенческий сигнал (ПФ)",
+"kb": "_kb: тип правило | сила 1 | внешняя | brand, offpage, entity, import-2026-10-06 | практика: —_"
+},
+{
+"id": "BRAND-4",
+"file": "kb/seo/60_offpage/brand-signals.md",
+"section": "Практические выводы",
+"n": 4,
+"line": 104,
+"text": "Email-рассылки и ретаргетинг создают прямые заходы (Chrome-сигналы)",
+"kb": "_kb: тип правило | сила 1 | внешняя | brand, offpage, entity, import-2026-10-06 | практика: —_"
+},
+{
+"id": "BRAND-5",
+"file": "kb/seo/60_offpage/brand-signals.md",
+"section": "Практические выводы",
+"n": 5,
+"line": 106,
+"text": "Собирать отзывы на авторитетных платформах — реальные лучше купленных",
+"kb": "_kb: тип правило | сила 1 | внешняя | brand, offpage, entity, import-2026-10-06 | практика: —_"
+},
+{
+"id": "BRAND-6",
+"file": "kb/seo/60_offpage/brand-signals.md",
+"section": "Практические выводы",
+"n": 6,
+"line": 108,
+"text": "Мониторить брендовую выдачу и вытеснять негатив",
+"kb": "_kb: тип правило | сила 1 | внешняя | brand, offpage, entity, import-2026-10-06 | практика: —_"
+},
+{
+"id": "ANLT-1",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Правила",
+"n": 1,
+"line": 26,
+"text": "Каждое SEO-изменение оформляется как гипотеза (что меняем → какой эффект ожидаем → как измеряем) до внедрения, не постфактум.",
+"kb": "_kb: тип правило | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | практика: —_"
+},
+{
+"id": "ANLT-2",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Правила",
+"n": 2,
+"line": 28,
+"text": "Формат гипотезы и эксперимента — единый шаблон `docs/hypothesis-template.md` (готовит параллельный модуль OODA) — все SEO-агенты используют его, а не изобретают свой.",
+"kb": "_kb: тип правило | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | практика: —_"
+},
+{
+"id": "ANLT-3",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Правила",
+"n": 3,
+"line": 30,
+"text": "Замер эффекта — не раньше, чем через цикл переиндексации/накопления данных (обычно 2–4 недели), иначе вывод недостоверен.",
+"kb": "_kb: тип правило | сила 2 | подтверждено | analytics, hypotheses, experiments, metrics | к AN-MEAS-010 | практика: muza-2026-11-14-rix-d-measure_"
+},
+{
+"id": "ANLT-4",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Правила",
+"n": 4,
+"line": 32,
+"text": "Метрики фиксируются «до» и «после» по одному и тому же срезу (сегмент трафика/страниц), без смешения с параллельными изменениями.",
+"kb": "_kb: тип правило | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | практика: —_"
+},
+{
+"id": "ANLT-5",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Правила",
+"n": 5,
+"line": 34,
+"text": "Результат эксперимента (успех/провал/неопределённо) документируется кейсом в `kb/practice/` (раньше `80_cases/`) независимо от исхода — провалы тоже знание.",
+"kb": "_kb: тип правило | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | практика: —_"
+},
+{
+"id": "ANLT-6",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Правила",
+"n": 6,
+"line": 37,
+"text": "Учитывать новые отчёты Google Search Console по соц- и видео-постам (появляются в GSC отдельными срезами) — заводить их в набор метрик, а не смотреть только веб-страницы. _(обновление · дайджест W28, 2026-07-13)_",
+"kb": "_kb: тип правило | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | источник: дайджест W28, 2026-07-13 | практика: —_"
+},
+{
+"id": "ANLT-E1",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 1,
+"line": 42,
+"text": "Изменение «на глазок» без зафиксированной гипотезы и точки отсчёта — потом нечего анализировать.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | практика: —_"
+},
+{
+"id": "ANLT-E2",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 2,
+"line": 44,
+"text": "Слишком ранний замер результата (через 2–3 дня после правки) — шум принимают за эффект.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | к AN-MEAS-010 | практика: —_"
+},
+{
+"id": "ANLT-E3",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 3,
+"line": 46,
+"text": "Несколько изменений одновременно на одном сегменте — невозможно понять, что именно сработало.",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | практика: —_"
+},
+{
+"id": "ANLT-E4",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 4,
+"line": 48,
+"text": "Фиксируются только успешные эксперименты, провалы не документируются — база знаний искажается (survivorship bias).",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | практика: —_"
+},
+{
+"id": "ANLT-E5",
+"file": "kb/seo/70_analytics/playbook.md",
+"section": "Типовые ошибки / анти-паттерны",
+"n": 5,
+"line": 50,
+"text": "Метрика эксперимента не соответствует гипотезе (например, гипотеза про CTR в сниппете, а меряют только позиции).",
+"kb": "_kb: тип ошибка | сила 1 | внешняя | analytics, hypotheses, experiments, metrics | практика: —_"
+},
+{
+"id": "NAVB-1",
+"file": "kb/seo/10_basics/behavioral-factors-navboost.md",
+"section": "Практические выводы",
+"n": 1,
+"line": 96,
+"text": "ПФ — не «косвенный» фактор, а прямой сигнал ранжирования",
+"kb": "_kb: тип правило | сила 1 | внешняя | behavior, pf, navboost, yandex | практика: —_"
+},
+{
+"id": "NAVB-2",
+"file": "kb/seo/10_basics/behavioral-factors-navboost.md",
+"section": "Практические выводы",
+"n": 2,
+"line": 98,
+"text": "Для Яндекса — часто важнее ссылок на коротком горизонте",
+"kb": "_kb: тип правило | сила 1 | внешняя | behavior, pf, navboost, yandex | практика: —_"
+},
+{
+"id": "NAVB-3",
+"file": "kb/seo/10_basics/behavioral-factors-navboost.md",
+"section": "Практические выводы",
+"n": 3,
+"line": 100,
+"text": "Директ на конверсионные страницы = SEO-инвестиция, не просто реклама",
+"kb": "_kb: тип правило | сила 1 | внешняя | behavior, pf, navboost, yandex | практика: —_"
+},
+{
+"id": "NAVB-4",
+"file": "kb/seo/10_basics/behavioral-factors-navboost.md",
+"section": "Практические выводы",
+"n": 4,
+"line": 102,
+"text": "Улучшать реальный UX выгоднее и безопаснее, чем накручивать",
+"kb": "_kb: тип правило | сила 1 | внешняя | behavior, pf, navboost, yandex | практика: —_"
+},
+{
+"id": "NAVB-5",
+"file": "kb/seo/10_basics/behavioral-factors-navboost.md",
+"section": "Практические выводы",
+"n": 5,
+"line": 104,
+"text": "Медленный сайт → плохие ПФ → потеря позиций (связь CWV ↔ NavBoost)",
+"kb": "_kb: тип правило | сила 1 | внешняя | behavior, pf, navboost, yandex | практика: —_"
+}
+]

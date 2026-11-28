@@ -1,0 +1,160 @@
+{
+ "pages": [
+  {
+   "url": "https://ne-prosto.ru/blog/blog-category/news/",
+   "status": 301,
+   "location": "https://ne-prosto.ru/blog/?blog-category=news",
+   "bytes": 0
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/blog-category/brending/",
+   "status": 301,
+   "location": "https://ne-prosto.ru/blog/?blog-category=brending",
+   "bytes": 0
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/portfolio-category/sites/",
+   "status": 301,
+   "location": "https://ne-prosto.ru/portfolio/?portfolio-category=sites",
+   "bytes": 0
+  },
+  {
+   "url": "https://ne-prosto.ru/index.php",
+   "status": 200,
+   "location": null,
+   "bytes": 27567,
+   "title": "Главная - Непросто",
+   "canonical": [],
+   "robots": "max-image-preview:large",
+   "description": "",
+   "h1": [
+    "Всё гениальное<br><span>непросто.</span>"
+   ],
+   "cards": 11
+  }
+ ],
+ "bots": [
+  {
+   "bot": "Googlebot",
+   "status": 200,
+   "bytes": 29795,
+   "has_h1": true
+  },
+  {
+   "bot": "YandexBot",
+   "status": 200,
+   "bytes": 29795,
+   "has_h1": true
+  },
+  {
+   "bot": "GPTBot",
+   "status": 200,
+   "bytes": 29795,
+   "has_h1": true
+  },
+  {
+   "bot": "ClaudeBot",
+   "status": 200,
+   "bytes": 29795,
+   "has_h1": true
+  },
+  {
+   "bot": "PerplexityBot",
+   "status": 200,
+   "bytes": 29795,
+   "has_h1": true
+  }
+ ],
+ "assets": [
+  {
+   "url": "https://ne-prosto.ru/images/portfolio/stankin/photo-31.jpg",
+   "status": 200,
+   "bytes": 697021,
+   "ctype": "image/jpeg",
+   "enc": null,
+   "cache": "max-age=31536000"
+  },
+  {
+   "url": "https://ne-prosto.ru/assets/neprosto/design-20261018/site.css?v=11",
+   "status": 200,
+   "bytes": 33446,
+   "ctype": "text/css",
+   "enc": "gzip",
+   "cache": "max-age=31536000",
+   "font_urls": [
+    "/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2"
+   ],
+   "font_display": [
+    "swap"
+   ],
+   "font_faces": 3
+  },
+  {
+   "url": "https://ne-prosto.ru/assets/components/minifyx/cache/styles_8d58812fbf.css",
+   "status": 200,
+   "bytes": 55338,
+   "ctype": "text/css",
+   "enc": "gzip",
+   "cache": "max-age=31536000",
+   "font_urls": [
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Bold.eot",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Bold.eot?#iefix",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Bold.ttf",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Bold.woff",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Light.eot",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Light.eot?#iefix",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Light.ttf",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Light.woff",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Medium.eot",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Medium.eot?#iefix",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Medium.ttf",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Medium.woff",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Thin.eot",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Thin.eot?#iefix",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Thin.ttf",
+    "/assets/portfolio/fonts/ClearSans/ClearSans-Thin.woff",
+    "/assets/portfolio/fonts/ClearSans/ClearSans.eot",
+    "/assets/portfolio/fonts/ClearSans/ClearSans.eot?#iefix",
+    "/assets/portfolio/fonts/ClearSans/ClearSans.ttf",
+    "/assets/portfolio/fonts/ClearSans/ClearSans.woff",
+    "/assets/portfolio/fonts/Museo/MuseoSansBold.eot",
+    "/assets/portfolio/fonts/Museo/MuseoSansBold.eot?#iefix",
+    "/assets/portfolio/fonts/Museo/MuseoSansBold.ttf",
+    "/assets/portfolio/fonts/Museo/MuseoSansBold.woff",
+    "/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "/assets/portfolio/fonts/Museo/MuseoSansRegular.eot",
+    "/assets/portfolio/fonts/Museo/MuseoSansRegular.eot?#iefix",
+    "/assets/portfolio/fonts/Museo/MuseoSansRegular.ttf",
+    "/assets/portfolio/fonts/Museo/MuseoSansRegular.woff",
+    "/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNova.eot",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNova.eot?#iefix",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNova.ttf",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaBold.eot",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaBold.eot?#iefix",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaBold.ttf",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaBold.woff",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaBold.woff2",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.eot",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.eot?#iefix",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.ttf",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.woff",
+    "/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.woff2"
+   ],
+   "font_display": [],
+   "font_faces": 10
+  },
+  {
+   "url": "https://ne-prosto.ru/images/godnota/blog/semanticheskoe-yadro-sajta.jpg",
+   "status": 200,
+   "bytes": 73027,
+   "ctype": "image/jpeg",
+   "enc": null,
+   "cache": "max-age=31536000"
+  }
+ ]
+}

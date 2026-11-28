@@ -1,0 +1,10 @@
+{
+ "total": 129,
+ "applicable_checked": 102,
+ "violated": 47,
+ "ok": 55,
+ "na": 13,
+ "nc": 14,
+ "atomic": 92,
+ "playbook": 37
+}

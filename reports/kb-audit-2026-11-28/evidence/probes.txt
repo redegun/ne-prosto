@@ -1,0 +1,14 @@
+== INFRA-SEC-001
+{"id": "INFRA-SEC-001", "domain": "ne-prosto.ru", "probe": "modx_core_closed", "state": "есть", "detail": "/core/config/config.inc.php → 403", "at": "2026-11-28T06:13:33"}
+== SEO-TECH-003
+{"id": "SEO-TECH-003", "domain": "ne-prosto.ru", "probe": "first_img_priority", "state": "есть", "detail": "fetchpriority=high у картинки первого экрана или preload", "at": "2026-11-28T06:13:35"}
+== SEO-TECH-010
+{"id": "SEO-TECH-010", "domain": "ne-prosto.ru", "probe": "http2_gzip_cache", "state": "есть", "detail": "HTTP/2, styles_8d58812fbf.css: сжатие gzip, кэш max-age 31536000, Server: nginx/1.30.7", "at": "2026-11-28T06:13:37"}
+== SEO-TECH-013
+{"id": "SEO-TECH-013", "domain": "ne-prosto.ru", "probe": "lazy_below_fold", "state": "есть", "detail": "lazy у 14 из 16 img главной", "at": "2026-11-28T06:13:39"}
+== SEO-TECH-014
+{"id": "SEO-TECH-014", "domain": "ne-prosto.ru", "probe": "fonts_woff2_subset", "state": "нет", "detail": "шрифтов 13, всего 619 КБ; не WOFF2: 10 (woff)", "at": "2026-11-28T06:13:43"}
+== SEO-ONP-010
+{"id": "SEO-ONP-010", "domain": "ne-prosto.ru", "probe": "robots_max_image_preview", "state": "есть", "detail": "max-image-preview:large уже в robots главной", "at": "2026-11-28T06:13:45"}
+== SEO-ONP-200
+{"id": "SEO-ONP-200", "domain": "ne-prosto.ru", "probe": "org_markup", "state": "нет", "detail": "разметки Organization/LocalBusiness на главной нет", "at": "2026-11-28T06:13:47"}

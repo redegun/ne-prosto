@@ -1,0 +1,6 @@
+# 28.11.2026: GET https://ne-prosto.ru/blog/semanticheskoe-yadro-sajta с UA поисковых и AI-ботов (без редиректов)
+Googlebot	200	29795 байт	H1=True
+YandexBot	200	29795 байт	H1=True
+GPTBot	200	29795 байт	H1=True
+ClaudeBot	200	29795 байт	H1=True
+PerplexityBot	200	29795 байт	H1=True

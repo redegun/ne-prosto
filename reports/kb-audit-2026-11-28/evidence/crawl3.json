@@ -1,0 +1,35 @@
+{
+ "v-rolyax": {
+  "status": 200,
+  "title": "В ролях - Непросто",
+  "person_links": [],
+  "canonical": [],
+  "desc": [
+   ""
+  ]
+ },
+ "https://ne-prosto.ru/images/godnota/kirillicheskie-shrifty.jpg": {
+  "status": 200,
+  "kb": 294,
+  "dims": [
+   1536,
+   1024
+  ]
+ },
+ "https://ne-prosto.ru/images/godnota/stranicy-i-obrashcheniya/cover.webp": {
+  "status": 200,
+  "kb": 27,
+  "dims": [
+   1400,
+   1000
+  ]
+ },
+ "https://ne-prosto.ru/images/godnota/blog/semanticheskoe-yadro-sajta.jpg": {
+  "status": 200,
+  "kb": 71,
+  "dims": [
+   1536,
+   1024
+  ]
+ }
+}

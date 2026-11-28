@@ -1,0 +1,3 @@
+# 28.11.2026: 33 сайта lab/sites.yml против хостов Вебмастера (API user 247161245, 38 записей) и свойств GSC сервисного аккаунта reports-writer (23)
+Нет в Вебмастере (2): ne-prosto.ru, turbocarp.ru
+Нет в GSC сервисного аккаунта (11): boemichocolate.ru, firmaflis.ru, salonmuza.ru, ne-prosto.ru, ponbox.ru, ppfschool.ru, ruize.ru, skuchnoedelo.ru, storam.ru, turbocarp.ru, vedushiy-oleg.ru

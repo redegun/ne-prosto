@@ -1,0 +1,1959 @@
+[
+ {
+  "n": 1,
+  "url": "https://ne-prosto.ru/",
+  "status": 200,
+  "scrollWidth": 390,
+  "innerWidth": 390,
+  "overflowX": false,
+  "headerFound": true,
+  "headerRect": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 82,
+   "top": 0,
+   "bottom": 82
+  },
+  "headerButtons": [
+   {
+    "tag": "A",
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Меню +",
+    "href": null,
+    "x": 300,
+    "y": 19,
+    "w": 70,
+    "h": 44,
+    "top": 19,
+    "bottom": 63
+   }
+  ],
+  "headerTelVisible": false,
+  "headerTel": [],
+  "h1": {
+   "text": "Всё гениальное\nнепросто.",
+   "x": 20,
+   "y": 170,
+   "w": 350,
+   "h": 91,
+   "top": 170,
+   "bottom": 262,
+   "fullyInFirstScreen": true,
+   "fontSize": "44.85px",
+   "count": 1
+  },
+  "cta": [
+   {
+    "text": "Смотреть проект ↗",
+    "href": "/portfolio/poezd-stankin",
+    "x": 0,
+    "y": 529,
+    "w": 390,
+    "h": 360,
+    "top": 529,
+    "bottom": 889
+   }
+  ],
+  "smallTapCount": 3,
+  "firstScreenInteractive": 5,
+  "smallTapExamples": [
+   {
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "text": "Посмотреть работы ↓",
+    "href": "/#works",
+    "x": 20,
+    "y": 397,
+    "w": 181,
+    "h": 32,
+    "top": 397,
+    "bottom": 428
+   },
+   {
+    "text": "Все работы ↗",
+    "href": "/portfolio/",
+    "x": 273,
+    "y": 472,
+    "w": 97,
+    "h": 29,
+    "top": 472,
+    "bottom": 501
+   }
+  ],
+  "lcp": {
+   "timeMs": 364,
+   "tag": "IMG",
+   "url": "https://ne-prosto.ru/images/portfolio/stankin/hero-train-960.webp",
+   "id": "",
+   "cls": "",
+   "src": "/images/portfolio/stankin/photo-31.jpg",
+   "currentSrc": "https://ne-prosto.ru/images/portfolio/stankin/hero-train-960.webp",
+   "naturalWidth": 389,
+   "naturalHeight": 259,
+   "loading": null,
+   "fetchpriority": "high",
+   "widthAttr": "1920",
+   "heightAttr": "1280",
+   "hasWH": true
+  },
+  "fonts": [
+   {
+    "name": "ProximaNova.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "init": "css",
+    "transfer": 29772,
+    "encoded": 29472
+   },
+   {
+    "name": "MuseoSansBold.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "init": "css",
+    "transfer": 41808,
+    "encoded": 41508
+   },
+   {
+    "name": "ProximaNovaLight.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.woff",
+    "init": "css",
+    "transfer": 40028,
+    "encoded": 39728
+   },
+   {
+    "name": "MuseoSansRegular.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "init": "css",
+    "transfer": 40500,
+    "encoded": 40200
+   },
+   {
+    "name": "ProximaNova.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "init": "css",
+    "transfer": 40428,
+    "encoded": 40128
+   },
+   {
+    "name": "MuseoSansBold.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff",
+    "init": "css",
+    "transfer": 48428,
+    "encoded": 48128
+   }
+  ],
+  "fontsKB": 235.3,
+  "requests": 26,
+  "weightKB": 756.8,
+  "weightZeroTransferCount": 1,
+  "brokenImages": [],
+  "lazyUnloadedImages": 10,
+  "hasToc": false,
+  "anchorLinks": 0,
+  "anchorSamples": [],
+  "tocBlock": null,
+  "time": null,
+  "dateInText": null,
+  "authorEl": null,
+  "authorInText": null,
+  "hasFaq": false,
+  "coverImg": {
+   "src": "/images/portfolio/stankin/photo-31.jpg",
+   "alt": "Готовый поезд СТАНКИН с оформлением студии Непросто",
+   "x": 0,
+   "y": 529,
+   "w": 390,
+   "h": 360,
+   "top": 529,
+   "bottom": 889
+  },
+  "iframes": [],
+  "mapHints": false,
+  "telLinks": [
+   {
+    "href": "tel:84957232308",
+    "text": "8 495 723-23-08",
+    "visible": true
+   }
+  ],
+  "mailLinks": [
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   }
+  ],
+  "forms": [
+   {
+    "inputs": [
+     {
+      "type": "text",
+      "name": "email",
+      "placeholder": ""
+     },
+     {
+      "type": "text",
+      "name": "name",
+      "placeholder": "Представьтесь"
+     },
+     {
+      "type": "email",
+      "name": "contact",
+      "placeholder": "Почта"
+     },
+     {
+      "type": "textarea",
+      "name": "message",
+      "placeholder": "Вам слово"
+     },
+     {
+      "type": "hidden",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "checkbox",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "file",
+      "name": "attachment",
+      "placeholder": ""
+     },
+     {
+      "type": "submit",
+      "name": "send",
+      "placeholder": ""
+     },
+     {
+      "type": "hidden",
+      "name": "af_action",
+      "placeholder": ""
+     }
+    ]
+   }
+  ],
+  "phoneField": false,
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_FAILED"
+  ],
+  "failedRequests": [],
+  "badResponses": [],
+  "pageHeight": 10161
+ },
+ {
+  "n": 2,
+  "url": "https://ne-prosto.ru/uslugi/sajtyi",
+  "status": 200,
+  "scrollWidth": 390,
+  "innerWidth": 390,
+  "overflowX": false,
+  "headerFound": true,
+  "headerRect": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 82,
+   "top": 0,
+   "bottom": 82
+  },
+  "headerButtons": [
+   {
+    "tag": "A",
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Меню +",
+    "href": null,
+    "x": 300,
+    "y": 19,
+    "w": 70,
+    "h": 44,
+    "top": 19,
+    "bottom": 63
+   }
+  ],
+  "headerTelVisible": false,
+  "headerTel": [],
+  "h1": {
+   "text": "Сайты",
+   "x": 20,
+   "y": 204,
+   "w": 350,
+   "h": 42,
+   "top": 204,
+   "bottom": 246,
+   "fullyInFirstScreen": true,
+   "fontSize": "39px",
+   "count": 1
+  },
+  "cta": [],
+  "smallTapCount": 3,
+  "firstScreenInteractive": 4,
+  "smallTapExamples": [
+   {
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "text": "Непросто",
+    "href": "/",
+    "x": 20,
+    "y": 110,
+    "w": 62,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   },
+   {
+    "text": "Услуги",
+    "href": "uslugi/",
+    "x": 104,
+    "y": 110,
+    "w": 43,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   }
+  ],
+  "lcp": {
+   "timeMs": 264,
+   "tag": "IMG",
+   "url": "https://ne-prosto.ru/assets/neprosto/design-20261018/services/web-960.webp",
+   "id": "",
+   "cls": "",
+   "src": "/assets/neprosto/design-20261018/services/web-960.webp",
+   "currentSrc": "https://ne-prosto.ru/assets/neprosto/design-20261018/services/web-960.webp",
+   "naturalWidth": 351,
+   "naturalHeight": 263,
+   "loading": "eager",
+   "fetchpriority": null,
+   "widthAttr": "1440",
+   "heightAttr": "1080",
+   "hasWH": true
+  },
+  "fonts": [
+   {
+    "name": "ProximaNova.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "init": "css",
+    "transfer": 29772,
+    "encoded": 29472
+   },
+   {
+    "name": "ProximaNovaLight.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.woff",
+    "init": "css",
+    "transfer": 40028,
+    "encoded": 39728
+   },
+   {
+    "name": "MuseoSansBold.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "init": "css",
+    "transfer": 41808,
+    "encoded": 41508
+   },
+   {
+    "name": "MuseoSansRegular.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "init": "css",
+    "transfer": 40500,
+    "encoded": 40200
+   },
+   {
+    "name": "ProximaNova.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "init": "css",
+    "transfer": 40428,
+    "encoded": 40128
+   }
+  ],
+  "fontsKB": 188,
+  "requests": 19,
+  "weightKB": 285.3,
+  "weightZeroTransferCount": 1,
+  "brokenImages": [],
+  "lazyUnloadedImages": 0,
+  "hasToc": false,
+  "anchorLinks": 0,
+  "anchorSamples": [],
+  "tocBlock": null,
+  "time": null,
+  "dateInText": null,
+  "authorEl": null,
+  "authorInText": null,
+  "hasFaq": false,
+  "coverImg": {
+   "src": "/assets/neprosto/design-20261018/services/ai-960.webp",
+   "alt": "",
+   "x": 20,
+   "y": 1797,
+   "w": 350,
+   "h": 263,
+   "top": 1797,
+   "bottom": 2060
+  },
+  "iframes": [],
+  "mapHints": false,
+  "telLinks": [
+   {
+    "href": "tel:84957232308",
+    "text": "8 495 723-23-08",
+    "visible": true
+   }
+  ],
+  "mailLinks": [
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   }
+  ],
+  "forms": [],
+  "phoneField": false,
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_FAILED"
+  ],
+  "failedRequests": [],
+  "badResponses": [],
+  "pageHeight": 4036
+ },
+ {
+  "n": 3,
+  "url": "https://ne-prosto.ru/uslugi/ii-assistent-dlya-biznesa",
+  "status": 200,
+  "scrollWidth": 390,
+  "innerWidth": 390,
+  "overflowX": false,
+  "headerFound": true,
+  "headerRect": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 82,
+   "top": 0,
+   "bottom": 82
+  },
+  "headerButtons": [
+   {
+    "tag": "A",
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Меню +",
+    "href": null,
+    "x": 300,
+    "y": 19,
+    "w": 70,
+    "h": 44,
+    "top": 19,
+    "bottom": 63
+   }
+  ],
+  "headerTelVisible": false,
+  "headerTel": [],
+  "h1": {
+   "text": "ИИ-ассистент для бизнеса: первые ответы клиентам в мессенджерах",
+   "x": 20,
+   "y": 204,
+   "w": 350,
+   "h": 168,
+   "top": 204,
+   "bottom": 373,
+   "fullyInFirstScreen": true,
+   "fontSize": "39px",
+   "count": 1
+  },
+  "cta": [
+   {
+    "text": "Обсудить проект ↗",
+    "href": "#request",
+    "x": 20,
+    "y": 836,
+    "w": 191,
+    "h": 58,
+    "top": 836,
+    "bottom": 894
+   }
+  ],
+  "smallTapCount": 3,
+  "firstScreenInteractive": 5,
+  "smallTapExamples": [
+   {
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "text": "Непросто",
+    "href": "/",
+    "x": 20,
+    "y": 110,
+    "w": 62,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   },
+   {
+    "text": "Услуги",
+    "href": "uslugi/",
+    "x": 104,
+    "y": 110,
+    "w": 43,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   }
+  ],
+  "lcp": {
+   "timeMs": 336,
+   "tag": "IMG",
+   "url": "https://ne-prosto.ru/assets/neprosto/design-20261018/services/ai-960.webp",
+   "id": "",
+   "cls": "",
+   "src": "/assets/neprosto/design-20261018/services/ai-960.webp",
+   "currentSrc": "https://ne-prosto.ru/assets/neprosto/design-20261018/services/ai-960.webp",
+   "naturalWidth": 351,
+   "naturalHeight": 263,
+   "loading": "eager",
+   "fetchpriority": null,
+   "widthAttr": "1440",
+   "heightAttr": "1080",
+   "hasWH": true
+  },
+  "fonts": [
+   {
+    "name": "ProximaNova.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "init": "css",
+    "transfer": 29772,
+    "encoded": 29472
+   },
+   {
+    "name": "ProximaNovaLight.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.woff",
+    "init": "css",
+    "transfer": 40028,
+    "encoded": 39728
+   },
+   {
+    "name": "MuseoSansBold.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "init": "css",
+    "transfer": 41808,
+    "encoded": 41508
+   },
+   {
+    "name": "ProximaNovaBold.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaBold.woff",
+    "init": "css",
+    "transfer": 40928,
+    "encoded": 40628
+   },
+   {
+    "name": "MuseoSansRegular.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "init": "css",
+    "transfer": 40500,
+    "encoded": 40200
+   },
+   {
+    "name": "ProximaNova.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "init": "css",
+    "transfer": 40428,
+    "encoded": 40128
+   }
+  ],
+  "fontsKB": 228,
+  "requests": 23,
+  "weightKB": 309.9,
+  "weightZeroTransferCount": 1,
+  "brokenImages": [],
+  "lazyUnloadedImages": 3,
+  "hasToc": false,
+  "anchorLinks": 1,
+  "anchorSamples": [
+   "Обсудить проект ↗"
+  ],
+  "tocBlock": null,
+  "time": null,
+  "dateInText": null,
+  "authorEl": null,
+  "authorInText": null,
+  "hasFaq": true,
+  "coverImg": {
+   "src": "/assets/neprosto/design-20261018/services/advertising-960.webp",
+   "alt": "",
+   "x": 20,
+   "y": 8287,
+   "w": 350,
+   "h": 263,
+   "top": 8287,
+   "bottom": 8550
+  },
+  "iframes": [],
+  "mapHints": false,
+  "telLinks": [
+   {
+    "href": "tel:84957232308",
+    "text": "8 495 723-23-08",
+    "visible": true
+   }
+  ],
+  "mailLinks": [
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   }
+  ],
+  "forms": [
+   {
+    "inputs": [
+     {
+      "type": "text",
+      "name": "email",
+      "placeholder": ""
+     },
+     {
+      "type": "text",
+      "name": "name",
+      "placeholder": "Представьтесь"
+     },
+     {
+      "type": "email",
+      "name": "contact",
+      "placeholder": "Почта"
+     },
+     {
+      "type": "textarea",
+      "name": "message",
+      "placeholder": "Вам слово"
+     },
+     {
+      "type": "hidden",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "checkbox",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "file",
+      "name": "attachment",
+      "placeholder": ""
+     },
+     {
+      "type": "submit",
+      "name": "send",
+      "placeholder": ""
+     },
+     {
+      "type": "hidden",
+      "name": "af_action",
+      "placeholder": ""
+     }
+    ]
+   }
+  ],
+  "phoneField": false,
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_FAILED"
+  ],
+  "failedRequests": [],
+  "badResponses": []
+ },
+ {
+  "n": 4,
+  "url": "https://ne-prosto.ru/uslugi/",
+  "status": 200,
+  "scrollWidth": 390,
+  "innerWidth": 390,
+  "overflowX": false,
+  "headerFound": true,
+  "headerRect": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 82,
+   "top": 0,
+   "bottom": 82
+  },
+  "headerButtons": [
+   {
+    "tag": "A",
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Меню +",
+    "href": null,
+    "x": 300,
+    "y": 19,
+    "w": 70,
+    "h": 44,
+    "top": 19,
+    "bottom": 63
+   }
+  ],
+  "headerTelVisible": false,
+  "headerTel": [],
+  "h1": {
+   "text": "Услуги",
+   "x": 20,
+   "y": 147,
+   "w": 350,
+   "h": 41,
+   "top": 147,
+   "bottom": 187,
+   "fullyInFirstScreen": true,
+   "fontSize": "39px",
+   "count": 1
+  },
+  "cta": [
+   {
+    "text": "Сайты и лендинги Проектируем структуру, делаем дизайн, разра",
+    "href": "/uslugi/sajtyi",
+    "x": 20,
+    "y": 545,
+    "w": 350,
+    "h": 203,
+    "top": 545,
+    "bottom": 747
+   }
+  ],
+  "smallTapCount": 1,
+  "firstScreenInteractive": 5,
+  "smallTapExamples": [
+   {
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   }
+  ],
+  "lcp": {
+   "timeMs": 236,
+   "tag": "P",
+   "url": "",
+   "id": "",
+   "cls": "",
+   "text": "Создаём узнаваемый образ компании — от знака и типографики д"
+  },
+  "fonts": [
+   {
+    "name": "ProximaNova.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "init": "css",
+    "transfer": 29772,
+    "encoded": 29472
+   },
+   {
+    "name": "MuseoSansBold.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "init": "css",
+    "transfer": 41808,
+    "encoded": 41508
+   },
+   {
+    "name": "MuseoSansRegular.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "init": "css",
+    "transfer": 40500,
+    "encoded": 40200
+   },
+   {
+    "name": "ProximaNova.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "init": "css",
+    "transfer": 40428,
+    "encoded": 40128
+   }
+  ],
+  "fontsKB": 148.9,
+  "requests": 20,
+  "weightKB": 234.2,
+  "weightZeroTransferCount": 1,
+  "brokenImages": [],
+  "lazyUnloadedImages": 0,
+  "hasToc": false,
+  "anchorLinks": 0,
+  "anchorSamples": [],
+  "tocBlock": null,
+  "time": null,
+  "dateInText": null,
+  "authorEl": null,
+  "authorInText": null,
+  "hasFaq": false,
+  "coverImg": {
+   "src": "/assets/neprosto/design-20261018/services/branding-960.webp",
+   "alt": "",
+   "x": 20,
+   "y": 344,
+   "w": 119,
+   "h": 89,
+   "top": 344,
+   "bottom": 433
+  },
+  "iframes": [],
+  "mapHints": false,
+  "telLinks": [
+   {
+    "href": "tel:84957232308",
+    "text": "8 495 723-23-08",
+    "visible": true
+   }
+  ],
+  "mailLinks": [
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   }
+  ],
+  "forms": [],
+  "phoneField": false,
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_FAILED"
+  ],
+  "failedRequests": [],
+  "badResponses": []
+ },
+ {
+  "n": 5,
+  "url": "https://ne-prosto.ru/blog/semanticheskoe-yadro-sajta",
+  "status": 200,
+  "scrollWidth": 390,
+  "innerWidth": 390,
+  "overflowX": false,
+  "headerFound": true,
+  "headerRect": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 82,
+   "top": 0,
+   "bottom": 82
+  },
+  "headerButtons": [
+   {
+    "tag": "A",
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Меню +",
+    "href": null,
+    "x": 300,
+    "y": 19,
+    "w": 70,
+    "h": 44,
+    "top": 19,
+    "bottom": 63
+   }
+  ],
+  "headerTelVisible": false,
+  "headerTel": [],
+  "h1": {
+   "text": "Семантическое ядро сайта: зачем собирать его до структуры",
+   "x": 20,
+   "y": 248,
+   "w": 350,
+   "h": 160,
+   "top": 248,
+   "bottom": 408,
+   "fullyInFirstScreen": true,
+   "fontSize": "37.05px",
+   "count": 1
+  },
+  "cta": [],
+  "smallTapCount": 3,
+  "firstScreenInteractive": 6,
+  "smallTapExamples": [
+   {
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "text": "Непросто",
+    "href": "/",
+    "x": 20,
+    "y": 110,
+    "w": 62,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   },
+   {
+    "text": "Годнота",
+    "href": "blog/",
+    "x": 104,
+    "y": 110,
+    "w": 50,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   }
+  ],
+  "lcp": {
+   "timeMs": 360,
+   "tag": "IMG",
+   "url": "https://ne-prosto.ru/assets/components/phpthumbof/cache/semanticheskoe-yadro-sajta.7e3472e08759fdea1f4d30c3669a4bab.jpg",
+   "id": "",
+   "cls": "article__img",
+   "src": "/assets/components/phpthumbof/cache/semanticheskoe-yadro-sajta.7e3472e08759fdea1f4d30c3669a4bab.jpg",
+   "currentSrc": "https://ne-prosto.ru/assets/components/phpthumbof/cache/semanticheskoe-yadro-sajta.7e3472e08759fdea1f4d30c3669a4bab.jpg",
+   "naturalWidth": 1536,
+   "naturalHeight": 1024,
+   "loading": null,
+   "fetchpriority": null,
+   "widthAttr": null,
+   "heightAttr": null,
+   "hasWH": false
+  },
+  "fonts": [
+   {
+    "name": "ProximaNova.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "init": "css",
+    "transfer": 29772,
+    "encoded": 29472
+   },
+   {
+    "name": "MuseoSansBold.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "init": "css",
+    "transfer": 41808,
+    "encoded": 41508
+   },
+   {
+    "name": "MuseoSansRegular.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "init": "css",
+    "transfer": 40500,
+    "encoded": 40200
+   },
+   {
+    "name": "ProximaNovaLight.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.woff",
+    "init": "css",
+    "transfer": 40028,
+    "encoded": 39728
+   },
+   {
+    "name": "ProximaNovaBold.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaBold.woff",
+    "init": "css",
+    "transfer": 40928,
+    "encoded": 40628
+   },
+   {
+    "name": "ProximaNova.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "init": "css",
+    "transfer": 40428,
+    "encoded": 40128
+   }
+  ],
+  "fontsKB": 228,
+  "requests": 24,
+  "weightKB": 389.8,
+  "weightZeroTransferCount": 1,
+  "brokenImages": [],
+  "lazyUnloadedImages": 6,
+  "hasToc": true,
+  "anchorLinks": 0,
+  "anchorSamples": [],
+  "tocBlock": null,
+  "time": null,
+  "dateInText": "22 октября 2026",
+  "authorEl": null,
+  "authorInText": null,
+  "hasFaq": false,
+  "coverImg": {
+   "src": "/assets/cache_image/images/godnota/blog/kreativy-dlya-reklamy_900x650_c92.jpg",
+   "alt": "",
+   "x": 20,
+   "y": 8630,
+   "w": 350,
+   "h": 250,
+   "top": 8630,
+   "bottom": 8880
+  },
+  "iframes": [],
+  "mapHints": false,
+  "telLinks": [
+   {
+    "href": "tel:84957232308",
+    "text": "8 495 723-23-08",
+    "visible": true
+   }
+  ],
+  "mailLinks": [
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   }
+  ],
+  "forms": [
+   {
+    "inputs": [
+     {
+      "type": "text",
+      "name": "email",
+      "placeholder": ""
+     },
+     {
+      "type": "hidden",
+      "name": "cta",
+      "placeholder": ""
+     },
+     {
+      "type": "text",
+      "name": "name",
+      "placeholder": ""
+     },
+     {
+      "type": "text",
+      "name": "contact",
+      "placeholder": ""
+     },
+     {
+      "type": "textarea",
+      "name": "message",
+      "placeholder": ""
+     },
+     {
+      "type": "hidden",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "checkbox",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "hidden",
+      "name": "af_action",
+      "placeholder": ""
+     }
+    ]
+   },
+   {
+    "inputs": [
+     {
+      "type": "text",
+      "name": "email",
+      "placeholder": ""
+     },
+     {
+      "type": "hidden",
+      "name": "cta",
+      "placeholder": ""
+     },
+     {
+      "type": "text",
+      "name": "name",
+      "placeholder": ""
+     },
+     {
+      "type": "text",
+      "name": "contact",
+      "placeholder": ""
+     },
+     {
+      "type": "textarea",
+      "name": "message",
+      "placeholder": ""
+     },
+     {
+      "type": "hidden",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "checkbox",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "hidden",
+      "name": "af_action",
+      "placeholder": ""
+     }
+    ]
+   }
+  ],
+  "phoneField": false,
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_FAILED"
+  ],
+  "failedRequests": [],
+  "badResponses": [],
+  "pageHeight": 11673
+ },
+ {
+  "n": 6,
+  "url": "https://ne-prosto.ru/blog/besplatnye-kirillicheskie-shrifty",
+  "status": 200,
+  "scrollWidth": 390,
+  "innerWidth": 390,
+  "overflowX": false,
+  "headerFound": true,
+  "headerRect": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 82,
+   "top": 0,
+   "bottom": 82
+  },
+  "headerButtons": [
+   {
+    "tag": "A",
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Меню +",
+    "href": null,
+    "x": 300,
+    "y": 19,
+    "w": 70,
+    "h": 44,
+    "top": 19,
+    "bottom": 63
+   }
+  ],
+  "headerTelVisible": false,
+  "headerTel": [],
+  "h1": {
+   "text": "10 бесплатных кириллических шрифтов, которые не стыдно поставить на сайт и в логотип",
+   "x": 20,
+   "y": 248,
+   "w": 350,
+   "h": 240,
+   "top": 248,
+   "bottom": 488,
+   "fullyInFirstScreen": true,
+   "fontSize": "37.05px",
+   "count": 1
+  },
+  "cta": [],
+  "smallTapCount": 3,
+  "firstScreenInteractive": 4,
+  "smallTapExamples": [
+   {
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "text": "Непросто",
+    "href": "/",
+    "x": 20,
+    "y": 110,
+    "w": 62,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   },
+   {
+    "text": "Годнота",
+    "href": "blog/",
+    "x": 104,
+    "y": 110,
+    "w": 50,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   }
+  ],
+  "lcp": {
+   "timeMs": 280,
+   "tag": "H1",
+   "url": "",
+   "id": "",
+   "cls": "article-title",
+   "text": "10 бесплатных кириллических шрифтов, которые не стыдно поста"
+  },
+  "fonts": [
+   {
+    "name": "ProximaNova.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "init": "css",
+    "transfer": 29772,
+    "encoded": 29472
+   },
+   {
+    "name": "ProximaNovaLight.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.woff",
+    "init": "css",
+    "transfer": 40028,
+    "encoded": 39728
+   },
+   {
+    "name": "MuseoSansBold.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "init": "css",
+    "transfer": 41808,
+    "encoded": 41508
+   },
+   {
+    "name": "MuseoSansRegular.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "init": "css",
+    "transfer": 40500,
+    "encoded": 40200
+   },
+   {
+    "name": "ProximaNovaBold.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaBold.woff",
+    "init": "css",
+    "transfer": 40928,
+    "encoded": 40628
+   },
+   {
+    "name": "ProximaNova.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "init": "css",
+    "transfer": 40428,
+    "encoded": 40128
+   }
+  ],
+  "fontsKB": 228,
+  "requests": 21,
+  "weightKB": 690.1,
+  "weightZeroTransferCount": 1,
+  "brokenImages": [],
+  "lazyUnloadedImages": 3,
+  "hasToc": true,
+  "anchorLinks": 0,
+  "anchorSamples": [],
+  "tocBlock": null,
+  "time": null,
+  "dateInText": "12 августа 2026",
+  "authorEl": null,
+  "authorInText": null,
+  "hasFaq": false,
+  "coverImg": {
+   "src": "/assets/cache_image/images/godnota/blog/semanticheskoe-yadro-sajta_900x650_c92.jpg",
+   "alt": "",
+   "x": 20,
+   "y": 3184,
+   "w": 350,
+   "h": 250,
+   "top": 3184,
+   "bottom": 3434
+  },
+  "iframes": [],
+  "mapHints": false,
+  "telLinks": [
+   {
+    "href": "tel:84957232308",
+    "text": "8 495 723-23-08",
+    "visible": true
+   }
+  ],
+  "mailLinks": [
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   }
+  ],
+  "forms": [],
+  "phoneField": false,
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_FAILED"
+  ],
+  "failedRequests": [],
+  "badResponses": []
+ },
+ {
+  "n": 7,
+  "url": "https://ne-prosto.ru/portfolio/vinyl-tm",
+  "status": 200,
+  "scrollWidth": 390,
+  "innerWidth": 390,
+  "overflowX": false,
+  "headerFound": true,
+  "headerRect": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 82,
+   "top": 0,
+   "bottom": 82
+  },
+  "headerButtons": [
+   {
+    "tag": "A",
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Меню +",
+    "href": null,
+    "x": 300,
+    "y": 19,
+    "w": 70,
+    "h": 44,
+    "top": 19,
+    "bottom": 63
+   }
+  ],
+  "headerTelVisible": false,
+  "headerTel": [],
+  "h1": {
+   "text": "Разработка и SEO — «Vinyl-TM»",
+   "x": 20,
+   "y": 227,
+   "w": 350,
+   "h": 80,
+   "top": 227,
+   "bottom": 307,
+   "fullyInFirstScreen": true,
+   "fontSize": "37.05px",
+   "count": 1
+  },
+  "cta": [],
+  "smallTapCount": 3,
+  "firstScreenInteractive": 4,
+  "smallTapExamples": [
+   {
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "text": "Непросто",
+    "href": "/",
+    "x": 20,
+    "y": 110,
+    "w": 62,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   },
+   {
+    "text": "Портфолио",
+    "href": "portfolio/",
+    "x": 104,
+    "y": 110,
+    "w": 73,
+    "h": 22,
+    "top": 110,
+    "bottom": 132
+   }
+  ],
+  "lcp": {
+   "timeMs": 300,
+   "tag": "VIDEO",
+   "url": "https://ne-prosto.ru/assets/neprosto/stageshow/np-vinyl-calc/poster-390.png",
+   "id": "",
+   "cls": "",
+   "text": ""
+  },
+  "fonts": [
+   {
+    "name": "ProximaNova.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "init": "css",
+    "transfer": 29772,
+    "encoded": 29472
+   },
+   {
+    "name": "ProximaNovaLight.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.woff",
+    "init": "css",
+    "transfer": 40028,
+    "encoded": 39728
+   },
+   {
+    "name": "MuseoSansBold.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "init": "css",
+    "transfer": 41808,
+    "encoded": 41508
+   },
+   {
+    "name": "MuseoSansRegular.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "init": "css",
+    "transfer": 40500,
+    "encoded": 40200
+   },
+   {
+    "name": "ProximaNovaBold.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaBold.woff",
+    "init": "css",
+    "transfer": 40928,
+    "encoded": 40628
+   },
+   {
+    "name": "MuseoSansBold.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff",
+    "init": "css",
+    "transfer": 48428,
+    "encoded": 48128
+   },
+   {
+    "name": "ProximaNova.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "init": "css",
+    "transfer": 40428,
+    "encoded": 40128
+   }
+  ],
+  "fontsKB": 275.3,
+  "requests": 19,
+  "weightKB": 777.7,
+  "weightZeroTransferCount": 1,
+  "brokenImages": [],
+  "lazyUnloadedImages": 0,
+  "hasToc": false,
+  "anchorLinks": 0,
+  "anchorSamples": [],
+  "tocBlock": null,
+  "time": null,
+  "dateInText": null,
+  "authorEl": null,
+  "authorInText": null,
+  "hasFaq": true,
+  "coverImg": {
+   "src": "images/portfolio/clients/vinyl-tm.jpg",
+   "alt": "Скриншот сайта Vinyl-TM",
+   "x": 20,
+   "y": 1875,
+   "w": 350,
+   "h": 219,
+   "top": 1875,
+   "bottom": 2094
+  },
+  "iframes": [],
+  "mapHints": false,
+  "telLinks": [
+   {
+    "href": "tel:84957232308",
+    "text": "8 495 723-23-08",
+    "visible": true
+   }
+  ],
+  "mailLinks": [
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   }
+  ],
+  "forms": [],
+  "phoneField": false,
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_FAILED"
+  ],
+  "failedRequests": [],
+  "badResponses": []
+ },
+ {
+  "n": 8,
+  "url": "https://ne-prosto.ru/portfolio/",
+  "status": 200,
+  "scrollWidth": 390,
+  "innerWidth": 390,
+  "overflowX": false,
+  "headerFound": true,
+  "headerRect": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 82,
+   "top": 0,
+   "bottom": 82
+  },
+  "headerButtons": [
+   {
+    "tag": "A",
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Меню +",
+    "href": null,
+    "x": 300,
+    "y": 19,
+    "w": 70,
+    "h": 44,
+    "top": 19,
+    "bottom": 63
+   }
+  ],
+  "headerTelVisible": false,
+  "headerTel": [],
+  "h1": {
+   "text": "Портфолио",
+   "x": 20,
+   "y": 147,
+   "w": 350,
+   "h": 41,
+   "top": 147,
+   "bottom": 187,
+   "fullyInFirstScreen": true,
+   "fontSize": "39px",
+   "count": 1
+  },
+  "cta": [],
+  "smallTapCount": 5,
+  "firstScreenInteractive": 7,
+  "smallTapExamples": [
+   {
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "text": "Логотипы и фирменные стили",
+    "href": "https://ne-prosto.ru/portfolio/portfolio-category/logotipyi/",
+    "x": 120,
+    "y": 336,
+    "w": 208,
+    "h": 32,
+    "top": 336,
+    "bottom": 368
+   },
+   {
+    "text": "Сайты, интернет-магазины, лендинги",
+    "href": "https://ne-prosto.ru/portfolio/portfolio-category/sites/",
+    "x": 20,
+    "y": 376,
+    "w": 253,
+    "h": 32,
+    "top": 376,
+    "bottom": 407
+   }
+  ],
+  "lcp": {
+   "timeMs": 396,
+   "tag": "VIDEO",
+   "url": "https://ne-prosto.ru/assets/neprosto/stageshow/np-muza/poster-1440.png",
+   "id": "",
+   "cls": "",
+   "text": ""
+  },
+  "fonts": [
+   {
+    "name": "ProximaNova.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "init": "css",
+    "transfer": 29772,
+    "encoded": 29472
+   },
+   {
+    "name": "MuseoSansBold.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "init": "css",
+    "transfer": 41808,
+    "encoded": 41508
+   },
+   {
+    "name": "MuseoSansRegular.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "init": "css",
+    "transfer": 40500,
+    "encoded": 40200
+   },
+   {
+    "name": "ProximaNova.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "init": "css",
+    "transfer": 40428,
+    "encoded": 40128
+   },
+   {
+    "name": "MuseoSansBold.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff",
+    "init": "css",
+    "transfer": 48428,
+    "encoded": 48128
+   }
+  ],
+  "fontsKB": 196.2,
+  "requests": 25,
+  "weightKB": 1149.3,
+  "weightZeroTransferCount": 1,
+  "brokenImages": [],
+  "lazyUnloadedImages": 18,
+  "hasToc": false,
+  "anchorLinks": 0,
+  "anchorSamples": [],
+  "tocBlock": null,
+  "time": null,
+  "dateInText": null,
+  "authorEl": null,
+  "authorInText": null,
+  "hasFaq": false,
+  "coverImg": null,
+  "iframes": [],
+  "mapHints": false,
+  "telLinks": [
+   {
+    "href": "tel:84957232308",
+    "text": "8 495 723-23-08",
+    "visible": true
+   }
+  ],
+  "mailLinks": [
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   }
+  ],
+  "forms": [],
+  "phoneField": false,
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_FAILED"
+  ],
+  "failedRequests": [],
+  "badResponses": []
+ },
+ {
+  "n": 9,
+  "url": "https://ne-prosto.ru/koordinatyi",
+  "status": 200,
+  "scrollWidth": 390,
+  "innerWidth": 390,
+  "overflowX": false,
+  "headerFound": true,
+  "headerRect": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 82,
+   "top": 0,
+   "bottom": 82
+  },
+  "headerButtons": [
+   {
+    "tag": "A",
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Меню +",
+    "href": null,
+    "x": 300,
+    "y": 19,
+    "w": 70,
+    "h": 44,
+    "top": 19,
+    "bottom": 63
+   }
+  ],
+  "headerTelVisible": false,
+  "headerTel": [],
+  "h1": {
+   "text": "Координаты",
+   "x": 20,
+   "y": 116,
+   "w": 350,
+   "h": 42,
+   "top": 116,
+   "bottom": 158,
+   "fullyInFirstScreen": true,
+   "fontSize": "39px",
+   "count": 1
+  },
+  "cta": [],
+  "smallTapCount": 2,
+  "firstScreenInteractive": 3,
+  "smallTapExamples": [
+   {
+    "text": "Студия дизайна",
+    "href": "/",
+    "x": 20,
+    "y": 21,
+    "w": 148,
+    "h": 40,
+    "top": 21,
+    "bottom": 61
+   },
+   {
+    "text": "info@ne-prosto.ru",
+    "href": "mailto:info@ne-prosto.ru",
+    "x": 20,
+    "y": 583,
+    "w": 350,
+    "h": 28,
+    "top": 583,
+    "bottom": 611
+   }
+  ],
+  "lcp": {
+   "timeMs": 644,
+   "tag": "YMAPS",
+   "url": "https://core-renderer-tiles.maps.yandex.net/tiles?l=map&v=26.11.27-0~b:261028152700~ia:26.09.28-0~ib:26.11.27-0&x=39536&y=20515&z=16&scale=2&lang=ru_RU&ads=enabled",
+   "id": "",
+   "cls": "ymaps-2-1-79-user-selection-none",
+   "text": ""
+  },
+  "fonts": [
+   {
+    "name": "ProximaNova.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff2",
+    "init": "css",
+    "transfer": 29772,
+    "encoded": 29472
+   },
+   {
+    "name": "MuseoSansBold.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansBold.woff2",
+    "init": "css",
+    "transfer": 41808,
+    "encoded": 41508
+   },
+   {
+    "name": "ProximaNovaLight.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNovaLight.woff",
+    "init": "css",
+    "transfer": 40028,
+    "encoded": 39728
+   },
+   {
+    "name": "MuseoSansRegular.woff2",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/Museo/MuseoSansRegular.woff2",
+    "init": "css",
+    "transfer": 40500,
+    "encoded": 40200
+   },
+   {
+    "name": "ProximaNova.woff",
+    "url": "https://ne-prosto.ru/assets/portfolio/fonts/ProximaNova/ProximaNova.woff",
+    "init": "css",
+    "transfer": 40428,
+    "encoded": 40128
+   }
+  ],
+  "fontsKB": 188,
+  "requests": 38,
+  "weightKB": 964.5,
+  "weightZeroTransferCount": 11,
+  "brokenImages": [],
+  "lazyUnloadedImages": 0,
+  "hasToc": false,
+  "anchorLinks": 0,
+  "anchorSamples": [],
+  "tocBlock": null,
+  "time": null,
+  "dateInText": null,
+  "authorEl": null,
+  "authorInText": null,
+  "hasFaq": false,
+  "coverImg": {
+   "src": "assets/portfolio/img/ico/ico-paperclip.svg",
+   "alt": "",
+   "x": 20,
+   "y": 1715,
+   "w": 20,
+   "h": 24,
+   "top": 1715,
+   "bottom": 1739
+  },
+  "iframes": [],
+  "mapHints": true,
+  "telLinks": [
+   {
+    "href": "tel:84957232308",
+    "text": "8 495 723-23-08",
+    "visible": true
+   }
+  ],
+  "mailLinks": [
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   },
+   {
+    "href": "mailto:info@ne-prosto.ru",
+    "text": "info@ne-prosto.ru",
+    "visible": true
+   }
+  ],
+  "forms": [
+   {
+    "inputs": [
+     {
+      "type": "text",
+      "name": "email",
+      "placeholder": ""
+     },
+     {
+      "type": "text",
+      "name": "name",
+      "placeholder": "Представьтесь"
+     },
+     {
+      "type": "email",
+      "name": "contact",
+      "placeholder": "Почта"
+     },
+     {
+      "type": "textarea",
+      "name": "message",
+      "placeholder": "Вам слово"
+     },
+     {
+      "type": "hidden",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "checkbox",
+      "name": "policy",
+      "placeholder": ""
+     },
+     {
+      "type": "file",
+      "name": "attachment",
+      "placeholder": ""
+     },
+     {
+      "type": "submit",
+      "name": "send",
+      "placeholder": ""
+     },
+     {
+      "type": "hidden",
+      "name": "af_action",
+      "placeholder": ""
+     }
+    ]
+   }
+  ],
+  "phoneField": false,
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_FAILED"
+  ],
+  "failedRequests": [],
+  "badResponses": []
+ }
+]
