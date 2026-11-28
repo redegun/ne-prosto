@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<title>[[*titl:notempty=`[[*titl]]`:empty=`[[*pagetitle]] - [[++site_name]]`]]</title>
+[[*noindex:default=`<meta name="robots" content="max-image-preview:large">`]]
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<meta property="og:description" content="">
+<meta property="og:site_name" content="[[++site_name]]">
+
+<style type="text/css">
+    [[getResourceField? &id=`6` &field=`content`]]
+</style>
+<script type="text/javascript">
+    var headCSS = document.getElementsByTagName("html")[0].getAttribute("class") || "";
+    document.getElementsByTagName("html")[0].setAttribute("class",headCSS +" js");
+</script>
+    [[!MinifyX?
+        &minifyCss=`0`
+        &cssSources=`
+            [[styles]]
+            fonts/Museo/Museo.css,
+            fonts/Proxima-Nova/ProximaNova.css,
+            assets/blocks/page/page.css,
+            assets/blocks/menu/menu.css,
+            assets/blocks/menu/--bottom/menu--bottom.css,
+            assets/blocks/menu/--top/menu--top.css,
+            assets/blocks/width/width.css,
+            assets/blocks/heading/heading.css,
+            assets/blocks/subheading/subheading.css,
+            assets/blocks/logo/logo.css,
+            assets/blocks/link/link.css,
+            assets/blocks/header/header.css
+    `]]
+[[!+MinifyX.css]]
+<!---->
+<base href="[[++site_url]]">
+<link rel="stylesheet" href="/assets/neprosto/design-20261018/site.css?v=11">
+<script defer src="/assets/neprosto/design-20261018/site.js?v=9"></script>
+<link rel="stylesheet" href="/assets/neprosto/stageshow/stageshow.css?v=1">
+<script defer src="/assets/neprosto/stageshow/stageshow.js?v=2"></script>
+<!-- Yandex.Metrika counter (task 2452) -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){ m[i]=m[i]||function(){ (m[i].a=m[i].a||[]).push(arguments) };m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){ if(document.scripts[j].src===r){ return; } }k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a) })(window,document,"script","https://mc.yandex.ru/metrika/tag.js?id=27066311","ym");
+ym(27066311,"init",{ ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true,trackHash:true });
+/* цели: AjaxForm шлёт $(document).trigger("af_complete"); jQuery зовёт и document.onaf_complete, какой бы экземпляр jQuery ни был на странице */
+document.onaf_complete=function(e,r){ try{ if(r&&r.success){ var w=r.form&&r.form.closest?r.form.closest(".jobs__form"):null;ym(27066311,"reachGoal",w&&w.length?"job_form":"lead_form"); } }catch(x){ } };
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/27066311" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->

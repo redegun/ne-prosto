@@ -1,0 +1,4 @@
+[[pdoSitemap?
+    &showHidden=`1`
+    &resources=`-6,-17,-27,-29,-60,-113,-114`
+]]

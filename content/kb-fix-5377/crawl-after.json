@@ -1,0 +1,1738 @@
+{
+ "sitemap_count": 91,
+ "home_in_sitemap": true,
+ "sitemap_has": {
+  "/404": false,
+  "index-new": false,
+  "page-style": false,
+  "sitemap.xml": false,
+  "v-rolyax/<": false,
+  "politika": true
+ },
+ "pages": [
+  {
+   "url": "https://ne-prosto.ru/",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 7,
+   "cards_empty_alt": 7,
+   "unparsed": 0,
+   "len": 24573
+  },
+  {
+   "url": "https://ne-prosto.ru/podderzhka/prodvizhenie",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/podderzhka/prodvizhenie"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 3,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9846
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/vakansii/speczialist-po-poiskovomu-prodvizheniyu",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/vakansii/speczialist-po-poiskovomu-prodvizheniyu"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14601
+  },
+  {
+   "url": "https://ne-prosto.ru/uslugi/sajtyi",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/uslugi/sajtyi"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 4,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 11337
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/v-rolyax/anton-vetrov",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/v-rolyax/anton-vetrov"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14752
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/klientyi/topwaters",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/klientyi/topwaters"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15105
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/kakie-stranicy-pomogayut-poluchat-obrashcheniya",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/kakie-stranicy-pomogayut-poluchat-obrashcheniya"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15628
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/klientyi/",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/klientyi/"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 1,
+   "cards_empty_alt": 1,
+   "unparsed": 0,
+   "len": 10465
+  },
+  {
+   "url": "https://ne-prosto.ru/podderzhka/podderzhka",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/podderzhka/podderzhka"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 3,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9796
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/vakansii/veb-razrabotchik",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/vakansii/veb-razrabotchik"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14513
+  },
+  {
+   "url": "https://ne-prosto.ru/uslugi/logotipyi-firmennyie-stili",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/uslugi/logotipyi-firmennyie-stili"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 4,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 11413
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/v-rolyax/tatyana-kochneva",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/v-rolyax/tatyana-kochneva"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14766
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/klientyi/push-clean",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/klientyi/push-clean"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15107
+  },
+  {
+   "url": "https://ne-prosto.ru/podderzhka/soczseti",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/podderzhka/soczseti"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 3,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9811
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/vakansii/",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/vakansii/"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23029
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 28436
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/sajt-dlya-shkolyi-inostrannyix-yazyikov",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/sajt-dlya-shkolyi-inostrannyix-yazyikov"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 13388
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/klientyi/iris",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/klientyi/iris"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15090
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/vakansii/texnicheskij-dizajner",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/vakansii/texnicheskij-dizajner"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14626
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/v-rolyax/lyubov-borodkina",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/v-rolyax/lyubov-borodkina"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14768
+  },
+  {
+   "url": "https://ne-prosto.ru/uslugi/reklamnyie-kampanii",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/uslugi/reklamnyie-kampanii"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 4,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 11101
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/klientyi/anglomaniya",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/klientyi/anglomaniya"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15110
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/v-rolyax/boris-demchenko",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/v-rolyax/boris-demchenko"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14774
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/v-rolyax/andrej-ivanov",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/v-rolyax/andrej-ivanov"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14766
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/v-rolyax/vladimir-kuzneczov",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/v-rolyax/vladimir-kuzneczov"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14780
+  },
+  {
+   "url": "https://ne-prosto.ru/uslugi/",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/uslugi/"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 7,
+   "cards_empty_alt": 7,
+   "unparsed": 0,
+   "len": 11929
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/klientyi/arshin",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/klientyi/arshin"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15095
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/logotip-dlya-geodezicheskojkompanii-arshin",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/logotip-dlya-geodezicheskojkompanii-arshin"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 12369
+  },
+  {
+   "url": "https://ne-prosto.ru/uslugi/ii-assistent-dlya-biznesa",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/uslugi/ii-assistent-dlya-biznesa"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 4,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 20713
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/klientyi/sverxu-goroda",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/klientyi/sverxu-goroda"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15117
+  },
+  {
+   "url": "https://ne-prosto.ru/koordinatyi",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/koordinatyi"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 12444
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/klientyi/novyij-klient",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/klientyi/novyij-klient"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15116
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/instrumenty-dlya-firmennogo-stilya",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/instrumenty-dlya-firmennogo-stilya"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "12 бесплатных инструментов, чтобы собрать фирменный стиль ещё до дизайнера"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14745
+  },
+  {
+   "url": "https://ne-prosto.ru/kompaniya/",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/kompaniya/"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 11277
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/besplatnye-kirillicheskie-shrifty",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/besplatnye-kirillicheskie-shrifty"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "10 бесплатных кириллических шрифтов, которые не стыдно поставить на сайт и в логотип"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14521
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/gde-brat-foto-i-illyustracii-stoki",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/gde-brat-foto-i-illyustracii-stoki"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Где легально брать фото и иллюстрации: 12 стоков"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 14214
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/servisy-dlya-podbora-cveta",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/servisy-dlya-podbora-cveta"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "7 сервисов, чтобы подобрать цветовые сочетания для сайта и фирстиля"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 13437
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/priznaki-chto-pora-na-rebrending",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/priznaki-chto-pora-na-rebrending"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Пора на ребрендинг: 8 признаков, что фирменный стиль устал"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 13270
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 26469
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/upakovka-kotoraya-prodaet-priemy",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/upakovka-kotoraya-prodaet-priemy"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Упаковка, которая продаёт: 9 приёмов, работающих на полке"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 13503
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/kuda-propadayut-zayavki-iz-messendzherov",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/kuda-propadayut-zayavki-iz-messendzherov"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Куда пропадают заявки из мессенджеров, пока менеджер занят"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23637
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/chat-bot-ili-ii-assistent",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/chat-bot-ili-ii-assistent"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Чат-бот или ассистент с одобрением менеджера: что выбрать малому бизнесу"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 21599
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/internet-magazin-topwaters",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/internet-magazin-topwaters"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 8503
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/oshibki-vnedreniya-ii-v-biznes",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/oshibki-vnedreniya-ii-v-biznes"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Ошибки при внедрении ИИ в бизнес: цены, обещания, запретные темы"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 21246
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/presentation-trump",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/presentation-trump"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 7823
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/skorost-otveta-na-zayavku",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/skorost-otveta-na-zayavku"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Скорость ответа на заявку: как она влияет на продажи"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 22207
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/presentation-stdfast",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/presentation-stdfast"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9697
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/kak-poschitat-poteryannye-zayavki",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/kak-poschitat-poteryannye-zayavki"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Как посчитать, сколько заявок вы теряете: конверсия из заявки в продажу"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 21721
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/presentation-slono",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/presentation-slono"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 13666
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/vse-obrashheniya-v-odnom-okne",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/vse-obrashheniya-v-odnom-okne"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Все обращения в одном окне: чем это отличается от CRM"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 21457
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/presentation-servisok",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/presentation-servisok"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 10926
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/zapisi-zvonkov-dlya-ii-assistenta",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/zapisi-zvonkov-dlya-ii-assistenta"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Как записи звонков учат ассистента отвечать как лучший менеджер"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 22008
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/presentation-sadodel",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/presentation-sadodel"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 8567
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/chto-sprosit-u-klienta-pri-pervom-obrashhenii",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/chto-sprosit-u-klienta-pri-pervom-obrashhenii"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Чек-лист: что спросить у клиента при первом обращении"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 21854
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/presentation-parket",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/presentation-parket"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 8312
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/novyj-ili-postoyannyj-klient",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/novyj-ili-postoyannyj-klient"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Новый или постоянный клиент: зачем это понимать с первого сообщения"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 20964
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/presentation-anglomania",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/presentation-anglomania"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 8969
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/etapy-razrabotki-sajta",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/etapy-razrabotki-sajta"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Этапы разработки сайта: что нужно от заказчика на каждом шаге"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23071
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/tovarnyj-znak-i-logotip",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/tovarnyj-znak-i-logotip"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Регистрация товарного знака: что проверить до дизайна логотипа"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23169
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/politika-konfidencialnosti-dlya-sajta",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/politika-konfidencialnosti-dlya-sajta"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Политика конфиденциальности для сайта: документы и формы"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23456
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/utp-kak-sformulirovat",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/utp-kak-sformulirovat"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Уникальное торговое предложение: как найти своё отличие"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23615
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/tekhnicheskoe-zadanie-na-sajt",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/tekhnicheskoe-zadanie-na-sajt"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Техническое задание на сайт: что подготовить заказчику"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23470
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/firmennyj-shrift-kak-vybrat",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/firmennyj-shrift-kak-vybrat"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Фирменный шрифт: как выбрать и не нарушить лицензию"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23269
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/skorost-zagruzki-sajta",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/skorost-zagruzki-sajta"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Скорость загрузки сайта: что проверить владельцу"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23290
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/koncepciya-reklamnoj-kampanii",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/koncepciya-reklamnoj-kampanii"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Концепция рекламной кампании: как её проверить"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23528
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/iz-chego-skladyvaetsya-stoimost-sajta",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/iz-chego-skladyvaetsya-stoimost-sajta"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Из чего складывается стоимость разработки сайта"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23249
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/vinyl-tm",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/vinyl-tm"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 21200
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/nejming-kompanii",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/nejming-kompanii"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Нейминг компании: как придумать название и проверить его"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23536
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/kppf",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/kppf"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15856
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/redizajn-sajta",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/redizajn-sajta"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Редизайн сайта: когда он нужен и что сохранить"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23349
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/merci",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/merci"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 16856
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/korporativnyj-sajt-razdely",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/korporativnyj-sajt-razdely"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Корпоративный сайт небольшой компании: какие разделы нужны"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23690
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/sadodel",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/sadodel"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9061
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/kreativy-dlya-reklamy",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/kreativy-dlya-reklamy"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Креативы для рекламы: одна идея на разных носителях"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23430
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/storam",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/storam"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9114
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/semanticheskoe-yadro-sajta",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/semanticheskoe-yadro-sajta"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [
+    "Семантическое ядро сайта: зачем собирать его до структуры"
+   ],
+   "cards": 1,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 23155
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/boemi",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/boemi"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9055
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/ruize",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/ruize"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9067
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/gitwell",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/gitwell"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9088
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/academylu",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/academylu"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9038
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/firmaflis",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/firmaflis"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 10106
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/turbocarp",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/turbocarp"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9065
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/iris",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/iris"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9039
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/cuptrade",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/cuptrade"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9092
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/peoplepay",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/peoplepay"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9054
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/rybkavprud",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/rybkavprud"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9076
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/vedushiy-oleg",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/vedushiy-oleg"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9103
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/plusdeshevle",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/plusdeshevle"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 9086
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/poezd-stankin",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/poezd-stankin"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 28603
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/lrrazbor-poisk",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/lrrazbor-poisk"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 15671
+  },
+  {
+   "url": "https://ne-prosto.ru/portfolio/muza",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/portfolio/muza"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 10254
+  },
+  {
+   "url": "https://ne-prosto.ru/index.php",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 7,
+   "cards_empty_alt": 7,
+   "unparsed": 0,
+   "len": 24573
+  },
+  {
+   "url": "https://ne-prosto.ru/KOORDINATYI",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/koordinatyi"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 12444
+  },
+  {
+   "url": "https://ne-prosto.ru/uslugi/sajtyi?utm_source=test",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/uslugi/sajtyi"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 4,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 11337
+  },
+  {
+   "url": "https://ne-prosto.ru/blog/?page=2",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/blog/"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 26476
+  },
+  {
+   "url": "https://ne-prosto.ru/404",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/404"
+   ],
+   "robots": [
+    "noindex, nofollow"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 7058
+  },
+  {
+   "url": "https://ne-prosto.ru/net-takoj-stranicy-5377",
+   "status": 404,
+   "canonical": [
+    "https://ne-prosto.ru/404"
+   ],
+   "robots": [
+    "noindex, nofollow"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 7058
+  },
+  {
+   "url": "https://ne-prosto.ru/politika-konfidencialnosti",
+   "status": 200,
+   "canonical": [
+    "https://ne-prosto.ru/politika-konfidencialnosti"
+   ],
+   "robots": [
+    "max-image-preview:large"
+   ],
+   "icons": 4,
+   "h1": 1,
+   "cover_alt": [],
+   "cards": 0,
+   "cards_empty_alt": 0,
+   "unparsed": 0,
+   "len": 11708
+  }
+ ]
+}

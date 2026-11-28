@@ -62,8 +62,8 @@
       "name": null,
       "field": "content",
       "path": "templates/8.html",
-      "expected": "b7a064c71b5a1083cb023c56e1c1c61d7804789c76d0b1242669f2b02f2ce292",
-      "target": "b7a064c71b5a1083cb023c56e1c1c61d7804789c76d0b1242669f2b02f2ce292"
+      "expected": "d9b3138f006272fb76c565c9ce7700bbd088f42c0ca756ca1fed84558b27bffe",
+      "target": "d9b3138f006272fb76c565c9ce7700bbd088f42c0ca756ca1fed84558b27bffe"
     },
     {
       "type": "modTemplate",
@@ -161,8 +161,8 @@
       "name": "np_article",
       "field": "snippet",
       "path": "chunks/np_article.html",
-      "expected": "b5d486a9f5cdb1ba5572d3b6af064caa8a66e253209d9ca36cc34413c0314958",
-      "target": "b5d486a9f5cdb1ba5572d3b6af064caa8a66e253209d9ca36cc34413c0314958"
+      "expected": "ec9c78d21aa4a91bc73cb509f60c741320c55a78fd98286577cc38605f605286",
+      "target": "ec9c78d21aa4a91bc73cb509f60c741320c55a78fd98286577cc38605f605286"
     },
     {
       "type": "modChunk",
@@ -197,8 +197,8 @@
       "name": "head_2019",
       "field": "snippet",
       "path": "chunks/head_2019.html",
-      "expected": "c98449cf502b509684d14915daa0a680ab52aca5fa66ca7b72bebd8202a30c92",
-      "target": "c98449cf502b509684d14915daa0a680ab52aca5fa66ca7b72bebd8202a30c92"
+      "expected": "7a78bdb960f572dc49ed5c4dac83a69aa25aaf5b258be01544167fbccc1d5af2",
+      "target": "7a78bdb960f572dc49ed5c4dac83a69aa25aaf5b258be01544167fbccc1d5af2"
     },
     {
       "type": "modChunk",
@@ -206,8 +206,8 @@
       "name": "head",
       "field": "snippet",
       "path": "chunks/head.html",
-      "expected": "e45b705617bc0cc783059ce5b7a458b4690522980df6600c370d5c056b69a61b",
-      "target": "e45b705617bc0cc783059ce5b7a458b4690522980df6600c370d5c056b69a61b"
+      "expected": "bf1c3eddc383a0cd56df44244433e27ada3ddcacd449d4a56f6438ee8fb7de1e",
+      "target": "bf1c3eddc383a0cd56df44244433e27ada3ddcacd449d4a56f6438ee8fb7de1e"
     },
     {
       "type": "modChunk",
@@ -323,8 +323,8 @@
       "name": "np_related",
       "field": "snippet",
       "path": "chunks/np_related.html",
-      "expected": "67397e49abcafa249014da3458824997f9205d92f4f9602bdc4d11cedb968cc5",
-      "target": "67397e49abcafa249014da3458824997f9205d92f4f9602bdc4d11cedb968cc5"
+      "expected": "543a9d171ed39cb344e32931b3bef7554fea60f2bab6481719c7209374fd4889",
+      "target": "543a9d171ed39cb344e32931b3bef7554fea60f2bab6481719c7209374fd4889"
     },
     {
       "type": "modChunk",
