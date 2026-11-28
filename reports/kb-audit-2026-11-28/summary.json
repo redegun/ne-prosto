@@ -1,10 +1,17 @@
 {
  "total": 129,
- "applicable_checked": 102,
- "violated": 47,
+ "applicable_checked": 97,
+ "violated": 42,
  "ok": 55,
  "na": 13,
- "nc": 14,
+ "nc": 19,
  "atomic": 92,
- "playbook": 37
+ "playbook": 37,
+ "test_candidates": [
+  "SEO-ONP-200",
+  "SEO-CONT-140",
+  "SEO-CONT-141",
+  "CONV-OFFER-140"
+ ],
+ "note": "гипотезы kb в статусе «проверяется»/«кандидат» не засчитаны нарушениями (status «не проверить»), SEO-TECH-352 — «не проверить» (уточнено по замечанию верификатора 28.11)"
 }
