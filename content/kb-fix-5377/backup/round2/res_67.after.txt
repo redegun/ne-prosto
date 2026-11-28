@@ -1,0 +1,28 @@
+<img alt="СТД РФ: экраны лендинга типографии" class="stdfast-itro__img" src="assets/portfolio/img/presentation/stdfast/std-intro.png" />
+<div class="stdfast-wrapper">
+<div class="presentation__title">О проекте</div>
+
+<div class="presentation-settings">
+<div class="presentation-target"><b>Задача:</b> за сжатые сроки сделать стильный продающий лендинг.</div>
+
+<div class="presentation-solution"><b>Решение:</b> яркие иллюстрации и самая необходимая информация.</div>
+</div>
+
+<div class="presentation-item"><img alt="СТД РФ: первый экран «Отпечатаем любой тираж в течение 48 часов»" class="presentation-item__img" src="assets/portfolio/img/presentation/stdfast/std-01.png" /> <img alt="" class="presentation-item__number" src="assets/portfolio/img/presentation/stdfast/n-1.png" /></div>
+
+<div class="presentation-item"><img alt="СТД РФ: блок «Рады представиться»" class="presentation-item__img" src="assets/portfolio/img/presentation/stdfast/std-02.png" /> <img alt="" class="presentation-item__number_odd" src="assets/portfolio/img/presentation/stdfast/n-2.png" /></div>
+
+<div class="presentation-item"><img alt="СТД РФ: блок «Ночной тираж»" class="presentation-item__img" src="assets/portfolio/img/presentation/stdfast/std-03.png" /> <img alt="" class="presentation-item__number" src="assets/portfolio/img/presentation/stdfast/n-3.png" /></div>
+
+<div class="presentation-item"><img alt="СТД РФ: блок «Тираж в выходные дни»" class="presentation-item__img" src="assets/portfolio/img/presentation/stdfast/std-04.png" /> <img alt="" class="presentation-item__number_odd" src="assets/portfolio/img/presentation/stdfast/n-4.png" /></div>
+
+<div class="presentation-item"><img alt="СТД РФ: блок «Что мы делаем»" class="presentation-item__img" src="assets/portfolio/img/presentation/stdfast/std-05.png" /> <img alt="" class="presentation-item__number" src="assets/portfolio/img/presentation/stdfast/n-5.png" /></div>
+
+<div class="presentation-item"><img alt="СТД РФ: блок «Наше оборудование»" class="presentation-item__img" src="assets/portfolio/img/presentation/stdfast/std-06.png" /> <img alt="" class="presentation-item__number_odd" src="assets/portfolio/img/presentation/stdfast/n-6.png" /></div>
+
+<div class="presentation-item presentation-item_last"><img alt="СТД РФ: форма заявки на расчёт тиража" class="presentation-item__img" src="assets/portfolio/img/presentation/stdfast/std-07.png" /> <img alt="" class="presentation-item__number" src="assets/portfolio/img/presentation/stdfast/n-7.png" /></div>
+</div>
+
+<div class="stdfast-fin">
+<div class="stdfast-fin-wrapper"><img alt="" class="stdfast-fin__elmbg_left" src="assets/portfolio/img/presentation/stdfast/std-fin_heart_blur.png" /> <img alt="" class="stdfast-fin__layer" src="assets/portfolio/img/presentation/stdfast/std-fin_layer.svg" /> <img alt="СТД РФ: иллюстрация лендинга на экране ноутбука" class="stdfast__img" src="assets/portfolio/img/presentation/stdfast/std-fin.png" /> <img alt="" class="stdfast-fin__elmbg_right" src="assets/portfolio/img/presentation/stdfast/std-fin_heart_blur.png" /></div>
+</div>

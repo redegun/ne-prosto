@@ -1,0 +1,35 @@
+<div class="parket-intro">
+<div class="parket-intro-wrapper">
+<div class="parket-info">
+<div class="presentation__title">Паркет Элит</div>
+
+<div class="presentation-settings">
+<div class="presentation-target"><b>Задача:</b> разработать дизайн интернет-магазина.</div>
+
+<div class="presentation-solution"><b>Решение:</b> плиточный дизайн, дополненный фирменным паттерном.</div>
+</div>
+</div>
+<img alt="" class="parket-intro__img" src="assets/portfolio/img/presentation/parket/parket-intro.png" /></div>
+</div>
+
+<div class="parket-wrapper">
+<div class="parket-item_02"><img alt="" class="parket-item__img" src="assets/portfolio/img/presentation/parket/parket-02.png" /></div>
+</div>
+
+<div class="parket-item_bg">
+<div class="parket-wrapper">
+<div class="parket-item_03">
+<div class="parket-item__title">Личный кабинет</div>
+<img alt="" class="parket-item__img_03" src="assets/portfolio/img/presentation/parket/parket-03.png" /></div>
+</div>
+</div>
+
+<div class="parket-wrapper">
+<div class="parket-item_04">
+<div class="parket-item__title">Мобильная версия</div>
+<img alt="" class="parket-item__img_04" src="assets/portfolio/img/presentation/parket/parket-04.png" /></div>
+</div>
+
+<div class="parket-fin">
+<div class="parket-fin-wrapper"><img alt="" class="parket-fin__img" src="assets/portfolio/img/presentation/parket/parket-fin.png" /></div>
+</div>

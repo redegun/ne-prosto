@@ -1,0 +1,31 @@
+<div class="sadodel-intro">
+<div class="sadodel-intro-wrapper">
+<div class="sadodel-info">
+<div class="presentation__title">Садодел</div>
+
+<div class="presentation-settings">
+<div class="presentation-target"><b>Задача:</b> разработать дизайн для сайта услуг и интернет-магазина.</div>
+
+<div class="presentation-solution"><b>Решение:</b> продуманный UI и минималистичный дизайн.</div>
+</div>
+</div>
+<img alt="Садодел: главный экран сайта на ноутбуке" class="sadodel-intro__img" src="assets/portfolio/img/presentation/sadodel/sadodel-intro.png" /></div>
+<!-- <img src="assets/portfolio/img/presentation/sadodel/sadodel-intro_full.png" alt="Садодел: сайт на ноутбуке в интерьере" class="sadodel-intro__img"> --></div>
+
+<div class="sadodel-wrapper">
+<div class="presentation-item">
+<div class="sadodel-item__title">Главная</div>
+<img alt="Садодел: главная страница целиком" class="presentation-item__img" src="assets/portfolio/img/presentation/sadodel/sadodel-02.png" /></div>
+
+<div class="presentation-item">
+<div class="sadodel-item__title">Услуги</div>
+<img alt="Садодел: страница «Услуги»" class="presentation-item__img" src="assets/portfolio/img/presentation/sadodel/sadodel-03.png" /></div>
+</div>
+
+<div class="sadodel-mob">
+<div class="sadodel-item__title sadodel-mob__title">Адаптив</div>
+<img alt="" class="sadodel-mob__tree" src="assets/portfolio/img/presentation/sadodel/sadodel-tree.png" /> <img alt="Садодел: мобильная версия на смартфоне" class="sadodel-mob__hand" src="assets/portfolio/img/presentation/sadodel/sadodel-hand_mob.png" /></div>
+
+<div class="sadodel-fin">
+<div class="sadodel-fin-wrapper"><img alt="Садодел: экраны мобильной версии" class="sadodel-fin__img" src="assets/portfolio/img/presentation/sadodel/sadodel-mob_elem.png" /></div>
+</div>

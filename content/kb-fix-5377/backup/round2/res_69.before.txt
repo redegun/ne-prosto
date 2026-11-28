@@ -1,0 +1,37 @@
+<div class="vodopoev-intro">
+<div class="vodopoev-intro-wrapper">
+<div class="vodopoev-info">
+<p class="presentation__title">&nbsp;</p>
+</div>
+
+<p>&nbsp;</p>
+</div>
+<img alt="" class="vodopoev-intro_bg" src="assets/portfolio/img/presentation/vodopoev/vodopoev-leafs.png" /></div>
+
+<div class="vodopoev_light">
+<div class="vodopoev-wrapper">
+<div class="vodopoev-item">
+<div class="vodopoev-item__title"><a href="https://topwaters.ru/">topwaters.ru</a></div>
+
+<div class="vodopoev-item__title">Главная</div>
+<img alt="" class="presentation-item__img" src="assets/portfolio/img/presentation/vodopoev/vodopoev-02.png" /></div>
+
+<div class="vodopoev-item">
+<div class="vodopoev-item__title">Каталог</div>
+<img alt="" class="presentation-item__img" src="assets/portfolio/img/presentation/vodopoev/vodopoev-03.png" /></div>
+
+<div class="vodopoev-item">
+<div class="vodopoev-item__title">О компании</div>
+<img alt="" class="presentation-item__img" src="assets/portfolio/img/presentation/vodopoev/vodopoev-04.png" /></div>
+</div>
+</div>
+
+<div class="vodopoev_darken">
+<div class="vodopoev-wrapper">
+<div class="vodopoev-item">
+<div class="vodopoev-item__title">Личный кабинет</div>
+<img alt="" class="presentation-item__img" src="assets/portfolio/img/presentation/vodopoev/vodopoev-05.png" /></div>
+</div>
+
+<div class="vodopoev-fin"><!-- <div class="vodopoev-wrapper"> --><img alt="" class="vodopoev-fin__img" src="assets/portfolio/img/presentation/vodopoev/vodopoev-fin.png" /> <!-- </div> --></div>
+</div>

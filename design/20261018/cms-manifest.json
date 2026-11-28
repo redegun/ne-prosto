@@ -53,8 +53,8 @@
       "name": null,
       "field": "content",
       "path": "templates/7.html",
-      "expected": "70d128a2fdad44f274003c4a02ee2da37eac7c2aec0832d27b5687dd04e8d16d",
-      "target": "70d128a2fdad44f274003c4a02ee2da37eac7c2aec0832d27b5687dd04e8d16d"
+      "expected": "0fe08a485913da9ea306038edafe80714238155633ee79066248d273d2f05ad4",
+      "target": "0fe08a485913da9ea306038edafe80714238155633ee79066248d273d2f05ad4"
     },
     {
       "type": "modTemplate",
@@ -233,8 +233,8 @@
       "name": "np_team",
       "field": "snippet",
       "path": "chunks/np_team.html",
-      "expected": "5908a4faab06238a0629f9131a922b0b4f35f5de00a537dfbe5a3f033e14a69f",
-      "target": "5908a4faab06238a0629f9131a922b0b4f35f5de00a537dfbe5a3f033e14a69f"
+      "expected": "4dac6e7fa53764cc265f6c157b701957264e57ff9894934baf38954cc1967ca8",
+      "target": "4dac6e7fa53764cc265f6c157b701957264e57ff9894934baf38954cc1967ca8"
     },
     {
       "type": "modResource",

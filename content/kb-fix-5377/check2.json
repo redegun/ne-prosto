@@ -1,0 +1,211 @@
+{
+ "/404": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 0,
+  "gallery_empty_alt": [],
+  "gallery_alts_sample": [],
+  "unparsed": 0
+ },
+ "/net-takoj-stranicy-5377b": {
+  "status": 404,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 0,
+  "gallery_empty_alt": [],
+  "gallery_alts_sample": [],
+  "unparsed": 0
+ },
+ "/kompaniya/": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": true,
+  "gallery_imgs": 0,
+  "gallery_empty_alt": [],
+  "gallery_alts_sample": [],
+  "unparsed": 0
+ },
+ "/kompaniya/v-rolyax/": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": true,
+  "gallery_imgs": 0,
+  "gallery_empty_alt": [],
+  "gallery_alts_sample": [],
+  "unparsed": 0
+ },
+ "/portfolio/presentation-anglomania": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 16,
+  "gallery_empty_alt": [],
+  "gallery_alts_sample": [
+   "Англомания: сайт школы на мониторе iMac",
+   "Англомания: страница «Акции и скидки»"
+  ],
+  "unparsed": 0
+ },
+ "/portfolio/presentation-parket": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 5,
+  "gallery_empty_alt": [],
+  "gallery_alts_sample": [
+   "Паркет Элит: интернет-магазин на компьютере и телефоне",
+   "Паркет Элит: главная страница и каталог"
+  ],
+  "unparsed": 0
+ },
+ "/portfolio/presentation-sadodel": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 7,
+  "gallery_empty_alt": [
+   "sadodel-tree.png"
+  ],
+  "gallery_alts_sample": [
+   "Садодел: главный экран сайта на ноутбуке",
+   "Садодел: сайт на ноутбуке в интерьере"
+  ],
+  "unparsed": 0
+ },
+ "/portfolio/presentation-servisok": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 27,
+  "gallery_empty_alt": [
+   "servisok-cross.png",
+   "servisok-pellet.png",
+   "servisok-triangle.png",
+   "servisok-pellet.png",
+   "servisok-cross.png",
+   "servisok-dots.png",
+   "servisok-ball.png",
+   "servisok-circle.png",
+   "servisok-rhomb.png",
+   "servisok-pellet.png",
+   "servisok-cross.png",
+   "servisok-dots.png",
+   "servisok-ball.png",
+   "servisok-circle.png"
+  ],
+  "gallery_alts_sample": [
+   "СервисОк: первый экран лендинга",
+   "СервисОк: блок о ремонте смартфонов, планшетов и ноутбуков"
+  ],
+  "unparsed": 0
+ },
+ "/portfolio/presentation-stdfast": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 19,
+  "gallery_empty_alt": [
+   "n-1.png",
+   "n-2.png",
+   "n-3.png",
+   "n-4.png",
+   "n-5.png",
+   "n-6.png",
+   "n-7.png",
+   "std-fin_heart_blur.png",
+   "std-fin_layer.svg",
+   "std-fin_heart_blur.png"
+  ],
+  "gallery_alts_sample": [
+   "СТД РФ: экраны лендинга типографии",
+   "СТД РФ: первый экран «Отпечатаем любой тираж в течение 48 часов»"
+  ],
+  "unparsed": 0
+ },
+ "/portfolio/presentation-trump": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 4,
+  "gallery_empty_alt": [
+   "trump-balloon_red.png"
+  ],
+  "gallery_alts_sample": [
+   "Trump English: обложка концепта лендинга",
+   "Trump English: лендинг языкового курса целиком"
+  ],
+  "unparsed": 0
+ },
+ "/portfolio/internet-magazin-topwaters": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 6,
+  "gallery_empty_alt": [
+   "vodopoev-leafs.png"
+  ],
+  "gallery_alts_sample": [
+   "Topwaters: главная страница интернет-магазина воды",
+   "Topwaters: каталог воды"
+  ],
+  "unparsed": 0
+ },
+ "/": {
+  "status": 200,
+  "robots": [
+   "max-image-preview:large"
+  ],
+  "h1": 1,
+  "typo": [],
+  "pavel": false,
+  "gallery_imgs": 0,
+  "gallery_empty_alt": [],
+  "gallery_alts_sample": [],
+  "unparsed": 0
+ }
+}
