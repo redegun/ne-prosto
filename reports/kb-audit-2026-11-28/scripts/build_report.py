@@ -101,9 +101,8 @@ ok("SEO-TECH-003", [HOME],
    "проба first_img_priority — «есть». На 390 px LCP главной — hero-train-960.webp (picture: WebP 960/1920, JPEG-запас photo-31.jpg 697 КБ только для браузеров без WebP), fetchpriority=high, width/height, без lazy, LCP 364 мс (evidence/visual-390.json). Услуги — см. SEO-TECH-012.")
 ok("SEO-TECH-010", [S + "/assets/components/minifyx/cache/styles_8d58812fbf.css"],
    "проба http2_gzip_cache — HTTP/2, CSS с gzip и Cache-Control max-age=31536000, nginx/1.30.7. HTML-страницы отдаются с Cache-Control: no-store и PHPSESSID — это норма MODX, на скорость первого ответа не влияет (0,10–0,54 с, медиана 0,14 с на 96 страницах).")
-bad("SEO-TECH-013", [SERV, STD, S + "/portfolio/presentation-slono"], 1, 1,
-    "проба lazy_below_fold на главной — «есть» (lazy у 14 из 16 img), на услугах и статьях картинки ниже первого экрана тоже ленивые. Но в 10 старых кейсах портфолио lazy нет ни у одной картинки: presentation-servisok 27 img, presentation-stdfast 20, presentation-slono 18, sajt-dlya-shkolyi-inostrannyix-yazyikov 15 (evidence/analysis.json).",
-    "в шаблоне старых кейсов (template 4, npLegacyContent) или выходным фильтром добавить loading=\"lazy\" всем img, кроме первой. Проверить на 390 px, что первая картинка не ленится.")
+ok("SEO-TECH-013", [SAJ, LOGO, REKL, II, PROD, PODD, SOC, SEM, S + "/blog/etapy-razrabotki-sajta", SHR],
+   "пункт по applies.page_type относится к услугам и статьям, на них он выполнен. 7 страниц услуг: без lazy только иллюстрация первого экрана (LCP, loading=eager, как требует исключение пункта) и иконка счётчика просмотров у H1; остальные картинки ленивые (например, /uslugi/sajtyi — 3 из 5 img, /uslugi/ii-assistent-dlya-biznesa — 3 из 6; на ИИ-ассистенте без lazy ещё SVG-скрепка в форме). 29 статей шаблона 8: без lazy только обложка (LCP) и иконка просмотров, остальные 5–8 картинок ленивые (/blog/semanticheskoe-yadro-sajta — 6 из 8). /uslugi/ — 7 из 7. Проба lazy_below_fold на главной — «есть» (14 из 16); лаборатория 15–25.11 отметила «уже есть». Старые кейсы портфолио под пункт не попадают — наблюдение по ним вынесено строкой KB в README (вне счётчика).")
 bad("SEO-TECH-014", [HOME, SAJ, SEM], 1, 1,
     "проба fonts_woff2_subset: в CSS 13 файлов шрифтов, 619 КБ, 10 не WOFF2. На 390 px реально скачиваются 6–7 файлов: 149–275 КБ на странице (главная 235 КБ, кейс vinyl-tm 275 КБ), часть в WOFF (ProximaNovaLight.woff 40 КБ). Старый бандл styles_8d58812fbf.css (55 КБ) всё ещё подключает @font-face ClearSans, Museo и ProximaNova в eot/ttf/woff (evidence/visual-390.json, crawl/crawl2.json).",
     "оставить только используемые начертания ProximaNova и MuseoSans в WOFF2 с подмножеством латиница+кириллица (pyftsubset), font-display: swap, старые @font-face из бандла minifyx убрать. Цель — около 100 КБ шрифтов на странице. Лаборатория уже отмечала сайт кандидатом (lab/runs/2026-11-16.md).")
@@ -364,7 +363,7 @@ summary = {
     "atomic": sum(1 for i in ids if i in PTS or i in EXTRA),
     "playbook": sum(1 for i in ids if i in PB and i not in PTS),
     "test_candidates": TESTS,
-    "note": "гипотезы kb в статусе «проверяется»/«кандидат» не засчитаны нарушениями (status «не проверить»), SEO-TECH-352 — «не проверить» (уточнено по замечанию верификатора 28.11)",
+    "note": "гипотезы kb в статусе «проверяется»/«кандидат» не засчитаны нарушениями (status «не проверить»), SEO-TECH-352 — «не проверить», SEO-TECH-013 — «выполнен» на услугах и статьях (уточнено по замечаниям верификатора 28.11)",
 }
 json.dump(summary, open(os.path.join(OUT, "summary.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(summary)
